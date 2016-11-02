@@ -17,14 +17,14 @@ defaults:
     type: posts
   values:
     layout: post
-    permalink: '/blog/:year/:month/:day/:title'
+    permalink: "/blog/:year/:month/:day/:title"
 - scope:
     path: ''
     type: pages
   values:
     layout: page
 permalink: pretty
-desc: 'Timber.io – Make logging great again.'
+desc: Timber.io – Make logging great again.
 url: https://timber.io
 baseurl: ''
 email: jackal@gmail.com
@@ -54,7 +54,7 @@ kramdown:
   hard_wrap: false
   parse_block_html: true
 include:
-    - _pages
+- _pages
 exclude:
 - README.md
 - vendor
