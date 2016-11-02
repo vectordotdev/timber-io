@@ -2,6 +2,9 @@
 title: timber.io
 timezone: UTC
 collections:
+  plans:
+    title: Plans
+    output: true
   posts:
     title: Posts
     output: true
