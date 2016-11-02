@@ -17,18 +17,14 @@ defaults:
     type: posts
   values:
     layout: post
-    permalink: "/posts/:title/"
+    permalink: '/blog/:year/:month/:day/:title'
 - scope:
     path: ''
     type: pages
   values:
     layout: page
 permalink: pretty
-desc: 'Write an awesome description for your new site here. You can edit this line
-  in _config.yml. It will appear in your document head meta (for Google search results)
-  and in your feed.xml site description.
-
-'
+desc: 'Timber.io – Make logging great again.'
 url: https://timber.io
 baseurl: ''
 email: jackal@gmail.com
@@ -38,10 +34,10 @@ github_username: clenemt
 github_source: jackal
 google_analytics: UA-XXXXXXXX-X
 paginate: 5
-paginate_path: "/articles/page:num/"
+paginate_path: "/blog/page:num"
 navigation:
-- title: Articles
-  url: "/articles/"
+- title: Blog
+  url: "/blog/"
   desc: Stuffs I write about
 - title: Projects
   url: "/projects/"
@@ -58,7 +54,7 @@ kramdown:
   hard_wrap: false
   parse_block_html: true
 include:
-- _pages
+    - _pages
 exclude:
 - README.md
 - vendor
