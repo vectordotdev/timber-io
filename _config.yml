@@ -21,3 +21,41 @@ defaults:
   values:
     layout: page
 permalink: pretty
+desc: |
+  Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+url: https://timber.io
+baseurl: ''
+permalink: pretty
+email: jackal@gmail.com
+author: The Jackal
+twitter_username: clenemt
+github_username: clenemt
+github_source: jackal
+google_analytics: UA-XXXXXXXX-X
+paginate: 5
+paginate_path: "/articles/page:num/"
+navigation:
+- title: Articles
+  url: "/articles/"
+  desc: Stuffs I write about
+- title: Projects
+  url: "/projects/"
+  desc: Stuffs I like to do
+- title: Work
+  url: "/work/"
+  desc: Stuffs I hate to do
+- title: About
+  url: "/about/"
+  desc: Learn about me
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+include:
+- _pages
+exclude:
+- README.md
+- vendor
+gems:
+- jekyll-paginate
