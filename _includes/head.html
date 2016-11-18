@@ -12,10 +12,14 @@
 
   <!-- SEO metas -->
   <meta name="description" content="{% if page.desc %}{{ page.desc }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.desc }}{% endif %}">
+  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  
+  <link href="//ajax.googleapis.com" rel="dns-prefetch">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Sans+Pro:300,400,600/Montserrat:300,400,500">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
@@ -24,4 +28,7 @@
   <!-- CSS files -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
+  <!-- Fonts -->
+  <script src="https://use.typekit.net/whk1cid.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
