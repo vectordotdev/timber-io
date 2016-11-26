@@ -19,9 +19,30 @@
   </nav>
 </footer>
 
-<script src="assets/components/jquery/jquery.min.js"></script>
-  <script src="assets/js/scripts.min.js"></script>
+<!-- <div class="site-copy">&copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span></div> -->
 
+<!-- <ul>
+  {% if site.email %}
+  <li><a href="mailto:{{ site.email }}">Contact</a></li>
+  {% endif %}
+
+  {% if site.github_username %}
+  <li><a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a></li>
+  {% endif %}
+
+  {% if site.twitter_username %}
+  <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+  {% endif %}
+</ul> -->
+
+<!-- {% if page.syntax %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
+{% endif %} -->
+
+<script src="{{ site.baseurl }}/assets/components/jquery/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+
+{% if site.google_analytics %}
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -31,3 +52,4 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
   </script>
+{% endif %}
