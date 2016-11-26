@@ -23,11 +23,6 @@ html {
 }
 
 body {
-  font-family: $font-family;
-  font-size: $fs;
-  line-height: $lh;
-  color: $body-color;
-  background-color: $body-bg;
   margin: 0;
 }
 
@@ -85,8 +80,6 @@ blockquote {
 }
 
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
   background-color: transparent;
 
   &:active,
@@ -94,11 +87,6 @@ a {
     outline-width: 0;
   }
 
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-  }
 
   &:focus {
     @include tab-focus();
@@ -277,7 +265,6 @@ table {
 caption {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  color: $text-muted;
   text-align: left;
   caption-side: bottom;
 }

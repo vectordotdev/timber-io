@@ -1,0 +1,57 @@
+.lumberjack-laptop {
+	margin: auto;
+	position: absolute;
+	top: 475px; left: 0; bottom: 0; right: 0;
+	width: 100%;
+	max-width: none;
+
+	@media only screen and (min-width: 320px) {
+		width: 300px;
+		margin-top: 60px;
+	}
+
+	@media only screen and (min-width: 375px) {
+		width: 400px;
+		margin-top: -10px;
+	}
+
+	@media only screen and (min-width: 500px) {
+		margin-top: -30px;
+		width: 450px;
+	}
+
+	@media only screen and (min-width: 600px) {
+		margin-top: -50px;
+		width: 520px;
+	}
+
+	@media only screen and (min-width: 671px) {
+		margin-top: -100px;
+		width: 540px;
+	}
+
+	@media only screen and (min-width: 800px) {
+		margin-top: -80px;
+		width: 590px;
+	}
+
+	@media only screen and (min-width: 900px) {
+		margin-top: -90px;
+		width: 610px;
+	}
+
+	@media only screen and (min-width: 1000px) {
+		margin-top: -100px;
+		width: 630px;
+	}
+
+	@media only screen and (min-width: 1050px) {
+		margin-top: -100px;
+		width: 700px;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		margin-top: -110px;
+		width: 786px;
+	}
+}

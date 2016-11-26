@@ -1,48 +1,33 @@
-<footer class="site-footer">
-
-  <div class="site-copy">&copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span></div>
-
-  <div class="site-links">
-    <div class="site-contact">
-      <ul>
-        {% if site.email %}
-        <li><a href="mailto:{{ site.email }}">Contact</a></li>
-        {% endif %}
-
-        {% if site.github_username %}
-        <li><a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a></li>
-        {% endif %}
-
-        {% if site.twitter_username %}
-        <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
-        {% endif %}
-      </ul>
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div class="col-xs footer__nav__links">
+        <img src="assets/img/Timber footer logo.png" alt="footer logo"/>
+        <a href="#features" class="footer__links">Features</a>
+        <a href="#pricing" class="footer__links">Pricing</a>
+        <a href="#about" class="footer__links">About</a>
+        <a href="mailto:hi@timber.io" class="footer__links">Contact</a>
+      </div>
+      <div class="row end-xs">
+        <div class="col-xs footer__logos">
+          <a href="https://www.linkedin.com/company/timber.io" target="_blank"><img src="assets/img/linkedin logo.gif" class="footer__logos__social-logo" alt="footer logo"></a>
+          <a href="https://www.facebook.com/timberdotio/" target="_blank"><img src="assets/img/facebook logo.gif" class="footer__logos__social-logo" alt="footer logo"/></a>
+          <a href="https://twitter.com/timberdotio" target="_blank"><img src="assets/img/twitter logo.gif" class="footer__logos__social-logo" alt="footer logo"/></a>
+        </div>
+      </div>
     </div>
-
-    <div class="site-source">
-      <ul>
-        <li><a target="_blank" href="https://github.com/{{ site.github_username }}/{{ site.github_source }}">Source</a></li>
-      </ul>
-    </div>
-  </div>
-
+  </nav>
 </footer>
-<!-- site-footer -->
 
-{% if page.syntax %}
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
-{% endif %}
+<script src="assets/components/jquery/jquery.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
 
-<script src="{{ site.baseurl }}/assets/js/main.js"></script>
-
-{% if site.google_analytics %}
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','{{ site.baseurl }}/assets/js/analytics.js','ga');
-
-  ga('create', '{{ site.google_analytics }}', 'auto');
-  ga('send', 'pageview');
-</script>
-{% endif %}
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
