@@ -1,27 +1,32 @@
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- Common metas -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% if page.title %}{{ page.title }} | {{ site.title }}
+      {% else %}{{ site.title }}{% endif %}
+    </title>
 
-  <title>
-  {% if page.title %}{{ page.title }} | {{ site.title }}
-  {% else %}{{ site.title }}{% endif %}
-  </title>
+    <!-- SEO metas -->
+    <meta name="description" content="{% if page.desc %}{{ page.desc }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.desc }}{% endif %}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- SEO metas -->
-  <meta name="description" content="{% if page.desc %}{{ page.desc }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.desc }}{% endif %}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Source+Sans+Pro:300,400,600/Montserrat:300,400,500">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Lora:400,400i,700" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-  <!-- CSS files -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <script src="{{ site.baseurl }}/assets/components/modernizr/modernizr.js"></script>
 
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/whk1cid.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>

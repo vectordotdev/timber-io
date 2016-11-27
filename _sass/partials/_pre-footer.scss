@@ -1,0 +1,149 @@
+.pre-footer {
+	position: relative;
+	background-color: #f7f6fb;
+	box-shadow: inset 0 -15px 4px -16px #111;
+
+	.top-dip {
+		width: 100%;
+	}
+
+	h1 {
+		text-align: center;
+		color: #271f4b;
+		font-size: 2.1rem;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.button-center {
+        text-align: center;
+    }
+
+    button {
+		display: inline-block;
+		white-space: nowrap;
+	}
+
+	button {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-bottom: 10px;
+		height: 40px;
+		border: none;
+		color: $white;
+		letter-spacing: 2px;
+		background-color: $purple;
+		border-radius: 30px;
+		outline: none;
+	}
+
+	button:hover {
+		color: $white;
+		background-color: #978AFF;
+	}
+
+	h6 {
+		color: #000;
+		font-size: .67rem;
+	}
+
+	.button h6 {
+		font-family: Montserrat, "Futura PT", Helvetica, sans-serif;
+		display: inline-block;
+		color: $white;
+		margin: 0px; 
+		font-weight: 100px;
+		letter-spacing: 3px;
+	}
+
+	p {
+		color: #000;
+		font-size: 1.1rem;
+		opacity: .7;
+		padding-bottom: 5px;
+	}
+
+	button:hover {
+		color: $white;
+	}
+}
+
+.pre-footer {
+	@media only screen and (min-width: 320px) {
+		padding-bottom: 150px;
+	}
+
+	@media only screen and (min-width: 400px) {
+		padding-bottom: 194px;
+	}
+
+	@media only screen and (min-width: 1000px) {
+		padding-bottom: 100px;
+	}
+}
+
+.lumberjack {
+	position: absolute;
+	right: 0;
+	margin-top: 40px;
+	max-width: 100%;
+
+	@media only screen and (min-width: 320px) {
+		margin-top: 376px;
+		width: 320px;
+	}
+
+	@media only screen and (min-width: 375px) {
+		margin-top: 359px;
+		width: 375px;
+	}
+
+	@media only screen and (min-width: 400px) {
+		margin-top: 399px;
+		width: 399px;
+	}
+
+	@media only screen and (min-width: 401px) {
+		margin-top: 394px;
+		width: 400px;
+	}
+
+	@media only screen and (min-width: 445px) {
+		margin-top: 395px;
+	}
+
+	@media only screen and (min-width: 455px) {
+		margin-top: 342px;
+		width: 400px;
+	}
+
+	@media only screen and (min-width: 475px) {
+		margin-top: 322px;
+		width: 460px;
+	}
+
+	@media only screen and (min-width: 559px) {
+		margin-top: 300px;
+		width: 530px;
+	}
+
+	@media only screen and (min-width: 585px) {
+		margin-top: 299px;
+		width: 530px;
+	}
+
+	@media only screen and (min-width: 601px) {
+		margin-top: 272px;
+	}
+
+	@media only screen and (min-width: 853px) {
+		margin-top: 219px;
+	}
+
+	@media only screen and (min-width: 1000px) {
+		margin-top: 96px;
+		width: 620px;
+	}
+}

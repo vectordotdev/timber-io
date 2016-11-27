@@ -43,13 +43,10 @@
 
   &:hover {
     text-decoration: none;
-    color: $link-color;
-    background-color: $brand-light-color;
   }
 
   &:focus,
   &:active {
-    background-color: $link-color;
     text-decoration: none;
     color: #fff;
   }
@@ -109,7 +106,6 @@
   margin: 4rem 0 6rem;
   padding-top: $spacer1;
   font-family: $font-heading;
-  border-top: 1px solid $brand-light-color;
 }
 
 .site-footer {
@@ -146,7 +142,6 @@
 
   &:not(:last-child)::after {
     content: '|';
-    color: $brand-light-color;
     margin: 0 .3rem 0 $spacer0;
   }
 }
