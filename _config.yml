@@ -38,7 +38,7 @@ paginate_path: "/blog/page:num"
 navigation:
 - title: Home
   url: "/"
-  desc: "Logging made better"
+  desc: Logging made better
 - title: Blog
   url: "/blog/"
   desc: Stuffs I write about
