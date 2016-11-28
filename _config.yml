@@ -42,7 +42,7 @@ navigation:
 - title: Pricing
   url: "/pricing/"
   desc: Different package deals
-- title: About 
+- title: About
   url: "/about/"
   desc: What Timber is about
 - title: Contact
@@ -58,7 +58,7 @@ footer:
 - title: Pricing
   url: "/pricing/"
   desc: Different package deals
-- title: About 
+- title: About
   url: "/about/"
   desc: What Timber is about
 - title: Contact
