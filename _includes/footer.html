@@ -2,11 +2,13 @@
   <div class="wrap">
     <div class="row">
       <div class="col-xs footer__nav__links">
+
         <img src="assets/img/Timber footer logo.png" alt="footer logo"/>
-        <a href="#features" class="footer__links">Features</a>
-        <a href="#pricing" class="footer__links">Pricing</a>
-        <a href="#about" class="footer__links">About</a>
-        <a href="mailto:hi@timber.io" class="footer__links">Contact</a>
+
+        {% for link in site.footer %} 
+          <a href="{{ link.url | prepend: site.baseurl }}" class="footer__links">{{link.title}}</a>
+        {% endfor %}
+
       </div>
       <div class="row end-xs">
         <div class="col-xs footer__logos">

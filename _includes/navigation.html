@@ -1,24 +1,33 @@
 <div class="wrap">
-  <nav class="header__nav row between-xs">
-    <div class="col-xs-2 header__nav__logo">
-      <a href="/" class="header__nav__logo">
+  <nav class="nav row between-xs">
+    <div class="col-xs-6 nav__logo">
+      <a href="/" class="nav__logo">
         <img src="assets/img/logo@2x.png" alt="logo"/>
       </a>
     </div>
-    <div class="col-med-2">
-      <div class="header__nav__links">
-        <a href="#features" class="header__nav__links__link">Features</a>
-        <a href="#pricing" class="header__nav__links__link">Pricing</a>
-        <a href="#about" class="header__nav__links__link">About</a>
-        <a href="#contact" class="header__nav__links__link header__nav__links__link--active">Contact</a>
-      </div>
+    <div class="col-xs-6">
+      <div class="row end-xs">
+        <div class="nav__links">
+          
+          {% for link in site.navigation %} 
+            {% assign active = nil %}
+            {% assign base_class = "nav__links__link" %}
 
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+            {% if page.url contains link.url %}
+              {% assign active = "nav__links__link--active" %}
+            {% endif %}
 
+            <a href="{{ link.url | prepend: site.baseurl }}" class="{{base_class | append: active }}">{{link.title}}</a>
+          {% endfor %}
+
+        </div>
+
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </nav>
 </div>
