@@ -87,63 +87,6 @@
 .lumberjack {
 	position: absolute;
 	right: 0;
-	margin-top: 40px;
+	bottom: -15px;
 	max-width: 100%;
-
-	@media only screen and (min-width: 320px) {
-		margin-top: 376px;
-		width: 320px;
-	}
-
-	@media only screen and (min-width: 375px) {
-		margin-top: 359px;
-		width: 375px;
-	}
-
-	@media only screen and (min-width: 400px) {
-		margin-top: 399px;
-		width: 399px;
-	}
-
-	@media only screen and (min-width: 401px) {
-		margin-top: 394px;
-		width: 400px;
-	}
-
-	@media only screen and (min-width: 445px) {
-		margin-top: 395px;
-	}
-
-	@media only screen and (min-width: 455px) {
-		margin-top: 342px;
-		width: 400px;
-	}
-
-	@media only screen and (min-width: 475px) {
-		margin-top: 322px;
-		width: 460px;
-	}
-
-	@media only screen and (min-width: 559px) {
-		margin-top: 300px;
-		width: 530px;
-	}
-
-	@media only screen and (min-width: 585px) {
-		margin-top: 299px;
-		width: 530px;
-	}
-
-	@media only screen and (min-width: 601px) {
-		margin-top: 272px;
-	}
-
-	@media only screen and (min-width: 853px) {
-		margin-top: 219px;
-	}
-
-	@media only screen and (min-width: 1000px) {
-		margin-top: 96px;
-		width: 620px;
-	}
 }
