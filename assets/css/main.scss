@@ -8,13 +8,10 @@
 
 @import "reboot";           // Opinionated reboot/normalize/reset css
 
-@import "grid";             // A small grid css (no flex)
 @import "text";             // The type related css
 
 @import "site";             // Styles specific to the site architecture
 @import "page";             // Styles specific to the pages
-
-//Freyja (copied over from)
 
 //----------------------------------*\
 // SCSS MIXINS
@@ -35,20 +32,6 @@
 // PARTIALS
 //----------------------------------*/
 
-@import 'partials/_header.scss';
-@import 'partials/_lumberjack-laptop.scss';
-@import 'partials/_main.scss';
-@import 'partials/_features.scss';
-@import 'partials/_demo.scss';
-@import 'partials/_footer.scss';
-@import 'partials/_log-conversion.scss';
-@import 'partials/_installation.scss';
-@import 'partials/_logos.scss';
-@import 'partials/_pricing.scss';
-@import 'partials/_faq.scss';
-@import 'partials/_pre-footer.scss';
-@import 'partials/_title.scss';
-@import 'partials/_section borders.scss';
 @import 'partials/_nav.scss';
 
 //----------------------------------*\
@@ -57,18 +40,14 @@
 
 @import 'modules/_buttons.scss';
 
-@import 'modules/_typography.scss';
-@import 'modules/_misc.scss';
-@import 'modules/_app.scss';
+//----------------------------------*\
+// VENDOR
+//----------------------------------*/
 
-// Enhancement modules
-@import 'modules/_breakpoints.scss';
-@import 'modules/_print.scss';
+@import "vendor/tachyons/tachyons";
 
 //----------------------------------*\
 // VENDOR
 //----------------------------------*/
 
-@import 'vendor/_flexbox.scss';
-@import '_globals.scss';
-
+@import "overrides";

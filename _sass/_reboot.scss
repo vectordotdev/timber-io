@@ -86,11 +86,6 @@ a {
   &:hover {
     outline-width: 0;
   }
-
-
-  &:focus {
-    @include tab-focus();
-  }
 }
 
 a:not([href]):not([tabindex]) {

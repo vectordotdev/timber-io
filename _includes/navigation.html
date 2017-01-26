@@ -1,33 +1,17 @@
-<div class="wrap">
-  <nav class="nav row between-xs">
-    <div class="col-xs-6 nav__logo">
-      <a href="/" class="nav__logo">
-        <img src="assets/img/logo@2x.png" alt="logo"/>
-      </a>
-    </div>
-    <div class="col-xs-6">
-      <div class="row end-xs">
-        <div class="nav__links">
-          
-          {% for link in site.navigation %} 
-            {% assign active = nil %}
-            {% assign base_class = "nav__links__link" %}
+<nav class="db dt-l w-100 border-box pa3 ph5-l bg-purple">
+  <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="/" title="Home">
+    <img src="assets/img/logo@2x.png" class="dib w5" alt="Timber.io | Logging Made Useful">
+  </a>
+  <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+    {% for link in site.navigation %} 
+      {% assign active = nil %}
+      {% assign base_class = "link dim dark-gray f6 f5-l dib mr3 mr4-l" %}
 
-            {% if page.url contains link.url %}
-              {% assign active = "nav__links__link--active" %}
-            {% endif %}
+      {% if page.url contains link.url %}
+        {% assign active = "nav__links__link--active" %}
+      {% endif %}
 
-            <a href="{{ link.url | prepend: site.baseurl }}" class="{{base_class | append: active }}">{{link.title}}</a>
-          {% endfor %}
-
-        </div>
-
-        <div class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </nav>
-</div>
+      <a href="{{ link.url | prepend: site.baseurl }}" class="{{base_class | append: active }}" title="{{link.title}}">{{link.title}}</a>
+    {% endfor %}
+  </div>
+</nav>
