@@ -1,6 +1,10 @@
 .home__hero {
-  background-image: url("/assets/img/background_triangles.png");
+  background-image: url("/assets/img/background_triangles.png"), linear-gradient(#130F21, #22213F);
   background-size: 100%, cover;
 	background-repeat: no-repeat;
 	background-position: bottom;
+}
+
+.home__hero__lumberjack {
+  background-image: url("/assets/img/lumberjack.png");
 }

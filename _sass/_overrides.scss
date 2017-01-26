@@ -3,3 +3,9 @@
 .w5 {
   width: 5rem;
 }
+
+@media #{$breakpoint-large} {
+  .bottom--50-l {
+    bottom: -50%;
+  }
+}
