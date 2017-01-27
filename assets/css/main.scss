@@ -17,20 +17,12 @@
 // SCSS MIXINS
 //----------------------------------*/
 
-@import 'mixins/_position.scss';
-
-//----------------------------------*\
-// CONFIG MODULES
-//----------------------------------*/
-
-@import 'modules/_defaults.scss';
-
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
 
-@import 'partials/_nav.scss';
 @import 'partials/_section-borders.scss';
+@import 'partials/home/_how-it-works.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES

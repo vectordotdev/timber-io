@@ -18,7 +18,6 @@ $(function () {
   var $demoCarousel = $(".home__demo__carousel__content").slick({
     infinite: true,
     slidesToShow: 1,
-    centerMode: true,
     autoplay: true,
     autoplaySpeed: 5000,
     nextArrow: "",
