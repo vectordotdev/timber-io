@@ -40,15 +40,16 @@ navigation:
 - title: Features
   url: "/features/"
   desc: Logging made better
+- title: Frameworks
+  url: "/frameworks/"
+- title: Languages
+  url: "/languages/"
 - title: Pricing
   url: "/pricing/"
   desc: Different package deals
 - title: About
   url: "/about/"
   desc: What Timber is about
-- title: Contact
-  url: "/contact/"
-  desc: How to reach us
 - title: Blog
   url: "/blog/"
   desc: Timber community posts

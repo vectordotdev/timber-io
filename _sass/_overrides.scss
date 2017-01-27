@@ -17,3 +17,15 @@
     bottom: -50%;
   }
 }
+
+.skew-30 {
+  transform: skew(30deg);
+}
+
+.skew--30 {
+  transform: skew(-30deg);
+}
+
+.outline-none {
+  outline: none !important;
+}

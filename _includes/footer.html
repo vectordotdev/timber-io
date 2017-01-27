@@ -37,13 +37,20 @@
   {% endif %}
 </ul> -->
 
-<!-- {% if page.syntax %}
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
-{% endif %} -->
+{% if page.syntax %}
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
+{% endif %} 
 
-<script src="{{ site.baseurl }}/assets/components/jquery/jquery.min.js"></script>
+<!-- Slim version of jQuery 3.0 -->
+<script src="https://code.jquery.com/jquery-3.0.0.slim.min.js"></script>
+
+<!-- Slick Carousel -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<!-- Custom JS -->
 <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 
+<!-- Google Analytics -->
 {% if site.google_analytics %}
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

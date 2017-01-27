@@ -23,16 +23,14 @@
 // CONFIG MODULES
 //----------------------------------*/
 
-@import 'modules/_vars.scss';
-@import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
-@import 'modules/_normalize.scss';
 
 //----------------------------------*\
 // PARTIALS
 //----------------------------------*/
 
 @import 'partials/_nav.scss';
+@import 'partials/_section-borders.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES
