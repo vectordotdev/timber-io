@@ -4,6 +4,14 @@
   width: 5rem;
 }
 
+.w6 {
+  width: 6rem;
+}
+
+.w7 {
+  width: 7rem;
+}
+
 @media #{$breakpoint-large} {
   .bottom--50-l {
     bottom: -50%;

@@ -1,0 +1,12 @@
+<section class="home__features mt5 mw9-l center" id="features">
+  <h1 class="tc p2 ttu black fw6 f2 mt1 tk-futura-pt">Features</h1>
+  <div class="flex flex-wrap justify-center">
+    {% for feature in site.features %} 
+      <div class="fl w-50 w-33-m pa4-m w-25-l pa3 pb3-l pt3-l pa4-l tc mb3">
+        <img src="assets/img/{{feature.image}}.png" alt="{{feature.title}}" class="w-75 black-10"/>
+        <h4 class="f4 black tk-futura-pt mt3 mb3">{{feature.title}}</h4>
+        <p class="tk-source-sans-pro f6 black-50 ma0">{{feature.desc}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
