@@ -1,28 +1,28 @@
-<section class="home__pricing pa4 bg-snuff" id="customers">
-  <div class="mw9-l center">
-    <h1 class="tc p2 ttu black o-80 fw6 f2 mt1 mb1 tracked tk-futura-pt">Pricing</h1>
+<section class="home__pricing bg-snuff" id="customers">
+  <div class="mw9-l center pa4">
+    <h1 class="tc p2 ttu black o-80 fw6 f2 m4 tracked tk-futura-pt">Pricing</h1>
     <div class="flex flex-wrap justify-around tc">
-      <div class="w-100 w-50-m pa4 w-25-l">
-        <div class="bg-white pt4 br2">
-          <img class="mh4 mw4"src="assets/img/free-plan.png" alt="tree graphic">
-          <h4 class="tk-futura-pt ttu black">Personal</h4>
-          <p class="light-purple tk-futura-pt fw6">
-            <span class="f2">$49</span>
-             / month
-          </p>
-          <a class="f6 br-pill fw6 light-purple b--light-purple ba ttu tk-source-sans-pro no-underline grow pv2 ph4 dib">
-            Sign Up
-          </a>
-          <div class="bg-midnight br--bottom br2 white pa3 mt4">
-            <h6 class="tk-futura-pro ttu fw6 f6 ma3 tracked">Features</h6>
-            <div class="b--light-purple bb center mw3 mb3"></div>
-            <p class="tk-source-sans-pro fw4 f6">15GB / month</p>
+      {% for plan in site.billing_plans %} 
+        <div class="w-100 w-50-m pa4 w-25-l">
+          <div class="bg-white pt4 br2">
+            <img class="mh4 mw4" src="assets/img/{{plan.image}}.png" alt="{{plan.name}}">
+            <h4 class="tk-futura-pt ttu black">{{plan.name}}</h4>
+            <p class="light-purple tk-futura-pt fw6">
+              <span class="f2">${{plan.price}}</span>
+              / month
+            </p>
+            <a class="f6 br-pill fw6 light-purple b--light-purple ba ttu tk-source-sans-pro no-underline grow pv2 ph4 dib">
+              Sign Up
+            </a>
+            <div class="bg-gore br--bottom br2 white pa3 mt4">
+              <h6 class="tk-futura-pro ttu fw6 f6 ma3 tracked">Features</h6>
+              <div class="b--light-purple bb center mw3 mb3"></div>
+              <p class="tk-source-sans-pro fw4 f6">{{plan.data}}GB / month</p>
+            </div>
           </div>
         </div>
-      </div>
+      {% endfor %}
+    </div>
   </div>
+  <div id="pricing-bottom"></div>
 </section>
-<!--
-<img class="w-50 w-33-m pa4 w-25-l h4 w4"src="assets/img/personal.png" alt="axe graphic">
-<img class="w-50 w-33-m pa4 w-25-l h4 w4"src="assets/img/team.png" alt="hot chocolate graphic">
-<img class="w-50 w-33-m pa4 w-25-l h4 w4"src="assets/img/enterprise.png" alt="saw graphic">-->
