@@ -1,0 +1,31 @@
+// Overrides for tachyons classes
+
+.w5 {
+  width: 5rem;
+}
+
+.w6 {
+  width: 6rem;
+}
+
+.w7 {
+  width: 7rem;
+}
+
+@media #{$breakpoint-large} {
+  .bottom--50-l {
+    bottom: -50%;
+  }
+}
+
+.skew-30 {
+  transform: skew(30deg);
+}
+
+.skew--30 {
+  transform: skew(-30deg);
+}
+
+.outline-none {
+  outline: none !important;
+}

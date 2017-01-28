@@ -2,101 +2,37 @@
 layout: default
 ---
 
-<header class="header" role="banner">
+<!-- Hero Section -->
+{% include home/hero.html %}
 
-  <div class="title">
-    <div class="wrap">
-      <div class="row center-xs">
-        <div class="col-xs">
-          <h1>MAKE LOGGING GREAT AGAIN</h1>
-          <p>Sign up for superquick logging on Ruby on Rails, Node, Elixir & Go</p>
-        </div>
-      </div>
-      <div class="row center-xs ">
-        <div class="col-xs-6">
-          <div class="row end-xs">
-            <div class="col-xs">
-              <a href="#sign up">
-                <button class="button"><h6>SIGN UP</h6></button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="row start-xs">
-            <div class="col-xs">
-              <a href="#watch video">
-                <img src="assets/img/watch video.png"/>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="header-triangles">
-      </div>
-    </div>
-  </div>
-  <img class="lumberjack-laptop" src="assets/img/lumberjack.png"/>
-</header>
+<main class="main pt7-l pt7-m pt-0" role="main">
+  <!-- Features Section -->
+  {% include home/features.html %}
 
-<main class="main" role="main">
-  <div class="features" id="features">
-    <div class="wrap">
-      <div class="row center-xs">
-        <div class="col-xs-6">
-          <h2>FEATURES</h2>
-        </div>
-      </div>
-      <div class="row center-xs">
-        <div class="col-xs">
-          <img src="assets/img/dashboard.png"/>
-          <h4>MODERN DASHBOARD</h4>
-          <p>Our lightning fast and flexible dashboard allows you to search through your logs with ease</p>
-        </div>
-        <div class="col-xs">
-          <img src="assets/img/realtime.png"/>
-          <h4>REAL-TIME TAILING</h4>
-          <p>All logs are pushed to your dashboard in real-time, no batched updates, pure speed.</p>
-        </div>
-        <div class="col-xs">
-          <div class="features__img--center">
-            <img src="assets/img/search.png"/>
-          </div>
-          <h4>FAST SEARCHING & FILTERING</h4>
-          <p>We allow you to search and filter logs by user, resource, request type, or any other context you can think of.</p>
-        </div>
-        <div class="col-xs">
-          <div class="features__img--center">
-            <img src="assets/img/logs.png"/>
-          </div>
-          <h4>CLICKABLE LOGS</h4>
-          <p>Since we intelligently parse your logs, we can identify important chunks and let you click between them. Mind blown.</p>
-        </div>
-      </div>
-      <div class="row center-xs second-line">
-        <div class="col-xs paragraph-tighten">
-          <img src="assets/img/retention.png"/>
-          <h4>6 MONTH RETENTION</h4>
-          <p>Most services keep your logs for 2 weeks, we start out with 6 month retention by default at no extra charge.</p>
-        </div>
-        <div class="col-xs paragraph-tighten">
-          <img src="assets/img/trending.png"/>
-          <h4>TRENDING EVENTS</h4>
-          <p>Easily identify outliers, memory spikes and trending events with our advanced facets and graphs.</p>
-        </div>
-        <div class="col-xs paragraph-tighten">
-          <div class="features__img--center">
-            <img src="assets/img/install.png"/>
-          </div>
-          <h4>1 CLICK HEROKU INSTALL</h4>
-          <p>Just install our package and logs will automatically be parsed and sent to your dashboard, no configuration necessary.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Demo Section-->
+  {% include home/demo.html %}
 
+  <!-- How It Works -->
+  {% include home/how-it-works.html %}
 
-  <div class="wrap">
+  <!-- Installation -->
+  {% include home/installation.html %}
+
+  <!-- Customers -->
+  {% include home/customers.html %}
+
+  <!-- Pricing -->
+  {% include home/pricing.html %}
+
+  <!-- FAQ -->
+  {% include home/faq.html %}
+
+  <!-- Stats -->
+  {% include home/stats.html %}
+</main>
+
+<script src="{{ site.baseurl }}/assets/js/animation.js"></script>
+  <!--<div class="wrap">
     <div id="background-waves">
     </div>
   </div>
@@ -423,4 +359,4 @@ layout: default
 </main>
 
 
-
+-->
