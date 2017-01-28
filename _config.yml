@@ -35,7 +35,6 @@ github_source: jackal
 google_analytics: UA-XXXXXXXX-X
 paginate: 5
 paginate_path: "/blog/page:num"
-
 navigation:
 - title: Features
   url: "/features/"
@@ -53,30 +52,35 @@ navigation:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
-
 features:
 - title: Modern Dashboard
   image: dashboard
-  desc: Our lightning fas and flexible dashboard allows you to search through your logs with ease.
+  desc: Our lightning fas and flexible dashboard allows you to search through your
+    logs with ease.
 - title: Real-Time Tailing
   image: realtime
-  desc: All logs are pushed to your dashboard in real-time, no batched updates, pure speed.
+  desc: All logs are pushed to your dashboard in real-time, no batched updates, pure
+    speed.
 - title: Fast Searching & Filtering
   image: search
-  desc: We allow you to search and filter logs by user, resource, request type, or any other context you can think of.
+  desc: We allow you to search and filter logs by user, resource, request type, or
+    any other context you can think of.
 - title: Clickable Logs
   image: logs
-  desc: Since we intelligently parse your logs, we can identify important chunks and let you click between them. Mind blown.
+  desc: Since we intelligently parse your logs, we can identify important chunks and
+    let you click between them. Mind blown.
 - title: 6 Month Retention
   image: retention
-  desc: Most services keep your logs for 2 weeks, we start out with 6 month retention by default at no extra charge.
+  desc: Most services keep your logs for 2 weeks, we start out with 6 month retention
+    by default at no extra charge.
 - title: Trending Events
   image: trending
-  desc: Easily identify outliers, memory spikes and trending events with our advanced facets and graphs.
+  desc: Easily identify outliers, memory spikes and trending events with our advanced
+    facets and graphs.
 - title: 1 Click Heroku Install
   image: install
-  desc: Just install our package and logs will automatically be parsed and sent to your dashboard, no configuration necessary.
-
+  desc: Just install our package and logs will automatically be parsed and sent to
+    your dashboard, no configuration necessary.
 footer:
 - title: Features
   url: "/features/"
@@ -93,7 +97,6 @@ footer:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
-
 markdown: kramdown
 kramdown:
   input: GFM
