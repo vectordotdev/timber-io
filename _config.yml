@@ -35,6 +35,7 @@ github_source: jackal
 google_analytics: UA-XXXXXXXX-X
 paginate: 5
 paginate_path: "/blog/page:num"
+
 navigation:
 - title: Features
   url: "/features/"
@@ -52,6 +53,7 @@ navigation:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
+
 features:
 - title: Modern Dashboard
   image: dashboard
@@ -81,6 +83,25 @@ features:
   image: install
   desc: Just install our package and logs will automatically be parsed and sent to
     your dashboard, no configuration necessary.
+
+billing_plans:
+- name: Free
+  image: free-plan
+  price: 0
+  data: 5
+- name: Personal
+  image: personal-plan
+  price: 49
+  data: 10
+- name: Team
+  image: team-plan
+  price: 99
+  data: 15
+- name: Enterprise
+  image: enterprise-plan
+  price: 299
+  data: 100+
+
 footer:
 - title: Features
   url: "/features/"
@@ -97,6 +118,7 @@ footer:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
+
 markdown: kramdown
 kramdown:
   input: GFM
