@@ -33,3 +33,30 @@
 .outline-none {
   outline: none !important;
 }
+
+blockquote {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-color: #357edd;
+  border-width: .25rem;
+  font-family: athelas, georgia, serif;
+  font-style: normal;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, .9);
+  padding: 2rem;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  blockquote {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  blockquote {
+    font-size: 1.5rem;
+  }
+}
+
