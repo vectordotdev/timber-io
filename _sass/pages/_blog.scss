@@ -1,0 +1,17 @@
+.blog__hero {
+  background-size: cover;
+  background: url("/assets/img/blog-header.png"), linear-gradient(#130F21, #22213F);
+	background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 50vh;
+  
+  @media only screen and (max-width: 900px) {
+    background-position: bottom right;
+	}
+
+  @media only screen and (max-width: 500px) {
+    background-position: bottom right;
+    background: linear-gradient(#130F21, #22213F);
+    height: auto;
+	}
+}

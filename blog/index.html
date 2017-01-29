@@ -1,9 +1,18 @@
 ---
 title: Blog
 layout: page
-subtitle: Blog Posts
 desc: Stuffs I write about
 ---
+
+<header class="blog__hero header relative" role="banner">
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro"> 
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked tl">Blog Posts</h1>
+    <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tl mw6">
+      A collection of thoughtfully crafted blog posts from the Timber team on technology,
+      programming, server architecture, business and design.
+    </p>
+  </div>
+</header>
 
 {% if paginator.page == 1 %}
   {% for post in site.posts limit: 2 %}
@@ -11,19 +20,18 @@ desc: Stuffs I write about
   {% endfor %}
 {% endif %}
 
-<section class="mw7 center avenir">
-  <ul class="post-list">
+<section class="mw8 center avenir">
+  <ul class="post-list ph3-ns pa0 mt4-ns mt2">
     {% for post in paginator.posts %}
     <article class="bb b--black-10">
       <a href="{{ post.url | prepend: site.baseurl }}" class="db pv4 ph3 ph0-l no-underline black dim" href="#0">
         <div class="flex flex-column flex-row-ns">
           <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-            <img src="http://mrmrs.io/photos/whale.jpg" class="db" alt="Photo of a whale's tale coming crashing out of the water.">
+            <img src="{{ post.image }}" class="db" alt="Photo of a whale's tale coming crashing out of the water.">
           </div>
           <div class="w-100 w-60-ns pl3-ns">
-            <h1 class="f3 fw1 baskerville mt0 lh-title">{{post.title}}</h1>
+            <h1 class="f3 fw6 tk-futura-pt mt0 lh-title pr5">{{post.title}}</h1>
             <time class="post-date" datetime="{{ post.date }}">
-            <p>{{post.author}}</p>
             {% assign d = post.date | date: "%-d" %}
             {% assign m = post.date | date: "%B" %}
             {% case m %}
@@ -35,8 +43,8 @@ desc: Stuffs I write about
               {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
             {{ post.date | date: "%Y" }}
             </time>
-            <p class="post-desc f6 f5-l lh-copy">{% if post.desc %}{{ post.desc }}{% else %}{{ post.excerpt }}{% endif %}</p>
-            <p class="f6 lh-copy mv0">{{post.author}}</p>
+            <p class="post-desc tk-source-code-pro f6 f5-l lh-copy mt3">{% if post.desc %}{{ post.desc }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
+            <p class="post-desc tk-source-code-pro f6 f5-l">Posted by {{post.author}}</p>
           </div>
         </div>
       </a>
