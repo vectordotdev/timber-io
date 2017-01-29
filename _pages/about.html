@@ -5,22 +5,24 @@ layout: page
 desc: About me.
 ---
 
-<header class="about__hero header bg-dark-purple relative" role="banner">
-  <article class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw9-l">
-    <h1 class="fw6 f4 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">
-      About Us
-    </h1>
-    <h2 class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked mw6 center">
-      We're a small team trying to change the way that developers use logs.
-      In the wild west of microservice based architectures, Timber structures
-      your data and adds the context you need to solve problems fast.
-    </h2>
-  </article>
-</header>
+<div class="about">
+  <header class="about__hero header bg-dark-purple relative" role="banner">
+    <article class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw9-l">
+      <h1 class="fw6 f4 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">
+        About Us
+      </h1>
+      <h2 class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked mw6 center">
+        We're a small team trying to change the way that developers use logs.
+        In the wild west of microservice based architectures, Timber structures
+        your data and adds the context you need to solve problems fast.
+      </h2>
+    </article>
+  </header>
 
-{% include about/investors.html %}
+  {% include about/investors.html %}
 
-{% include about/team.html %}
+  {% include about/team.html %}
+</div>
 
 <!--
 {::nomarkdown} 
