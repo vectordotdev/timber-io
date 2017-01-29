@@ -4,5 +4,39 @@ permalink: "/pricing/"
 layout: page
 desc: Pricing.
 ---
+<header class="pricing__hero header relative" role="banner">
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw8-l tk-source-sans-pro"> 
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">Pricing</h1>
+    <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
+      The best pricing in the industry, we only charge you for the number of messages sent, not the size of the payload.
+    </p>
+  </div>
+</header>
 
-{% include home/pricing.html %}
+<!-- This should be dryed up -->
+<section class="home__pricing bg-snuff" id="customers">
+  <div class="mw9-l center pa4">
+    <div class="flex flex-wrap justify-around tc">
+      {% for plan in site.billing_plans %} 
+        <div class="w-100 w-50-m pa4 w-25-l">
+          <div class="bg-white pt4 br2">
+            <img class="mh4 mw4" src="/assets/img/{{plan.image}}.png" alt="{{plan.name}}">
+            <h4 class="tk-futura-pt ttu black">{{plan.name}}</h4>
+            <p class="light-purple tk-futura-pt fw6">
+              <span class="f2">${{plan.price}}</span>
+              / month
+            </p>
+            <a class="f6 br-pill fw6 light-purple b--light-purple ba ttu tk-source-sans-pro no-underline grow pv2 ph4 dib">
+              Sign Up
+            </a>
+            <div class="bg-gore br--bottom br2 white pa3 mt4">
+              <h6 class="tk-futura-pro ttu fw6 f6 ma3 tracked">Features</h6>
+              <div class="b--light-purple bb center mw3 mb3"></div>
+              <p class="tk-source-sans-pro fw4 f6">{{plan.data}}GB / month</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
