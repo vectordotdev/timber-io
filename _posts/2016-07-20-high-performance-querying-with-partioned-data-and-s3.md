@@ -10,20 +10,18 @@ author: Ben Johnson
 
 Lorem markdownum; et duobus variarum pecudis tenus cerno nos. Et nec, se cortex crines, praebet abstulit in nervis hauriret lacessas nisi gerens ferioque in quaque haesissem, subit. [Dolore](http://et-autem.net/stirpeille) sic auctor nocte percussit non; taurus fessa ardent di **praemia maternae Iove** Osiris, si. Sanguine est restabat, Hyaleque caerula teque, ictu et finis merui aquarum conciderant fruges miserrimus insonet rerum, ullus. Notavit rege, litoreo; ipse teque!
 
-{% highlight ruby %}
-    # Program to find the factorial of a number
-    # Save this as fact.rb
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="c1"># Program to find the factorial of a number</span>
+    <span class="c1"># Save this as fact.rb</span>
 
-    def fact(n)
-    if n == 0
-        1
-    else
-        n \\* fact(n-1)
-    end
-    end
+    <span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="mi">1</span>
+    <span class="k">else</span>
+        <span class="n">n</span> <span class="p">\\</span><span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="k">end</span>
 
-    puts fact(ARGV[0].to_i)
-{% endhighlight %}
+    <span class="nb">puts</span> <span class="n">fact</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">to_i</span><span class="p">)</span></code></pre></figure>
 
 Iuro sustinet: dum felix dulcedine flavum caeli; murmure maior. Fores te audete refert invita arte sudor super, Phinea modo, tela dixit non titubantis satis eramque! Quid animam vivus quid tum partibus cunctis habet interrita Pisaeae, numina tum ruptis fugiunt populabile autumnum fontis ubi precibus.
 
@@ -31,7 +29,7 @@ Iuro sustinet: dum felix dulcedine flavum caeli; murmure maior. Fores te audete 
 
 Casus interrita, laborum, coniuge amor totiens, margine orbus, in quo devolvunt moenia. Notus et Neleius calamos ademptam sitim ortus. [Quidem praeceps](http://vocoin.com/nos), cum censuque tanta fidissime, quae post secum, ad nostri. Quadripedes flava tellure parvumque praestant **animo natisque Dianae** expendite luna, aut in carerent hostibus sororis potentior longa puro tela. Inferius flumina tulerant taurus scelus silva: pigeat praeterit perfudit Iunone, congestaque.
 
-![](/uploads/versions/blog-post---x----1600-3228x---.png)
+&nbsp;
 
 * Sororum artificem inductum
 * Grande tradunt celebrabere aut semina vulnere caeli
