@@ -151,7 +151,7 @@ footer:
   url: "/about/"
   desc: What Timber is about
 - title: Contact
-  url: "/contact/"
+  url: "mailto://hi@timber.io"
   desc: How to reach us
 - title: Blog
   url: "/blog/"
