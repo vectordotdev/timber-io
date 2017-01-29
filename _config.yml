@@ -39,10 +39,6 @@ navigation:
 - title: Features
   url: "/features/"
   desc: Logging made better
-# - title: Frameworks
-#   url: "/frameworks/"
-# - title: Languages
-#   url: "/languages/"
 - title: Pricing
   url: "/pricing/"
   desc: Different package deals
@@ -52,7 +48,6 @@ navigation:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
-
 features:
 - title: Modern Dashboard
   image: dashboard
@@ -82,7 +77,6 @@ features:
   image: install
   desc: Just install our package and logs will automatically be parsed and sent to
     your dashboard, no configuration necessary.
-
 billing_plans:
 - name: Free
   image: free-plan
@@ -100,7 +94,6 @@ billing_plans:
   image: enterprise-plan
   price: 299
   data: 100+
-
 faqs:
 - title: A question about Timber
   desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -126,7 +119,6 @@ faqs:
   desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
 team:
 - name: Zach Sherman
   image: zach
@@ -148,7 +140,6 @@ team:
   image: bronson
   role: Lumberjack
   desc: Person of interest with a longer description about them that goes here.
-
 footer:
 - title: Features
   url: "/features/"
@@ -165,7 +156,6 @@ footer:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
-
 markdown: kramdown
 kramdown:
   input: GFM
