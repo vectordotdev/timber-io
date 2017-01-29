@@ -1,0 +1,10 @@
+.about__hero {
+  background-image: url("/assets/img/about.png"), linear-gradient(#130F21, #22213F);
+  background-size: cover;
+	background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media only screen and (max-width: 800px) {
+		background-position: bottom center;
+	}
+}
