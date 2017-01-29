@@ -8,9 +8,14 @@ author: Ben Johnson
 
 ## Mersaeque diversa quoque utque cum et
 
-```
-Lorem markdownum; et duobus variarum pecudis tenus cerno nos. Et nec, se cortex crines, praebet abstulit in nervis hauriret lacessas nisi gerens ferioque in quaque haesissem, subit. [Dolore](http://et-autem.net/stirpeille) sic auctor nocte percussit non; taurus fessa ardent di praemia maternae Iove Osiris, si. Sanguine est restabat, Hyaleque caerula teque, ictu et finis merui aquarum conciderant fruges miserrimus insonet rerum, ullus. Notavit rege, litoreo; ipse teque!
-```
+> Lorem markdownum; et duobus variarum pecudis tenus cerno nos.
+> <br>Et nec, se cortex crines, praebet abstulit in nervis
+> <br>hauriret lacessas nisi gerens ferioque in quaque haesissem,
+> <br>subit. [Dolore](http://et-autem.net/stirpeille) sic auctor nocte percussit non; taurus fessa ardent
+> <br>di praemia maternae Iove Osiris, si.
+> <br>Sanguine est restabat, Hyaleque caerula teque, ictu et
+> <br>finis merui aquarum conciderant fruges miserrimus insonet rerum, ullus. Notavit rege
+> <br>litoreo; ipse teque!
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="c1"># Program to find the factorial of a number</span>
     <span class="c1"># Save this as fact.rb</span>
