@@ -2,11 +2,9 @@
 layout: default
 ---
 
-<div>
-{% if page.image %}
 <header class="post__hero header relative" role="banner">
-  <div class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw9-l tk-source-sans-pro"> 
-    <h1 class="fw6 f4 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">{{ page.title }}</h1>
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw8-l tk-source-sans-pro"> 
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">{{ page.title }}</h1>
     <time class="post-date" datetime="{{ page.date }}">
     {% assign d = page.date | date: "%-d" %}
     {% assign m = page.date | date: "%B" %}
@@ -22,11 +20,12 @@ layout: default
     <span class="ph2"> | </span><span>{{ page.author }}</span>
   </div>
 </header>
-{% endif %}
 
-<article class="post pa3 pa5-ns mw8 center">
-  <div class="post-content pretty-links">
-  <div class="post-content pretty-links">
-    {{ content }}
-  </div>
-</article>
+<div class="post tk-source-sans-pro lh-copy">
+  <article class="post-article pa3 pa4-ns ph6-l mw8 center">
+    <div class="post-content pretty-links">
+    <div class="post-content pretty-links">
+      {{ content }}
+    </div>
+  </article>
+</div>
