@@ -5,7 +5,18 @@
   background-position: 50% 50%;
   height: 120vh;
 
-  @media only screen and (max-width: 800px) {
-		background-position: bottom center;
+  @media only screen and (max-width: 1230px) {
+    height: 100vh;
+    background-position: 50% 0px;
+	}
+
+  @media only screen and (max-width: 950px) {
+    height: 100vh;
+    background-position: 50% 50px;
+	}
+
+  @media only screen and (max-width: 850px) {
+    height: 100vh;
+    background-position: 50% 60px;
 	}
 }
