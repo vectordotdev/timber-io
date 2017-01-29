@@ -85,6 +85,7 @@ blockquote {
 
 a {
   background-color: transparent;
+  outline: none !important;
 
   &:active,
   &:hover {

@@ -5,27 +5,23 @@ layout: page
 desc: About me.
 ---
 
-<header class="about__hero header bg-dark-purple vh-100 relative" role="banner">
+<header class="about__hero header bg-dark-purple relative" role="banner">
   <article class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw9-l">
     <h1 class="fw6 f4 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">
-      Make logging useful again.
+      About Us
     </h1>
-    <h2 class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked">
-      Complete insight into your applications with context and structured logs.
+    <h2 class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked mw6 center">
+      We're a small team trying to change the way that developers use logs.
+      In the wild west of microservice based architectures, Timber structures
+      your data and adds the context you need to solve problems fast.
     </h2>
-    <div class="mt4">
-      <a class="f6 br-pill white bg-light-purple ttu tk-source-sans-pro no-underline grow pv3 ph4 dib mr3 tracked"
-        href="#">
-        Sign Up
-      </a>
-      <a class="f6 br-pill white no-underline ba grow pv3 ph4 tk-source-sans-pro dib mr3 bottom tracked"
-        href="#">
-        Learn More
-      </a>
-    </div>
   </article>
-  <div class="absolute relative-ns bg-bottom bottom--2 bottom-2-ns contain h-100 w-100 about__hero__lumberjack" />
 </header>
+
+{% include about/investors.html %}
+
+{% include about/team.html %}
+
 <!--
 {::nomarkdown} 
 <figure class="site-profile">
