@@ -39,6 +39,16 @@ $(function () {
   // Make the first button active
   $('.home__demo__carousel__nav button').first().click();
 
+  // Homepage video button
+  $('.popup-youtube').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
+
   
 });
 
