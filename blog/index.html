@@ -1,7 +1,7 @@
 ---
 title: Blog
 layout: page
-subtitle: Stuffs I write about
+subtitle: Blog Posts
 desc: Stuffs I write about
 ---
 
@@ -11,28 +11,39 @@ desc: Stuffs I write about
   {% endfor %}
 {% endif %}
 
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li class="post">
-    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-      <h4 class="post-title">{{ post.title }}</h4>
-      <time class="post-date" datetime="{{ post.date }}">
-      {% assign d = post.date | date: "%-d" %}
-      {% assign m = post.date | date: "%B" %}
-      {% case m %}
-        {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-        {% when 'September' %}Sept.
-        {% else %}{{ post.date | date: "%b" }}.
-        {% endcase %}
-      {% case d %}
-        {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
-      {{ post.date | date: "%Y" }}
-      </time>
-      <p class="post-desc">{% if post.desc %}{{ post.desc }}{% else %}{{ post.excerpt }}{% endif %}</p>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<section class="mw7 center avenir">
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+    <article class="bb b--black-10">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="db pv4 ph3 ph0-l no-underline black dim" href="#0">
+        <div class="flex flex-column flex-row-ns">
+          <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+            <img src="http://mrmrs.io/photos/whale.jpg" class="db" alt="Photo of a whale's tale coming crashing out of the water.">
+          </div>
+          <div class="w-100 w-60-ns pl3-ns">
+            <h1 class="f3 fw1 baskerville mt0 lh-title">{{post.title}}</h1>
+            <time class="post-date" datetime="{{ post.date }}">
+            <p>{{post.author}}</p>
+            {% assign d = post.date | date: "%-d" %}
+            {% assign m = post.date | date: "%B" %}
+            {% case m %}
+              {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
+              {% when 'September' %}Sept.
+              {% else %}{{ post.date | date: "%b" }}.
+              {% endcase %}
+            {% case d %}
+              {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+            {{ post.date | date: "%Y" }}
+            </time>
+            <p class="post-desc f6 f5-l lh-copy">{% if post.desc %}{{ post.desc }}{% else %}{{ post.excerpt }}{% endif %}</p>
+            <p class="f6 lh-copy mv0">{{post.author}}</p>
+          </div>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </ul>
+</section>
 <!-- post-list -->
 
 <ol class="pager">
