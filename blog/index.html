@@ -43,8 +43,8 @@ desc: Stuffs I write about
               {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
             {{ post.date | date: "%Y" }}
             </time>
-            <p class="post-desc tk-source-code-pro f6 f5-l lh-copy mt3">{% if post.desc %}{{ post.desc }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
-            <p class="post-desc tk-source-code-pro f6 f5-l">Posted by {{post.author}}</p>
+            <p class="post-desc tk-source-sans-pro f6 f5-l lh-copy mt3">{% if post.desc %}{{ post.desc }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
+            <p class="post-desc tk-source-sans-pro f6 f5-l">Posted by {{post.author}}</p>
           </div>
         </div>
       </a>
