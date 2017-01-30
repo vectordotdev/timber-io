@@ -2,33 +2,23 @@
 layout: default
 ---
 
-{% capture page_subtitle %}Articles by tag{% endcapture %}
+<header class="blog__hero--tag header relative" role="banner">
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro"> 
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked tc">{{ page.slug }} posts</h1>
+    <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
+      A collection of thoughtfully crafted blog posts about {{ page.slug }}.
+    </p>
+  </div>
+</header>
 
-<div class="text-justify">
-  {% if site.tags[page.slug] %}
-    {% for post in site.tags[page.slug] %}
-      {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% if forloop.first %}
-        <h3 class="m-t-3 m-b-1">{{ post_year }}</h3>
-        <div class="list-group">
-      {% endif %}
-      {% unless forloop.first %}
-        {% assign previous_index = forloop.index0 | minus: 1 %}
-        {% capture previous_post_year %}{{ site.tags[page.slug][previous_index].date | date: '%Y' }}{% endcapture %}
-        {% if post_year != previous_post_year %}
-          </div>
-          <h3 class="m-t-3 m-b-1">{{ post_year }}</h3>
-          <div class="list-group">
-        {% endif %}
-      {% endunless %}
-      <a href="{{ post.url }}" class="list-group-item">
-        <h4 class="list-group-item-heading h6">{{ post.title }}</h4>
-      </a>
-      {% if forloop.last %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    <p>There are no posts in this tag.</p>
-  {% endif %}
-</div>
+<section class="mw8 center avenir">
+  <ul class="post-list ph3-ns pa0 mt4-ns mt2">
+    {% if site.tags[page.slug] %}
+      {% for post in site.tags[page.slug] %}
+        {% include post.html post=post %}
+      {% endfor %}
+    {% else %}
+      <p>There are no posts for this tag.</p>
+    {% endif %}
+  <ul>
+</section>
