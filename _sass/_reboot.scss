@@ -122,6 +122,11 @@ svg:not(:root) {
 
 figure {
   margin: 0 0 $spacer;
+  font-size: 1rem;
+}
+
+pre {
+  font-size: 1rem;
 }
 
 hr {

@@ -23,6 +23,7 @@ desc: Stuffs I write about
 <section class="mw8 center avenir">
   <ul class="post-list ph3-ns pa0 mt4-ns mt2">
     {% for post in paginator.posts %}
+    {% assign author = site.data.authors[post.author] %}
     <article class="bb b--black-10">
       <a href="{{ post.url | prepend: site.baseurl }}" class="db pv4 ph3 ph0-l no-underline black dim" href="#0">
         <div class="flex flex-column flex-row-ns">
@@ -44,7 +45,7 @@ desc: Stuffs I write about
             {{ post.date | date: "%Y" }}
             </time>
             <p class="post-desc tk-source-sans-pro f6 f5-l lh-copy mt3">{% if post.desc %}{{ post.desc }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
-            <p class="post-desc tk-source-sans-pro f6 f5-l">Posted by {{post.author}}</p>
+            <p class="post-desc tk-source-sans-pro f6 f5-l">Posted by {{ author.name }}</p>
           </div>
         </div>
       </a>
