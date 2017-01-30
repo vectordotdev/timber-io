@@ -8,6 +8,10 @@ collections:
   posts:
     title: Posts
     output: true
+  blog_tags:
+    title: Tags
+    output: true
+    permalink: /blog/tag/:name/
   uploads:
     title: Uploads
     output: true
@@ -23,6 +27,11 @@ defaults:
     type: pages
   values:
     layout: page
+- scope:
+    path: ''
+    type: blog_tags
+  values:
+    layout: posts_by_tag
 permalink: pretty
 desc: Timber.io – Make logging great again.
 url: https://timber.io
