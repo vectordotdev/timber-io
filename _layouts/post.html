@@ -2,13 +2,13 @@
 layout: default
 ---
 
+{% comment %}inspiration from https://github.com/minddust/minddust.github.io/blob/master/_layouts/post.html{% endcomment %}
+
 {% assign post = page %}
 {% assign author = site.data.authors[post.author] %}
 
-{{ post.tags | inspect }}
-
 {% if post.tags.size > 0 %}
-  {% capture tags_content %} with <span class="icon-price-tag{% if post.tags.size > 1 %}s{% endif %}"></span>: {% endcapture %}
+  {% capture tags_content %} tagged with <span class="icon-price-tag{% if post.tags.size > 1 %}s{% endif %}"></span>: {% endcapture %}
   {% for post_tag in post.tags %}
     {% assign tag = site.blog_tags | where: "slug", post_tag %}
     {% if tag %}
@@ -39,8 +39,8 @@ layout: default
 </header>
 
 <div class="post tk-source-sans-pro lh-copy">
-  <p id="post-meta">{{ tags_content }}</p>
   <article class="post-article pa3 pa4-ns ph6-l mw8 center f4">
+    <p id="post-meta">{{ tags_content }}</p>
     <div class="post-content pretty-links">
     <div class="post-content pretty-links">
       {{ content }}
