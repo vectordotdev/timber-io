@@ -8,7 +8,7 @@ tags:
 
 In the last decade, the way that we've built applications and services has changed dramatically. Unfortunately, the way that we debug and monitor them hasn't changed nearly as much. Once monolithic behemoths have splintered into lean microservices with single responsibilities, written in different languages and with different frameworks that are carefully chosen for the tasks at hand.
 
-[Many]() [many](link) engineers and organizations have to come to realize the benefits of architecting systems in this manner, but like anything, it's not without its downsides. With so many different tools running on so many different platforms, the task of reliably debugging and monitoring them can become sisyphean.
+[Many](https://blog.risingstack.com/how-enterprises-benefit-from-microservices-architectures/), [many](https://martinfowler.com/articles/microservice-trade-offs.html) engineers and organizations have to come to realize the benefits of architecting systems in this manner, but like anything, it's not without its downsides. With so many different tools running on so many different platforms, the task of reliably debugging and monitoring them can become sisyphean.
 
 In this wild west of microservices, serverless apps, workers, and 3rd party services one thing remains universal: the log is the single, reliable, immutable source of truth. Or as Jay Kreps [so thoughtfully puts it](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying):
 
@@ -59,34 +59,34 @@ into this:
 
 ```
 {
-  "dt": "2016-12-01T02:23:12.236543Z",
-  "level": "info",
-  "message": "Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)",
-  "context": {
-    "http": {
-      "method": "GET",
-      "path": "/checkout",
-      "remote_addr": "123.456.789.10",
-      "request_id": "abcd1234"
-    },
-    "user": {  // <---- http://i.giphy.com/EldfH1VJdbrwY.gif
-      "id": 2,
-      "name": "Ben Johnson",
-      "email": "ben@johnson.com"
-    }
-  },
-  "event": {
-    "http_response": {
-      "status": 200,
-      "time_ms": 117
-    }
-  }
+"dt": "2016-12-01T02:23:12.236543Z",
+"level": "info",
+"message": "Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)",
+"context": {
+"http": {
+"method": "GET",
+"path": "/checkout",
+"remote_addr": "123.456.789.10 (tel:12345678910)",
+"request_id": "abcd1234"
+},
+"user": { // <---- http://i.giphy.com/EldfH1VJdbrwY.gif
+"id": 2,
+"name": "Ben Johnson",
+"email": "ben@johnson.com (mailto:ben@johnson.com)"
+}
+},
+"event": {
+"http_response": {
+"status": 200,
+"time_ms": 117
+}
+}
 }
 ```
 
 That's it, it's dead simple.
 
-Our lightweight packages ([ruby](github.com/timberio/timber-ruby) or [elixir](github.com/timberio/timber-elixir) for example) sit directly inside your application to ensure this structure, and augment your logs with context that was previously never included.
+Our lightweight packages ([ruby](github.com/timberio/timber-ruby (http://github.com/timberio/timber-ruby)) or [elixir](github.com/timberio/timber-elixir (http://github.com/timberio/timber-elixir)) for example) sit directly inside your application to ensure this structure, and augment your logs with context that was previously never included.
 
 ### Why is this a big deal?
 
@@ -94,13 +94,13 @@ With structured logs and more context, your logs become **consistent** and **use
 
 **1. Find and solve issues more easily.**
 
-Let's say a user reported that they were unable to check out, you can now simple run the following query:
+Let's say a user reported that they were unable to check out, you can now simply run the following query:
 
-`user.email:zach@timber.io http.path:checkout`
+`user.email:zach@timber.io http.path:/checkout`
 
 and see exactly what went wrong.
 
-Or if you wanted to find out which endpoints were timing out:
+Or if you wanted to find out which endpoints were performing slowly:
 
 `http_response.time_ms > 5000`
 
@@ -112,7 +112,7 @@ The Timber console is specifically built to take advantage of this log structure
 
 **3. Reliable alerting**
 
-No more of those fragile regexes, alerts can now be configured around **actual data**. For example instead of matching on `/(500|503|504)/g` you can simply look for `http.response.code:5*` or just `level:error`.
+No more of those fragile regexes, alerts can now be configured around **actual data**. For example instead of matching on `/(500|503|504)/g` you can simply look for `http.response.code>=500` or just `level:error`.
 
 **4. No operations overhead**
 
@@ -125,3 +125,7 @@ Since user data is automatically added to the logs context, narrowing down to a 
 **6. Longer retention**
 
 Timber offers retention up to 6 months, far exceeding the industry standard. This means you can use that data for analytical purposes without issue.
+
+**7. Trace requests through your stack**
+
+Timber assigns each request a unique id, which means you can see how a request travels through you entire system and at which point the issue arose.

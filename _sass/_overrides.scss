@@ -35,10 +35,7 @@
 }
 
 blockquote {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-color: #357edd;
-  border-width: .25rem;
+  border-left: 10px solid #357edd;
   font-family: "source-sans-pro", serif;
   font-style: normal;
   letter-spacing: .1em;
@@ -46,7 +43,25 @@ blockquote {
   color: rgba(0, 0, 0, .9);
   padding: 0 1rem;
   margin: 20px 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+blockquote {
+  background: #f9f9f9;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 
 // @media screen and (min-width: 30em) and (max-width: 60em) {
