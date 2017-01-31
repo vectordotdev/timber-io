@@ -9,11 +9,11 @@ tags:
 
 In the last decade, the way that we've built applications and services has changed dramatically. Unfortunately, the way that we debug and monitor them hasn't changed nearly as much. Once monolithic behemoths have splintered into lean microservices with single responsibilities, written in different languages and with different frameworks that are carefully chosen for the tasks at hand.
 
-[Many]() [many](link) engineers and organizations have to come to realize the benefits of architecting systems in this manner, but like anything, it's not without its downsides. With so many different tools running on so many different platforms, the task of reliably debugging and monitoring them can become sisyphean.
+[Many](){: .cc-active} [many](link) engineers and organizations have to come to realize the benefits of architecting systems in this manner, but like anything, it's not without its downsides. With so many different tools running on so many different platforms, the task of reliably debugging and monitoring them can become sisyphean.
 
 In this wild west of microservices, serverless apps, workers, and 3rd party services one thing remains universal: the log is the single, reliable, immutable source of truth. Or as Jay Kreps [so thoughtfully puts it](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying):
 
-&gt; The log is the record of what happened.... Since the log is immediately persisted it is used as the authoritative source in restoring all other persistent structures...
+&gt; The log is the record of what happened…. Since the log is immediately persisted it is used as the authoritative source in restoring all other persistent structures…
 
 The idea behind Timber starts with this one basic tenant.
 
@@ -53,36 +53,11 @@ So glad you asked, to put it simply: Timber transforms your log lines into a sta
 
 For you visual people, we turn this:
 
-```Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)``` (ಥ_ಥ)
+`Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)` (ಥ_ಥ)
 
 into this:
 
-```
-<br>{
-<br>&nbsp; "dt": "2016-12-01T02:23:12.236543Z",
-<br>&nbsp; "level": "info",
-<br>&nbsp; "message": "Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)",
-<br>&nbsp; "context": {
-<br>&nbsp; &nbsp; "http": {
-<br>&nbsp; &nbsp; &nbsp; "method": "GET",
-<br>&nbsp; &nbsp; &nbsp; "path": "/checkout",
-<br>&nbsp; &nbsp; &nbsp; "remote_addr": "123.456.789.10",
-<br>&nbsp; &nbsp; &nbsp; "request_id": "abcd1234"
-<br>&nbsp; &nbsp; },
-<br>&nbsp; &nbsp; "user": { &nbsp;// &lt;---- http://i.giphy.com/EldfH1VJdbrwY.gif
-<br>&nbsp; &nbsp; &nbsp; "id": 2,
-<br>&nbsp; &nbsp; &nbsp; "name": "Ben Johnson",
-<br>&nbsp; &nbsp; &nbsp; "email": "ben@johnson.com"
-<br>&nbsp; &nbsp; }
-<br>&nbsp; },
-<br>&nbsp; "event": {
-<br>&nbsp; &nbsp; "http_response": {
-<br>&nbsp; &nbsp; &nbsp; "status": 200,
-<br>&nbsp; &nbsp; &nbsp; "time_ms": 117
-<br>&nbsp; &nbsp; }
-<br>&nbsp; }
-<br>}
-<br>```
+`<br>{<br>&nbsp; "dt": "2016-12-01T02:23:12.236543Z",<br>&nbsp; "level": "info",<br>&nbsp; "message": "Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)",<br>&nbsp; "context": {<br>&nbsp; &nbsp; "http": {<br>&nbsp; &nbsp; &nbsp; "method": "GET",<br>&nbsp; &nbsp; &nbsp; "path": "/checkout",<br>&nbsp; &nbsp; &nbsp; "remote_addr": "123.456.789.10",<br>&nbsp; &nbsp; &nbsp; "request_id": "abcd1234"<br>&nbsp; &nbsp; },<br>&nbsp; &nbsp; "user": { &nbsp;// &lt;---- http://i.giphy.com/EldfH1VJdbrwY.gif<br>&nbsp; &nbsp; &nbsp; "id": 2,<br>&nbsp; &nbsp; &nbsp; "name": "Ben Johnson",<br>&nbsp; &nbsp; &nbsp; "email": "ben@johnson.com"<br>&nbsp; &nbsp; }<br>&nbsp; },<br>&nbsp; "event": {<br>&nbsp; &nbsp; "http_response": {<br>&nbsp; &nbsp; &nbsp; "status": 200,<br>&nbsp; &nbsp; &nbsp; "time_ms": 117<br>&nbsp; &nbsp; }<br>&nbsp; }<br>}<br>`
 
 That's it, it's dead simple.
 
@@ -112,7 +87,7 @@ The Timber console is specifically built to take advantage of this log structure
 
 \*\*3. Reliable alerting\*\*
 
-No more of those fragile regexes, alerts can now be configured around \*\*actual data\*\*. For example instead of matching on `/(500|503|504)/g` you can simply look for `http.response.code:5\*` or just `level:error`.
+No more of those fragile regexes, alerts can now be configured around \*\*actual data\*\*. For example instead of matching on `/(500|503|504)/g` you can simply look for `http.response.code:5\\*` or just `level:error`.
 
 \*\*4. No operations overhead\*\*
 
