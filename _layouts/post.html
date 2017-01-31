@@ -13,7 +13,7 @@ layout: default
     {% assign tag = site.blog_tags | where: "slug", post_tag %}
     {% if tag %}
       {% assign tag = tag[0] %}
-      {% capture tags_content_temp %}{{ tags_content }}<a class="f6 link dim br-pill ph3 pv1 mb2 mr2 dib white bg-purple fw6" href="{{ tag.url }}">{{ tag.name }}</a>{% if forloop.last == false %} {% endif %}{% endcapture %}
+      {% capture tags_content_temp %}{{ tags_content }}<a class="f6 link dim br-pill ph3 pv1 mr2 dib white bg-purple fw6" href="{{ tag.url }}">{{ tag.name }}</a>{% if forloop.last == false %} {% endif %}{% endcapture %}
       {% assign tags_content = tags_content_temp %}
     {% endif %}
   {% endfor %}
