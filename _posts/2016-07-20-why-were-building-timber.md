@@ -59,28 +59,28 @@ into this:
 
 ```
 {
-"dt": "2016-12-01T02:23:12.236543Z",
-"level": "info",
-"message": "Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)",
-"context": {
-"http": {
-"method": "GET",
-"path": "/checkout",
-"remote_addr": "123.456.789.10 (tel:12345678910)",
-"request_id": "abcd1234"
-},
-"user": { // <---- http://i.giphy.com/EldfH1VJdbrwY.gif
-"id": 2,
-"name": "Ben Johnson",
-"email": "ben@johnson.com (mailto:ben@johnson.com)"
-}
-},
-"event": {
-"http_response": {
-"status": 200,
-"time_ms": 117
-}
-}
+  "dt": "2016-12-01T02:23:12.236543Z",
+  "level": "info",
+  "message": "Completed 200 OK in 117ms (Views: 85.2ms | ActiveRecord: 25.3ms)",
+  "context": {
+    "http": {
+      "method": "GET",
+      "path": "/checkout",
+      "remote_addr": "123.456.789.10",
+      "request_id": "abcd1234"
+    },
+    "user": {  // <---- http://i.giphy.com/EldfH1VJdbrwY.gif
+      "id": 2,
+      "name": "Ben Johnson",
+      "email": "ben@johnson.com"
+    }
+  },
+  "event": {
+    "http_response": {
+      "status": 200,
+      "time_ms": 117
+    }
+  }
 }
 ```
 
