@@ -4,6 +4,13 @@
   {% include head.html %}
 
   <body class="{{ page.collection }}">
+    <!-- Used To Track Blog Progress -->
+    <progress value="0" id="progressBar">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+
     {% include navigation.html %}
 
       <div class="site-content">
