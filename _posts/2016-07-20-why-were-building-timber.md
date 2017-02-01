@@ -3,7 +3,7 @@ title: "Why We're Building Timber"
 date: 2016-07-20 00:00:00
 image: 'https://d13yacurqjgara.cloudfront.net/users/13774/screenshots/3003711/projects.png'
 author: zach_sherman
-tags:
+tags: [timber]
 ---
 
 In the last decade, the way that we've built applications and services has changed dramatically. Unfortunately, the way that we debug and monitor them hasn't changed nearly as much. Once monolithic behemoths have splintered into lean microservices with single responsibilities, written in different languages and with different frameworks that are carefully chosen for the tasks at hand.
