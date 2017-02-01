@@ -1,7 +1,7 @@
 ---
 title: "Why We're Building Timber"
 date: 2016-07-20 00:00:00
-image: 'https://d13yacurqjgara.cloudfront.net/users/13774/screenshots/3003711/projects.png'
+image: 'https://res.cloudinary.com/timber/image/upload/v1485983608/pricing/why-we-are-building-timber.png'
 author: zach_sherman
 tags: [timber]
 ---
