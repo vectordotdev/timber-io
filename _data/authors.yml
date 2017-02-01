@@ -1,12 +1,20 @@
 zach_sherman:
     name: Zach Sherman
     email: zach@timber.io
-    link: http://twitter.com/zsh
+    link: http://twitter.com/zshrm
+    twitter: zshrm
 ben_johnson:
     name: Ben Johnson
     email: ben@timber.io
     link: http://twitter.com/binarylogic
+    twitter: binarylogic
 david_antaramian:
   name: David Antaramian
   email: david@timber.io
   link: twitter.com/davidantaramian
+  twitter: davidantaramian
+garet_mckinley:
+  name: Garet McKinley
+  email: garet@timber.io
+  link: twitter.com/garetmckinley
+  twitter: garetmckinley

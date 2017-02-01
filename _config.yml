@@ -33,15 +33,23 @@ defaults:
   values:
     layout: posts_by_tag
 permalink: pretty
-desc: Timber.io – Make logging great again.
+desc: Timber.io – Structured Logging Made Easy
 url: https://timber.io
 baseurl: ''
-email: jackal@gmail.com
-author: The Jackal
-twitter_username: clenemt
-github_username: clenemt
-github_source: jackal
-google_analytics: UA-XXXXXXXX-X
+email: hi@timber.io
+author: Timber.io
+logo: /assets/logo-square.png
+twitter:
+  username: timberdotio
+social:
+  name: Timber.io
+  links:
+    - https://twitter.com/timberdotio
+    - https://www.facebook.com/timberdotio
+    - https://www.linkedin.com/company/10631943
+    - https://github.com/timberio
+github_username: timberio
+github_source: timberio/timber-io
 segment_key: ocCzUkf4zAaUOzyCbWelskTptGgenOAU
 paginate: 5
 paginate_path: "/blog/page:num"
@@ -178,3 +186,4 @@ exclude:
 - vendor
 gems:
 - jekyll-paginate
+- jekyll-seo-tag
