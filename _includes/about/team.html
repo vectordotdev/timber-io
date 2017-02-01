@@ -3,11 +3,13 @@
     <h1 class="tc p2 ttu black fw6 f2 mt1 tk-futura-pt">Our Team</h1>
     <div class="flex flex-wrap pt4">
       {% for lumberjack in site.team %} 
-        <div class="fl w-100 w-50-m pa4-m w-33-l pa3 pb3-l pt3-l pa5-l tc mb3">
-          <img src="/assets/img/team/{{lumberjack.image}}.png" alt="{{lumberjack.name}}" class="w-75 black-10"/>
-          <h4 class="f4 black tk-futura-pt mt4 mb3 ttu">{{lumberjack.name}}</h4>
-          <h5 class="light-purple fw4 tk-futura-pt f5 mt0 mb3">{{lumberjack.role}}</h5>
-          <p class="tk-source-sans-pro f5 black-50 ma0 lh-copy">{{lumberjack.desc}}</p>
+        <div class="fl w-100 w-50-m w-33-l tc mb3">
+          <div class="pa3 pa4-m pb1-l pt3-l pa5-l">
+            <img src="/assets/img/team/{{lumberjack.image}}.png" alt="{{lumberjack.name}}" class="w-75 black-10"/>
+            <h4 class="f4 black tk-futura-pt mt4 mb3 ttu">{{lumberjack.name}}</h4>
+            <h5 class="light-purple fw4 tk-futura-pt f5 mt0 mb3">{{lumberjack.role}}</h5>
+          </div>
+          <p class="tk-source-sans-pro f5 black-50 ma0 lh-copy ph3">{{lumberjack.desc}}</p>
         </div>
       {% endfor %}
     </div>
