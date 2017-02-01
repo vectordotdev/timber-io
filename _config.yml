@@ -141,19 +141,19 @@ team:
 - name: Zach Sherman
   image: zach
   role: Founder & CEO
-  desc: Person of interest with a longer description about them that goes here.
+  desc: Founder @timberdotio, previously @seatgeek. @VanderbiltU grad. I like programming, design & sushi.
 - name: Ben Johnson
   image: ben
   role: Founder & CTO
-  desc: Person of interest with a longer description about them that goes here.
+  desc: Founder / CTO @timberdotio, previously @seatgeek. I do things with computers.
 - name: David Antaramian
   image: david
   role: Senior Backend Engineer
-  desc: Person of interest with a longer description about them that goes here.
+  desc: A curmudgeon that codes in @elixirlang and sometimes Ruby. Senior Backend Engineer at @timberdotio. Organizing @ElixirNYC. Treasuring @empexco.
 - name: Garet McKinley
   image: garet
   role: Frontend Engineer
-  desc: Person of interest with a longer description about them that goes here.
+  desc: Writer of software. Designer of Vectors.
 - name: You?
   image: bronson
   role: Lumberjack
