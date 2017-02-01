@@ -8,7 +8,7 @@ layout: default
 {% assign author = site.data.authors[post.author] %}
 
 {% if post.tags.size > 0 %}
-  {% capture tags_content %} <span class="icon-price-tag{% if post.tags.size > 1 %}s{% endif %}"></span> {% endcapture %}
+  {% capture tags_content %} <span class="f6 bg-light-gray pa1 mr2 icon-price-tag{% if post.tags.size > 1 %}s{% endif %}">Tagged with: </span> {% endcapture %}
   {% for post_tag in post.tags %}
     {% assign tag = site.blog_tags | where: "slug", post_tag %}
     {% if tag %}
@@ -40,10 +40,10 @@ layout: default
 
 <div class="post tk-source-sans-pro lh-copy">
   <article class="post-article pa3 pa4-ns ph6-l mw8 center f4">
-    <p id="post-meta">{{ tags_content }}</p>
     <div class="post-content pretty-links">
     <div class="post-content pretty-links">
       {{ content }}
     </div>
+   <p id="post-meta">{{ tags_content }}</p>
   </article>
 </div>
