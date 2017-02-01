@@ -1,16 +1,18 @@
-<footer class="db dt-l w-100 border-box pa3 mw9-l center bg-whisper bt b--snuff">
-  <a href="/" class="db dtc-l v-mid mid-gray link dim w-100 w-10-l tc tl-l mb2 mb0-l" href="#" title="Home">
-    {% include logo.html color="#5F53AE" %}
-  </a>
-  <div class="db dtc-l v-mid link w-100 w-25-l tc tl-l mb2 mb0-l">
-    <a href="https://www.linkedin.com/company/timber.io" target="_blank"><img src="/assets/img/linkedin.png" class="mw2 mh2 grow" alt="footer logo"></a>
-    <a href="https://www.facebook.com/timberdotio/" target="_blank"><img src="/assets/img/facebook.png" class="mw2 mh2 grow" alt="footer logo"/></a>
-    <a href="https://twitter.com/timberdotio" target="_blank"><img src="/assets/img/twitter.png" class="mw2 mh2 grow" alt="footer logo"/></a>
-  </div>
-  <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-    {% for link in site.footer %} 
-      <a href="{{ link.url }}" title="{{link.title}}" class="link dim purple fw6 f7 logan dib mr3 mr4-l ttu tracked fw5 tk-futura-pt">{{link.title}}</a>
-    {% endfor %}
+<footer class="db dt-l w-100 border-box pa3 bg-whisper bt b--snuff pb3 pb0-l">
+  <div class="w-100 mw9-l center flex items-center-l flex-row-l flex-column justify-center">
+    <a href="/" class="db dtc-l v-mid mid-gray link dim mr4 tc tl-l mb2 mb0-l" href="#" title="Home">
+      {% include logo.html color="#5F53AE" %}
+    </a>
+    <div class="db dtc-l v-mid link w-100 w-25-l tc tl-l mb2 mb0-l">
+      <a href="https://www.linkedin.com/company/timber.io" target="_blank"><img src="/assets/img/linkedin.png" class="mw2 mh2 grow" alt="footer logo"></a>
+      <a href="https://www.facebook.com/timberdotio/" target="_blank"><img src="/assets/img/facebook.png" class="mw2 mh2 grow" alt="footer logo"/></a>
+      <a href="https://twitter.com/timberdotio" target="_blank"><img src="/assets/img/twitter.png" class="mw2 mh2 grow" alt="footer logo"/></a>
+    </div>
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      {% for link in site.footer %} 
+        <a href="{{ link.url }}" title="{{link.title}}" class="link dim purple fw6 f7 logan dib mr3 mr4-l ttu tracked fw5 tk-futura-pt">{{link.title}}</a>
+      {% endfor %}
+    </div>
   </div>
 </footer>
 

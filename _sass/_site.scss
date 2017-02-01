@@ -1,0 +1,22 @@
+.site-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -67px;
+}
+
+footer, .push {
+  height: 67px; /* .push must be the same height as .footer */
+}
+
+footer {
+  width: 100%;
+}
+
+@media screen and (min-width: 10em) and (max-width: 60em) {
+  .site-wrapper {
+    margin-bottom: -131px;
+  }
+
+  footer, .push { height: 131px; }
+}

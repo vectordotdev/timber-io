@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="{{ page.collection }}">
-    <!-- Used To Track Blog Progress -->
-    <progress value="0" id="progressBar">
-      <div class="progress-container">
-        <span class="progress-bar"></span>
-      </div>
-    </progress>
+<body class="{{ page.collection }}">
+  <!-- Used To Track Blog Progress -->
+  <progress value="0" id="progressBar">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+
+  <div class="site-wrapper">
 
     {% include navigation.html %}
 
-      <div class="site-content">
-        {{ content }}
-      </div>
-      <!-- site-content -->
+    <!-- site-content -->
+    <div class="site-content">
+      {{ content }}
+      <div class="push"></div>
+    </div>
 
-      {% include footer.html %}
+  </div>
 
-  </body>
+  {% include footer.html %}
+
+</body>
 
 </html>

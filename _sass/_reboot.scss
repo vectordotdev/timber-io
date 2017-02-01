@@ -12,6 +12,10 @@ html {
   font-smoothing: antialiased;
 }
 
+html, body {
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
