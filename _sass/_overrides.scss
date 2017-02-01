@@ -36,21 +36,18 @@
 
 blockquote {
   border-left: 10px solid #357edd;
-  font-family: 'Alegreya', serif;
-  font-style: normal;
+  font-family: Georgia, serif;
+  font-style: italic;
   line-height: 1.5;
   color: rgba(0, 0, 0, .9);
-  padding: 0 1rem;
+  padding: 1rem;
   margin: 20px 0;
-  font-size: 1.5rem;
-}
-
-blockquote {
+  font-size: 1.25rem;
   background: #f9f9f9;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  margin: 1.5em 0;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
