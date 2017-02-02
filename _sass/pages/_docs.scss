@@ -17,6 +17,8 @@
 
 .docs__content__main__doc {
   flex: 1;
+  height: calc(100vh - 50px);
+  overflow: auto;
 }
 
 .docs__content__main__table-of-contents {
@@ -29,6 +31,8 @@
 
 .docs__navigation {
   order: -1;
+  height: 100%;
+  overflow: auto;
 
   .current {
     color: blue !important;
