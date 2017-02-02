@@ -1,0 +1,32 @@
+.docs {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex: 1;
+}
+
+.docs__content {
+  flex: 1;
+  flex-direction: column;
+}
+
+.docs__content__main {
+  display: flex;
+  flex: 1;
+}
+
+.docs__content__main__doc {
+  flex: 1;
+}
+
+.docs__content__main__table-of-contents {
+  flex: 0 0 12em;
+}
+
+.docs__navigation, .docs__aside {
+  flex: 0 0 12em;
+}
+
+.docs__navigation {
+  order: -1;
+}
