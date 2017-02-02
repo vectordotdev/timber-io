@@ -72,6 +72,8 @@ navigation:
 - title: About
   url: "/about/"
   desc: What Timber is about
+- title: Docs
+  url: "/docs/"
 - title: Blog
   url: "/blog/"
   desc: Timber community posts

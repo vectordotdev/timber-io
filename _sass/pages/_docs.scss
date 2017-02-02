@@ -29,4 +29,9 @@
 
 .docs__navigation {
   order: -1;
+
+  .current {
+    color: blue !important;
+    font-weight: bold;
+  }
 }

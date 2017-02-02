@@ -1,10 +1,16 @@
 <div class="pa3 pa5-ns">
-    <ul class="list pl0 measure center">
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Orange</li>
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Apple</li>
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Peach</li>
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Grape</li>
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Grapefruit</li>
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">Kiwi</li>
-    </ul>
+  <ul class="list pl0 measure center">
+    {% assign grouped = site.docs | group_by: 'category' | sort: 'name' %}
+    {% for group in grouped %}
+      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30 {% if group.name == page.category %}current{% endif %}">
+        {% assign items = group.items | sort: 'order' %}
+        <a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+        <ul>
+          {% for item in items %}
+            <li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
