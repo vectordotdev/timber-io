@@ -34,8 +34,15 @@
   height: 100%;
   overflow: auto;
 
-  .current {
-    color: blue !important;
+  .nav-item {
+    border-radius: 3px;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+
+  .nav-item.current {
+    color: #FFF !important;
+    background: #5E58AE;
     font-weight: bold;
   }
 }
