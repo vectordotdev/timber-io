@@ -23,10 +23,19 @@
   }
 }
 
+.docs__content__header {
+  font-family: Source Sans Pro;
+  font-weight: 600;
+  font-size: 24px;
+  color: #5E58AE;
+  letter-spacing: 0.18px;
+}
+
 .docs__content__main__doc {
   flex: 1;
-  height: calc(100vh - 50px);
+  height: 100vh;
   overflow: auto;
+  padding: 1rem;
 
   @media screen and (max-width: 60em) {
     height: auto;
@@ -41,14 +50,12 @@
   }
 }
 
-.docs__navigation, .docs__aside {
-  flex: 0 0 12em;
-}
-
 .docs__navigation {
   order: -1;
-  height: 100%;
   overflow: auto;
+  flex: 0 0 15em;
+  border-right: 1px solid #DBE1E1;
+  min-height: 100vh;
 
   .nav-item {
     border-radius: 3px;
