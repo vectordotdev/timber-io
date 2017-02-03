@@ -1,7 +1,9 @@
 {% assign languages = include.posts | group_by: 'language' %}
 
 {% if languages.size == 1 and languages.first.name == empty %}
-  {% include docs/frameworks.html posts=language.items %}
+  <ul>
+    <li><a href="{{ site.baseurl }}{{ include.posts.first.url }}">{{ include.posts.first.title }}</a></li>
+  </ul>
 {% else %}
   <ul>
     {% for language in languages %}

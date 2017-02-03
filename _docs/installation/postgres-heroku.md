@@ -1,5 +1,5 @@
 ---
-title: Postgres Heroku
+title: Postgres
 category: Installation
 type: database
 platform: heroku
