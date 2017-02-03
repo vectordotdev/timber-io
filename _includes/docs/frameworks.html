@@ -2,9 +2,13 @@
 
 <ul>
   {% for framework in frameworks %}
-    <li>
-      {{ framework.name }}
+    {% if framework.name != empty %}
+      <li>
+        <span>{{ framework.name }}</span>
+        {% include docs/transport.html posts=framework.items %}
+      </li>
+    {% else %}
       {% include docs/transport.html posts=framework.items %}
-    </li>
+    {% endif %}
   {% endfor %}
 </ul>

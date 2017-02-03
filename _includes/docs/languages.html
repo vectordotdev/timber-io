@@ -3,7 +3,7 @@
 <ul>
   {% for language in languages %}
     <li>
-      {{ language.name }}
+      <span>{{ language.name }}</span>
       {% include docs/frameworks.html posts=language.items %}
     </li>
   {% endfor %}

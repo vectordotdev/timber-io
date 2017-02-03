@@ -3,8 +3,7 @@
 <ul>
   {% for method in transport_methods %}
     <li>
-      {{ method.name }}
-      {{ method.items }}
+      <a href="{{ site.baseurl }}{{ method.items.first.url }}">{{ method.name }}</a>
     </li>
   {% endfor %}
 </ul>

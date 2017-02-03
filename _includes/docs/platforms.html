@@ -3,7 +3,7 @@
 <ul>
   {% for platform in platforms %}
     <li>
-      {{ platform.name }}
+      <span>{{ platform.name }}</span>
       {% include docs/languages.html posts=platform.items %}
     </li>
   {% endfor %}

@@ -3,7 +3,7 @@
 <ul>
   {% for type in types %}
     <li>
-      {{ type.name }}
+      <span>{{ type.name }}</span>
       {% include docs/platforms.html posts=type.items %}
     </li>
   {% endfor %}
