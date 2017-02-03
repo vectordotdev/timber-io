@@ -1,0 +1,10 @@
+{% assign languages = include.posts | group_by: 'language' %}
+
+<ul>
+  {% for language in languages %}
+    <li>
+      {{ language.name }}
+      {% include docs/frameworks.html posts=language.items %}
+    </li>
+  {% endfor %}
+</ul>

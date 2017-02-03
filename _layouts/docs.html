@@ -13,14 +13,14 @@
 
     <div class="docs__content">
 
+      <header class="docs__content__header">
+        {% include docs/header.html %}
+      </header>
+
       <main role="main" class="docs__content__main">
         
         <div class="docs__content__main__doc">
-          
-          <header class="docs__content__header">
-            {% include docs/header.html %}
-          </header>
-          
+
           {{ content }}
 
         </div>

@@ -1,0 +1,10 @@
+{% assign platforms = include.posts | group_by: 'platform' %}
+
+<ul>
+  {% for platform in platforms %}
+    <li>
+      {{ platform.name }}
+      {% include docs/languages.html posts=platform.items %}
+    </li>
+  {% endfor %}
+</ul>

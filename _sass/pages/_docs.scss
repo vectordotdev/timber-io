@@ -29,11 +29,12 @@
   font-size: 24px;
   color: #5E58AE;
   letter-spacing: 0.18px;
+  border-bottom: 1px solid #DBE1E1;
 }
 
 .docs__content__main__doc {
   flex: 1;
-  height: 100vh;
+  height: calc(100vh - 63px);
   overflow: auto;
   padding: 1rem;
 
@@ -44,7 +45,7 @@
 
 .docs__content__main__table-of-contents {
   flex: 0 0 14em;
-  background: #f9f9ff;
+  // background: #f9f9ff;
   border-left: 1px solid #F3F3FB;
 
   ul {
@@ -71,6 +72,10 @@
   flex: 0 0 15em;
   border-right: 1px solid #DBE1E1;
   min-height: 100vh;
+
+  ul {
+    padding: 1em;
+  }
 
   .nav-item {
     border-radius: 3px;

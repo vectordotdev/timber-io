@@ -1,0 +1,10 @@
+{% assign frameworks = include.posts | group_by: 'framework' %}
+
+<ul>
+  {% for framework in frameworks %}
+    <li>
+      {{ framework.name }}
+      {% include docs/transport.html posts=framework.items %}
+    </li>
+  {% endfor %}
+</ul>

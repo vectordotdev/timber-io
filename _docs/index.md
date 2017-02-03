@@ -2,7 +2,6 @@
 title: Docs
 layout: docs
 permalink: /docs/index.html
-category: z
 ---
 
 An h1 header

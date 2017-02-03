@@ -1,17 +1,23 @@
 <div class="pa3">
   {% include logo.html color="#5E58AE" %}
+
   <ul class="list pl0 measure center">
-    {% assign grouped = site.docs | group_by: 'category' | sort: 'name' | pop %}
+    {% assign grouped = site.docs | group_by: 'category' | sort: 'name' %}
     {% for group in grouped %}
-      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30 {% if group.name == page.category %}current{% endif %}">
-        {% assign items = group.items | sort: 'order' %}
-        <a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
-        <ul>
-          {% for item in items %}
-            <li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
+      {% if group.name != empty and group.name != "Installation" %}
+        <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30 {% if group.name == page.category %}current{% endif %}">
+          {% assign items = group.items | sort: 'order' %}
+          <a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+          <ul>
+            {% for item in items %}
+              <li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endif %}
     {% endfor %}
+    
+    {% assign installation = site.docs | where: 'category', 'Installation' %}
+    {% include docs/types.html posts=installation %}
   </ul>
 </div>
