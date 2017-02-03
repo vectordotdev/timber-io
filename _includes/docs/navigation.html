@@ -1,5 +1,5 @@
 <div class="pa3">
-  {% include logo.html color="#5E58AE" %}
+  <a href="/">{% include logo.html color="#5E58AE" %}</a>
 
   <ul class="list pl0 measure center">
     {% assign grouped = site.docs | group_by: 'category' | sort: 'name' %}
@@ -18,6 +18,8 @@
     {% endfor %}
     
     {% assign installation = site.docs | where: 'category', 'Installation' %}
-    {% include docs/types.html posts=installation %}
+    <div class="docs__navigation__installation">
+      {% include docs/types.html posts=installation %}
+    </div>
   </ul>
 </div>

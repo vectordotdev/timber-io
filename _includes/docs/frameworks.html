@@ -1,14 +1,18 @@
 {% assign frameworks = include.posts | group_by: 'framework' %}
 
-<ul>
-  {% for framework in frameworks %}
-    {% if framework.name != empty %}
-      <li>
-        <span>{{ framework.name }}</span>
+{% if frameworks.size == 1 and frameworks.first.name == empty %}
+  {% include docs/transport.html posts=framework.items %}
+{% else %}
+  <ul>
+    {% for framework in frameworks %}
+      {% if framework.name != empty %}
+        <li>
+          <span>{{ framework.name }}</span>
+          {% include docs/transport.html posts=framework.items %}
+        </li>
+      {% else %}
         {% include docs/transport.html posts=framework.items %}
-      </li>
-    {% else %}
-      {% include docs/transport.html posts=framework.items %}
-    {% endif %}
-  {% endfor %}
-</ul>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
