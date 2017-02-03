@@ -25,9 +25,11 @@
 
         </div>
         
-        <aside class="docs__content__main__table-of-contents">
-          {% include docs/table_of_contents.html %}
-        </aside>
+        {% if page.sections.size > 0 %}
+          <aside class="docs__content__main__table-of-contents">
+            {% include docs/table_of_contents.html %}
+          </aside>
+        {% endif %}
       
       </main>
       

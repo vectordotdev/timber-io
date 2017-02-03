@@ -1,9 +1,10 @@
 {% assign sections = page.sections | split: ', ' %}
-<section class="bg-washed-blue pa2 pa4-ns">
-    <ul class="list f6 pl0 mt3 mb0">
+<section class="pa3">
+    <h4>Table of Contents</h4>
+    <ul class="list f6 pl0 mb0 ml3">
       {% for section in sections %}
         <li>
-          <a href="#{{ section }}">{{ section }}</a>
+          # <a href="#{{ section }}">{{ section }}</a>
         </li>
       {% endfor %}
     </ul>

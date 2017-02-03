@@ -4,7 +4,7 @@
   width: 100%;
   flex: 1;
 
-  @media screen and (max-width: 60em) {
+  @media screen and (max-width: 40em) {
     flex-direction: column;
   }
 }
@@ -18,7 +18,7 @@
   display: flex;
   flex: 1;
 
-  @media screen and (max-width: 60em) {
+  @media screen and (max-width: 40em) {
     flex-direction: column;
   }
 }
@@ -37,15 +37,30 @@
   overflow: auto;
   padding: 1rem;
 
-  @media screen and (max-width: 60em) {
+  @media screen and (max-width: 40em) {
     height: auto;
   }
 }
 
 .docs__content__main__table-of-contents {
-  flex: 0 0 12em;
+  flex: 0 0 14em;
+  background: #f9f9ff;
+  border-left: 1px solid #F3F3FB;
 
-  @media screen and (max-width: 60em) {
+  ul {
+    list-style: disc;
+  }
+
+  a {
+    /* # Structuring Your L: */
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+    color: #A6ACB7;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+  }
+
+  @media screen and (max-width: 40em) {
     order: -1;
   }
 }
@@ -67,5 +82,11 @@
     color: #FFF !important;
     background: #5E58AE;
     font-weight: bold;
+  }
+
+  @media screen and (max-width: 40em) {
+    min-height: initial;
+    height: auto;
+    flex: none;
   }
 }
