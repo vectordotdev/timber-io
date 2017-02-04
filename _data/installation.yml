@@ -1,0 +1,16 @@
+server_side:
+    heroku:
+      node:
+        express:
+          syslog:
+          http:
+      ruby:
+        rails:
+          http: 
+          syslog:  
+serverless:
+  lambda_node: serverless_lambda_node
+database:
+  
+file:
+  

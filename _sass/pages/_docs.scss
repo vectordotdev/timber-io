@@ -1,0 +1,139 @@
+.docs {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex: 1;
+
+  @media screen and (max-width: 40em) {
+    flex-direction: column;
+  }
+}
+
+.docs__content {
+  flex: 1;
+  flex-direction: column;
+}
+
+.docs__content__main {
+  display: flex;
+  flex: 1;
+
+  @media screen and (max-width: 40em) {
+    flex-direction: column;
+  }
+}
+
+.docs__content__header {
+  font-family: Source Sans Pro;
+  font-weight: 600;
+  font-size: 24px;
+  color: #5E58AE;
+  letter-spacing: 0.18px;
+  border-bottom: 1px solid #DBE1E1;
+}
+
+.docs__content__main__doc {
+  flex: 1;
+  height: calc(100vh - 63px);
+  overflow: auto;
+  padding: 1rem;
+
+  @media screen and (max-width: 40em) {
+    height: auto;
+  }
+}
+
+.docs__content__main__table-of-contents {
+  flex: 0 0 14em;
+  // background: #f9f9ff;
+  border-left: 1px solid #F3F3FB;
+
+  ul {
+    list-style: disc;
+  }
+
+  a {
+    /* # Structuring Your L: */
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    color: #A6ACB7;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+  }
+
+  @media screen and (max-width: 40em) {
+    order: -1;
+  }
+}
+
+.docs__navigation {
+  order: -1;
+  overflow: auto;
+  flex: 0 0 16em;
+  border-right: 1px solid #DBE1E1;
+  min-height: 100vh;
+  padding: 25px;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: none;
+    border-bottom: 1px solid #F3F3FB;
+  }
+
+  ul li {
+    border-radius: 3px;
+  }
+
+  ul a {
+    border-radius: 3px;
+    padding: 7px 10px 7px 0;
+    text-decoration: none;
+    font-family: Europa;
+    font-size: 14px;
+    color: #A6ACB7;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+    border: none;
+    display: block;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background: #f5f7fb;
+      color: #595b61;
+      padding-left: 10px;
+    }
+
+    &.current {
+      background: #5E58AE;
+      font-weight: bold;
+      color: #FFF;
+      padding-left: 10px;
+    }
+  }
+
+  ul > ul li {
+    padding: 0;
+  }
+
+  section {
+
+  }
+
+  h3 {
+    font-family: Europa;
+    font-weight: bold;
+    font-size: 15px;
+    color: #3D4A67;
+    letter-spacing: 0.11px;
+    text-decoration: none;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 40em) {
+    min-height: initial;
+    height: auto;
+    flex: none;
+  }
+}

@@ -1,0 +1,24 @@
+<div>
+  <!--<a href="/">{% include logo.html color="#5E58AE" %}</a>-->
+
+  <div class="list pl0 measure center">
+    {% assign grouped = site.docs | group_by: 'category' | sort: site.docs %}
+    {% for group in grouped %}
+      {% if group.name != empty %}
+        <section class="{% if group.name == page.category %}current{% endif %}">
+          {% assign items = group.items | sort: 'order' %}
+          <h3 class="docs__navigation__list__header" href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</h3>
+          <ul>
+            {% for item in items %}
+              <li class="nav-item">
+                <a class="{% if item.url == page.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
+                  {{ item.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

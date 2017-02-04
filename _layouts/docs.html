@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  <div class="docs">
+
+    <nav class="docs__navigation">
+      {% include docs/navigation.html %}
+    </nav>
+
+    <div class="docs__content">
+
+      <header class="docs__content__header">
+        {% include docs/header.html %}
+      </header>
+
+      <main role="main" class="docs__content__main">
+        
+        <div class="docs__content__main__doc">
+
+          {{ content }}
+
+        </div>
+        
+        {% if page.sections.size > 0 %}
+          <aside class="docs__content__main__table-of-contents">
+            {% include docs/table_of_contents.html %}
+          </aside>
+        {% endif %}
+      
+      </main>
+      
+    </div>
+
+  </div>
+
+  {% include docs/footer.html %}
+
+</body>
+
+</html>

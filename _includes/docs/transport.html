@@ -1,0 +1,9 @@
+{% assign transport_methods = include.posts | group_by: 'transport' %}
+
+<ul>
+  {% for method in transport_methods %}
+    <li>
+      <a href="{{ site.baseurl }}{{ method.items.first.url }}">{{ method.name }}</a>
+    </li>
+  {% endfor %}
+</ul>

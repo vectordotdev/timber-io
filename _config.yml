@@ -12,6 +12,10 @@ collections:
     title: Tags
     output: true
     permalink: /blog/tag/:name/
+  docs:
+    title: Docs
+    permalink: /docs/:path/
+    output: true
   uploads:
     title: Uploads
     output: true
@@ -32,6 +36,11 @@ defaults:
     type: blog_tags
   values:
     layout: posts_by_tag
+- scope:
+    path: ''
+    type: docs
+  values:
+    layout: docs
 permalink: pretty
 desc: Timber.io – Structured Logging Made Easy
 url: https://timber.io
@@ -63,6 +72,8 @@ navigation:
 - title: About
   url: "/about/"
   desc: What Timber is about
+- title: Docs
+  url: "/docs/"
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
