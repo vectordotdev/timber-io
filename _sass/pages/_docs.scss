@@ -69,28 +69,66 @@
 .docs__navigation {
   order: -1;
   overflow: auto;
-  flex: 0 0 15em;
+  flex: 0 0 16em;
   border-right: 1px solid #DBE1E1;
   min-height: 100vh;
-
-  &__installation {
-    
-  }
+  padding: 25px;
 
   ul {
-    padding-left: 1em;
+    padding-left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: none;
+    border-bottom: 1px solid #F3F3FB;
   }
 
-  .nav-item {
+  ul li {
     border-radius: 3px;
-    padding: 5px 10px;
-    text-decoration: none;
   }
 
-  .nav-item.current {
-    color: #FFF !important;
-    background: #5E58AE;
+  ul a {
+    border-radius: 3px;
+    padding: 7px 10px 7px 0;
+    text-decoration: none;
+    font-family: Europa;
+    font-size: 14px;
+    color: #A6ACB7;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+    border: none;
+    display: block;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background: #EAEBEE;
+      color: #3D4A67;
+      padding-left: 10px;
+    }
+
+    &.current {
+      background: #5E58AE;
+      font-weight: bold;
+      color: #FFF;
+      padding-left: 10px;
+    }
+  }
+
+  ul > ul li {
+    padding: 0;
+  }
+
+  section {
+
+  }
+
+  h3 {
+    font-family: Europa;
     font-weight: bold;
+    font-size: 15px;
+    color: #3D4A67;
+    letter-spacing: 0.11px;
+    text-decoration: none;
+    margin: 0;
   }
 
   @media screen and (max-width: 40em) {

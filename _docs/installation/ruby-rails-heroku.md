@@ -1,6 +1,7 @@
 ---
 title: Ruby On Rails on Heroku
-category: Installation
+category: Ruby
+order: 3
 type: server_side
 platform: heroku
 language: ruby
