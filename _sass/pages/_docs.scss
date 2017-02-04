@@ -71,7 +71,8 @@
   overflow: auto;
   flex: 0 0 16em;
   border-right: 1px solid #DBE1E1;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   padding: 25px;
 
   ul {
