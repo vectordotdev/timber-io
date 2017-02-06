@@ -138,7 +138,7 @@ Because Timber sits in your app, it can assign each request a unique id and rela
 
 **8.  Less time configuring.**
 
-Since Timber doesn't have to account for arbitrary log structures, it's incredibly useful out of the box – it can make assumptions about your log data. This means we immediately recognize log level, status and context data which means things just work.
+Since Timber doesn't have to account for arbitrary log structures, it's incredibly useful out of the box – it can make assumptions about your log data. This means we immediately recognize log level, status and context data so things just work.
 
 **9. We're here to help**
 
