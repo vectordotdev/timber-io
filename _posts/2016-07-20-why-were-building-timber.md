@@ -6,9 +6,9 @@ author: zach_sherman
 tags: [timber]
 ---
 
-In the last decade, the way that we've built applications and services has changed dramatically. Unfortunately, the way that we debug and monitor them hasn't changed nearly as much. Once monolithic behemoths have splintered into lean microservices with single responsibilities, written in different languages and with different frameworks that are carefully chosen for the tasks at hand.
+In the last decade, the way that we've built applications and services has changed dramatically. Unfortunately, the way that we debug and monitor them hasn't changed nearly as much. Applications that were once structured as monolithic architectures have been splintered into lean microservices, each with their own responsibility. Each microservice may be written in a different language with a different framework that is carefully chosen for the service's responsibility.
 
-[Many](https://blog.risingstack.com/how-enterprises-benefit-from-microservices-architectures/), [many](https://martinfowler.com/articles/microservice-trade-offs.html) engineers and organizations have to come to realize the benefits of architecting systems in this manner, but like anything, it's not without its downsides. With so many different tools running on so many different platforms, the task of reliably debugging and monitoring them can become sisyphean.
+[Many]() [many](link) engineers and organizations have realized the benefits of architecting systems in this manner, but, like anything, it has downsides. With so many different tools running on so many different platforms, the task of reliably debugging and monitoring them becomes Sisyphean.
 
 In this wild west of microservices, serverless apps, workers, and 3rd party services one thing remains universal: the log is the single, reliable, immutable source of truth. Or as Jay Kreps [so thoughtfully puts it](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying):
 
@@ -22,34 +22,34 @@ Anyone who's attempted to use logs in production can probably tell you what a ha
 
 **1. Finding what you need in the logs is often really hard.**
 
-Most logging platforms ingest and display only raw text in a view that can make you feel like you're in the matrix.
+Most logging platforms ingest and display only raw text in a view that can make you feel like you're in The Matrix. Some logs are designed for humans, some for machines, some for both. Uh...
 
-You might say "sure, but I can always search for what I'm looking for, right?" Well, what happens if what you want to find isn't in the message string? What if your microservices are all logging different information in different formats with different log levels? The problem here is that there is **no context**.
+You might say "sure, but I can always search for what I'm looking for, right?" Well, what happens if what you want to find isn't in the message string? What if your microservices are all logging different information in different formats with different log levels? The problem here is that there is **no consistent structure** and **no context**.
 
-**2. Log based alerting is inconsistent and relies on fragile regexes**
+**2. Log-based alerting is inconsistent and relies on fragile regexes**
 
-It's common practice to set up alerts based on your logs, which can be incredibly useful. The problem is that these are generally done with simple regexes that are fragile, and will break with even the simplest changes to the log format.
+It's common practice to set up alerts based on your logs, which can be incredibly useful. The problem is that these are generally done with simple regexes that are fragile and will break with even the simplest changes to the log format.
 
 **3. Logging is expensive**
 
-The sheer amount of data that gets recorded can be [incredibly expensive](https://www.dropbox.com/s/zb0h8lrt7vuu262/Screenshot%202017-01-31%2013.29.19.png?dl=0) to process and store, and it's not uncommon to spend more on collecting and gathering your logs than on any other service at your company, particulary as you scale up services and machines.
+The sheer amount of data that gets recorded can be [incredibly expensive](https://www.dropbox.com/s/zb0h8lrt7vuu262/Screenshot%202017-01-31%2013.29.19.png?dl=0) to process and store, and it's not uncommon to spend more on collecting and gathering your logs than on any other service at your company, particularly as you scale up services and machines.
 
 **4. Retention is poor**
 
-Since logs are the direct record of what happens in your applications, they contain incredibly valuable data that can be utilized data science teams to find trends, patterns, behaviors, and more. The industry standard is to store that data for a few days and then destroy it, making any kind of valuable analysis impossible.
+Since logs are the direct record of what happens in your applications, they contain incredibly valuable data that can be utilized by data science teams to find trends, patterns, behaviors, and more. The industry standard is to store that data for a few days and then destroy it, making any kind of valuable analysis impossible.
 
 **5. Logging is difficult to set up and maintain**
 
-Let's face it, logging is not your core competency. You have many more important things to focus on than setting up and maintaining a system that can process your log data. We've seen large companies take hundreds of development hours to set up logigng systems that are still expensive and prone to issues.
+Let's face it, logging is not your core competency. You have many more important things to focus on than setting up and maintaining a system that can process your log data. We've seen large companies take hundreds of development hours to set up logging systems that are still expensive and prone to issues.
 
-**6. Can't see trends or high level overviews**
+**6. Can't see trends or high-level overviews**
 
 Since most log data is just raw text with timestamps, zooming out to see any real trends or being able to get a feel for how your app is performing just isn't possible. Many developers will resort to installing heavy server or application monitoring agents to get this data, but it should've been in your logs the whole time.
 
 
 ### So what is Timber?
 
-So glad you asked, to put it simply: Timber transforms your log lines into a standardized JSON structure and adds important application context along the way.
+We're glad you asked! To put it simply: Timber transforms your log lines into a shared normalized JSON schema (https://github.com/timberio/log-event-json-schema) and adds important application context along the way.
 
 For you visual people, we turn this:
 
@@ -84,9 +84,9 @@ into this:
 }
 ```
 
-That's it, it's dead simple.
+That's it! It's dead simple.
 
-Our lightweight packages ([ruby](github.com/timberio/timber-ruby (http://github.com/timberio/timber-ruby)) or [elixir](github.com/timberio/timber-elixir (http://github.com/timberio/timber-elixir)) for example) sit directly inside your application to ensure this structure, and augment your logs with context that was previously never included.
+Our lightweight packages ([ruby](github.com/timberio/timber-ruby (http://github.com/timberio/timber-ruby)) or [elixir](github.com/timberio/timber-elixir (http://github.com/timberio/timber-elixir)) for example) sit directly inside your application to ensure this structure and augment your logs with context that was previously inaccessible.
 
 ### Why is this a big deal?
 
@@ -94,7 +94,7 @@ With structured logs and more context, your logs become **consistent** and **use
 
 **1. Find and solve issues more easily.**
 
-Let's say a user reported that they were unable to check out, you can now simply run the following query:
+Let's say a user reported that they were unable to check out. You can now run the following query:
 
 `user.email:zach@timber.io http.path:/checkout`
 
@@ -106,26 +106,42 @@ Or if you wanted to find out which endpoints were performing slowly:
 
 The possibilities here are endless.
 
-**2. Save devleopers time**
+**2. Save developers time**
 
-The Timber console is specifically built to take advantage of this log structure (although it will also work with standard log formats), which means searching, graphing and investigating are easier and much faster.
+
+1. The Timber console is specifically built to take advantage of this log structure (although it will also work with standard log formats), which means searching, graphing and investigating are easier and much faster.
+2. Our libraries automatically structure your logs and give you a framework to work in. This burden is removed and developers can spend more time focusing on their application.
 
 **3. Reliable alerting**
 
-No more of those fragile regexes, alerts can now be configured around **actual data**. For example instead of matching on `/(500|503|504)/g` you can simply look for `http.response.code>=500` or just `level:error`.
+No more of those fragile regexes: alerts can now be configured around **actual data**. For example instead of matching on `/(500|503|504)/g` you can simply look for `http.response.code>=500` or just `level:error`.
 
 **4. No operations overhead**
 
-Forget about storing and processing the data yourself, Timber offers a completely managed platform to handle all of this for you.
+Forget about storing and processing the data yourself. Timber offers a completely managed platform to handle all of this for you.
 
 **5. Better customer experiences & faster response times**
 
-Since user data is automatically added to the logs context, narrowing down to a specific user's session is seamless and powerful.
+Since user data is automatically added to the log's context, narrowing down to a specific user's session is seamless and powerful.
 
-**6. Longer retention**
+**6. Cheaper**
 
-Timber offers retention up to 6 months, far exceeding the industry standard. This means you can use that data for analytical purposes without issue.
+Timber doesn't break the bank. It's designed with cost in mind. And in most cases, it's even cheaper than hosting an open-source logging solution yourself.
+
+**7. Longer retention**
+
+By default, Timber offers 6 months retention,  far exceeding the industry standard (1 week - 1 month). This means you can use that data for analytical purposes without issue. Need your data longer? Retention can be extended for up to 10 years if it suits your fancy :).
 
 **7. Trace requests through your stack**
 
-Timber assigns each request a unique id, which means you can see how a request travels through you entire system and at which point the issue arose.
+Because Timber sits in your app, it can assign each request a unique id and relate them. This means you can see how a request travels through your entire system and at which point the issue arose.
+
+**8. Out of the box usefulness. Less time configuring.**
+
+Last, but not least, because Timber defines a schema for your logs, this makes it possible to pre-configure your applications.
+
+**9. We're here to help******
+
+The Timber team is here to help you and that if you have custom requirements you should reach out to see if we can meet them.
+
+We hope that you enjoy using Timber as much as we enjoy building it. If you'd like to learn more head over to our [docs](/docs) or feel free to ping us at [hi@timber.io](mailto://hi@timber.io).
