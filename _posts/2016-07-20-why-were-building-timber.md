@@ -130,17 +130,17 @@ Timber doesn't break the bank. It's designed with cost in mind. And in most case
 
 **7. Longer retention**
 
-By default, Timber offers 6 months retention,  far exceeding the industry standard (1 week - 1 month). This means you can use that data for analytical purposes without issue. Need your data longer? Retention can be extended for up to 10 years if it suits your fancy :).
+By default, Timber offers 6 months retention,  far exceeding the industry standard (1 week - 1 month). This means you can use that data for analytical purposes without issue. Need your data longer? No problem, retention can be extended as needed.
 
 **7. Trace requests through your stack**
 
 Because Timber sits in your app, it can assign each request a unique id and relate them. This means you can see how a request travels through your entire system and at which point the issue arose.
 
-**8. Out of the box usefulness. Less time configuring.**
+**8.  Less time configuring.**
 
-Last, but not least, because Timber defines a schema for your logs, this makes it possible to pre-configure your applications.
+Since Timber doesn't have to account for arbitrary log structures, it's incredibly useful out of the box – it can make assumptions about your log data. This means we immediately recognize log level, status and context data which means things just work.
 
-**9. We're here to help******
+**9. We're here to help**
 
 The Timber team is here to help you and that if you have custom requirements you should reach out to see if we can meet them.
 
