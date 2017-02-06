@@ -142,6 +142,6 @@ Since Timber doesn't have to account for arbitrary log structures, it's incredib
 
 **9. We're here to help**
 
-The Timber team is here to help you and that if you have custom requirements you should reach out to see if we can meet them.
+The Timber team is here to help you. If you have custom requirements you should reach out to see if we can meet them.
 
 We hope that you enjoy using Timber as much as we enjoy building it. If you'd like to learn more head over to our [docs](/docs) or feel free to ping us at [hi@timber.io](mailto://hi@timber.io).
