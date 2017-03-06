@@ -35,6 +35,10 @@
 	background-position: bottom;
 	height: 120px;
 	min-width: 100%;
+
+	@media only screen and (min-width: 1500px) {
+		min-height: 300px;
+	}
 }
 
 #pfooter-top {
@@ -44,6 +48,10 @@
 	background-position: top;
 	height: 120px;
 	min-width: 100%;
+
+	@media only screen and (min-width: 1500px) {
+		min-height: 300px;
+	}
 }
 
 

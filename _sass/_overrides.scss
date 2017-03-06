@@ -16,6 +16,12 @@
   font-size: .75rem;
 }
 
+.bottom-4-ns {
+  @media screen and (min-width: 30em) {
+    bottom: 5rem;
+  }
+}
+
 @media #{$breakpoint-large} {
   .bottom--50-l {
     bottom: -50%;
