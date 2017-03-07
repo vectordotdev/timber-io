@@ -44,6 +44,7 @@ defaults:
 permalink: pretty
 desc: Timber.io – Structured Logging Made Easy
 url: https://timber.io
+app_url: https://app.timber.io
 baseurl: ''
 email: hi@timber.io
 author: Timber.io
@@ -110,44 +111,32 @@ billing_plans:
 - name: Free
   image: free-plan
   price: 0
-  data: 5
+  data: 100MB
 - name: Personal
   image: personal-plan
-  price: 49
-  data: 10
+  price: 10
+  data: 1GB
 - name: Team
   image: team-plan
-  price: 99
-  data: 15
+  price: 68
+  data: 8GB
 - name: Enterprise
   image: enterprise-plan
-  price: 299
-  data: 100+
+  price: 350+
+  data: 50GB+
 faqs:
-- title: A question about Timber
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- title: A question about Timber
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- title: A question about Timber
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- title: A question about Timber
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- title: A question about Timber
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-- title: A question about Timber
-  desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+- title: How does it work?
+  desc: Once the Timber package or gem is installed, it will automatically decorate your logs with useful context and events (user info, requests, queries, etc).
+- title: How do I install Timber?
+  desc: Simply sign up and choose your language and platform, from there you will be guided through a very brief installation process that will give you everything you need.
+- title: How much does it cost?
+  desc: Timber offers a variety of plans (including a generous free tier) to suit any company size. Paid plans start at $8 per GB of data sent. 
+- title: Which apps do you support?
+  desc: Currently we have packages for ruby, elixir and node, but can also accept logs from any app that runs on Heroku.
+- title: What data can I collect?
+  desc: You can see all of the possible fields at https://github.com/timberio/log-event-json-schema, but you can also add your own custom context and events.
+- title: How is this different?
+  desc: Most logging platforms accept only raw text or json payloads. Timber automatically structures your logs so they're consistent, and augments them with custom context and events.
 team:
 - name: Zach Sherman
   image: zach
@@ -164,11 +153,11 @@ team:
 - name: Garet McKinley
   image: garet
   role: Frontend Engineer
-  desc: Writer of software. Designer of Vectors.
+  desc: Writer of software. Designer of Vectors. Open source lover.
 - name: You?
   image: bronson
   role: Lumberjack
-  desc: Person of interest with a longer description about them that goes here.
+  desc: Interested in working at Timber? Send us an email at hi@timber.io.
 footer:
 - title: Features
   url: "/features/"
