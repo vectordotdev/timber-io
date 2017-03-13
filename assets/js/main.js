@@ -65,8 +65,8 @@ $(function () {
     }
   });
 
-  if (localStorage.getItem('timber_production_id_token')) {
-    // Copy last nav element and link to Timber dashboard
+  // Copy last nav element and link to Timber dashboard
+  if (Cookies.get('timber_logged_in') === "true") {
     $('.site-wrapper nav > .w-75-l > a:last-of-type')
       .clone()
       .text('Dashboard')
