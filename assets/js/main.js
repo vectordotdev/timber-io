@@ -53,18 +53,30 @@ $(function () {
     $('.wistia_embed a')[0].click();
   });
 
-  
-});
+  /* Mobile menu */
+  $('.nav-toggle').on('click', function() {
+    // this === nav-toggle
+    if ($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      $('.nav__links').removeClass('is-active');
+    } else {
+      $(this).addClass('is-active');
+      $('.nav__links').addClass('is-active');
+    }
+  });
 
-/* Mobile menu */
-
-$('.nav-toggle').on('click', function() {
-  // this === nav-toggle
-  if ($(this).hasClass('is-active')) {
-    $(this).removeClass('is-active');
-    $('.nav__links').removeClass('is-active');
-  } else {
-    $(this).addClass('is-active');
-    $('.nav__links').addClass('is-active');
+  // Copy last nav element and link to Timber dashboard
+  if (Cookies.get('timber_logged_in') === "true") {
+    $('.site-wrapper nav > .w-75-l > a:last-of-type')
+      .clone()
+      .text('Dashboard')
+      .attr('href', 'https://app.timber.io')
+      .css({
+        'border': '1px solid #FFF',
+        'border-radius': '3rem',
+        'padding': '5px 10px'
+      })
+      .insertAfter('.site-wrapper nav > .w-75-l > a:last-of-type');
   }
+
 });
