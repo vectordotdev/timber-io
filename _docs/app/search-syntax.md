@@ -1,13 +1,17 @@
 ---
-title: Search Syntax
 category: Timber App
-order: 1
-sections: test attributes
+category_order: 4
+title: Search Syntax
+page_order: 1
+sections: text search, attribute search, real-world examples
 ---
 
-# Reference
+While Timber does not store your logs on ElasticSearch, we provide a query syntax that works
+exactly the same.
 
-## Text
+Looking for something more powerful? Checkout the [SQL query your logs]({% link _docs/app/sql-query.md %}) page.
+
+# Text search
 
 | Action                 | Example                      | Description
 |------------------------|------------------------------|-------------------------------------------------------------------
@@ -20,7 +24,7 @@ sections: test attributes
 | Grouping               | `(paul OR bunyan) AND ox`    | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
 | Grouping w/ negation   | `-(paul bunyan)`             | Any line that does _not_ contain `paul` _and_ does not contain `bunyan`.
 
-## Attributes
+# Attribute search
 
 A full list of the available fields can be found in our log event JSON schema.
 
@@ -40,19 +44,14 @@ A full list of the available fields can be found in our log event JSON schema.
 | Less than or equal to    | `http_server_response.time_ms:<=50` | Any line where the`http_server_response.time_ms` field is _less than or equal to_ `50`.
 
 
-# Real world examples
+# Real-world examples
 
-1. Find all exceptions:
-  * `has:exception`
+1. Find all exceptions: `has:exception`
 
-2. Find all error level logs:
-  * `level:error`
+2. Find all error level logs: `level:error`
 
-3. Find all exceptions for a user:
-  * `user.id:1234 has:exception`
+3. Find all exceptions for a user: `user.id:1234 has:exception`
 
-4. Find all 500 responses:
-  * `http_server_response.stats:500`
+4. Find all 500 responses: `http_server_response.stats:500`
 
-5. Find all platform errors:
-  * `has:platform.error`
+5. Find all platform errors: `has:platform.error`
