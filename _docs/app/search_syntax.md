@@ -11,10 +11,10 @@ sections: test attributes
 
 | Action                 | Example                      | Description
 |------------------------|------------------------------|-------------------------------------------------------------------
-| Contains               | `paul`                       | Any line that contains `axes`. Case insensitive.
-| Intersection           | `paul bunyan`                | Any line that contains `axes` _and_ `logs`. Case insensitive.
-| Literal phrases w/ `"` | `"paul bunyan"      `        | Any line that contains `paul bunyan` (space included). Case insensitive.
-| Literal phrases w/ `'` | `'paul bunyan'      `        | Any line that contains `paul bunyan` (space included). Case insensitive.
+| Contains               | `paul`                       | Any line that contains `paul`. Case insensitive.
+| Intersection           | `paul bunyan`                | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
+| Literal phrases w/ `"` | `"paul bunyan"      `        | Any line that contains `paul bunyan`, _together_ (space included). Case insensitive.
+| Literal phrases w/ `'` | `'paul bunyan'      `        | Any line that contains `paul bunyan`, _together_ (space included). Case insensitive.
 | Negation (exclusion)   | `-paul`                      | Any line that does _not_ contain `paul`. Case insensitive.
 | Wildcards              | `pau*unyan`                  | Regex equivalent: `/paul.*unyan/`. Case insensitive.
 | Grouping               | `(paul OR bunyan) AND ox`    | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
