@@ -1,5 +1,5 @@
 <div class="db dt-l w-100 border-box pa3 flex justify-between">
-  {{ page.category }} / {{ page.title }}
+  {% if page.category %}{{ page.category }} / {% endif %}{{ page.title }}
 
   <a class="pv2 ph3" href="https://github.com/timberio/timber-io">Edit Page</a>
 </div>
