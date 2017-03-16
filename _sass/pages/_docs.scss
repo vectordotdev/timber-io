@@ -104,6 +104,10 @@
     color: #5E58AE;
   }
 
+  code {
+    background: #f4f3fb;
+  }
+
   h2 {
     margin-top: 3rem;
     color: rgba(0, 0, 0, 0.7);
@@ -112,6 +116,11 @@
   img {
     border: 2rem solid #f4f3fb;
     box-sizing: border-box;
+  }
+
+  .highlight pre,
+  pre {
+    background: #f4f3fb;
   }
 
   table {

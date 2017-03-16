@@ -12,17 +12,6 @@ sections: manual configuration
     gem "timber"
     {% endhighlight %}
 
-2. In `config/environments/production.rb`, install the `Timber::Logger`:
+2. In your `shell`, run `bundle install`.
 
-    {% highlight ruby %}
-    # config/environments/production.rb
-
-    # Remove *any* existing `config.logger =` and `config.log_formatter` calls!
-    # config.log_formatter = ... # <--------------------------------- REMOVE ME
-    # config.logger = ... # <---------------------------------------- REMOVE ME
-
-    # Install the Timber logger
-    config.logger = ActiveSupport::TaggedLogging.new(Timber::Logger.new(STDOUT))
-    {% endhighlight %}
-
-3. Commit changes and deploy. 🚀
+3. In your `shell`, run `bundle exec timber install`.

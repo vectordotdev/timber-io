@@ -11,6 +11,12 @@ exactly the same.
 
 Looking for something more powerful? Checkout the [SQL query your logs]({% link _docs/app/sql-query.md %}) page.
 
+## Interface example
+
+![Seek to time](/assets/img/docs/app/query-example.gif){:class="img-responsive"}
+
+
+
 ## Text search
 
 | Action                 | Example                      | Description
