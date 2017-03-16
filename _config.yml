@@ -145,7 +145,7 @@ team:
 - name: Ben Johnson
   image: ben
   role: Founder & CTO
-  desc: Founder / CTO @timberdotio, previously @seatgeek. I do things with computers.
+  desc: Founder / CTO @timberdotio, previously @seatgeek. How many logs could a logger log if a logger could log logs?
 - name: David Antaramian
   image: david
   role: Senior Backend Engineer
