@@ -7,32 +7,47 @@
 
   <div class="docs">
 
-    <nav class="docs__navigation">
+    <nav class="docs__navigation pv4 ph4">
       {% include docs/navigation.html %}
     </nav>
 
-    <div class="docs__content">
+    <div class="docs__content pv4 ph4">
 
       <header class="docs__content__header">
         {% include docs/header.html %}
       </header>
 
       <main role="main" class="docs__content__main">
-        
-        <div class="docs__content__main__doc">
 
-          {{ content }}
+        <div class="docs__content__main__doc pt4">
+
+          <div class="markdown-body">
+            {{ content }}
+          </div>
+
+          <div class="flex mt5 docs__content__main__doc__cta">
+            <div>
+              <h4 class="mt0 mb2">Questions? Need help?</h4>
+
+              <p>Chat with us, just click the talk button in the bottom right of this page.</p>
+
+              <a class="dib pv1 ph2 mt2" href="https://app.timber.io">Chat with us</a>
+            </div>
+
+            <div>
+              <h4 class="pt0 mt0 mb2">Start a trial - 15 days free</h4>
+
+              <p>Log better and solve problems faster, today. Less than 1 minutes to install.</p>
+
+              <a class="dib pv1 ph2 mt2" href="https://app.timber.io">Start a trial</a>
+            </div>
+
+          </div>
 
         </div>
-        
-        {% if page.sections.size > 0 %}
-          <aside class="docs__content__main__table-of-contents">
-            {% include docs/table_of_contents.html %}
-          </aside>
-        {% endif %}
-      
+
       </main>
-      
+
     </div>
 
   </div>

@@ -1,7 +1,7 @@
 ---
 category: Timber App
-category_order: 4
-title: View in request context
+category_order: 5
+title: Trace a request
 page_order: 7
 sections: text, attributes
 ---

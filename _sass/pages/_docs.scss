@@ -1,112 +1,20 @@
 .docs {
-  display: flex;
   min-height: 100vh;
   height: 100vh;
   width: 100%;
-  flex: 1;
-  overflow: hidden;
-
-  @media screen and (max-width: 40em) {
-    flex-direction: column;
-  }
-}
-
-.docs__content {
-  flex: 1;
-  flex-direction: column;
-}
-
-.docs__content__main {
-  display: flex;
-  flex: 1;
-
-  @media screen and (max-width: 40em) {
-    flex-direction: column;
-  }
-}
-
-.docs__content__header {
-  font-family: "Europa", "Helvetica Neue";
-  font-weight: 600;
-  font-size: 24px;
-  color: #5E58AE;
-  letter-spacing: 0.18px;
-  border-bottom: 1px solid #DBE1E1;
-
-  a {
-    background: #F3F3FB;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #81848C;
-    letter-spacing: 0.1px;
-    text-decoration: none;
-    font-weight: 400;
-
-    &:hover {
-      color: #2F2A57;
-    }
-  }
-}
-
-.docs__content__main__doc {
-  flex: 1;
-  height: calc(100vh - 63px);
-  overflow: auto;
-  padding: 1rem;
-
-  @media screen and (max-width: 40em) {
-    height: auto;
-  }
-}
-
-.docs__content__main__table-of-contents {
-  flex: 0 0 14em;
-  // background: #f9f9ff;
-  border-left: 1px solid #F3F3FB;
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    font-family: "Europa", "Helvetica Neue";
-    font-size: 14px;
-    color: #A6ACB7;
-    letter-spacing: 0.1px;
-    line-height: 16px;
-    text-decoration: none;
-    padding: 5px 0;
-    display: inline-block;
-    text-transform: capitalize;
-
-    &:hover {
-      color: #3D4A67;
-    }
-  }
-
-  h4 {
-    font-family: "Europa", "Helvetica Neue";
-    font-weight: bold;
-    font-size: 15px;
-    color: #3D4A67;
-    letter-spacing: 0.11px;
-    margin: 0 0 10px 0;
-  }
-
-  @media screen and (max-width: 40em) {
-    order: -1;
-  }
 }
 
 .docs__navigation {
-  order: -1;
+  position: fixed;
   overflow: auto;
-  flex: 0 0 16em;
+  width: 18rem;
   border-right: 1px solid #DBE1E1;
   height: 100vh;
   max-height: 100vh;
-  padding: 25px;
+
+  a.logo {
+    margin-top: -3px;
+  }
 
   ul {
     padding-left: 0;
@@ -151,10 +59,6 @@
     padding: 0;
   }
 
-  section {
-
-  }
-
   h3 {
     font-family: "Europa", "Helvetica Neue";
     font-weight: bold;
@@ -164,11 +68,133 @@
     text-decoration: none;
     margin: 0;
   }
+}
 
-  @media screen and (max-width: 40em) {
-    min-height: initial;
-    max-height: initial;
-    height: auto;
-    flex: none;
+.docs__content__header {
+  font-family: "Europa", "Helvetica Neue";
+  font-weight: 600;
+  color: #5E58AE;
+  letter-spacing: 0.18px;
+  border-bottom: 1px solid #DBE1E1;
+
+  a {
+    background: #F3F3FB;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #81848C;
+    letter-spacing: 0.1px;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover {
+      color: #2F2A57;
+    }
+  }
+}
+
+.docs__content {
+  margin-left: 18rem;
+}
+
+.docs__content__main__doc {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.75;
+
+  a {
+    color: #5E58AE;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  img {
+    border: 2rem solid #f4f3fb;
+    box-sizing: border-box;
+  }
+
+  table {
+    border: 2rem solid #f4f3fb;
+    border-radius: 5px;
+
+    th, td {
+      border: 1px solid #f4f3fb;
+    }
+  }
+
+  table tr:nth-child(2n) {
+    background: white;
+  }
+}
+
+.docs__content__main__doc__cta {
+  background: #f9f9ff;
+  border-left: 1px solid #F3F3FB;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.5);
+
+  > div {
+    border-top: 1px solid #F3F3FB;
+    border-right: 1px solid #F3F3FB;
+    border-bottom: 1px solid #F3F3FB;
+    padding: 2rem;
+    width: 50%;
+
+    > h4 {
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    > a {
+      border-radius: 3px;
+      background: #5E58AE;
+      color: #FFF;
+      transition: all .2s ease-in-out;
+      text-decoration: none;
+
+      &:hover {
+        background: #5E58AE;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.docs__content__main__table-of-contents {
+  display: fixed;
+  top: 0;
+  right: 0;
+  margin-right: -2rem;
+  // background: #f9f9ff;
+  border-left: 1px solid #F3F3FB;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    font-family: "Europa", "Helvetica Neue";
+    font-size: 14px;
+    color: #A6ACB7;
+    letter-spacing: 0.1px;
+    line-height: 16px;
+    text-decoration: none;
+    padding: 10px 0;
+    display: inline-block;
+    text-transform: capitalize;
+
+    &:hover {
+      color: #3D4A67;
+    }
+  }
+
+  h4 {
+    font-family: "Europa", "Helvetica Neue";
+    font-weight: bold;
+    font-size: 15px;
+    color: #3D4A67;
+    letter-spacing: 0.11px;
+    margin: 0 0 10px 0;
   }
 }

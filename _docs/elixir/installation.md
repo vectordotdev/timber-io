@@ -23,9 +23,10 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
 
 2. In your `shell`, run `mix deps.get`.
 
-3. In your `shell`, run `mix timber.install` or follow the [manual instructions]({% link _docs/elixir/manual-installation.md %}).
+3. In your `shell`, run `mix timber.install` or follow the [manual install instructions]({% link _docs/elixir/manual-installation.md %}).
 
+---
 
-# Preview
+### Preview
 
 ![Timber elixir install](/assets/img/docs/timber-elixir-install.gif){:class="img-responsive"}

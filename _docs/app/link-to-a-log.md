@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 4
+category_order: 5
 title: Link to a Log
 page_order: 5
 ---

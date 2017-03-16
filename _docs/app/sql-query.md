@@ -1,12 +1,12 @@
 ---
 category: Timber App
-category_order: 4
+category_order: 5
 title: SQL Query Your Logs
 page_order: 2
 sections: text, attributes
 ---
 
-[![This feature is in private beta. If interested, please email beta@timber.io](http://messages.hellobits.com/info.svg?message=This%20feature%20is%20in%20private%20beta,%20if%20interested,%20please%20email%20beta@timber.io)](mailto:beta@timber.io)
+<div class="info-notice">This feature is in private beta. If interested, please email beta@timber.io</div>
 
 
 Timber supports the traditional SQL `SELECT` queries for your logs. It works like just SQL:
@@ -14,7 +14,7 @@ issue a query, get back a table of results. This is a power feature and provides
 direct, clean access to your data.
 
 
-# Synopsis
+## Synopsis
 
 ```
 [ WITH with_query [, ...] ]
@@ -58,7 +58,7 @@ CUBE ( column [, ...] )
 ROLLUP ( column [, ...] )
 ```
 
-# Schema (available columns)
+## Schema (available columns)
 
 All of your data is stored within a single table called `logs`. The columns available
-can be found in our [log schema]({% link _docs/app/log-schema.md %}) page.
+can be found in our [schema / fields]({% link _docs/app/schema-fields.md %}) page.

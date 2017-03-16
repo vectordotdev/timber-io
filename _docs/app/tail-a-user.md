@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 4
+category_order: 5
 title: Tail a user
 page_order: 6
 ---

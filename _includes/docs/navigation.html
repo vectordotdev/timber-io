@@ -1,26 +1,28 @@
 <div>
-  <a href="/docs">{% include logo.html color="#5E58AE" %}</a>
+  <a href="/docs" class="logo db mb4">{% include logo.html color="#5E58AE" %}</a>
 
   <div class="list pl0 measure center">
     {% assign grouped = site.docs | sort: 'category_order' | group_by: 'category' %}
     {% for group in grouped %}
-      <section class="{% if group.name == page.category %}current{% endif %}">
-        {% assign items = group.items | sort: 'page_order' %}
-        {% if group.name != empty %}
-          <h3 class="docs__navigation__list__header" href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</h3>
-        {% endif %}
-        <ul>
-          {% for item in items %}
-            {% if item.page_order > 0 %}
-              <li class="nav-item">
-                <a class="{% if item.url == page.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
-                  {{ item.title }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
+      {% if group.name != empty %}
+        <section class="{% if group.name == page.category %}current{% endif %}">
+          {% assign items = group.items | sort: 'page_order' %}
+          {% if group.name != empty %}
+            <h3 class="docs__navigation__list__header" href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</h3>
+          {% endif %}
+          <ul>
+            {% for item in items %}
+              {% if item.page_order > 0 %}
+                <li class="nav-item">
+                  <a class="{% if item.url == page.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
+                    {{ item.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
     {% endfor %}
 
     <section class="{% if group.name == page.category %}current{% endif %}">
