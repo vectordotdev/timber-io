@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 4
+category_order: 5
 title: Seek To Time
 page_order: 4
 sections: interface component, nlp, linking

@@ -13,7 +13,7 @@ $(function () {
     // Make this button's circle active
     $(el).find('.bg-midnight').removeClass('bg-midnight').addClass('bg-purple');
   }
-  
+
   // Initialize the carousel
   var $demoCarousel = $(".home__demo__carousel__content").slick({
     infinite: true,

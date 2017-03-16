@@ -15,4 +15,4 @@ Github and Google integrations. We also support traditional email/password accou
 # Organizations / Access
 
 Your account on Timber represents you individually. There is no need to create multiple
-accounts for different organizations. Timber
+accounts for different organizations. Each organization can add you to their team.
