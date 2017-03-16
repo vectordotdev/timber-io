@@ -1,5 +1,5 @@
 ---
-title: timber.io
+title: Timber - Log Better. Solve Problems Faster.
 timezone: UTC
 collections:
   plans:
@@ -42,7 +42,7 @@ defaults:
   values:
     layout: docs
 permalink: pretty
-desc: Timber.io – Structured Logging Made Easy
+desc: Timber.io – Log Better. Solve Problems Faster.
 url: https://timber.io
 app_url: https://app.timber.io
 baseurl: ''
