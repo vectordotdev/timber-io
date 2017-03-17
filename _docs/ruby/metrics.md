@@ -41,7 +41,7 @@ situations, we recommend logging summary events.
     end
     logger.info(
       "Batch processing job complete",
-      batch_processing_job: {task_count: 100_000, success_count: 90_000, failed_count: 10_000, time_ms: 2000}
+      batch_job_summary: {task_count: 100_000, success_count: 90_000, failed_count: 10_000, time_ms: 2000}
     )
     {% endhighlight %}
 
@@ -49,5 +49,5 @@ Notice we classify this as an event and attached additional data beyond just the
 
 In the timber console you can run queries like:
 
-* `batch_processing_job.time_ms:>50`
-* `batch_processing_job.failed_count:>0`
+* `batch_job_summary.time_ms:>50`
+* `batch_job_summary.failed_count:>0`
