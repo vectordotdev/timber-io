@@ -13,8 +13,7 @@ Looking for something more powerful? Checkout the [SQL query your logs]({% link 
 
 ## Interface example
 
-![Seek to time](/assets/img/docs/app/query-example.gif){:class="img-responsive"}
-
+![Search / Query example](/assets/img/docs/app/query-example.gif){:class="img-responsive"}
 
 
 ## Text search
@@ -23,12 +22,13 @@ Looking for something more powerful? Checkout the [SQL query your logs]({% link 
 |------------------------|------------------------------|-------------------------------------------------------------------
 | Contains               | `paul`                       | Any line that contains `paul`. Case insensitive.
 | Intersection           | `paul bunyan`                | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
-| Literal phrases `"`    | `"paul bunyan"      `        | Any line that contains `paul bunyan`, (space included). Case insensitive.
-| Literal phrases `'`    | `'paul bunyan'      `        | Any line that contains `paul bunyan`, (space included). Case insensitive.
+| Literal phrases `"`    | `"paul bunyan"`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
+| Literal phrases `'`    | `'paul bunyan'`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
 | Negation (exclusion)   | `-paul`                      | Any line that does _not_ contain `paul`. Case insensitive.
-| Wildcards              | `pau*unyan`                  | Regex equivalent: `/paul.*unyan/`. Case insensitive.
+| Wildcards `*`          | `pau*unyan`                  | Regex equivalent: `/paul.*unyan/`. Case insensitive.
 | Grouping               | `(paul OR bunyan) AND ox`    | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
 | Grouping w/ negation   | `-(paul bunyan)`             | Any line that does _not_ contain `paul` _and_ does not contain `bunyan`.
+
 
 ## Attribute search
 

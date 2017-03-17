@@ -9,8 +9,8 @@ sections: manual configuration
 1. In your `Gemfile`, add the `timber` gem:
 
     {% highlight ruby %}
-    gem "timber"
-    {% endhighlight %}
+    # Gemfile
+    gem "timber", "~> 1.0"{% endhighlight %}
 
 2. In your `shell`, run `bundle install`.
 
