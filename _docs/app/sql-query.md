@@ -16,7 +16,7 @@ direct, clean access to your data.
 
 ## Synopsis
 
-```
+```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT ] select_expr [, ...]
 [ FROM from_item [, ...] ]
@@ -30,17 +30,17 @@ SELECT [ ALL | DISTINCT ] select_expr [, ...]
 
 where `from_item` is one of:
 
-```
+```sql
 table_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 ```
 
-```
+```sql
 from_item join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
 and `join_type` is one of:
 
-```
+```sql
 [ INNER ] JOIN
 LEFT [ OUTER ] JOIN
 RIGHT [ OUTER ] JOIN
@@ -50,7 +50,7 @@ CROSS JOIN
 
 and `grouping_element` is one of:
 
-```
+```sql
 ()
 expression
 GROUPING SETS ( ( column [, ...] ) [, ...] )

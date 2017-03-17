@@ -6,24 +6,30 @@ page_order: 4
 sections: interface component, nlp, linking
 ---
 
-# Interface Component
+Timber allows you to quick seek to any specific time:
+
+
+## Interface Component
 
 Within the Timber app you can seek to a specific time. You'll noticed this component
 in the top right of the interface:
 
-![Seek to time](/assets/img/docs/time-seeker.png){:class="img-responsive"}
+![Seek to time](/assets/img/docs/seek-to-time.gif)
 
 
-# NLP
+## Natural Language Dates / Times
 
-You can also type dates / times in natural language:
+You can supply dates / times in natural language:
 
 1. `today at 3m`
 2. `last wednesday at 4:01pm` (last meaning, last week)
 3. `wednesday at 4:01pm` (the most recent wednesday, past or future)
+4. `1997-07-16T19:20:30+01:00`
+5. [Complete reference →](https://sugarjs.com/docs/#/DateParsing)
 
 
-# Linking
+
+## Linking
 
 After seeking to a date the URL will update with a `date=` parameter. Simply copy
 that URL, anyone navigating to the URL will jump to the same time. Ex:

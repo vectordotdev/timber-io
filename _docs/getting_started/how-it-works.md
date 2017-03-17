@@ -6,28 +6,28 @@ page_order: 2
 sections: how timber is organized, log enrichment, log delivery, log ingestion, log retention, log querying
 ---
 
-Timber works by ingesting logs from multiple servers, centralizing the data, and making it
-available for use. There is no limit to the amount of data you can send Timber, as long as
-your plan allows for it. To best describe how Timber works, let's walk through the basic
-flow logs take:
+The high-level explanation of how Timber works:
+
+1. [Install the Timber library in your app.](#1-install-the-timber-library-in-your-app)
+2. [The Timber library automatically turns your logs into rich structured events.](#2-the-timber-library-automatically-turns-your-logs-into-rich-structured-events)
+3. [Send your log data to the Timber service.](#3-send-your-log-data-to-the-timber-service)
+4. [Use the Timber console to query, graph, and alert on your new log data.](#4-use-the-timber-console-to-query-graph-and-alert-on-your-new-log-data)
 
 
-# How Timber is organized
+## 1. Install the timber library in your app
 
-Timber is organized by organization and application. Each organization contains applications,
-team members, and billing. An application represents a single source of logs for a specific
-environment.
+The Timber libraries are at the core of improving your log data quality. To your left
+you'll see the various Timber libraries for each language. Each library comes with
+a single installer command that makes set-up dead simple.
 
-After you [sign up](https://app.timber.io), you'll go through a simple process of setting up
-your first organization and creating your first application.
+* [Ruby installation](%{ link _docs/ruby/installation.md %})
+* [Elixir installation](%{ link _docs/elixir/installation.md %})
 
 
-# 1. Log enrichment
+## 2. The Timber library automatically turns your logs into rich structured events.
 
-The usefulness of your logs starts with data quality. Timber is unique in that it provides
-[libraries](https://github.com/timberio) that enrich and augment your logs. These libraries
-install within your application, collecting data that couldn't be obtained through parsing,
-and finally augmenting your logs with this data.
+Once the library is installed in your application, Timber goes to work by augmenting
+your logs with rich data.
 
 For example, our libraries turns this:
 
@@ -41,51 +41,23 @@ Into this:
 Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_response": {"status": 200, "time_ms": 45.2}}}
 ```
 
-Notice the `@metadata` call out. The Timber service will notice this and parse it out,
-detaching it from the message. When presented in the [Timber console](https://app.timber.io)
-the message is displayed cleanly with the ability to click the link and view the attached
-metadata. There is no need to sacrifice human readability for data quality.
-
-More details on our libraries can be found in the navigation to your left for each language.
+For a full list of data we collect, checkout the [schema & fields doc]({% link _docs/app/schema-fields.md %}).
 
 
-# 2. Log delivery
+## 3. Send your log data to the Timber service
 
-Depending on your language and platform, log delivery can be accomplished a number of ways.
-Timber simplifies this process by asking for these details during app created. After wich,
-Timber displays simple copy/paste install instructions to setup your app.
+Depending on your platform, delivering log data to the Timber service can vary. In fact, the
+variety of options can be overwhelming. Instead of throwing a ton of articles at you and
+requiring your to figure it out, Timber asks for these details when you create your app.
+After app creation, we'll give you a simple, single set of instructions to follow.
 
-Generally speaking, log delivery is accomplished 2 ways:
-
-1. Directly from your platform.
-  1. For example, Heroku offers [log drains](https://devcenter.heroku.com/articles/log-drains),
-     taking care of log delivery entirely. Your app simply writes logs to `STDOUT`.
-
-2. Directly from your application via HTTP.
-  1. All of the Timber libraries ship with an HTTP client to deliver your logs. Each of these
-     are very well thought out incorporating buffering, batching, compression, keep-alive
-     connections, and intelligent retries.
-
-Regardless of the method, all logs are delivered to `https://logs.timber.io/farmes` for ingestion.
+Note: there is no limit to the number of servers that can send us data, we do not
+rate limit. Limits are based on the plan data allowance.
 
 
-# 3. Log ingestion
+## 4. Use the Timber console to query, graph, and alert on your new log data.
 
-Once logs are delivered we guarantee 11-9s of durability during our ingestion process. Generally,
-logs are ingested and available within 5 seconds of receiving them.
+Now that you have rich structured log data, it's time to actually put it to use!
 
-
-# 4. Log retention
-
-All logs rest on durable storage, providing 11-9s of durability; the data is encrypted at rest.
-By default, all paid plans comes with 6 months retention, far exceeding the industry norm of
-2 - 4 weeks.
-
-
-# 5. Log querying
-
-Now that you have rich logs it's time for the fun part! Timber takes care to provide rich,
-unrestricted access to your logs. Please see:
-
-1. [Search syntax]({% link _docs/app/search-syntax.md %})
-2. [SQL query your logs]({% link _docs/app/sql-query.md %})
+Checkout out the `Timber App` seciton to your left for all of the glorious ways you
+can use your new log data.

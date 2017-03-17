@@ -16,7 +16,7 @@ If anything is missing, you're confused, or would like to suggest changes, pleas
 
 ## Top articles
 
-1. Search syntax
-2. Schema / Fields
-3. Tail a user
-4. Trace a request
+1. [Search syntax](% link _docs/apps/search-syntax.md %})
+2. [Schema / Fields](% link _docs/apps/schema-fields.md %})
+3. [Tail a user](% link _docs/apps/tail-a-user.md %})
+4. [Trace a request](% link _docs/apps/trace-request.md %})
