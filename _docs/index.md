@@ -5,6 +5,13 @@ layout: docs
 permalink: /docs/index.html
 ---
 
+<pre class="plain">
+ ^  ^  ^   ^      ___I_      ^  ^   ^  ^  ^   ^  ^
+/|\/|\/|\ /|\    /\-_--\    /|\/|\ /|\/|\/|\ /|\/|\
+/|\/|\/|\ /|\   /  \_-__\   /|\/|\ /|\/|\/|\ /|\/|\
+/|\/|\/|\ /|\   |[]| [] |   /|\/|\ /|\/|\/|\ /|\/|\
+</pre>
+
 Welcome to the [Timber](https://timber.io) docs!
 
 The purpose of these docs is to ensure you get the most out of Timber. Allowing you to log

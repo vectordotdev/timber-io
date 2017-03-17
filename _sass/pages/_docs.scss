@@ -129,6 +129,11 @@
     padding: 1rem;
   }
 
+  pre.plain {
+    background: white;
+    padding: 0;
+  }
+
   table {
     border: 2rem solid #f4f3fb;
     border-radius: 5px;
