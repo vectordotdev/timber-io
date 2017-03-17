@@ -9,10 +9,10 @@ sections: manual configuration
 Logging metrics is accomplished by [logging custom events]({% link _docs/ruby/custom-events.md %}). Let's take a look at a couple of examples:
 
 
-## Example 1: Tracking credit card charge attempts
+## Example 1: Tracking credit card charge volume
 
-With Timber, you can log the event as a whole. This way if you discover anomalies, you'll have the
-data you need to resolve the issue:
+Instead of focusing on individual metrics, Timber allows you to log the event as a whole. This
+way if you discover anomalies, you'll have the data you need to resolve the issue:
 
     {% highlight ruby %}
     result = CreditCrardProcessor.charge(credit_card, amount)
@@ -29,7 +29,7 @@ In the timber console you can run queries like:
 * `cc_charge_attempt.amount:>100`
 
 
-## Example 2: Tracking a batch processing job
+## Example 2: Timing a batch processing job
 
 In some cases volume is high enough that logging individual events is not feasible. In these
 situations, we recommend logging summary events.
@@ -43,3 +43,10 @@ situations, we recommend logging summary events.
       batch_processing_job: {task_count: 100_000, success_count: 90_000, failed_count: 10_000, time_ms: 2000}
     )
     {% endhighlight %}
+
+Notice we classify this as an event and attached additional data beyond just the timing.
+
+In the timber console you can run queries like:
+
+* `batch_processing_job.time_ms:>50`
+* `batch_processing_job.failed_count:>0`
