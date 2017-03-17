@@ -32,7 +32,7 @@ In the timber console you can run queries like:
 
 ## Example 2: Timing a batch processing job
 
-In some cases volume is high enough that logging individual events is not feasible. In these
+In some cases, volume is high enough that logging individual events is not feasible. In these
 situations, we recommend logging summary events.
 
     {% highlight ruby %}
