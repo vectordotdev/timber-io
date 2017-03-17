@@ -23,6 +23,8 @@ Action | Member | Admin
 Create apps | X | ✓
 Edit apps | X | ✓
 Delete apps | X | ✓
+Access apps | ✓ | ✓
+Access the console | ✓ | ✓
 Delete the organization | X | ✓
 Access billing | X | ✓
 Create members | X | ✓
