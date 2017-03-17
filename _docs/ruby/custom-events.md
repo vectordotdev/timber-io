@@ -18,3 +18,9 @@ Logger.warn "Payment rejected", payment_rejected: {customer_id: "abcd1234", amou
 * Notice the `:payment_rejected` root key. Timber will classify this event as such.
 * In the Timber console use the query: `type:payment_rejected` or `payment_rejected.amount:>100`.
 * Looking for metrics? Checkout the [metrics doc]({% link _docs/ruby/metrics.md %}).
+
+
+## Limits
+
+* There are *no limits* to the depth of fields you can nest. As long as the resulting field path is less than `128` characters.
+* There are *no limits* to the number of custom fields you can send. As long as the result payload size is less than `2mb`.
