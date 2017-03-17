@@ -32,8 +32,11 @@ In the timber console you can run queries like:
 
 ## Example 2: Timing a batch processing job
 
+Just like above, instead of focusing on the individual timing metrics, we recommend logging an
+actual event.
+
 In some cases, volume is high enough that logging individual events is not feasible. In these
-situations, we recommend logging summary events.
+situations, we recommend logging summary events:
 
     {% highlight ruby %}
     100_000.times do
