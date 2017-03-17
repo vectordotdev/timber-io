@@ -10,7 +10,7 @@ This page contains the manual Timber for Elixir install instructions. We _highly
 [using the installer]({% link _docs/elixir/installation.md %}) if possible. As it streamlines
 the entire process and runs tests to ensure communication with the Timber service is working.
 
-**Prefer examples?** Checkout out the **[Timber install example pull requsts](https://github.com/timberio/elixir-phoenix-example-app/pulls).
+**Prefer examples?** Checkout out the [Timber install example pull requsts](https://github.com/timberio/elixir-phoenix-example-app/pulls).
 These demonstrate the changes below in a git-pull style format.
 
 ---
