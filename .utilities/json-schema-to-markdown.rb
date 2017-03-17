@@ -74,48 +74,9 @@ class MarkdownRenderer
       columns = columns(properties)
 
       columns.each do |column|
-        markdown << "`#{column[:name]}` | `#{column[:type]}` | #{column[:description]}\n"
+        restrictions = column[:restrictions].select { |_name, value| value != nil }.collect { |name, value| "#{name}: `#{value}`" }.join(", ")
+        markdown << "`#{column[:name]}` | `#{column[:type]}` | #{column[:description]} #{restrictions}\n"
       end
-
-      markdown
-    end
-
-    def types(section_name, properties)
-      markdown = ""
-
-
-      properties.each do |name, property_schema|
-        markdown << type_section(section_name, name, property_schema)
-      end
-      markdown
-    end
-
-    def type_section(section_name, name, type_schema)
-      markdown = "### #{name}\n\n"
-
-      if type_schema["$ref"]
-        type_schema = get_ref(type_schema["$ref"])
-      end
-
-      if !type_schema["description"]
-        raise "#{name} does not have a description!"
-      end
-
-      markdown << type_schema.fetch("description") + "\n\n"
-
-      if type_schema["properties"]
-        markdown << "Name | Type | Description\n"
-        markdown << "-----|------|------------\n"
-
-        columns = columns(type_schema["properties"], [name])
-        columns.each do |column|
-          markdown << "`#{column[:name]}` | `#{column[:type]}` | #{column[:description]}\n"
-        end
-
-        markdown << "\n"
-      end
-
-      markdown << "\n"
 
       markdown
     end
@@ -147,6 +108,11 @@ class MarkdownRenderer
             name: path.join("."),
             type: schema.fetch("type"),
             description: schema.fetch("description"),
+            restrictions: {
+              "max-length" => schema["maxLength"],
+              "minimum" => schema["minimum"],
+              "maximum" => schema["maximum"]
+            }
           }
         end
       end
