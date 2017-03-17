@@ -10,8 +10,6 @@ Context is additional data shared across log lines. Think of it like log join da
 Custom contexts allow you to extend beyond contexts already defined in
 the [`Timber::Contexts`](https://github.com/timberio/timber-ruby/tree/master/lib/timber/contexts) namespace.
 
-Add a Hash as context
-
     {% highlight ruby %}
     Timber::CurrentContext.with({build: {version: "1.0.0"}}) do
       logger.info("My log message")
@@ -19,15 +17,6 @@ Add a Hash as context
 
     # My log message @metadata {"level": "info", "context": {"build": {"version": "1.0.0"}}}{% endhighlight %}
 
-Or, add a Struct as context
+*Notice the `:build` root key. Timber will classify this context as such.*
 
-    {% highlight ruby %}
-    BuildContext = Struct.new(:version) do
-      def type; :build; end
-    end
-    build_context = BuildContext.new("1.0.0")
-    Timber::CurrentContext.with(build_context) do
-      logger.info("My log message")
-    end
-
-    # My log message @metadata {"level": "info", "context": {"build": {"version": "1.0.0"}}}{% endhighlight %}
+* In the [Timber console](https://app.timber.io) use queries like: `build.version:1.0.0`.

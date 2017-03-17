@@ -7,24 +7,13 @@ sections: manual configuration
 ---
 
 Custom events allow you to extend beyond events already defined in
-the [`Timber::Events`](https://github.com/timberio/timber-ruby/tree/master/lib/timber/events) namespace.
-
-Log a Hash as an event
+the [`Timber::Events`](https://github.com/timberio/timber-ruby/tree/master/lib/timber/events) namespace:
 
     {% highlight ruby %}
-    # Notice the :payment_rejected root key. If you supply a single root key, Timber will
-    # automatically classify it as that event type.
     Logger.warn "Payment rejected", payment_rejected: {customer_id: "abcd1234", amount: 100, reason: "Card expired"}
 
-    # Payment rejected @metadata {"level": "warn", "event": {"payment_rejected": {"customer_id": "abcd1234", "amount": 100, "reason": "Card expired"}}, "context": {...}}{% endhighlight %}
+    # => Payment rejected @metadata {"level": "warn", "event": {"payment_rejected": {"customer_id": "abcd1234", "amount": 100, "reason": "Card expired"}}, "context": {...}}{% endhighlight %}
 
-Or, log a Struct as an event
+*Notice the `:payment_rejected` root key. Timber will classify this event as such.*
 
-    {% highlight ruby %}
-    PaymentRejectedEvent = Struct.new(:customer_id, :amount, :reason) do
-      def message; "Payment rejected for #{customer_id}"; end
-      def type; :payment_rejected; end
-    end
-    Logger.warn PaymentRejectedEvent.new("abcd1234", 100, "Card expired")
-
-    # Payment rejected @metadata {"level": "warn", "event": {"payment_rejected": {"customer_id": "abcd1234", "amount": 100, "reason": "Card expired"}}, "context": {...}}{% endhighlight %}
+* In the Timber console use the query: `type:payment_rejected` or `payment_rejected.amount:>100`.
