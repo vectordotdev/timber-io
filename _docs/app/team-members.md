@@ -41,3 +41,7 @@ Delete members | X | ✓
 2. Click "Invite Member" in the top right:
 
     ![New member](/assets/img/docs/setting-up-team/new-member.png)
+
+3. They'll reeive an email that looks like:
+
+    ![Invitation email](/assets/img/docs/setting-up-team/email.png)
