@@ -11,8 +11,9 @@ Logging metrics is accomplished by [logging custom events]({% link _docs/ruby/cu
 
 ## Example 1: Tracking credit card charge volume
 
-Instead of focusing on individual metrics, Timber allows you to log the event as a whole. This
-way if you discover anomalies, you'll have the data you need to resolve the issue:
+Instead of focusing on the individual "volume" metric, Timber allows you to log the credit card
+charge event as a whole. This way if you discover anomalies, you'll have the data you need to
+resolve the issue:
 
     {% highlight ruby %}
     result = CreditCrardProcessor.charge(credit_card, amount)
