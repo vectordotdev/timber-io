@@ -20,8 +20,8 @@ sections: installer, manual configuration
     end
     ```
 
-2. In your shell, run `mix deps.get`.
+2. In your `shell`, run `mix deps.get`.
 
-3. In your sheel, run `mix timber.install your-timber-app-api-key`.
+3. In your `shell`, run `mix timber.install your-timber-app-api-key`.
 
     * You can obtain your API key by [adding your application within Timber](https://app.timber.io). Each app has it's own unique API key.

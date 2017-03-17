@@ -14,4 +14,8 @@ $(function () {
       $(this).html('<a href="#'+$(this).attr('id')+'">' + $(this).text() + '</a>');
     });
 
+    $('a.chat').on('click', function() {
+      window.Intercom('showNewMessage');
+      return false;
+    });
 });

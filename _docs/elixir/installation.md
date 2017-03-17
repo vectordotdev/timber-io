@@ -9,7 +9,7 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
 
 1. In `mix.exs`, add `timber` as a dependency:
 
-    {% highlight ruby %}
+    ```elixir
     # Mix.exs
 
     def application do
@@ -19,7 +19,7 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
     def deps do
       [{:timber, "~> 1.0"}]
     end
-    {% endhighlight %}
+    ```
 
 2. In your `shell`, run `mix deps.get`.
 
@@ -29,4 +29,4 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
 
 ### Preview
 
-![Timber elixir install](/assets/img/docs/timber-elixir-install.gif){:class="img-responsive"}
+![Timber elixir install](/assets/img/docs/timber-elixir-install.gif)

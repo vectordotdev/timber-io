@@ -118,9 +118,15 @@
     box-sizing: border-box;
   }
 
+  .highlight {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .highlight pre,
   pre {
     background: #f4f3fb;
+    padding: 1rem;
   }
 
   table {
