@@ -74,7 +74,7 @@ class MarkdownRenderer
       columns = columns(properties)
 
       columns.each do |column|
-        restrictions = column[:restrictions].select { |_name, value| value != nil }.collect { |name, value| "#{name}: `#{value}`" }.join(", ")
+        restrictions = column[:restrictions].select { |_name, value| value != nil }.collect { |name, value| "`#{name}: #{value}`" }.join(", ")
         markdown << "`#{column[:name]}` | `#{column[:type]}` | #{column[:description]} #{restrictions}\n"
       end
 
