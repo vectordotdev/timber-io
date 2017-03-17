@@ -42,6 +42,6 @@ Delete members | X | ✓
 
     ![New member](/assets/img/docs/setting-up-team/new-member.png)
 
-3. They'll reeive an email that looks like:
+3. They'll receive an email that looks like:
 
     ![Invitation email](/assets/img/docs/setting-up-team/email.png)

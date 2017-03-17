@@ -6,6 +6,8 @@ page_order: 1
 sections: manual configuration
 ---
 
+Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https://rubygems.org/gems/timber):
+
 1. In your `Gemfile`, add the `timber` gem:
 
     ```ruby
