@@ -2,7 +2,7 @@
 category: Timber for Elixir
 category_order: 2
 title: Custom Contexts
-page_order: 2
+page_order: 3
 sections: manual configuration
 ---
 

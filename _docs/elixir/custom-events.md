@@ -2,7 +2,7 @@
 category: Timber for Elixir
 category_order: 2
 title: Custom Events
-page_order: 3
+page_order: 4
 sections: manual configuration
 ---
 

@@ -7,18 +7,21 @@ sections: text, attributes
 ---
 
 The Timber schema represents all of the of fields you can search on. This is the data that our
-libraries collect for you. It's what makes Timber so powerful. A defined normalizes schema allows
-consumers (such as our interface) to make assumptions about your data and dramatically increase
-the utility of your logs.
+libraries collect for you. It's what makes Timber so powerful out of the box. A defined
+normalized schema dramatically improves usability of your log data, and provides consistency for
+downstream consumers (such as our interface, alerts, graphing, etc).
 
 To use these fields in a search, please see our [attribute search guide]({% link _docs/app/schema-fields.md %}#attribute-search).
 
 
 ## Versioning and Releases
 
-Our schema is formally defined by our [log event JSON schema](https://github.com/timberio/log-event-json-schema).
-Schema versions are [released within Github](https://github.com/timberio/log-event-json-schema/releases)
-and follow the [semver specification](http://semver.org/).
+Our schema is formally defined by our
+[log event JSON schema](https://github.com/timberio/log-event-json-schema).
+Schema versions are
+[released within Github](https://github.com/timberio/log-event-json-schema/releases)
+and follow the [semver specification](http://semver.org/). We take versioning and maintenance
+of this schema very serious due to implications changes can have to downstream consumers.
 
 
 ## Context Fields

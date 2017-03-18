@@ -2,7 +2,7 @@
 category: Timber for Ruby
 category_order: 2
 title: Metrics
-page_order: 4
+page_order: 5
 sections: manual configuration
 ---
 

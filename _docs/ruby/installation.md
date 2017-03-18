@@ -2,7 +2,7 @@
 category: Timber for Ruby
 category_order: 2
 title: Installation
-page_order: 1
+page_order: 2
 sections: manual configuration
 ---
 
