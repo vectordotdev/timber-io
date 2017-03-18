@@ -18,6 +18,7 @@
 
   section {
     a.header {
+      display: block;
       font-family: "Europa", "Helvetica Neue";
       font-weight: bold;
       font-size: 15px;
@@ -30,6 +31,10 @@
       span.open-arrow {
         display: none;
       }
+    }
+
+    a.header:hover {
+      color: #5E58AE;
     }
 
     ul {
@@ -80,6 +85,8 @@
   section.current,
   section.expanded {
     a.header {
+      color: #5E58AE;
+
       span.open-arrow {
         display: block;
       }
