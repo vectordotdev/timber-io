@@ -10,6 +10,9 @@ Context is additional data shared across log lines. Think of it like log join da
 Custom contexts allow you to extend beyond contexts already defined in
 the [`Timber.Contexts`](https://github.com/timberio/timber-elixir/tree/master/lib/timber/contexts) namespace.
 
+
+## Implementation
+
 ```elixir
 Timber.add_context(%{build: %{version: "1.0.0"}})
 Logger.info("My log message")
@@ -18,7 +21,19 @@ Logger.info("My log message")
 ```
 
 * Notice the `:build` root key. Timber will classify this context as such.
-* In the [Timber console](https://app.timber.io) use queries like: `build.version:1.0.0`.
+
+
+## What you can do
+
+1. Use this data for [querying your logs](% link _docs/apps/search-syntax.md %}). Ex: `build.version:1.0.0`.
+2. View this custom context when inspecting log lines:
+
+   ![Context panels](/assets/img/docs/context-panel.png)
+
+   Or view it in the raw JSON payload:
+
+   ![Context raw](/assets/img/docs/context-raw.png)
+
 
 ## Limits
 
