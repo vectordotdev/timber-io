@@ -13,5 +13,5 @@ There are 2 ways to accomplish this:
 2. Query directly for the user via `context.user.id:1234`, `context.user.name:"Ben Johnson"`,
    or `context.user.email:hi@timber.io`.
 
-![Tail a user](/assets/img/docs/tail-a-user.gif){:class="img-responsive"}
+![Tail a user](/assets/img/docs/tail-a-user.gif)
 

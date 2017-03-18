@@ -5,10 +5,10 @@
     {% assign grouped = site.docs | sort: 'category_order' | group_by: 'category' %}
     {% for group in grouped %}
       {% if group.name != empty %}
-        <section class="{% if group.name == page.category %}current{% endif %}">
+        <section class="{% if group.name == page.category %}expanded{% endif %}">
           {% assign items = group.items | sort: 'page_order' %}
           {% if group.name != empty %}
-            <h3 class="docs__navigation__list__header" href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</h3>
+            <a class="header" href="{{ site.baseurl }}{{ items.first.url }}"><span class="fr closed-arrow">►</span><span class="fr open-arrow">▼</span>{{ group.name }}</h3>
           {% endif %}
           <ul>
             {% for item in items %}
@@ -25,7 +25,7 @@
       {% endif %}
     {% endfor %}
 
-    <section class="{% if group.name == page.category %}current{% endif %}">
+    <section class="expanded">
       <ul>
         <li class="nav-item">
           <a href="https://api-docs.timber.io">API Documentation →</a>

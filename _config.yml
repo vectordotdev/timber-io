@@ -81,7 +81,7 @@ navigation:
 features:
 - title: Modern Dashboard
   image: dashboard
-  desc: Our lightning fas and flexible dashboard allows you to search through your
+  desc: Our lightning fast and flexible dashboard allows you to search through your
     logs with ease.
 - title: Real-Time Tailing
   image: realtime

@@ -2,7 +2,7 @@
 category: Timber App
 category_order: 5
 title: Service Limits
-page_order: 10
+page_order: 11
 sections: text, attributes
 ---
 

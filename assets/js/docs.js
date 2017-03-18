@@ -18,4 +18,9 @@ $(function () {
       window.Intercom('showNewMessage');
       return false;
     });
+
+    $('.docs__navigation section a.header').on('click', function() {
+      $(this).parent().toggleClass('expanded');
+      return false;
+    })
 });

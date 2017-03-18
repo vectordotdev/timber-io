@@ -13,7 +13,7 @@ Looking for something more powerful? Checkout the [SQL query your logs]({% link 
 
 ## Interface example
 
-![Search / Query example](/assets/img/docs/app/query-example.gif){:class="img-responsive"}
+![Search / Query example](/assets/img/docs/app/query-example.gif)
 
 
 ## Text search
