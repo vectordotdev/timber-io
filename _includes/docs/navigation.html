@@ -20,6 +20,36 @@
                 </li>
               {% endif %}
             {% endfor %}
+
+            {% if group.name == "Timber for Ruby" %}
+              <li class="separator-top">
+                <a href="http://www.rubydoc.info/github/timberio/timber-ruby"><i class="fa fa-book" aria-hidden="true"></i>
+ Library documentation →</a>
+              </li>
+              <li>
+                <a href="https://github.com/timberio/timber-ruby"><i class="fa fa-github" aria-hidden="true"></i>
+ Repo →</a>
+              </li>
+              <li>
+                <a href="https://github.com/timberio/timber-ruby/issues"><i class="fa fa-github" aria-hidden="true"></i>
+ Issues →</a>
+              </li>
+
+            {% elsif group.name == "Timber for Elixir" %}
+              <li class="separator-top">
+                <a href="https://hexdocs.pm/timber"><i class="fa fa-book" aria-hidden="true"></i>
+ Library documentation →</a>
+              </li>
+              <li>
+                <a href="https://github.com/timberio/timber-elixir"><i class="fa fa-github" aria-hidden="true"></i>
+ Repo →</a>
+              </li>
+              <li>
+                <a href="https://github.com/timberio/timber-elixir/issues"><i class="fa fa-github" aria-hidden="true"></i>
+ Issues →</a>
+              </li>
+
+            {% endif %}
           </ul>
         </section>
       {% endif %}
@@ -28,7 +58,7 @@
     <section class="expanded">
       <ul>
         <li class="nav-item">
-          <a href="https://api-docs.timber.io">API Documentation →</a>
+          <a href="https://api-docs.timber.io"><i class="fa fa-book" aria-hidden="true"></i> API Documentation →</a>
         </li>
       </ul>
     </section>

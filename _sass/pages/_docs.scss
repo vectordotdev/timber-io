@@ -45,9 +45,17 @@
       border-bottom: 1px solid #F3F3FB;
     }
 
-    ul li {
-      display: none;
-      border-radius: 3px;
+    ul {
+      li {
+        display: none;
+        border-radius: 3px;
+      }
+
+      li.separator-top {
+        border-top: 1px solid #F3F3FB;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+      }
     }
 
     ul a {
