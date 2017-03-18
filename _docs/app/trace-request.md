@@ -14,7 +14,7 @@ Example query: `http.request_id:abcd1234`
 
 ---
 
-### Related documents
+**Related documents**
 
 * [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
 * [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.

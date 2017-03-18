@@ -12,6 +12,6 @@ opening the context panel when accessed.
 
 ---
 
-### Related documents
+**Related documents**
 
 * [Viewing metadata & context]({% link _docs/app/viewing-metadata.md %}) - Opening the metadata / context panel.

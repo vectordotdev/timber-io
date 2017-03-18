@@ -15,7 +15,7 @@ Accessing metadata is as simple as clicking the line:
 
 ---
 
-### Related documents
+**Related documents**
 
 * [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
 * [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.
