@@ -120,4 +120,4 @@ These demonstrate the changes below in a git-pull style format.
     # ...
     ```
 
-6. Commit and deply your changes 🚀
+6. Commit your change and deploy 🚀
