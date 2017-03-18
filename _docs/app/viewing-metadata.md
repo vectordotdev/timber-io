@@ -19,5 +19,6 @@ Accessing metadata is as simple as clicking the line:
 
 * [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
 * [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.
+* [Schema & Fieldsh]({% link _docs/app/schema-fields.md %}) - Complete list of all available fields.
 * [Attribute search]({% link _docs/app/search-syntax.md %}#attribute-search) - Use this data when searching.
 
