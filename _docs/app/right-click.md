@@ -8,7 +8,7 @@ sections: text, attributes
 
 When you right click in the console, it will bring up a context menu:
 
-![Right-click / Context-menur](/assets/img/docs/right-click.gif)
+![Right-click / Context-menu](/assets/img/docs/right-click.gif)
 
 The options explained:
 

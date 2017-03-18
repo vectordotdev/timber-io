@@ -16,21 +16,29 @@ These demonstrate the changes below in a git-pull style format.
 ---
 
 
-1. Add `timber` as a dependency in `mix.exs`:
+1. Add `timber` and `hackney` as a dependency in `mix.exs`:
 
     ```elixir
     # Mix.exs
 
     def application do
-      [applications: [:timber]]
+      [applications: [:hackney, :timber]]
     end
 
     def deps do
-      [{:timber, "~> 1.0"}]
+      [
+        {:hackney, "~> 1.6"},
+        {:timber, "~> 1.0"}
+      ]
     end
     ```
 
 2. Create a new file in `config/timber.exs`:
+
+    Replace `[timber-api-key]` with your actual Timber API key. Notice you can also
+    pass the `{:system, "TIMBER_LOGS_KEY"}` notation for using an environment variable.
+    You can [obtain a Timber API key by creating an app or clicking 'settings' on an
+    existing app]({% link _docs/app/obtain-api-key.md %}).
 
     ```elixir
     # config/timber.exs
@@ -52,7 +60,9 @@ These demonstrate the changes below in a git-pull style format.
 
     # Direct logs to STDOUT for Heroku. We'll use Heroku drains to deliver logs.
     config :timber,
-      transport: Timber.Transports.IODevice
+      transport: Timber.Transports.HTTP,
+      api_key: "[timber-api-key]", # <--- REPLACE ME. You can also use {:system, "TIMBER_API_KEY"}
+      http_client: Timber.Transports.HTTP.HackneyClient
 
     # For dev / test environments, always log to STDOUt and format the logs properly
     if Mix.env() == :dev || Mix.env() == :test do
@@ -71,7 +81,7 @@ These demonstrate the changes below in a git-pull style format.
     # File an issue: https://github.com/timberio/timber-elixir/issues
     ```
 
-3. In `config/config.exs` link `config/timber.exs` at the *very bottom*:
+3. In `config/config.exs` link `config/timber.exs` at the **very bottom**:
 
     ```elixir
     # config/config.exs
@@ -94,6 +104,8 @@ These demonstrate the changes below in a git-pull style format.
     plug Timber.Integrations.EventPlug
 
     plug MyApp.Router
+
+    # ...
     ```
 
 5. In `web/web.ex` disable the default Phoenix logging:
@@ -101,5 +113,11 @@ These demonstrate the changes below in a git-pull style format.
     ```elixir
     # web/web.ex
 
+    # ...
+
     use Phoenix.Controller, log: false # <--- add log: false
+
+    # ...
     ```
+
+6. Commit and deply your changes 🚀
