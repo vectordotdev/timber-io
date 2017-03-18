@@ -1,19 +1,17 @@
 ---
 category: Timber App
 category_order: 5
-title: Tail a user
-page_order: 7
+title: View Metadata & Context
+page_order: 4
+sections: text, attributes
 ---
 
-Because Timber add's context with our libraries, you can quickly filter your logs by user.
-There are 2 ways to accomplish this:
+With Timber, each log line has additional metadata attached. Metadata is structured data about
+the log line itself and is not limited to the information in the actual line.
 
-1. Click the user tag on the log line itself (see below).
+Accessing metadata is as simple as clicking the line:
 
-2. Query directly for the user via `context.user.id:1234`, `context.user.name:"Ben Johnson"`,
-   or `context.user.email:hi@timber.io`.
-
-![Tail a user](/assets/img/docs/tail-a-user.gif)
+![Viewing context](/assets/img/docs/viewing-context.gif)
 
 ---
 

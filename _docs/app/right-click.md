@@ -2,8 +2,7 @@
 category: Timber App
 category_order: 5
 title: Right Click
-page_order: 10
-sections: text, attributes
+page_order: 11
 ---
 
 When you right click in the console, it will bring up a context menu:

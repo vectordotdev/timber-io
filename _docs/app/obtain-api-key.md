@@ -1,8 +1,8 @@
 ---
 category: Timber App
 category_order: 5
-title: Obtaining Your API Key
-page_order: 11
+title: Obtain Your API Key
+page_order: 12
 sections: text, attributes
 ---
 

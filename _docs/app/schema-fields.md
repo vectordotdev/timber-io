@@ -118,3 +118,13 @@ Name | Type | Description
 `web_server.routing.request_id` | `string` | An ID that uniquely identifies the request and can be used to trace requests. `max-length: 255`
 `web_server.routing.service_ms` | `number` | The time, in fractional milliseconds, it took for the downstream service to process and respond to the request. `minimum: 0`
 `web_server.routing.status` | `integer` | The status as defined by the HTTP status codes. `minimum: 100`, `maximum: 599`
+
+
+---
+
+### Related documents
+
+* [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
+* [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.
+* [Attribute search]({% link _docs/app/search-syntax.md %}#attribute-search) - Use this data when searching.
+

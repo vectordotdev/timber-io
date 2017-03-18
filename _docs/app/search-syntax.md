@@ -61,3 +61,12 @@ A full list of the available fields can be found in our log event JSON schema.
 4. Find all 500 responses: `http_server_response.stats:500`
 
 5. Find all platform errors: `has:platform.error`
+
+---
+
+### Related documents
+
+* [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
+* [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.
+* [Tail a user]({% link _docs/app/tail-a-user.md %}) - Tailing a user using attribute search.
+* [Trace a request]({% link _docs/app/trace-request.md %}) - Trace a request via the request_id.

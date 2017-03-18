@@ -1,8 +1,8 @@
 ---
 category: Timber App
 category_order: 5
-title: Setting up your Team
-page_order: 9
+title: Set up your Team
+page_order: 10
 sections: text, attributes
 ---
 
