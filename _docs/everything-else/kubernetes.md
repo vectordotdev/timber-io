@@ -2,7 +2,7 @@
 category: Timber for Everything Else
 category_order: 4
 title: Kubernetes (coming soon)
-page_order: 6
+page_order: 8
 ---
 
 Kubernetes integration is coming soon. Details will be updated as we make progress.

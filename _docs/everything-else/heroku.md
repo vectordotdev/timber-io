@@ -2,7 +2,7 @@
 category: Timber for Everything Else
 category_order: 4
 title: Heroku
-page_order: 1
+page_order: 6
 ---
 
 Sending your logs from Heroku is accomplished by using the

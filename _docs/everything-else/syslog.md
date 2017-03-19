@@ -2,7 +2,7 @@
 category: Timber for Everything Else
 category_order: 4
 title: Syslog (coming soon)
-page_order: 7
+page_order: 9
 ---
 
 Syslog integration is coming soon. Details will be updated as we make progress.
