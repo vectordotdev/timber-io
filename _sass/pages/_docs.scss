@@ -150,6 +150,21 @@
     color: #5E58AE;
   }
 
+  a.heading-anchor {
+    i.fa-link {
+      visibility: hidden;
+      margin-left: -20px;
+      margin-right: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  a.heading-anchor:hover {
+    i.fa-link {
+      visibility: visible;
+    }
+  }
+
   code {
     background: #f4f3fb;
   }
