@@ -3,6 +3,7 @@ category: Timber for Everything Else
 category_order: 4
 title: HTTP
 page_order: 7
+toc: true
 ---
 
 Sending your logs to Timber over HTTP is accomplished with our
