@@ -9,6 +9,9 @@ Timber was designed to be a great logging platform first. Raw text logs are full
 Timber was intentionally designed to work with these. While our libraries add useful context,
 there are many situations where they are not applicable.
 
-This section outliens the many way you can send logs to Timber, with or without context. Please
-note these methods are under active development and we radiply prioritizing them so that we
-can suppoer the various platforms and protocols.
+This section outlines the many way you can send logs to Timber, with or without context. Please
+note, these methods are under active development and we are radiply prioritizing them in our
+development backlog.
+
+If there is an integration missing, please let us know by chatting with us using the icon
+in the bottom right.
