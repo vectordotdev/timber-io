@@ -103,7 +103,7 @@ features:
     Close the loop from graphs, to data, to problem solved.
 - title: 1 Line Installers
   image: install
-  desc: Install timber in less than 1 minute with our installers.
+  desc: Install timber in less than a minute with our single command installers.
 billing_plans:
 - name: Free
   image: free-plan
