@@ -99,11 +99,12 @@ features:
     by default at no extra charge.
 - title: Log-based Graphing
   image: trending
-  desc: Easily identify outliers and trending events based on real log-data that you can access.
+  desc: Easily identify outliers and trending events based on _your_ log data.
     Close the loop from graphs, to data, to problem solved.
 - title: 1 Line Installers
   image: install
-  desc: Install timber in less than a minute with our single command installers.
+  desc: Install timber in less than a minute with our single command installers. No agents,
+    special APIs, no lock-in.
 billing_plans:
 - name: Free
   image: free-plan
