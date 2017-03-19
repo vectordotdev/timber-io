@@ -3,7 +3,6 @@ category: Timber App
 category_order: 5
 title: Trace a request
 page_order: 8
-toc: true
 ---
 
 Because Timber add's _normalized_ context with our libraries, you can quickly trace requests using their

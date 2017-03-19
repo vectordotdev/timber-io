@@ -3,7 +3,6 @@ category: Timber App
 category_order: 5
 title: Obtain Your API Key
 page_order: 12
-toc: true
 ---
 
 Timber's API keys are tied to each application you create:
