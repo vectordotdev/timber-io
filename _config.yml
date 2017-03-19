@@ -104,7 +104,7 @@ features:
 - title: 1 Line Installers
   image: install
   desc: Install timber in less than a minute with our single command installers. No agents,
-    special APIs, no lock-in.
+    special APIs, no lock-in; just logging.
 billing_plans:
 - name: Free
   image: free-plan
