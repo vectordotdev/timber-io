@@ -101,7 +101,7 @@ features:
   image: trending
   desc: Easily identify outliers and trending events based on real log-data that you can access.
     Close the loop from graphs, to data, to problem solved.
-- title: 1 Command Installers
+- title: 1 Line Installers
   image: install
   desc: Install timber in less than 1 minute with our installers.
 billing_plans:
