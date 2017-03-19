@@ -6,12 +6,15 @@ page_order: 3
 sections: text, attributes
 ---
 
-The Timber schema represents all of the of fields you can search on. This is the data that our
-libraries collect for you. It's what makes Timber so powerful out of the box. A defined
-normalized schema dramatically improves usability of your log data, and provides consistency for
-downstream consumers (such as our interface, alerts, graphing, etc).
+Within Timber, every log line contains rich metadata. This is additional information about the
+log line itself. It's what makes your Timber log data so useful. This metadata is populated by
+our libraries, as well as parsing when we ingest the log line.
 
-To use these fields in a search, please see our [attribute search guide]({% link _docs/app/schema-fields.md %}#attribute-search).
+This document will explain the structure of this metadata as well as describe all of the
+possible fields.
+
+Note: to use these fields in a search, please see our
+[attribute search guide]({% link _docs/app/schema-fields.md %}#attribute-search).
 
 
 ## Versioning and Releases
@@ -22,6 +25,86 @@ Schema versions are
 [released within Github](https://github.com/timberio/log-event-json-schema/releases)
 and follow the [semver specification](http://semver.org/). We take versioning and maintenance
 of this schema very serious due to implications changes can have to downstream consumers.
+
+
+## Structure
+
+Instead of allowing arbitrary JSON structures for this metadata, we've formally defined the schema
+with our [JSON schema definition](https://github.com/timberio/log-event-json-schema). This
+ensures data is consistent and normalized across all of your applications; dramatically
+improving the reliability of downstream consumption (our interface, graphs, alerts, etc).
+
+Here's an example payload:
+
+```json
+{
+  "message": "Sent 200 in 115.67ms",
+  "dt": "2017-03-19T13:58:44.706231Z",
+  "level": "info",
+  "id": "2ca8161e-0cac-11e7-b762-12626c3a2376",
+  "application_id": 1,
+  "event": {
+    "server_side_app": {
+      "http_server_response": {
+        "time_ms": 115.673509,
+        "status": 200,
+        "request_id": "6446bd7c-65ce-47f3-99a7-9b69d4c7a15f",
+        "headers": {
+          "x-request-id": "6446bd7c-65ce-47f3-99a7-9b69d4c7a15f",
+          "content-type": "application/json; charset=utf-8",
+          "content-length": "21852",
+          "cache-control": "max-age=0, private, must-revalidate"
+        },
+        "body": "{\"key\":\"value\"}"
+      }
+    }
+  },
+  "context": {
+    "user": {
+      "name": "Ben Johnson",
+      "id": "abcd1234",
+      "email": "ben@timber.io"
+    },
+    "system": {
+      "hostname": "my.hostname.com",
+      "pid": "4"
+    },
+    "runtime": {
+      "module_name": "MyApp.MyModule",
+      "line": 160,
+      "function": "my_function/1",
+      "file": "/path/to/event_plug.ex",
+      "application": "my_app"
+    },
+    "platform": {
+      "heroku": {
+        "source": "app",
+        "dyno_type": "web",
+        "dyno_id": 1
+      }
+    },
+    "http": {
+      "request_id": "6446bd7c-65ce-47f3-99a7-9b69d4c7a15f",
+      "remote_addr": "10.93.232.18",
+      "path": "/path",
+      "method": "GET"
+    }
+  }
+}
+```
+
+#### Top-level Field Descriptions
+
+* `message` - The raw message for the log line. We keep this to preserve the essence of logging
+  and not sacrifice human readability.
+* `dt` - The date / time the log line was written in ISO8601 format.
+* `level` - The level the log line was written.
+* `id` - Unique ID assumed by Timber during ingestion.
+* `application_id` - The Timber application ID this log line is for.
+* `event` - Each log line represents an individual event. This key contains this data. Event data
+  is directly related to the log line itself.
+* `context` - Contextual data when the log line was written. It's not directly related to the line
+  but serves to relate log lines. Think of it almost like log line join data.
 
 
 ## Context Fields

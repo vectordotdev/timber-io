@@ -53,20 +53,17 @@ A full list of the available fields can be found in our log event JSON schema.
 ## Real-world examples
 
 1. Find all exceptions: `has:exception`
-
 2. Find all error level logs: `level:error`
-
-3. Find all exceptions for a user: `user.id:1234 has:exception`
-
-4. Find all 500 responses: `http_server_response.stats:500`
-
-5. Find all platform errors: `has:platform.error`
+3. Find all errors for a user: `user.id:1234 level:error`
+4. Find all 500 responses: `http_server_response.status:500`
+6. Find all 500 responses or exceptions: `http_server_response.status:500 OR has:exception`
 
 ---
 
 **Related documents**
 
-* [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
-* [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.
+* [Schema & Fields]({% link _docs/app/tail-a-user.md %}) - Tailing a user using attribute search.
 * [Tail a user]({% link _docs/app/tail-a-user.md %}) - Tailing a user using attribute search.
 * [Trace a request]({% link _docs/app/trace-request.md %}) - Trace a request via the request_id.
+* [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
+* [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.

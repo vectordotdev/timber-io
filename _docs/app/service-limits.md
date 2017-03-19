@@ -6,7 +6,7 @@ page_order: 13
 sections: text, attributes
 ---
 
-Timber does _not_ impose traditional limits on the number of fields or the depth of nesting.
+Timber does not impose traditional limits on the number of fields or the depth of nesting.
 Instead, the limits are based on our underlying technology:
 
 1. Each log line payload (metadata included) cannot exceed `2mb`.
@@ -14,7 +14,7 @@ Instead, the limits are based on our underlying technology:
 3. Custom field values must be of a consistent type. For example, if you send `my.custom.field=1`,
    all subsequent values for that field must also be `numbers`. You _cannnot_ send a string or
    a boolean, for example.
-4. Timber official fields are validated to ensure consistency. Validation constrains for these
+4. The Timber native fields are validated to ensure consistency. Validation constraints for these
    fields can be found in our [schema & fields doc]({% link _docs/app/schema-fields.md %}).
 
 ### Timber does *not*...

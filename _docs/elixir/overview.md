@@ -5,10 +5,19 @@ title: Overview
 page_order: 1
 ---
 
-The Timber Elixir library automatically turns your Elixir application logs into rich structured
-events. It's at the heart of improving your log data quality.
+The Timber Elixir library's purpose is to improve the quality of your Elixir application logs.
+It does so by:
 
-For example, Timber turns this familiar log line:
+1. Automatically augmenting your existing logs with [metadata](#metadata).
+2. Transforming supported framework and 3rd party logs into rich structed events.
+3. Providing an API to enhance your own logs.
+
+
+## Metadata
+
+At the core of it, Timber simply augments your log lines with metadata.
+
+For example, it turns this familiar log line:
 
 ```
 Sent 200 in 45.ms
@@ -21,21 +30,10 @@ Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "inf
 ```
 
 
-## Frameworks, 3rd party libraries, and integration
-
-Out of the box, Timber works with a variety of frameworks and third-party libraries to
-augment your existing logs:
-
-* Phoenix
-* Plug
-* Ecto
-* A complete list can be found [in the Timber.Integrations module](https://github.com/timberio/timber-elixir/tree/master/lib/timber/integrations)
-
-
 ## Contexts
 
-Timber adds context to each of your log lines. Think of this like shared join data for your logs.
-A great example is the HTTP `request_id`. Timber automatically adds this to the context, allowing
+The metadata JSON payload contains a key called `context`. Context is shared join data for your
+logs. A great example is `context.http.request_id`. Timber automatically adds this fields, allowing
 you to [trace requests]({% link _docs/app/trace-request.md %}).
 
 Out of the box, Timber gives you the following contexts:
@@ -63,3 +61,10 @@ Out of the box, Timber gives you the following events:
 * `template_render` - Incoming HTTP request (`name`, `time_ms`)
 * For a complete list, checkout [`Timber.Events`](https://github.com/timberio/timber-elixir/tree/master/lib/timber/events)
 * For more detailed field explanations, see [schema & fields]({% link _docs/app/schema-fields.md %})
+
+
+## Automatic Context & Events
+
+Out of the box, Timber works with a variety of frameworks and third-party libraries
+(`Phoenix`, `Ecto`, `Plug`, etc). A complete list can be found
+[in the Timber.Integrations module](https://github.com/timberio/timber-elixir/tree/master/lib/timber/integrations)
