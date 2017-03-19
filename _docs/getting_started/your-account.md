@@ -3,7 +3,7 @@ category: Getting Started
 category_order: 1
 title: Your account
 page_order: 3
-sections: sign-up, organizations / access
+toc: true
 ---
 
 Accounts in Timber repsent you personally. There is no need to create multiple accounts

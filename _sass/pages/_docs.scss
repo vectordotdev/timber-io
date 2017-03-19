@@ -142,6 +142,37 @@
   margin-left: 18rem;
 }
 
+.docs__content__main__toc {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #5E58AE;
+  line-height: 2.5;
+
+  ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      display: inline;
+      padding-left: 2px;
+
+      > a {
+        background: #F3F3FB;
+        border-radius: 4px;
+        color: #81848C;
+        padding: 4px 8px;
+        font-weight: 400;
+        text-decoration: none;
+
+        &:hover {
+          color: #2F2A57;
+        }
+      }
+    }
+  }
+}
+
 .docs__content__main__doc {
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.75;

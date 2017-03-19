@@ -3,7 +3,7 @@ category: Timber for Ruby
 category_order: 2
 title: Custom Events
 page_order: 4
-sections: manual configuration
+toc: true
 ---
 
 Custom events allow you to extend beyond events already defined in

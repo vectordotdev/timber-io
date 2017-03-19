@@ -3,7 +3,6 @@ category: Timber for Elixir
 category_order: 3
 title: Manual Installation
 page_order: -1
-sections: installer, manual configuration
 ---
 
 This page contains the manual Timber for Elixir install instructions. We _highly_ recommend

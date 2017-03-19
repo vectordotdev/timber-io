@@ -3,12 +3,13 @@ category: Timber for Elixir
 category_order: 3
 title: Overview
 page_order: 1
+toc: true
 ---
 
 The Timber Elixir library's purpose is to improve the quality of your Elixir application logs.
 It does so by:
 
-1. Automatically augmenting your existing logs with [metadata](#metadata).
+1. [Automatically augmenting](#automatic-context-events) your existing logs with [metadata](#metadata).
 2. Transforming supported framework and 3rd party logs into rich structed events.
 3. Providing an API to enhance your own logs.
 

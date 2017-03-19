@@ -3,7 +3,7 @@ category: Timber for Ruby
 category_order: 2
 title: Custom Contexts
 page_order: 3
-sections: manual configuration
+toc: true
 ---
 
 Context is additional data shared across log lines. Think of it like log join data.

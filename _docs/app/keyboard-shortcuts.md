@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: Keyboard Shortcuts
 page_order: 9
-sections: text, attributes
+toc: true
 ---
 
 Timber thoughtfully adds keyboard shortcut when using the app:

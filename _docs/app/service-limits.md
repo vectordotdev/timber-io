@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: Service Limits
 page_order: 13
-sections: text, attributes
+toc: true
 ---
 
 Timber does not impose traditional limits on the number of fields or the depth of nesting.

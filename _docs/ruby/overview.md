@@ -3,12 +3,22 @@ category: Timber for Ruby
 category_order: 4
 title: Overview
 page_order: 1
+toc: true
 ---
 
-The Timber Ruby library automatically turns your Ruby application logs into rich structured
-events. It's at the heart of improving your log data quality.
+The Timber Ruby library's purpose is to improve the quality of your Ruby application logs.
+It does so by:
 
-For example, Timber turns this familiar log line:
+1. [Automatically augmenting](#automatic-context-events) your existing logs with [metadata](#metadata).
+2. Transforming supported framework and 3rd party logs into rich structed events.
+3. Providing an API to enhance your own logs.
+
+
+## Metadata
+
+At the core of it, Timber simply augments your log lines with metadata.
+
+For example, it turns this familiar log line:
 
 ```
 Sent 200 in 45.ms
@@ -19,19 +29,6 @@ Into this:
 ```
 Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
 ```
-
-
-## Frameworks, 3rd party libraries, and integration
-
-Out of the box, Timber works with a variety of frameworks and third-party libraries to
-augment your existing logs:
-
-* Rails
-* ActiveRecord
-* ActiveController
-* ActionView
-* Rack
-* A complete list can be found [in the Timber::Probes module](https://github.com/timberio/timber-ruby/tree/master/lib/timber/probes)
 
 
 ## Contexts
@@ -65,3 +62,10 @@ Out of the box, Timber gives you the following events:
 * `template_render` - Incoming HTTP request (`name`, `time_ms`)
 * For a complete list, checkout [`Timber::Events`](https://github.com/timberio/timber-ruby/tree/master/lib/timber/events)
 * For more detailed field explanations, see [schema & fields]({% link _docs/app/schema-fields.md %})
+
+
+## Automatic Context & Events
+
+Out of the box, Timber works with a variety of frameworks and third-party libraries
+(`Rails`, `ActiveRecord`, `ActionController`, `ActionView`, `Rack`, etc). A complete list can be found
+[in the Timber::Plugs module](https://github.com/timberio/timber-ruby/tree/master/lib/timber/plugs)

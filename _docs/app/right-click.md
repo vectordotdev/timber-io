@@ -3,6 +3,7 @@ category: Timber App
 category_order: 5
 title: Right Click
 page_order: 11
+toc: true
 ---
 
 When you right click in the console, it will bring up a context menu:

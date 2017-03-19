@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: SQL Query Your Logs
 page_order: 2
-sections: text, attributes
+toc: true
 ---
 
 <div class="info-notice">This feature is in private beta. If interested, please email beta@timber.io</div>

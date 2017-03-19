@@ -3,7 +3,7 @@ category: Timber for Ruby
 category_order: 2
 title: Metrics
 page_order: 5
-sections: manual configuration
+toc: true
 ---
 
 Logging metrics is accomplished by [logging custom events]({% link _docs/ruby/custom-events.md %}). Let's take a look at a couple of examples:

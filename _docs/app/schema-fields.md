@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: Schema & Fields
 page_order: 3
-sections: text, attributes
+toc: true
 ---
 
 Within Timber, every log line contains rich metadata. This is additional information about the

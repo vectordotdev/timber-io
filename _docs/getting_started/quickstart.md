@@ -3,7 +3,6 @@ category: Getting Started
 category_order: 1
 title: Quickstart
 page_order: 1
-sections: sign-up, create-organization, click-add-app, create-app, follow-install-instructions, next-steps
 ---
 
 This guide will walk you through getting started on Timber. Each step includes screen-shots, and

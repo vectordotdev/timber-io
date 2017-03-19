@@ -3,6 +3,7 @@ category: Timber App
 category_order: 5
 title: Link to a Log
 page_order: 6
+toc: true
 ---
 
 Identified a log you'd like to share? Timber allows you to link to individual logs, automatically

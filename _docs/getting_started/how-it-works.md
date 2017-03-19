@@ -3,7 +3,6 @@ category: Getting Started
 category_order: 1
 title: How It Works
 page_order: 2
-sections: how timber is organized, log enrichment, log delivery, log ingestion, log retention, log querying
 ---
 
 The high-level explanation of how Timber works:

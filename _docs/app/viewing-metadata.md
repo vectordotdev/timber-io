@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: View Metadata & Context
 page_order: 4
-sections: text, attributes
+toc: true
 ---
 
 With Timber, each log line has additional metadata attached. Metadata is structured data about

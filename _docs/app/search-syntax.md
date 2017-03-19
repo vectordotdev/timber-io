@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: Search Syntax
 page_order: 1
-sections: text search, attribute search, real-world examples
+toc: true
 ---
 
 While Timber does not store your logs on ElasticSearch, we provide a query syntax that works

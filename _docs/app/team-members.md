@@ -3,7 +3,7 @@ category: Timber App
 category_order: 5
 title: Set up your Team
 page_order: 10
-sections: text, attributes
+toc: true
 ---
 
 Timber allows you to add multiple team members to your organization.

@@ -3,6 +3,7 @@ category: Timber App
 category_order: 5
 title: Tail a user
 page_order: 7
+toc: true
 ---
 
 Because Timber add's context with our libraries, you can quickly filter your logs by user.
