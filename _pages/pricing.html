@@ -1,12 +1,11 @@
 ---
 title: Pricing
 permalink: "/pricing/"
-layout: page
 desc: Pricing.
 ---
 
 <header class="pricing__hero header relative" role="banner">
-  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro"> 
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro">
     <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">Pricing</h1>
     <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
       The best pricing in the industry, all plans come with 6 month retention by default.
@@ -18,7 +17,7 @@ desc: Pricing.
 <section class="home__pricing bg-snuff" id="customers">
   <div class="mw9-l center pa4">
     <div class="flex flex-wrap justify-around tc">
-      {% for plan in site.billing_plans %} 
+      {% for plan in site.billing_plans %}
         <div class="w-100 w-50-m pa4 w-25-l">
           <div class="bg-white pt4 br2">
             <img class="mh4 mw4" src="/assets/img/{{plan.image}}.png" alt="{{plan.name}}">
