@@ -25,16 +25,7 @@ the process itself should take less than a minute.
    ![Create organization](/assets/img/docs/quick-start/create-org.png)
 
 
-## 3. Click "Add App"
-
-   The next page you'll see is your organization home page. It comprises everything about
-   your organization: `applications`, `members`, `billing`, and `settings`. To proceed,
-   simply click the `Add App` button.
-
-   ![Organization home](/assets/img/docs/quick-start/org-home.png)
-
-
-## 4. Create your first application.
+## 3. Create your first application.
 
    Each application represents a stream of logs. We ask for the details below because it allows
    us to provide simple and clear installation instructions. No need to sift through pages of docs!
@@ -42,9 +33,9 @@ the process itself should take less than a minute.
    ![Create application](/assets/img/docs/quick-start/create-app.png)
 
 
-## 5. Done! Simply follow the instructions displayed.
+## 4. Done! Simply follow the instructions displayed.
 
-   ![Install instructions](/assets/img/docs/quick-start/install-instructions.png)
+   ![Install instructions](/assets/img/docs/quick-start/install.png)
 
 
 ## 6. Next steps
