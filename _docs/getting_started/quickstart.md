@@ -38,7 +38,9 @@ the process itself should take less than a minute.
    ![Install instructions](/assets/img/docs/quick-start/install.png)
 
 
-## 6. Next steps
+---
+
+**Next Steps**
 
    Checkout the `Timber App` section to your left. Recommended articles:
 
