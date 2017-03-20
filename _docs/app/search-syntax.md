@@ -1,15 +1,16 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: The Basics
 title: Search Syntax
-page_order: 1
+page_order: 2
 toc: true
 ---
 
-While Timber does not store your logs on ElasticSearch, we provide a query syntax that works
-exactly the same.
+The Timber search syntax follows familiar standards set by other popular services and websites.
+This documentation outlines the various syntax options when executing a search.
+The purpose is to ensure you utilize the full power of the Timber search feature.
 
-Looking for something more powerful? Checkout the [SQL query your logs]({% link _docs/app/sql-query.md %}) page.
 
 ## Interface example
 

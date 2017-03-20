@@ -6,51 +6,48 @@
     {% for group in grouped %}
       {% if group.name != empty %}
         <section class="{% if group.name == page.category %}expanded{% endif %}">
-          {% assign items = group.items | sort: 'page_order' %}
-          {% if group.name != empty %}
-            <a class="header" href="{{ site.baseurl }}{{ items.first.url }}"><span class="fr closed-arrow">►</span><span class="fr open-arrow">▼</span>{{ group.name }}</h3>
-          {% endif %}
-          <ul>
-            {% for item in items %}
-              {% if item.page_order > 0 %}
-                <li class="nav-item">
-                  <a class="{% if item.url == page.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
-                    {{ item.title }}
-                  </a>
-                </li>
+          <h3 class="mv0"><a href="{{ site.baseurl }}{{ items.first.url }}" class="pv3"><span class="fr closed-arrow">►</span><span class="fr open-arrow">▼</span>{{ group.name }}</a></h3>
+          {% assign sub_grouped = group.items | sort: 'page_order' | group_by: 'sub_category' %}
+          <div class="nav-items">
+            {% for sub_group in sub_grouped %}
+              {% if sub_group.name != empty %}
+                <h4 class="mt3 mb0">{{ sub_group.name}}</h4>
               {% endif %}
+              <ul>
+                {% for item in sub_group.items %}
+                  {% if item.page_order > 0 %}
+                    <li class="nav-item">
+                      <a class="{% if item.url == page.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
+                        {{ item.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+
+                {% if group.name == "Timber for Ruby" %}
+                  <li class="separator-top">
+                    <a href="http://www.rubydoc.info/github/timberio/timber-ruby"><i class="fa fa-book" aria-hidden="true"></i>
+     Library documentation →</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/timberio/timber-ruby"><i class="fa fa-github" aria-hidden="true"></i>
+     Repo &amp; Issues →</a>
+                  </li>
+
+                {% elsif group.name == "Timber for Elixir" %}
+                  <li class="separator-top">
+                    <a href="https://hexdocs.pm/timber"><i class="fa fa-book" aria-hidden="true"></i>
+     Library documentation →</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/timberio/timber-elixir"><i class="fa fa-github" aria-hidden="true"></i>
+     Repo &amp; Issues →</a>
+                  </li>
+
+                {% endif %}
+              </ul>
             {% endfor %}
-
-            {% if group.name == "Timber for Ruby" %}
-              <li class="separator-top">
-                <a href="http://www.rubydoc.info/github/timberio/timber-ruby"><i class="fa fa-book" aria-hidden="true"></i>
- Library documentation →</a>
-              </li>
-              <li>
-                <a href="https://github.com/timberio/timber-ruby"><i class="fa fa-github" aria-hidden="true"></i>
- Repo →</a>
-              </li>
-              <li>
-                <a href="https://github.com/timberio/timber-ruby/issues"><i class="fa fa-github" aria-hidden="true"></i>
- Issues →</a>
-              </li>
-
-            {% elsif group.name == "Timber for Elixir" %}
-              <li class="separator-top">
-                <a href="https://hexdocs.pm/timber"><i class="fa fa-book" aria-hidden="true"></i>
- Library documentation →</a>
-              </li>
-              <li>
-                <a href="https://github.com/timberio/timber-elixir"><i class="fa fa-github" aria-hidden="true"></i>
- Repo →</a>
-              </li>
-              <li>
-                <a href="https://github.com/timberio/timber-elixir/issues"><i class="fa fa-github" aria-hidden="true"></i>
- Issues →</a>
-              </li>
-
-            {% endif %}
-          </ul>
+          </div>
         </section>
       {% endif %}
     {% endfor %}

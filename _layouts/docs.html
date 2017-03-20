@@ -15,15 +15,15 @@
 
       <header class="docs__content__header">
         {% include docs/header.html %}
+
+        {% if page.toc %}
+          <div class="docs__content__main__toc mb2">
+            Sections: {{ content | toc_only }}
+          </div>
+        {% endif %}
       </header>
 
       <main role="main" class="docs__content__main">
-
-        {% if page.toc %}
-          <div class="docs__content__main__toc mv3">
-            TOC: {{ content | toc_only }}
-          </div>
-        {% endif %}
 
         <div class="docs__content__main__doc pt4">
 

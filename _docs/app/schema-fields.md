@@ -1,6 +1,7 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: The Basics
 title: Schema & Fields
 page_order: 3
 toc: true

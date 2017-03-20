@@ -1,8 +1,9 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: Tutorials
 title: Seek To Time
-page_order: 5
+page_order: 11
 toc: true
 ---
 

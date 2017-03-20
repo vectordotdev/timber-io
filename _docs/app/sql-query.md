@@ -1,8 +1,9 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: Tutorials
 title: SQL Query Your Logs
-page_order: 2
+page_order: 12
 toc: true
 ---
 

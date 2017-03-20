@@ -1,8 +1,9 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: The Basics
 title: Right Click
-page_order: 11
+page_order: 5
 ---
 
 When you right click in the console, it will bring up a context menu:

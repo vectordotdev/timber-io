@@ -17,37 +17,48 @@
   }
 
   section {
-    a.header {
-      display: block;
-      font-family: "Europa", "Helvetica Neue";
-      font-weight: bold;
-      font-size: 15px;
-      color: #3D4A67;
-      letter-spacing: 0.11px;
-      text-decoration: none;
-      margin: 0;
-      padding: 0;
+    border-bottom: 1px solid #F3F3FB;
 
-      span.open-arrow {
-        display: none;
+    h3 {
+      a {
+        display: block;
+        font-family: "Europa", "Helvetica Neue";
+        font-weight: bold;
+        font-size: 15px;
+        color: #3D4A67;
+        letter-spacing: 0.11px;
+        text-decoration: none;
+
+        span.open-arrow {
+          display: none;
+        }
+      }
+
+      a:hover {
+        color: #5E58AE;
       }
     }
 
-    a.header:hover {
-      color: #5E58AE;
+    div.nav-items {
+      display: none;
+      margin-top: -10px;
+    }
+
+    h4 {
+      font-size: 12px;
+      font-weight: bold;
+      color: rgba(0,0,0,0.5);
+      text-transform: uppercase;
     }
 
     ul {
       padding-left: 0;
       list-style: none;
       padding: 10px 0;
-      border-bottom: none;
-      border-bottom: 1px solid #F3F3FB;
     }
 
     ul {
       li {
-        display: none;
         border-radius: 3px;
       }
 
@@ -92,7 +103,7 @@
 
   section.current,
   section.expanded {
-    a.header {
+    h3 a {
       color: #5E58AE;
 
       span.open-arrow {
@@ -104,15 +115,13 @@
       }
     }
 
-    ul li {
+    div.nav-items {
       display: block;
     }
   }
 
   section:last-child {
-    ul {
-      border-bottom: 0px none;
-    }
+    border-bottom: 0px none;
   }
 }
 
@@ -147,6 +156,7 @@
   font-weight: bold;
   color: #5E58AE;
   line-height: 2.5;
+  margin-top: -10px;
 
   ul {
     display: inline;
@@ -161,9 +171,10 @@
         background: #F3F3FB;
         border-radius: 4px;
         color: #81848C;
-        padding: 4px 8px;
+        padding: 3px 6px;
         font-weight: 400;
         text-decoration: none;
+        font-size: 0.9em;
 
         &:hover {
           color: #2F2A57;

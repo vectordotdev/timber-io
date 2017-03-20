@@ -1,8 +1,9 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: Tutorials
 title: Obtain Your API Key
-page_order: 12
+page_order: 10
 ---
 
 Timber's API keys are tied to each application you create:

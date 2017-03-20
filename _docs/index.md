@@ -7,8 +7,11 @@ permalink: /docs/index.html
 
 Welcome to the [Timber](https://timber.io) docs!
 
-The purpose of these docs is to ensure you get the most out of Timber: Log
-Better. Solve problems faster.
+Timber is a logging platform with a focus on data quality and developer productivity.
+
+The purpose of these docs is to ensure you get the most out of Timber. If at any time
+you are confused or have questions, please do not hesitate to chat with us in the bottom
+right of this page.
 
 
 ## Top articles

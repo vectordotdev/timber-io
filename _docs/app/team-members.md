@@ -1,8 +1,9 @@
 ---
 category: Timber App
 category_order: 5
+sub_category: Tutorials
 title: Set up your Team
-page_order: 10
+page_order: 14
 toc: true
 ---
 
