@@ -19,7 +19,7 @@ In your `shell` run the following command, subbing `{timber_api_key}` with
 heroku drains:add https://{timber_api_key}@logs.timber.io/frames
 ```
 
-### Additional Insight
+#### Additional Insight
 
 If you'd like server data, such as CPU and memory usage, run:
 
