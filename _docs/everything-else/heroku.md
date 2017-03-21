@@ -36,8 +36,7 @@ heroku labs:enable runtime-dyno-metadata
 
 ## Fields Automatically Captured
 
-By installing Timber into your application, you'll automatically get the following `context`
-and `event` data in your logs:
+Timber automatically parses Heroku events in your logs. By default you'll get:
 
 * `platform.error` - All Heroku platform errors and fields.
 * `server.cpu_sample` - Enabled by Heroku's [log runtime metrics](https://devcenter.heroku.com/articles/log-runtime-metrics). This captures fields `load_avg` fields.
