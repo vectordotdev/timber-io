@@ -144,11 +144,7 @@
   }
 }
 
-.docs__content {
-  margin-left: 18rem;
-}
-
-.docs__content__main__toc {
+.docs__content__header__toc {
   font-size: 0.8rem;
   font-weight: bold;
   color: #5E58AE;
@@ -179,6 +175,14 @@
       }
     }
   }
+}
+
+.docs__content {
+  margin-left: 18rem;
+}
+
+.docs__content__main {
+  line-height: 1.75;
 }
 
 .docs__content__main__doc {
