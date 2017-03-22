@@ -12,7 +12,7 @@ Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https
 
     ```ruby
     # Gemfile
-    gem "timber", "~> 1.0"
+    gem "timber", "~> 2.0"
     ```
 
 2. In your `shell`, run `bundle install`.
