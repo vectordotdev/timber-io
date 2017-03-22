@@ -34,21 +34,20 @@ Authorization: Basic YWJjZDEyMzQ=
 POST /frames HTTP/1.1
 Host: logs.timber.io
 Authorization: Bearer {base64(api_key)}
-Content-Type: application/text
+Content-Type: text/plain
 
-[
-  {"application_id": 34, "dt": "2017-02-02T00:00:00.00000Z", "level": "info", "message": "Log message"}
-]
+[2016-03-02T00:01:02.112234Z] log line 1
+[2016-03-02T00:01:02.112234Z] log line 2
 ```
 
 ### Curl
 
 ```shell
 curl -X POST -H "Authorization: Bearer {base64(api_token)}" \
-  -H "Content-Type: application/json" \
+  -H "Content-Type: text/plain" \
   -H "Cache-Control: no-cache" \
   -H "Postman-Token: 0fe1a806-97e6-213b-0b1f-acb9c697d26b" \
-  -d '[{"application_id": 34, "dt": "2017-02-02T00:00:00.00000Z", "level": "info", "message": "Log message"}]' \
+  -d '[2016-03-02T00:01:02.112234Z] log line 1\n[2016-03-02T00:01:02.112234Z] log line 2' \
   "https://logs.timber.io/frames"
 ```
 
@@ -56,7 +55,7 @@ curl -X POST -H "Authorization: Bearer {base64(api_token)}" \
 
 1. `application/json` - used in the examples above.
 2. `application/msgpack` - the same as json, just [msgpack encoded](http://msgpack.org).
-3. `plain/text` - lines are separated by new line characters.
+3. `text/plain` - lines are separated by new line (`\n`) characters.
 
 ---
 
