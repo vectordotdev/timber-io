@@ -3,7 +3,7 @@ title: Timber for Ruby v2 released
 date: 2017-03-22 00:00:00
 image: '/assets/img/blog/ruby.png'
 author: ben_johnson
-tags: [ruby]
+tags: [ruby-gem, ruby]
 ---
 
 Hot and fresh, v2 of the Timber ruby gem has just been released! v2 is the culmination
