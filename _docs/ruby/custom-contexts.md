@@ -25,7 +25,7 @@ end
 
 ## What you can do
 
-1. Use this data for [querying your logs](% link _docs/apps/search-syntax.md %}). Ex: `build.version:1.0.0`.
+1. Use this data for [querying your logs]({% link _docs/app/search-syntax.md %}). Ex: `build.version:1.0.0`.
 2. View this custom context when inspecting log lines:
 
    ![Context panels](/assets/img/docs/context-panel.png)

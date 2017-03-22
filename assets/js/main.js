@@ -68,15 +68,7 @@ $(function () {
   // Copy last nav element and link to Timber dashboard
   if (Cookies.get('timber_logged_in') === "true") {
     $('.site-wrapper nav > .w-75-l > a:last-of-type')
-      .clone()
-      .text('Dashboard')
-      .attr('href', 'https://app.timber.io')
-      .css({
-        'border': '1px solid #FFF',
-        'border-radius': '3rem',
-        'padding': '5px 10px'
-      })
-      .insertAfter('.site-wrapper nav > .w-75-l > a:last-of-type');
+      .text('Dashboard');
   }
 
 });

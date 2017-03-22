@@ -78,6 +78,9 @@ navigation:
 - title: Blog
   url: "/blog/"
   desc: Timber community posts
+- title: Sign-up
+  url: "https://app.timber.io"
+  desc: Sign-up for Timber
 features:
 - title: Modern Dashboard
   image: dashboard

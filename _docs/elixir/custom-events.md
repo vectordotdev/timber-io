@@ -26,7 +26,7 @@ Logger.info("Payment rejected", event: %{payment_rejected: event_data})
 
 ## What you can do
 
-1. Use this data for [querying your logs](% link _docs/apps/search-syntax.md %}). Ex: `type:payment_rejected` or `payment_rejected.amount:>100`.
+1. Use this data for [querying your logs]({% link _docs/app/search-syntax.md %}). Ex: `type:payment_rejected` or `payment_rejected.amount:>100`.
 2. View this custom event when inspecting log lines:
 
    ![Event panels](/assets/img/docs/event-panel.png)
