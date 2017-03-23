@@ -181,15 +181,13 @@
   margin-left: 18rem;
 }
 
-.docs__content__main {
-  line-height: 1.75;
-}
-
 .docs__content__main__doc {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.75;
 
   .markdown-body {
-    line-height: 1.75;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 2;
   }
 
   a {

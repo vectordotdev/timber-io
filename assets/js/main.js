@@ -65,10 +65,14 @@ $(function () {
     }
   });
 
-  // Copy last nav element and link to Timber dashboard
+  // Switch sign-up to dashboard if logged in
   if (Cookies.get('timber_logged_in') === "true") {
     $('.site-wrapper nav > .w-75-l > a:last-of-type')
       .text('Dashboard');
   }
 
+  // Make post headers linkable
+  $('.post h2,h3,h4,h5,h6').filter('[id]').each(function () {
+    $(this).html('<a href="#'+$(this).attr('id')+'" class="heading-anchor"><i class="fa fa-link" aria-hidden="true"></i>' + $(this).text() + '</a>');
+  });
 });
