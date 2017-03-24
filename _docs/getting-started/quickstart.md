@@ -1,8 +1,5 @@
 ---
-category: Getting Started
-category_order: 1
 title: Quickstart
-page_order: 1
 ---
 
 This guide will walk you through getting started on Timber. Each step includes screen-shots, and

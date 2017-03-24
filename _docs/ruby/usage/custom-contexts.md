@@ -1,14 +1,13 @@
 ---
-category: Timber for Ruby
-category_order: 2
+breadcrumbs: Timber for Ruby / Usage
 title: Custom Contexts
-page_order: 3
 toc: true
 ---
 
 Context is additional data shared across log lines. Think of it like log join data.
 Custom contexts allow you to extend beyond contexts already defined in
 the [`Timber::Contexts`](https://github.com/timberio/timber-ruby/tree/master/lib/timber/contexts) namespace.
+
 
 ## Implementation
 
@@ -21,6 +20,26 @@ end
 ```
 
 * Notice the `:build` root key. Timber will classify this context as such.
+
+
+## Rails ActionController Example
+
+The following adds context to logs written within the request cycle:
+
+```ruby
+class ApplicationController < ActionController::Base
+  around_filter :add_build_context
+
+  private
+    def add_build_context
+      Timber::CurrentContext.with({build: {version: "1.0.0"}}) do
+        yield
+      end
+    end
+end
+
+# => Processing MyController @metadata {... "context": {"build": {"version": "1.0.0"}} ...}
+```
 
 
 ## What you can do

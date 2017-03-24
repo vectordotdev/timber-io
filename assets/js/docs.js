@@ -18,8 +18,8 @@ $(function () {
       return false;
     });
 
-    $('.docs__navigation section h3 a').on('click', function() {
-      $(this).parent().parent().toggleClass('expanded');
+    $('.docs__navigation > ul > li > a').on('click', function() {
+      $(this).parent().toggleClass('expanded');
       return false;
     })
 });

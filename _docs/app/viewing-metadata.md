@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: Tutorials
 title: View Metadata & Context
 page_order: 16
@@ -19,6 +19,6 @@ Accessing metadata is as simple as clicking the line:
 
 * [Timber for Ruby installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your ruby app.
 * [Timber for Elixir installation]({% link _docs/app/search-syntax.md %}) - Capture this data in your Elixir app.
-* [Schema & Fields]({% link _docs/app/schema-fields.md %}) - Complete list of all available fields.
+* [Schema & Fields]({% link _docs/app/events-and-context.md %}) - Complete list of all available fields.
 * [Attribute search]({% link _docs/app/search-syntax.md %}#attribute-search) - Use this data when searching.
 

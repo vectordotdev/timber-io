@@ -1,8 +1,8 @@
 ---
 category: Timber for Elixir
-category_order: 2
+category_order: 4
 title: Metrics
-page_order: 5
+page_order: 6
 toc: true
 ---
 

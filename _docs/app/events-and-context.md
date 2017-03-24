@@ -1,21 +1,46 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: The Basics
 title: Schema & Fields
 page_order: 3
 toc: true
 ---
 
-Within Timber, every log line contains rich metadata. This is additional information about the
-log line itself. It's what makes your Timber log data so useful. This metadata is populated by
-our libraries, as well as parsing when we ingest the log line.
+As you may have noticed, Timber fully embraces structured data in your logs. So much so
+that we designed Timber with that as it's core premise. You'll notice every integration, and
+library we offer, enhances your logs with context and metadata. With Timber, this is not
+left as an open-ended exercise. We've [defined](https://github.com/timberio/log-event-json-schema)
+and provided an entire structured logging strategy that you can start using in minutes.
 
-This document will explain the structure of this metadata as well as describe all of the
-possible fields.
 
-Note: to use these fields in a search, please see our
-[attribute search guide]({% link _docs/app/schema-fields.md %}#attribute-search).
+## How It Works
+
+It's pretty simple actually. Take this familiar log line:
+
+```
+Sent 200 in 45.ms
+```
+
+Timber simply augments this log with metadata:
+
+```
+Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
+```
+
+1. In the [Timber console](https://app.timber.io) this metadata is hidden and available when you click the line.
+2. We preseve the original message to maximize human readability.
+3.
+
+
+## What can I do with this data?
+
+So many great things! Checkout these articles:
+
+1. [Attribute searching]({% link _docs/app/events-and-context.md %}#attribute-search)
+2. [Graphing]({% link _docs/app/events-and-context.md %})
+3. [Alerting]({% link _docs/app/events-and-context.md %})
+4. [Integrations]({% link _docs/app/events-and-context.md %})
 
 
 ## Versioning and Releases

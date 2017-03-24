@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: Tutorials
 title: Link to a Log
 page_order: 9

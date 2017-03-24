@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 title: Overview
 page_order: 1
 ---

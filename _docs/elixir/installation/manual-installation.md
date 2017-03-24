@@ -1,6 +1,8 @@
 ---
 category: Timber for Elixir
-category_order: 3
+category_order: 4
+sub_category: Installation
+sub_category_order: 1
 title: Manual Installation
 page_order: -1
 ---

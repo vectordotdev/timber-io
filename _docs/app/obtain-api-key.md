@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: Tutorials
 title: Obtain Your API Key
 page_order: 10
@@ -12,7 +12,7 @@ Timber's API keys are tied to each application you create:
 ## Obtaining an API key for a new application
 
 If you have not created an application, please follow the
-[quick start guide]({% link _docs/getting_started/quickstart.md %}) to create one.
+[quick start guide]({% link _docs/getting-started/quickstart.md %}) to create one.
 
 
 ## Obtaining an API key for an existing application

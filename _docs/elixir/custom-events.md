@@ -1,8 +1,8 @@
 ---
 category: Timber for Elixir
-category_order: 2
+category_order: 4
 title: Custom Events
-page_order: 4
+page_order: 5
 toc: true
 ---
 

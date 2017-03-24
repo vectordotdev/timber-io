@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: Tutorials
 title: SQL Query Your Logs
 page_order: 12
@@ -62,4 +62,4 @@ ROLLUP ( column [, ...] )
 ## Schema (available columns)
 
 All of your data is stored within a single table called `logs`. The columns available
-can be found in our [schema / fields]({% link _docs/app/schema-fields.md %}) page.
+can be found in our [schema / fields]({% link _docs/app/events-and-context.md %}) page.

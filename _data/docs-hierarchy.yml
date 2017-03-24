@@ -1,0 +1,76 @@
+- title: Getting started
+  path: /docs/getting-started/quickstart/
+  sections:
+    - title: Quick start
+      path: /docs/getting-started/quickstart/
+    - title: How it works
+      path: /docs/getting-started/how-it-works/
+    - title: Your account
+      path: /docs/getting-started/your-account/
+- title: Timber for Heroku
+  path: /docs/heroku/overview
+  sections:
+    - title: Overview
+      path: /docs/heroku/overview/
+    - title: Installation
+      path: /docs/heroku/installation/
+    - title: Events & context
+      path: /docs/heroku/events-and-context/
+      sections:
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Platform error event
+          path: /docs/heroku/events-and-context/platform-error-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Relase context
+          path: /docs/heroku/events-and-context/release-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Server CPU sample event
+          path: /docs/heroku/events-and-context/server-cpu-sample-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Server Memory sample event
+          path: /docs/heroku/events-and-context/server-memory-sample-event/
+- title: Timber for Ruby
+  path: /docs/ruby/overview
+  sections:
+    - title: Overview
+      path: /docs/ruby/overview/
+    - title: Installation
+      path: /docs/ruby/installation/
+    - title: Events & context
+      path: /docs/ruby/events-and-context/
+      sections:
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Controller call event
+          path: /docs/ruby/events-and-context/controller-call-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Exception event
+          path: /docs/ruby/events-and-context/exception-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
+          path: /docs/ruby/events-and-context/http-context-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client request event
+          path: /docs/ruby/events-and-context/http-client-request-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client response event
+          path: /docs/ruby/events-and-context/http-client-response-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server request event
+          path: /docs/ruby/events-and-context/http-server-request-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server response event
+          path: /docs/ruby/events-and-context/http-server-response-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Session context
+          path: /docs/ruby/events-and-context/session-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Template render event
+          path: /docs/ruby/events-and-context/template-render-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> User context
+          path: /docs/ruby/events-and-context/user-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> SQL query event
+          path: /docs/ruby/events-and-context/sql-query-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> System context
+          path: /docs/ruby/events-and-context/system-context/
+    - title: Usage
+      path: /docs/ruby/usage/
+      sections:
+        - title: Basic logging
+          path: /docs/ruby/usage/basic-logging/
+        - title: Custom contexts
+          path: /docs/ruby/usage/custom-contexts/
+        - title: Custom events
+          path: /docs/ruby/usage/custom-events/
+        - title: Metrics
+          path: /docs/ruby/usage/metrics/
+    - title: <i class="fa fa-book" aria-hidden="true"></i> Library documentation →
+      path: http://www.rubydoc.info/github/timberio/timber-ruby
+    - title: <i class="fa fa-github" aria-hidden="true"></i> Repo & issues →
+      path: https://github.com/timberio/timber-ruby

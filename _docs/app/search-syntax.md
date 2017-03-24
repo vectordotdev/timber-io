@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: The Basics
 title: Search Syntax
 page_order: 2

@@ -1,15 +1,13 @@
 ---
-category: Timber for Ruby
-category_order: 2
+breadcrumbs: Timber for Ruby / Usage
 title: Custom Events
-page_order: 4
 toc: true
 ---
 
 Custom events allow you to extend beyond events already defined in
 the [`Timber::Events`](https://github.com/timberio/timber-ruby/tree/master/lib/timber/events) namespace.
 
-Looking for metrics? Checkout the [metrics doc]({% link _docs/ruby/metrics.md %}).
+Looking for metrics? Checkout the [metrics doc]({% link _docs/ruby/usage/metrics.md %}).
 
 
 ## Implementation

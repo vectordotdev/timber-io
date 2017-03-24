@@ -1,6 +1,6 @@
 ---
 category: Timber App
-category_order: 5
+category_order: 6
 sub_category: The Basics
 title: Service Limits
 page_order: 6
@@ -15,7 +15,7 @@ Instead, the limits are based on our underlying technology:
    all subsequent values for that field must also be `numbers`. You _cannnot_ send a string or
    a boolean, for example.
 4. The Timber native fields are validated to ensure consistency. Validation constraints for these
-   fields can be found in our [schema & fields doc]({% link _docs/app/schema-fields.md %}).
+   fields can be found in our [schema & fields doc]({% link _docs/app/events-and-context.md %}).
 
 ### Timber does *not*...
 

@@ -1,17 +1,24 @@
 ---
 category: Timber for Elixir
-category_order: 2
+category_order: 4
+sub_category: Usage
+sub_category_order: 1
 title: Custom Contexts
-page_order: 3
+page_order: 4
 toc: true
 ---
 
-Context is additional data shared across log lines. Think of it like log join data.
-Custom contexts allow you to extend beyond contexts already defined in
-the [`Timber.Contexts`](https://github.com/timberio/timber-elixir/tree/master/lib/timber/contexts) namespace.
+Timber for Elixir allows you to add custom context to your apps. Context is additional data
+that is added to every log line within that context. Think of it like shared / join data
+for your logs.
+
+Before adding a custom context, checkout the [events & context]() to make sure Timber isn't
+already capturing it.
 
 
 ## Implementation
+
+Adding a context is just a simple Map:
 
 ```elixir
 Timber.add_context(%{build: %{version: "1.0.0"}})
@@ -25,14 +32,7 @@ Logger.info("My log message")
 
 ## What you can do
 
-1. Use this data for [querying your logs]({% link _docs/app/search-syntax.md %}). Ex: `build.version:1.0.0`.
-2. View this custom context when inspecting log lines:
-
-   ![Context panels](/assets/img/docs/context-panel.png)
-
-   Or view it in the raw JSON payload:
-
-   ![Context raw](/assets/img/docs/context-raw.png)
+Check out our [doc on what you can do with events & context]().
 
 
 ## Limits

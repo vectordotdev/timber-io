@@ -15,7 +15,7 @@ for different organizations or apps.
 [Signing up for Timber](https://app.timber.io) can be accomplished with 1-click through our
 Github and Google integrations. We also support traditional email/password accounts as well.
 
-Please see our [quick start]({% link _docs/getting_started/quickstart.md %}) for assistance
+Please see our [quick start]({% link _docs/getting-started/quickstart.md %}) for assistance
 registering.
 
 

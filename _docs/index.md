@@ -17,6 +17,6 @@ right of this page.
 ## Top articles
 
 1. [Search syntax]({% link _docs/app/search-syntax.md %})
-2. [Schema / Fields]({% link _docs/app/schema-fields.md %})
+2. [Schema / Fields]({% link _docs/app/events-and-context.md %})
 3. [Tail a user]({% link _docs/app/tail-a-user.md %})
 4. [Trace a request]({% link _docs/app/trace-request.md %})

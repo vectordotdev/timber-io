@@ -1,12 +1,10 @@
 ---
-category: Timber for Ruby
-category_order: 2
+breadcrumbs: Timber for Ruby / Usage
 title: Metrics
-page_order: 5
 toc: true
 ---
 
-Logging metrics is accomplished by [logging custom events]({% link _docs/ruby/custom-events.md %}). Let's take a look at a couple of examples:
+Logging metrics is accomplished by [logging custom events]({% link _docs/ruby/usage/custom-events.md %}). Let's take a look at a couple of examples:
 
 
 ## Example 1: Tracking credit card charge volume
