@@ -35,3 +35,8 @@ Check out our [doc on what you can do with events & context]().
 
 * There are *no limits* to the depth of fields you can nest. As long as the resulting field path is less than `128` characters.
 * There are *no limits* to the number of custom fields you can send. As long as the result payload size is less than `2mb`.
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

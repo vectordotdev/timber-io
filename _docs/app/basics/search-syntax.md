@@ -62,6 +62,11 @@ A full list of the available fields can be found in our log event JSON schema.
 
 * [Schema & Fields]({% link _docs/app/tutorials/tail-a-user.md %}) - Tailing a user using attribute search.
 * [Tail a user]({% link _docs/app/tutorials/tail-a-user.md %}) - Tailing a user using attribute search.
-* [Trace a request]({% link _docs/app/tutorials/trace-request.md %}) - Trace a request via the request_id.
+* [Trace a request]({% link _docs/app/tutorials/trace-a-request.md %}) - Trace a request via the request_id.
 * [Timber for Ruby installation]({% link _docs/app/basics/search-syntax.md %}) - Capture this data in your ruby app.
 * [Timber for Elixir installation]({% link _docs/app/basics/search-syntax.md %}) - Capture this data in your Elixir app.
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

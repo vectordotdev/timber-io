@@ -1,6 +1,6 @@
 ---
 breadcrumbs: Timber for Elixir / Usage
-title: Usage
+title: Metrics
 toc: true
 ---
 

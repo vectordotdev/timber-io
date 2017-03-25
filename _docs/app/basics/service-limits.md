@@ -23,3 +23,8 @@ Instead, the limits are based on our underlying technology:
 5. Timber does _not_ limit the number of team members you can have.
 6. Timber does _not_ limit the number apps you can have.
 7. Timber does _not_ limit the number of organizations you can have.
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

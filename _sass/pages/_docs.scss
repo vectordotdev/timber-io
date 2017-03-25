@@ -292,12 +292,12 @@
 
   .markdown-body {
     color: rgba(0, 0, 0, 0.7);
-    line-height: 2;
+    line-height: 1.75;
   }
 
   a {
     color: #5E58AE;
-    font-weight: 500;
+    font-weight: bold;
   }
 
   a.heading-anchor {
@@ -375,6 +375,15 @@
     }
   }
 
+  div.next {
+    margin-top: 2em;
+    font-weight: bold;
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   h2 {
     margin-top: 3rem;
     color: rgba(0, 0, 0, 0.7);
@@ -387,6 +396,10 @@
   img {
     border: 2rem solid #f4f3fb;
     box-sizing: border-box;
+  }
+
+  img.hero {
+    border: 0px none;
   }
 
   .highlight {

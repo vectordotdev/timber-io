@@ -1,11 +1,11 @@
 ---
 breadcrumbs: Timber App / Tutorials
-title: Graphing (beta)
+title: Overview
 toc: true
 ---
 
-Graphing is in beta. If you're interested in joining, please chat with us
-in the bottom right and let us know you're interested in joining the beta.
+The tutorials sections aims to show you how to use the various features of Timber, ensuring
+you get the most out of the application.
 
 
 <div class="next">

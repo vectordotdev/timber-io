@@ -60,3 +60,8 @@ ROLLUP ( column [, ...] )
 
 All of your data is stored within a single table called `logs`. The columns available
 can be found in our [schema / fields]({% link _docs/app/basics/events-and-context.md %}) page.
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

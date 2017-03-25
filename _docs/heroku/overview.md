@@ -3,8 +3,14 @@ breadcrumbs: Timber for Heroku
 title: Overview
 ---
 
-Heroku is a platform as a service that you can host your app. Timber integration with Heroku
-through it's [log drains feature](https://devcenter.heroku.com/articles/log-drains).
-This makes setup and log delivery dead simple.
+Timber supports any application on Heroku through Heroku's
+[log drains feature](https://devcenter.heroku.com/articles/log-drains). Heroku provides
+a log stream making it simple to send your logs to the Timber service.
 
-To get started, see our [Heroku installation guide]({% link _docs/heroku/installation.md %}).
+This section will outlint how we integrate with Heroku and the various events
+and contexts we capture as a result.
+
+
+<div class="next">
+  Next: [Installation <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/heroku/installation.md %})
+</div>

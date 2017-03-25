@@ -17,7 +17,7 @@ They would all share the same HTTP context since they are logged within a single
 {
   "context": {
     "http": {
-      "method: "GET",
+      "method": "GET",
       "path": "/welcome",
       "remote_addr": "123.34.32.123",
       "request_id": "2c3a0b24069af49b3de35b8e8c26765c1dba9ff0"
@@ -46,3 +46,8 @@ Example queries:
 * Only this event: `has:http`
 
 See our doc on [using context & event data]({% link _docs/app/basics/events-and-context.md %}#what-can-i-do-with-this-data).
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

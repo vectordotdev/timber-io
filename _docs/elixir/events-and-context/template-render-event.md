@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Elixir / Events & Context
-title: Controller Call Event
-formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Controller Call Event
+title: Template Render Event
+formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Template Render Event
 toc: true
 ---
 

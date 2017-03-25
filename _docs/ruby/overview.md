@@ -27,4 +27,7 @@ Into this:
 Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
 ```
 
-[Read more about all of the context and fields this library captures]({% link _docs/ruby/events-and-context.md %}).
+
+<div class="next">
+  Next: [Installation <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/ruby/installation.md %})
+</div>

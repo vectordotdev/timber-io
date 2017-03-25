@@ -8,8 +8,7 @@ opening the context panel when accessed.
 
 ![Linking to a log](/assets/img/docs/link-to-a-log.gif)
 
----
 
-**Related documents**
-
-* [Viewing metadata & context]({% link _docs/app/tutorials/view-metadata.md %}) - Opening the metadata / context panel.
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

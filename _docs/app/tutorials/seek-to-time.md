@@ -33,3 +33,8 @@ After seeking to a date the URL will update with a `date=` parameter. Simply cop
 that URL, anyone navigating to the URL will jump to the same time. Ex:
 
     https://app.timber.io/organizations/timber/apps/my-app-production/console?date=Mon+Mar+13+2017+14%3A00%3A00+GMT-0500+%28CDT%29
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

@@ -3,22 +3,16 @@ breadcrumbs: Timber for Elixir
 title: Events & Context
 ---
 
-By [installing the Timber for Elixir library](https://github.com/timberio/timber-elixir) your application will automatically start collecting
-the following events and context in your logs:
+By [installing the Timber for Elixir library](https://github.com/timberio/timber-elixir) your
+application will automatically start collecting events and context.
 
-<div class="additions">
-<h3>Events & contexts added...</h3>
+To your left you'll see a sub-navigation listing all of the events and contexts the Timber
+library capture.
 
-* [Controller call event]({% link _docs/elixir/events-and-context/controller-call-event.md %})
-* [Exception event]({% link _docs/elixir/events-and-context/exception-event.md %})
-* [HTTP client request event]({% link _docs/elixir/events-and-context/http-client-request-event.md %})
-* [HTTP client response event]({% link _docs/elixir/events-and-context/http-client-response-event.md %})
-* [HTTP context]({% link _docs/elixir/events-and-context/http-context.md %})
-* [HTTP server request event]({% link _docs/elixir/events-and-context/http-server-request-event.md %})
-* [HTTP server response event]({% link _docs/elixir/events-and-context/http-server-request-event.md %})
-* [Session context]({% link _docs/elixir/events-and-context/session-context.md %})
-* [Template render event]({% link _docs/elixir/events-and-context/template-render-event.md %})
-* [User context]({% link _docs/elixir/events-and-context/user-context.md %})
-* [SQL query event]({% link _docs/elixir/events-and-context/sql-query-event.md %})
-* [System context]({% link _docs/elixir/events-and-context/system-context.md %})
+If you aren't sure what events or context means, checkout our
+[events & context doc]({% link _docs/app/basics/events-and-context.md %}).
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
 </div>

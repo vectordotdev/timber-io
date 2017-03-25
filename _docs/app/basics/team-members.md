@@ -1,6 +1,6 @@
 ---
 breadcrumbs: Timber App / The Basics
-title: Set up your Team
+title: Team Members & Access
 toc: true
 ---
 

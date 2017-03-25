@@ -3,12 +3,12 @@ breadcrumbs: Timber for Ruby
 title: Usage
 ---
 
-The Timber elixir library is simple to use: it's just logging. There are no special
-APIs.
+The goal is of the Timber Ruby libray is to help you log better; taking advantage of the
+tools you already have (the `Logger`). There are no special APIs or proprietary syntax that
+you have to learn.
 
-This section aims to help you get the most out of usign the Timber ruby library:
+To your left you'll see a sub-navigation with the various ways you can use the Timber library.
 
-* [Basic logging]({% link _docs/ruby/usage/basic-logging.md %})
-* [Custom contexts]({% link _docs/ruby/usage/custom-contexts.md %})
-* [Custom events]({% link _docs/ruby/usage/custom-events.md %})
-* [Metrics]({% link _docs/ruby/usage/metrics.md %})
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

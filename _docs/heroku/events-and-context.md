@@ -9,11 +9,13 @@ toc: true
 If your app is on Heroku, Timber parses and recognizes a number of events in your Heroku log
 stream automatically.
 
-<div class="additions">
-<h3>Events & contexts added...</h3>
+To your left you'll see a sub-navigation listing all of the events and contexts Timber extracts
+from the Heroku log stream.
 
-* [Platform error event]({% link _docs/heroku/events-and-context/platform-error-event.md %})
-* [Release context]({% link _docs/heroku/events-and-context/release-context.md %})
-* [Server CPU sample event]({% link _docs/heroku/events-and-context/server-cpu-sample-event.md %})
-* [Server memory sample event]({% link _docs/heroku/events-and-context/server-memory-sample-event.md %})
+If you aren't sure what events or context means, checkout our
+[events & context doc]({% link _docs/app/basics/events-and-context.md %}).
+
+
+<div class="next">
+  Next: [Platform error event <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/heroku/installation.md %})
 </div>

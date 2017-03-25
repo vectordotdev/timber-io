@@ -1,9 +1,9 @@
 ---
 category: Timber App / Integrations
-title: Sentry (coming soon)
+title: Honeybadger (coming soon)
 ---
 
-The Timber [Sentry](https://sentry.io) integration is coming soon and is being
+The Timber [Honeybadger](https://www.honeybadger.io) integration is coming soon and is being
 actively developed. If this feature interests you, please let us know by starting a chat in the
 bottom right! This helps us adjust priorities and potentially deliver this feature sooner.
 

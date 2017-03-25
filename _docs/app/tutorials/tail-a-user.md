@@ -13,11 +13,7 @@ There are 2 ways to accomplish this:
 
 ![Tail a user](/assets/img/docs/tail-a-user.gif)
 
----
 
-**Related documents**
-
-* [Timber for Ruby installation]({% link _docs/app/basics/search-syntax.md %}) - Capture this data in your ruby app.
-* [Timber for Elixir installation]({% link _docs/app/basics/search-syntax.md %}) - Capture this data in your Elixir app.
-* [Attribute search]({% link _docs/app/basics/search-syntax.md %}#attribute-search) - Use this data when searching.
-
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

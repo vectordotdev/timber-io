@@ -28,3 +28,9 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
 ### Preview
 
 ![Timber elixir install](/assets/img/docs/timber-elixir-install.gif)
+
+
+
+<div class="next">
+  Next: [Events & context <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/elixir/events-and-context.md %})
+</div>

@@ -43,3 +43,8 @@ heroku labs:enable runtime-dyno-metadata
 
 * [Release context]({% link _docs/heroku/events-and-context/release-context.md %})
 </div>
+
+
+<div class="next">
+  Next: [Events and context <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/heroku/events-and-context.md %})
+</div>

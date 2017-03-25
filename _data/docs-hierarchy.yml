@@ -39,12 +39,12 @@
           path: /docs/ruby/events-and-context/controller-call-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Exception event
           path: /docs/ruby/events-and-context/exception-event/
-        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
-          path: /docs/ruby/events-and-context/http-context/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client request event
           path: /docs/ruby/events-and-context/http-client-request-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client response event
           path: /docs/ruby/events-and-context/http-client-response-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
+          path: /docs/ruby/events-and-context/http-context/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server request event
           path: /docs/ruby/events-and-context/http-server-request-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server response event
@@ -89,12 +89,12 @@
           path: /docs/elixir/events-and-context/controller-call-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Exception event
           path: /docs/elixir/events-and-context/exception-event/
-        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
-          path: /docs/elixir/events-and-context/http-context/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client request event
           path: /docs/elixir/events-and-context/http-client-request-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client response event
           path: /docs/elixir/events-and-context/http-client-response-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
+          path: /docs/elixir/events-and-context/http-context/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server request event
           path: /docs/elixir/events-and-context/http-server-request-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server response event
@@ -150,7 +150,7 @@
     - title: Overview
       path: /docs/app/overview/
     - title: The Basics
-      path: /docs/app/basics/overview/
+      path: /docs/app/basics/
       sections:
         - title: API keys
           path: /docs/app/basics/api-key/
@@ -164,14 +164,14 @@
           path: /docs/app/basics/search-syntax/
         - title: Service limits
           path: /docs/app/basics/service-limits/
-        - title: Team members
+        - title: Team members & access
           path: /docs/app/basics/team-members/
     - title: Tutorials
-      path: /docs/app/tutorials/overview/
+      path: /docs/app/tutorials/
       sections:
-        - title: Alerting
+        - title: Alerting (beta)
           path: /docs/app/tutorials/alerting/
-        - title: Graphing
+        - title: Graphing (beta)
           path: /docs/app/tutorials/graphing/
         - title: Inspect HTTP requests
           path: /docs/app/tutorials/inspect-http-requests/
@@ -179,7 +179,7 @@
           path: /docs/app/tutorials/link-to-a-log/
         - title: Seek to time
           path: /docs/app/tutorials/seek-to-time/
-        - title: SQL query your logs
+        - title: SQL query your logs (beta)
           path: /docs/app/tutorials/sql-query/
         - title: Tail a user
           path: /docs/app/tutorials/tail-a-user/
@@ -188,11 +188,13 @@
         - title: View metadata & context
           path: /docs/app/tutorials/view-metadata/
     - title: Integrations
-      path: /docs/app/integrations/overview/
+      path: /docs/app/integrations/
       sections:
-        - title: Honeybadger
+        - title: Honeybadger (coming soon)
           path: /docs/app/integrations/honeybadger/
-        - title: Sentry
+        - title: Rollbar (coming soon)
+          path: /docs/app/integrations/rollbar/
+        - title: Sentry (coming soon)
           path: /docs/app/integrations/sentry/
         - title: Not here? Make a request
           path: /docs/app/integrations/request/
