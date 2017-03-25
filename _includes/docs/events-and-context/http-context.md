@@ -1,14 +1,5 @@
-The HTTP context adds critical HTTP data within the context of a HTTP request. For example,
-takes these familiar lines:
-
-```
-Started Get "/"
-Processing by WelcomeController#index as html
-Rendered welcome/index.html.erb within layouts/application (0.2ms)
-Completed 200 OK in 2.46ms
-```
-
-They would all share the same HTTP context since they are logged within a single HTTP request.
+The HTTP context adds critical HTTP data within the context of a HTTP request. Any log line
+written within a single HTTP request will share this context data.
 
 
 ### Example JSON Structure

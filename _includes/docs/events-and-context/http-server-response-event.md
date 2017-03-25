@@ -2,6 +2,9 @@ The HTTP server response event represnts the response of an _incoming_ HTTP requ
 application. This is different from the `HTTP Client Response Event` in that it is a
 response to an _incoming_ request.
 
+```
+Sent 200 in 52.2ms
+```
 
 ### Example JSON Structure
 

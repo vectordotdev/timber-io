@@ -1,5 +1,4 @@
-The controller call event represents an invocation of your controller within the HTTP
-request cycle. The order of events generally looks like:
+The template render event represents the rendering of a template within your application.
 
 ```
 Rendered welcome/index.html.erb within layouts/application (0.2ms)

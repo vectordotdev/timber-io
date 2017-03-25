@@ -3,10 +3,12 @@ being a blob of text in your logs, Timber parses them and classifies it as a sin
 proper event.
 
 ```
-Started Get "/"
-Processing by WelcomeController#index as html <-------------------------
-Rendered welcome/index.html.erb within layouts/application (0.2ms)
-Completed 200 OK in 2.46ms
+RuntimeError: Failed to decode header from JSON
+  lib/json_web_token/jws.ex:96 (JsonWebToken.Jws.header_map/1)
+  lib/json_web_token/jws.ex:82 (JsonWebToken.Jws.validate_alg_matched/2)
+  lib/json_web_token/jws.ex:77 (JsonWebToken.Jws.verify/3)
+  lib/json_web_token/jws.ex:89 (JsonWebToken.Jwt.verify/2)
+  lib/odin_auth/bearer_user.ex (Odin.Auth.BearerUser.jwt_decode/1)
 ```
 
 

@@ -2,6 +2,10 @@ The HTTP server request event reprsents an _incoming_ HTTP request _to_ your app
 This is different from the `HTTP Client Request Event` in that it is an _incoming_ request
 that your appication serves.
 
+```
+Started POST /applications
+```
+
 
 ### Example JSON Structure
 

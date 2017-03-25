@@ -4,6 +4,10 @@ your application. This is different from the `HTTP Server Response Event` in tha
 response to an _outgoing_ request.
 
 
+```
+Outgoing HTTP response from timber 200 in 52.2ms
+```
+
 ### Example JSON Structure
 
 ```json
