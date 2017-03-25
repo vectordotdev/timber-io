@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Elixir / Events & Context
 title: HTTP Client Request Event
-formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP Client Request Event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP Client Request Event
 toc: true
 ---
 

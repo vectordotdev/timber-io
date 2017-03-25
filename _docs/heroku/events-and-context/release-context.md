@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
 title: Release Context
-formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Release Context
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Release Context
 toc: true
 ---
 

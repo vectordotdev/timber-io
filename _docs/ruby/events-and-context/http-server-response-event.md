@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Ruby / Events & Context
 title: HTTP Server Response Event
-formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP Server Response Event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP Server Response Event
 toc: true
 ---
 

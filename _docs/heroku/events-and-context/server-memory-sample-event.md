@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
 title: Server Memory Sample Event
-formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Server Memory Sample Event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Server Memory Sample Event
 toc: true
 ---
 
