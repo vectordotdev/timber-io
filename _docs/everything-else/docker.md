@@ -1,6 +1,6 @@
 ---
 category: Timber for Everything Else
-category_order: 4
+category_order: 5
 title: Docker (coming soon)
 page_order: 3
 ---

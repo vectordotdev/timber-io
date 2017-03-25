@@ -1,0 +1,42 @@
+---
+title: Changelog
+layout: page
+desc: Timber Product Updtes
+---
+
+<header class="blog__hero header relative" role="banner">
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro">
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked tl-ns tc">Changelog</h1>
+    <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tl-ns tc mw6">
+      Stay in the know! Short and simple product updates from Timber.
+    </p>
+  </div>
+</header>
+
+{% if paginator.page == 1 %}
+  {% for post in site.changelog limit: 2 %}
+<link rel="prerender" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+  {% endfor %}
+{% endif %}
+
+<section class="mw8 center avenir">
+  <ul class="post-list ph3-ns pa0 mt4-ns mt2">
+    {% for post in site.changelog %}
+    {% assign author = site.data.authors[post.author] %}
+    {% include post.html post=post %}
+    {% endfor %}
+  </ul>
+</section>
+
+<ol class="pager">
+  {% if paginator.previous_page %}
+  <li class="pager-prev">
+    <a href="{{ paginator.previous_page_path }}">Previous</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="pager-next">
+    <a href="{{ paginator.next_page_path }}">Next</a>
+  </li>
+  {% endif %}
+</ol>

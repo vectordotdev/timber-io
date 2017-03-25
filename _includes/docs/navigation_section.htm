@@ -1,0 +1,10 @@
+{% for item in items %}
+  <li>
+    <a href="">{{ section.title }}</a>
+
+    {% if item.items %}
+      {% assign old_items = items %}
+      {% assign items = item.items %}
+    <ul>
+      {% for sub_section}
+}

@@ -1,8 +1,6 @@
 ---
-category: Timber for Elixir
-category_order: 3
+breadcrumbs: Timber for Elixir
 title: Installation
-page_order: 2
 ---
 
 Installation of Timber for Elixir is accomplished with the [timber hex package](https://hex.pm/packages/timber):
@@ -23,10 +21,16 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
 
 2. In your `shell`, run `mix deps.get`.
 
-3. In your `shell`, run `mix timber.install` or follow the [manual install instructions]({% link _docs/elixir/manual-installation.md %}).
+3. In your `shell`, run `mix timber.install` or follow the [manual install instructions]({% link _docs/elixir/installation/manual-installation.md %}).
 
 ---
 
 ### Preview
 
 ![Timber elixir install](/assets/img/docs/timber-elixir-install.gif)
+
+
+
+<div class="next">
+  Next: [Events & context <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/elixir/events-and-context.md %})
+</div>

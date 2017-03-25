@@ -1,14 +1,13 @@
 ---
-category: Timber for Elixir
-category_order: 3
+breadcrumbs: Timber for Elixir
 title: Overview
-page_order: 1
-toc: true
 ---
 
-Timber for Elixir is designed to enhance your Elixir application logs; turning your once
-raw text logs into rich JSON events. This improves log data quality at the source, so you can
-cut out the noise and solve problems faster.
+[Timber for Elixir](https://github.com/timberio/timber-elixir) is an optional upgrade you can
+install for your Elixir apps. It turns your once raw text logs into
+[rich JSON events]({% link _docs/elixir/events-and-context.md %}) that contain critical
+context and event data. It significantly improves the quality of your logs, allowing you to filter
+out the noise and solve problems faster.
 
 
 ## How it works
@@ -16,7 +15,7 @@ cut out the noise and solve problems faster.
 This is accomplished by installing our [Timber Hex package](https://hex.pm/packages/timber) into
 your application.
 
-For example, it turns this familiar log line:
+Once installed, it turns this familiar log line:
 
 ```
 Sent 200 in 45.ms
@@ -28,28 +27,7 @@ Into this:
 Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
 ```
 
-It does so by integrating with popular frameworks and third-party libraries. Such as `Phoenix`,
-`Plug`, `Ecto`, etc.
 
-
-## Fields Automatically Captured
-
-By installing Timber into your application, you'll automatically get the following `context`
-and `event` data in your logs:
-
-* `context.http` - The current HTTP request being served (`method`, `path`, `request_id`)
-* `context.runtime` - Runtime data (the current `file`, `module`, `function`, `line`, and `app`)
-* `context.system` - System data (`hostname` and `pid`)
-* `context.user` - The current logged in user (`id`, `name`, `email`)
-* `event.controller_call` - When a controller is invoked by a HTTP request (`controller` and `action`)
-* `event.exception` - Detailed data about any excetions raised (`name`, `message`, `backtrace`)
-* `event.http_server_request` - Incoming HTTP request (`body`, `host`, `headers`, `method`, `path`, `port`, `query_string`, `request_id`, `scheme`)
-* `event.http_server_response` - Incoming HTTP request (`body`, `headers`, `request_id`, `status`)
-* `event.sql_query` - Incoming HTTP request (`sql`, `time_ms`)
-* `event.template_render` - Incoming HTTP request (`name`, `time_ms`)
-
-For a complete list, checkout..
-
-1. [`Timber.Contexts`](https://github.com/timberio/timber-elixir/tree/master/lib/timber/contexts)
-2. [`Timber.Events`](https://github.com/timberio/timber-elixir/tree/master/lib/timber/events)
-3. The [schema & fields doc]({% link _docs/app/schema-fields.md %})
+<div class="next">
+  Next: [Installation <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/elixir/installation.md %})
+</div>

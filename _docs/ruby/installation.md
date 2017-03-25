@@ -1,9 +1,6 @@
 ---
-category: Timber for Ruby
-category_order: 2
+breadcrumbs: Timber for Ruby
 title: Installation
-page_order: 2
-sections: manual configuration
 ---
 
 Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https://rubygems.org/gems/timber):
@@ -24,3 +21,8 @@ Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https
 ### Preview
 
 ![Timber ruby install](/assets/img/docs/timber-ruby-install.gif)
+
+
+<div class="next">
+  Next: [Events & context <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/ruby/events-and-context.md %})
+</div>

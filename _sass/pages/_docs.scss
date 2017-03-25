@@ -13,6 +13,105 @@
   height: 100vh;
   max-height: 100vh;
 
+  > ul {
+    > li {
+      border-bottom: 1px solid #F3F3FB;
+
+      > a {
+        display: block;
+        font-family: "Europa", "Helvetica Neue";
+        font-weight: bold;
+        font-size: 15px;
+        color: #3D4A67;
+        letter-spacing: 0.11px;
+        text-decoration: none;
+
+        &:hover {
+          color: #5E58AE;
+        }
+
+        > span.open-arrow {
+          display: none;
+        }
+      }
+
+      ul {
+        display: none;
+        list-style: none;
+
+        > li {
+          border-radius: 3px;
+
+          > a {
+            border-radius: 3px;
+            padding: 7px 10px 7px 0;
+            text-decoration: none;
+            font-family: "Europa", "Helvetica Neue";
+            font-size: 14px;
+            color: #A6ACB7;
+            letter-spacing: 0.1px;
+            line-height: 16px;
+            border: none;
+            display: block;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+              background: #f5f7fb;
+              color: #595b61;
+              padding-left: 10px;
+            }
+          }
+
+          &.current {
+            > a {
+              background: #5E58AE;
+              font-weight: bold;
+              color: #FFF;
+              padding-left: 10px;
+            }
+
+            > ul {
+              display: block;
+            }
+          }
+
+          &.sub-section-selected {
+            > a {
+              font-weight: normal;
+              color: #A6ACB7;
+              background: white;
+              padding-left: 0;
+            }
+          }
+
+          &.separator-top {
+            border-top: 1px solid #F3F3FB;
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+          }
+        }
+      }
+
+      &.current,
+      &.expanded {
+        > a {
+          > span.open-arrow {
+            display: block;
+          }
+
+          > span.closed-arrow {
+            display: none;
+          }
+        }
+
+        > ul {
+          display: block;
+        }
+      }
+    }
+  }
+
+
   section {
     border-bottom: 1px solid #F3F3FB;
 
@@ -129,6 +228,10 @@
   letter-spacing: 0.18px;
   border-bottom: 1px solid #DBE1E1;
 
+  span.breadcrumbs {
+    font-size: 14px;
+  }
+
   a {
     background: #F3F3FB;
     border-radius: 4px;
@@ -137,6 +240,8 @@
     letter-spacing: 0.1px;
     text-decoration: none;
     font-weight: 400;
+    white-space: nowrap;
+    line-height: 2.5;
 
     &:hover {
       color: #2F2A57;
@@ -187,11 +292,12 @@
 
   .markdown-body {
     color: rgba(0, 0, 0, 0.7);
-    line-height: 2;
+    line-height: 1.75;
   }
 
   a {
     color: #5E58AE;
+    font-weight: bold;
   }
 
   a.heading-anchor {
@@ -213,14 +319,87 @@
     background: #f4f3fb;
   }
 
+  div.additions {
+    background: #d8fbdb;
+    border-radius: 5px;
+    color: #1d8745;
+    padding: 0.75em 1em;
+    margin-bottom: 1em;
+    font-size: 85%;
+
+    h3 {
+      margin: 0 0 1em 0;
+    }
+
+    .learn-more {
+      display: block;
+      font-size: 80%;
+    }
+
+    > p:last-child {
+      margin-bottom: 0
+    }
+
+    ol,
+    ul {
+      margin: 0.5em 0;
+      padding: 0 0 0 2px;
+      list-style: none;
+      color: #1d8745;
+
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      li:before {
+        font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+        font-size: inherit; // can't have font-size inherit on line above, so need to override
+        text-rendering: auto; // optimizelegibility throws things off #1094
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: $fa-var-plus-circle;
+        margin-right: 6px;
+        color: #1d8745;
+      }
+    }
+
+    a {
+      color: #1d8745;
+      border-bottom: 1px dotted #8ec4a1;
+    }
+
+    a:hover {
+      text-decoration: none;
+      border-bottom: 1px solid #8ec4a1;
+    }
+  }
+
+  div.next {
+    margin-top: 2em;
+    font-weight: bold;
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   h2 {
     margin-top: 3rem;
     color: rgba(0, 0, 0, 0.7);
   }
 
+  h3 {
+    margin-top: 3rem;
+  }
+
   img {
     border: 2rem solid #f4f3fb;
     box-sizing: border-box;
+  }
+
+  img.hero {
+    border: 0px none;
   }
 
   .highlight {

@@ -1,7 +1,14 @@
 <div class="db dt-l w-100 border-box flex pb3 justify-between">
-  <h1 class="mv0">{% if page.category %}{{ page.category }} / {% endif %}{{ page.title }}</h1>
+  <h1 class="mv0">
+    {% if page.breadcrumbs %}<span class="breadcrumbs db mb2">{{ page.breadcrumbs }} / </span>{% endif %}
+    {% if page.formatted_title %}
+      {{ page.formatted_title }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
 
-  <div class="mt2">
+  <div class="mt1 nowrap">
     <a class="pv2 ph3" href="https://github.com/timberio/timber-io/blob/master/{{page.path}}">Edit Page</a>
     <a class="pv2 ph3" href="/">View Site →</a>
   </div>

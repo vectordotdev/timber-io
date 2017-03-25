@@ -5,18 +5,30 @@ layout: docs
 permalink: /docs/index.html
 ---
 
-Welcome to the [Timber](https://timber.io) docs!
-
-Timber is a logging platform with a focus on data quality and developer productivity.
+Welcome to the [Timber](https://timber.io) docs! Timber is a logging platform with a focus on
+data quality and developer productivity.
 
 The purpose of these docs is to ensure you get the most out of Timber. If at any time
 you are confused or have questions, please do not hesitate to chat with us in the bottom
 right of this page.
 
 
-## Top articles
+## Getting started
 
-1. [Search syntax]({% link _docs/app/search-syntax.md %})
-2. [Schema / Fields]({% link _docs/app/schema-fields.md %})
-3. [Tail a user]({% link _docs/app/tail-a-user.md %})
-4. [Trace a request]({% link _docs/app/trace-request.md %})
+We recommend the following articles for new users, as it lays the foundation for understanding
+Timber:
+
+1. [Quickstart]({% link _docs/getting-started/quickstart.md %})
+2. [Events & context]({% link _docs/app/basics/events-and-context.md %})
+3. [Search syntax]({% link _docs/app/basics/search-syntax.md %})
+4. [View metadata & context]({% link _docs/app/tutorials/tail-a-user.md %})
+
+
+## Feature highlights
+
+Timber offers a variety of powerful and unique features that'll help you be more productive.
+Here are a few:
+
+1. [Tail a specific user]({% link _docs/app/tutorials/tail-a-user.md %})
+2. [Trace a request]({% link _docs/app/tutorials/trace-a-request.md %})
+3. [Inspect an HTTP request]({% link _docs/app/tutorials/inspect-http-requests.md %})

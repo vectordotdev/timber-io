@@ -2,19 +2,23 @@
 title: Timber - Log Better. Solve Problems Faster.
 timezone: UTC
 collections:
+  blog_tags:
+    title: Tags
+    output: true
+    permalink: /blog/tag/:name/
+  changelog:
+    title: Changelog
+    permalink: /changelog/:path/
+    output: true
+  docs:
+    title: Docs
+    permalink: /docs/:path/
+    output: true
   plans:
     title: Plans
     output: true
   posts:
     title: Posts
-    output: true
-  blog_tags:
-    title: Tags
-    output: true
-    permalink: /blog/tag/:name/
-  docs:
-    title: Docs
-    permalink: /docs/:path/
     output: true
   uploads:
     title: Uploads
@@ -22,10 +26,16 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: changelog
+  values:
+    layout: post
+    permalink: "/changelog/:year/:month/:day/:slug/"
+- scope:
+    path: ''
     type: posts
   values:
     layout: post
-    permalink: "/blog/:title/"
+    permalink: "/blog/:slug/"
 - scope:
     path: ''
     type: pages

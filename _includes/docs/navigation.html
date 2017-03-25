@@ -1,63 +1,63 @@
-<div>
-  <a href="/docs" class="logo db mt1 mb4">{% include logo.html color="#5E58AE" %}</a>
+<a href="/docs" class="logo db mt1 mb4">{% include logo.html color="#5E58AE" %}</a>
 
-  <div class="list pl0 measure center">
-    {% assign grouped = site.docs | sort: 'category_order' | group_by: 'category' %}
-    {% for group in grouped %}
-      {% if group.name != empty %}
-        <section class="{% if group.name == page.category %}expanded{% endif %}">
-          <h3 class="mv0"><a href="{{ site.baseurl }}{{ items.first.url }}" class="pv3"><span class="fr closed-arrow">►</span><span class="fr open-arrow">▼</span>{{ group.name }}</a></h3>
-          {% assign sub_grouped = group.items | sort: 'page_order' | group_by: 'sub_category' %}
-          <div class="nav-items">
-            {% for sub_group in sub_grouped %}
-              {% if sub_group.name != empty %}
-                <h4 class="mt3 mb0">{{ sub_group.name}}</h4>
-              {% endif %}
-              <ul>
-                {% for item in sub_group.items %}
-                  {% if item.page_order > 0 %}
-                    <li class="nav-item">
-                      <a class="{% if item.url == page.url %}current{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
-                        {{ item.title }}
-                      </a>
-                    </li>
+<ul class="list measure center pa0 ma0">
+  {% for section in site.data.docs-hierarchy %}
+    {% assign sub_section_selected = false %}
+    {% assign sub_sub_section_selected = false %}
+
+    {% capture sub_section %}
+      <ul class="pa0 ma0 mb3">
+        {% for sub_section in section.sections %}
+          {% assign child_selected = false %}
+          {% assign sub_sub_section = nil %}
+
+          {% if sub_section.sections %}
+            {% capture sub_sub_section %}
+              <ul class="pa0 ma0 ml3">
+                {% for sub_sub_section in sub_section.sections %}
+                  {% if sub_sub_section.path == page.url %}
+                    {% assign selected = true %}
+                  {% else %}
+                    {% assign selected = false %}
                   {% endif %}
+                  {% if selected %}
+                    {% assign child_selected = true %}
+                    {% assign sub_sub_section_selected = true %}
+                  {% endif %}
+                  <li{% if selected == true %} class="current"{% endif %}>
+                    <a href="{{ sub_sub_section.path }}">{{ sub_sub_section.title }}</a>
+                  </li>
                 {% endfor %}
-
-                {% if group.name == "Timber for Ruby" %}
-                  <li class="separator-top">
-                    <a href="http://www.rubydoc.info/github/timberio/timber-ruby"><i class="fa fa-book" aria-hidden="true"></i>
-     Library documentation →</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/timberio/timber-ruby"><i class="fa fa-github" aria-hidden="true"></i>
-     Repo &amp; Issues →</a>
-                  </li>
-
-                {% elsif group.name == "Timber for Elixir" %}
-                  <li class="separator-top">
-                    <a href="https://hexdocs.pm/timber"><i class="fa fa-book" aria-hidden="true"></i>
-     Library documentation →</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/timberio/timber-elixir"><i class="fa fa-github" aria-hidden="true"></i>
-     Repo &amp; Issues →</a>
-                  </li>
-
-                {% endif %}
               </ul>
-            {% endfor %}
-          </div>
-        </section>
-      {% endif %}
-    {% endfor %}
+            {% endcapture %}
+          {% endif %}
 
-    <section class="expanded">
-      <ul>
-        <li class="nav-item">
-          <a href="https://api-docs.timber.io"><i class="fa fa-book" aria-hidden="true"></i> API Documentation →</a>
-        </li>
+          {% if sub_section.path == page.url %}
+            {% assign selected = true %}
+          {% else %}
+            {% assign selected = false %}
+          {% endif %}
+          {% if selected %}
+            {% assign sub_section_selected = true %}
+          {% endif %}
+          <li class="{% if child_selected == true %} sub-section-selected {% endif %}{% if child_selected or selected == true %} current{% endif %}{% if sub_section.separator == true %} separator-top{% endif %}">
+            <a href="{{ sub_section.path }}">{{ sub_section.title }}</a>
+
+            {{ sub_sub_section }}
+          </li>
+        {% endfor %}
       </ul>
-    </section>
-  </div>
-</div>
+    {% endcapture %}
+
+    {% if section.path == page.url %}
+      {% assign selected = true %}
+    {% else %}
+      {% assign selected = false %}
+    {% endif %}
+    <li{% if sub_sub_section_selected == true or sub_section_selected == true or selected == true %} class="current"{% endif %}>
+      <a href="{{ section.path }}" class="pv3"><span class="fr closed-arrow">►</span><span class="fr open-arrow">▼</span>{{ section.title }}</a>
+
+      {{ sub_section }}
+    </li>
+  {% endfor %}
+</ul>
