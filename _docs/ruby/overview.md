@@ -1,7 +1,6 @@
 ---
 breadcrumbs: Timber for Ruby
 title: Overview
-toc: true
 ---
 
 [Timber for Ruby](https://github.com/timberio/timber-ruby) is an optional upgrade you can

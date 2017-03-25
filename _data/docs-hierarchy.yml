@@ -40,7 +40,7 @@
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Exception event
           path: /docs/ruby/events-and-context/exception-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
-          path: /docs/ruby/events-and-context/http-context-event/
+          path: /docs/ruby/events-and-context/http-context/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client request event
           path: /docs/ruby/events-and-context/http-client-request-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client response event
@@ -51,14 +51,14 @@
           path: /docs/ruby/events-and-context/http-server-response-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Session context
           path: /docs/ruby/events-and-context/session-context/
-        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Template render event
-          path: /docs/ruby/events-and-context/template-render-event/
-        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> User context
-          path: /docs/ruby/events-and-context/user-context/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> SQL query event
           path: /docs/ruby/events-and-context/sql-query-event/
         - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> System context
           path: /docs/ruby/events-and-context/system-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Template render event
+          path: /docs/ruby/events-and-context/template-render-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> User context
+          path: /docs/ruby/events-and-context/user-context/
     - title: Usage
       path: /docs/ruby/usage/
       sections:
@@ -72,5 +72,127 @@
           path: /docs/ruby/usage/metrics/
     - title: <i class="fa fa-book" aria-hidden="true"></i> Library documentation →
       path: http://www.rubydoc.info/github/timberio/timber-ruby
+      separator: true
     - title: <i class="fa fa-github" aria-hidden="true"></i> Repo & issues →
       path: https://github.com/timberio/timber-ruby
+- title: Timber for Elixir
+  path: /docs/elixir/overview
+  sections:
+    - title: Overview
+      path: /docs/elixir/overview/
+    - title: Installation
+      path: /docs/elixir/installation/
+    - title: Events & context
+      path: /docs/elixir/events-and-context/
+      sections:
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Controller call event
+          path: /docs/elixir/events-and-context/controller-call-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Exception event
+          path: /docs/elixir/events-and-context/exception-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP context
+          path: /docs/elixir/events-and-context/http-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client request event
+          path: /docs/elixir/events-and-context/http-client-request-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP client response event
+          path: /docs/elixir/events-and-context/http-client-response-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server request event
+          path: /docs/elixir/events-and-context/http-server-request-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> HTTP server response event
+          path: /docs/elixir/events-and-context/http-server-response-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Session context
+          path: /docs/elixir/events-and-context/session-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> SQL query event
+          path: /docs/elixir/events-and-context/sql-query-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> System context
+          path: /docs/elixir/events-and-context/system-context/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Template render event
+          path: /docs/elixir/events-and-context/template-render-event/
+        - title: <i class="fa fa-plus-circle" aria-hidden="true"></i> User context
+          path: /docs/elixir/events-and-context/user-context/
+    - title: Usage
+      path: /docs/elixir/usage/
+      sections:
+        - title: Basic logging
+          path: /docs/elixir/usage/basic-logging/
+        - title: Custom contexts
+          path: /docs/elixir/usage/custom-contexts/
+        - title: Custom events
+          path: /docs/elixir/usage/custom-events/
+        - title: Metrics
+          path: /docs/elixir/usage/metrics/
+    - title: <i class="fa fa-book" aria-hidden="true"></i> Library documentation →
+      path: https://hexdocs.pm/timber
+      separator: true
+    - title: <i class="fa fa-github" aria-hidden="true"></i> Repo & issues →
+      path: https://github.com/timberio/timber-elixir
+- title: Timber for Everything Else
+  path: /docs/everything-else/overview
+  sections:
+    - title: Cloudwatch (beta)
+      path: /docs/everything-else/cloud-watch/
+    - title: Docker (coming soon)
+      path: /docs/everything-else/docker/
+    - title: Elastic Beanstalk (coming soon)
+      path: /docs/everything-else/elastic-beanstalk/
+    - title: File Tailing Agent (coming soon)
+      path: /docs/everything-else/file-tailing/
+    - title: HTTP (coming soon)
+      path: /docs/everything-else/http/
+    - title: Kubernetes (coming soon)
+      path: /docs/everything-else/kubernetes/
+    - title: Rsyslog (coming soon)
+      path: /docs/everything-else/rsyslog/
+    - title: Syslog-ng (coming soon)
+      path: /docs/everything-else/syslog-ng/
+- title: Timber App
+  path: /docs/app/overview/
+  sections:
+    - title: Overview
+      path: /docs/app/overview/
+    - title: The Basics
+      path: /docs/app/basics/overview/
+      sections:
+        - title: API keys
+          path: /docs/app/basics/api-key/
+        - title: Events & context
+          path: /docs/app/basics/events-and-context/
+        - title: Keyboard shortcuts
+          path: /docs/app/basics/keyboard-shortcuts/
+        - title: Right click
+          path: /docs/app/basics/right-click/
+        - title: Search syntax
+          path: /docs/app/basics/search-syntax/
+        - title: Service limits
+          path: /docs/app/basics/service-limits/
+        - title: Team members
+          path: /docs/app/basics/team-members/
+    - title: Tutorials
+      path: /docs/app/tutorials/overview/
+      sections:
+        - title: Alerting
+          path: /docs/app/tutorials/alerting/
+        - title: Graphing
+          path: /docs/app/tutorials/graphing/
+        - title: Inspect HTTP requests
+          path: /docs/app/tutorials/inspect-http-requests/
+        - title: Link to a log
+          path: /docs/app/tutorials/link-to-a-log/
+        - title: Seek to time
+          path: /docs/app/tutorials/seek-to-time/
+        - title: SQL query your logs
+          path: /docs/app/tutorials/sql-query/
+        - title: Tail a user
+          path: /docs/app/tutorials/tail-a-user/
+        - title: Trace a request
+          path: /docs/app/tutorials/trace-request/
+        - title: View metadata & context
+          path: /docs/app/tutorials/view-metadata/
+    - title: Integrations
+      path: /docs/app/integrations/overview/
+      sections:
+        - title: Honeybadger
+          path: /docs/app/integrations/honeybadger/
+        - title: Sentry
+          path: /docs/app/integrations/sentry/
+        - title: Not here? Make a request
+          path: /docs/app/integrations/request/

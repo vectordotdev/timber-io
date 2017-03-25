@@ -12,7 +12,7 @@ A few examples:
 
 ## Authentication
 
-Once you've [obtained your API key]({% link _docs/app/obtain-api-key.md %}), you'll need to
+Once you've [obtained your API key]({% link _docs/app/basics/api-key.md %}), you'll need to
 add it add in the `Authorization` header like so:
 
 ```
@@ -61,4 +61,4 @@ curl -X POST -H "Authorization: Bearer {base64(api_token)}" \
 
 **Related documents**
 
-* [Schema & Fields]({% link _docs/app/tail-a-user.md %}) - Tailing a user using attribute search.
+* [Schema & Fields]({% link _docs/app/tutorials/tail-a-user.md %}) - Tailing a user using attribute search.

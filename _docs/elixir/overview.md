@@ -1,9 +1,6 @@
 ---
-category: Timber for Elixir
-category_order: 4
+breadcrumbs: Timber for Elixir
 title: Overview
-page_order: 1
-toc: true
 ---
 
 [Timber for Elixir](https://github.com/timberio/timber-elixir) is an optional upgrade you can

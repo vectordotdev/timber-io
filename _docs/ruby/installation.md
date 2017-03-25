@@ -1,7 +1,6 @@
 ---
 breadcrumbs: Timber for Ruby
 title: Installation
-toc: true
 ---
 
 Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https://rubygems.org/gems/timber):

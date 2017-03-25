@@ -1,12 +1,17 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Server Memory Sample Event
+title: Server Memory Sample Event
+formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Server Memory Sample Event
 toc: true
 ---
 
 By enabling Heroku's [log runtime labs feature](https://devcenter.heroku.com/articles/log-runtime-metrics)
 memory samples will be periodically dumped into your logs. Timber recognizes and parses these events
 as `event.server.cpu_sample`.
+
+```
+source=web.1 dyno=heroku.2808254.d97d0ea7-cf3d-411b-b453-d2943a50b456 sample#memory_total=21.00MB sample#memory_rss=21.22MB sample#memory_cache=0.00MB sample#memory_swap=0.00MB sample#memory_pgpgin=348836pages sample#memory_pgpgout=343403pages
+```
 
 ### Example JSON Structure
 
@@ -42,4 +47,11 @@ Name | Type | Description
 
 ### Using this data
 
-See our doc on [using context & event data]({% link _docs/app/events-and-context.md %}#what-can-i-do-with-this-data).
+Example queries:
+
+* Full path: `event.server.memory_sample.rss_mb:>100`
+* Short path: `memory_sample.rss_md:>100` - Short paths are aliases allowing for simpler access to these fields.
+* Only this event: `is:exception`
+
+
+See our doc on [using context & event data]({% link _docs/app/basics/events-and-context.md %}#what-can-i-do-with-this-data).

@@ -41,6 +41,6 @@ the process itself should take less than a minute.
 
    Checkout the `Timber App` section to your left. Recommended articles:
 
-   * [How to search]({% link _docs/app/search-syntax.md %})
-   * [Seeking to times]({% link _docs/app/seek-to-time.md %})
-   * [Tail a user]({% link _docs/app/tail-a-user.md %})
+   * [How to search]({% link _docs/app/basics/search-syntax.md %})
+   * [Seeking to times]({% link _docs/app/tutorials/seek-to-time.md %})
+   * [Tail a user]({% link _docs/app/tutorials/tail-a-user.md %})

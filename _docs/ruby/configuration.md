@@ -1,9 +1,6 @@
 ---
-category: Timber for Ruby
-category_order: 3
+breadcrumbs: Timber for Ruby
 title: Configuration
-page_order: 3
-sections: manual configuration
 ---
 
 Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https://rubygems.org/gems/timber):

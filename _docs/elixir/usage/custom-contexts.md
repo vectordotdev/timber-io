@@ -1,10 +1,6 @@
 ---
-category: Timber for Elixir
-category_order: 4
-sub_category: Usage
-sub_category_order: 1
+breadcrumbs: Timber for Elixir / Usage
 title: Custom Contexts
-page_order: 4
 toc: true
 ---
 

@@ -1,10 +1,11 @@
 ---
 breadcrumbs: Timber for Ruby
 title: Usage
-toc: true
 ---
 
-The great thing about using the Timber ruby library is that it's just logging.
+The Timber elixir library is simple to use: it's just logging. There are no special
+APIs.
+
 This section aims to help you get the most out of usign the Timber ruby library:
 
 * [Basic logging]({% link _docs/ruby/usage/basic-logging.md %})

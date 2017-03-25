@@ -1,6 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Release Context
+title: Release Context
+formatted_title: <i class="fa fa-plus-circle" aria-hidden="true"></i> Release Context
 toc: true
 ---
 
@@ -27,11 +28,17 @@ this data and add it to your context under `context.release`.
 
 Name | Type | Description
 -----|------|------------
-`context.release.commit_hash` | `string` | The git commit hash of the current release.
-`context.release.created_at` | `string` | When the release was created in ISO8601 format.
-`context.release.version` | `string` | The version number of the release.
+`commit_hash` | `string` | The git commit hash of the current release.
+`created_at` | `string` | When the release was created in ISO8601 format.
+`version` | `string` | The version number of the release.
 
 
 ### Using this data
 
-See our doc on [using context & event data]({% link _docs/app/events-and-context.md %}#what-can-i-do-with-this-data).
+Example queries:
+
+* Full path: `context.release.version:v42`
+* Short path: `release.version:v42` - Short paths are aliases allowing for simpler access to these fields.
+
+
+See our doc on [using context & event data]({% link _docs/app/basics/events-and-context.md %}#what-can-i-do-with-this-data).

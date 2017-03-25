@@ -8,6 +8,7 @@
     {% capture sub_section %}
       <ul class="pa0 ma0 mb3">
         {% for sub_section in section.sections %}
+          {% assign child_selected = false %}
           {% assign sub_sub_section = nil %}
 
           {% if sub_section.sections %}
@@ -20,6 +21,7 @@
                     {% assign selected = false %}
                   {% endif %}
                   {% if selected %}
+                    {% assign child_selected = true %}
                     {% assign sub_sub_section_selected = true %}
                   {% endif %}
                   <li{% if selected == true %} class="current"{% endif %}>
@@ -38,7 +40,7 @@
           {% if selected %}
             {% assign sub_section_selected = true %}
           {% endif %}
-          <li class="{% if sub_sub_section_selected == true %} sub-section-selected {% endif %}{% if sub_sub_section_selected or selected == true %} current{% endif %}">
+          <li class="{% if child_selected == true %} sub-section-selected {% endif %}{% if child_selected or selected == true %} current{% endif %}{% if sub_section.separator == true %} separator-top{% endif %}">
             <a href="{{ sub_section.path }}">{{ sub_section.title }}</a>
 
             {{ sub_sub_section }}

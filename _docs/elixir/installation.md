@@ -1,8 +1,6 @@
 ---
-category: Timber for Elixir
-category_order: 4
+breadcrumbs: Timber for Elixir
 title: Installation
-page_order: 2
 ---
 
 Installation of Timber for Elixir is accomplished with the [timber hex package](https://hex.pm/packages/timber):

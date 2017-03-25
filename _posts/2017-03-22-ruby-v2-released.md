@@ -15,7 +15,7 @@ bug fixes, and performance improvements.
 
 1. Timber can now be installed with a simple command: `bundle exec timber install`. ([learn more]({% link _docs/ruby/installation.md %}))
 2. Timber now captures _all_ HTTP request / response headers. This allows you to see a complete
-   list of headers when inspecting requests and responses. ([learn more]({% link _docs/app/inspect-incoming-http-requests.md %}))
+   list of headers when inspecting requests and responses. ([learn more]({% link _docs/app/tutorials/inspect-http-requests.md %}))
 3. `params` for controller call events are now being captured. This allows you to inspect the
    parsed paramteres being sent to your controller. (learn more)
 4. Session IDs (`context.session.id`) are now being captured as part of the context. (learn more)
@@ -56,7 +56,7 @@ bug fixes, and performance improvements.
 
 3. In your `shell`, run `bundle exec timber install your-api-key`.
 
-    * [Here's a guide on locating your API key]({% link _docs/app/obtain-api-key.md %})
+    * [Here's a guide on locating your API key]({% link _docs/app/basics/api-key.md %})
 
 4. Remove any code you had in place to capture user contexts. As noted above, this issue has
    been fixed.
