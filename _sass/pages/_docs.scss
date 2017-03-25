@@ -1,11 +1,10 @@
 .docs {
   min-height: 100vh;
   height: 100vh;
-  margin: 0 auto;
+  display: flex;
 }
 
 .docs__navigation {
-  position: fixed;
   overflow: auto;
   width: 18rem;
   height: 100vh;
@@ -111,283 +110,283 @@
   }
 }
 
-.docs__content__header {
-  font-family: "Europa", "Helvetica Neue";
-  font-weight: 600;
-  color: #5E58AE;
-  letter-spacing: 0.18px;
-  border-bottom: 1px solid #DBE1E1;
+.docs__content {
+  flex-grow: 1;
 
-  span.breadcrumbs {
-    font-size: 14px;
-  }
+  .docs__content__header {
+    font-family: "Europa", "Helvetica Neue";
+    font-weight: 600;
+    color: #5E58AE;
+    letter-spacing: 0.18px;
+    border-bottom: 1px solid #DBE1E1;
 
-  a {
-    background: #F3F3FB;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #81848C;
-    letter-spacing: 0.1px;
-    text-decoration: none;
-    font-weight: 400;
-    white-space: nowrap;
-    line-height: 2.5;
+    span.breadcrumbs {
+      font-size: 14px;
+    }
 
-    &:hover {
-      color: #2F2A57;
+    a {
+      background: #F3F3FB;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #81848C;
+      letter-spacing: 0.1px;
+      text-decoration: none;
+      font-weight: 400;
+      white-space: nowrap;
+      line-height: 2.5;
+
+      &:hover {
+        color: #2F2A57;
+      }
     }
   }
-}
 
-.docs__content__header__toc {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #5E58AE;
-  line-height: 2.5;
-  margin-top: -10px;
+  .docs__content__header__toc {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #5E58AE;
+    line-height: 2.5;
+    margin-top: -10px;
 
-  ul {
-    display: inline;
-    margin: 0;
-    padding: 0;
-
-    > li {
+    ul {
       display: inline;
-      padding-left: 2px;
+      margin: 0;
+      padding: 0;
 
-      > a {
-        background: #F3F3FB;
-        border-radius: 4px;
-        color: #81848C;
-        padding: 3px 6px;
-        font-weight: 400;
-        text-decoration: none;
-        font-size: 0.9em;
+      > li {
+        display: inline;
+        padding-left: 2px;
 
-        &:hover {
-          color: #2F2A57;
+        > a {
+          background: #F3F3FB;
+          border-radius: 4px;
+          color: #81848C;
+          padding: 3px 6px;
+          font-weight: 400;
+          text-decoration: none;
+          font-size: 0.9em;
+
+          &:hover {
+            color: #2F2A57;
+          }
         }
       }
     }
   }
-}
 
-.docs__content {
-  margin-left: 18rem;
-}
-
-.docs__content__main__doc {
-  color: rgba(0, 0, 0, 0.7);
-  line-height: 1.75;
-
-  .markdown-body {
+  .docs__content__main__doc {
     color: rgba(0, 0, 0, 0.7);
     line-height: 1.75;
-  }
 
-  a {
-    color: #5E58AE;
-  }
-
-  a.heading-anchor {
-    i.fa-link {
-      visibility: hidden;
-      margin-left: -20px;
-      margin-right: 5px;
-      font-size: 1rem;
-    }
-  }
-
-  a.heading-anchor:hover {
-    i.fa-link {
-      visibility: visible;
-    }
-  }
-
-  code {
-    background: #f4f3fb;
-  }
-
-  div.additions {
-    background: #d8fbdb;
-    border-radius: 5px;
-    color: #1d8745;
-    padding: 0.75em 1em;
-    margin-bottom: 1em;
-    font-size: 85%;
-
-    h3 {
-      margin: 0 0 1em 0;
-    }
-
-    .learn-more {
-      display: block;
-      font-size: 80%;
-    }
-
-    > p:last-child {
-      margin-bottom: 0
-    }
-
-    ol,
-    ul {
-      margin: 0.5em 0;
-      padding: 0 0 0 2px;
-      list-style: none;
-      color: #1d8745;
-
-      li {
-        margin: 0;
-        padding: 0;
-      }
-
-      li:before {
-        font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
-        font-size: inherit; // can't have font-size inherit on line above, so need to override
-        text-rendering: auto; // optimizelegibility throws things off #1094
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        content: $fa-var-plus-circle;
-        margin-right: 6px;
-        color: #1d8745;
-      }
+    .markdown-body {
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 1.75;
     }
 
     a {
+      color: #5E58AE;
+    }
+
+    a.heading-anchor {
+      i.fa-link {
+        visibility: hidden;
+        margin-left: -20px;
+        margin-right: 5px;
+        font-size: 1rem;
+      }
+    }
+
+    a.heading-anchor:hover {
+      i.fa-link {
+        visibility: visible;
+      }
+    }
+
+    code {
+      background: #f4f3fb;
+    }
+
+    div.additions {
+      background: #d8fbdb;
+      border-radius: 5px;
       color: #1d8745;
-      border-bottom: 1px dotted #8ec4a1;
+      padding: 0.75em 1em;
+      margin-bottom: 1em;
+      font-size: 85%;
+
+      h3 {
+        margin: 0 0 1em 0;
+      }
+
+      .learn-more {
+        display: block;
+        font-size: 80%;
+      }
+
+      > p:last-child {
+        margin-bottom: 0
+      }
+
+      ol,
+      ul {
+        margin: 0.5em 0;
+        padding: 0 0 0 2px;
+        list-style: none;
+        color: #1d8745;
+
+        li {
+          margin: 0;
+          padding: 0;
+        }
+
+        li:before {
+          font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+          font-size: inherit; // can't have font-size inherit on line above, so need to override
+          text-rendering: auto; // optimizelegibility throws things off #1094
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: $fa-var-plus-circle;
+          margin-right: 6px;
+          color: #1d8745;
+        }
+      }
+
+      a {
+        color: #1d8745;
+        border-bottom: 1px dotted #8ec4a1;
+      }
+
+      a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid #8ec4a1;
+      }
     }
 
-    a:hover {
-      text-decoration: none;
-      border-bottom: 1px solid #8ec4a1;
+    div.next {
+      margin-top: 2em;
+      font-weight: bold;
+
+      > p:last-child {
+        margin-bottom: 0;
+      }
     }
-  }
 
-  div.next {
-    margin-top: 2em;
-    font-weight: bold;
-
-    > p:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  h2 {
-    margin-top: 3rem;
-    color: rgba(0, 0, 0, 0.7);
-  }
-
-  h3 {
-    margin-top: 3rem;
-  }
-
-  img {
-    border: 2rem solid #f4f3fb;
-    box-sizing: border-box;
-  }
-
-  img.hero {
-    border: 0px none;
-  }
-
-  .highlight {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .highlight pre,
-  pre {
-    background: #f4f3fb;
-    padding: 1rem;
-  }
-
-  pre.plain {
-    background: white;
-    padding: 0;
-  }
-
-  table {
-    border: 2rem solid #f4f3fb;
-    border-radius: 5px;
-
-    th, td {
-      border: 1px solid #f4f3fb;
-    }
-  }
-
-  table tr:nth-child(2n) {
-    background: white;
-  }
-}
-
-.docs__content__main__doc__cta {
-  background: #f9f9ff;
-  border-left: 1px solid #F3F3FB;
-  border-radius: 5px;
-  color: rgba(0, 0, 0, 0.5);
-
-  > div {
-    border-top: 1px solid #F3F3FB;
-    border-right: 1px solid #F3F3FB;
-    border-bottom: 1px solid #F3F3FB;
-    padding: 2rem;
-    width: 50%;
-
-    > h4 {
+    h2 {
+      margin-top: 3rem;
       color: rgba(0, 0, 0, 0.7);
     }
 
-    > a {
-      border-radius: 3px;
-      background: #5E58AE;
-      color: #FFF;
-      transition: all .2s ease-in-out;
-      text-decoration: none;
+    h3 {
+      margin-top: 3rem;
+    }
 
-      &:hover {
+    img {
+      border: 2rem solid #f4f3fb;
+      box-sizing: border-box;
+    }
+
+    img.hero {
+      border: 0px none;
+    }
+
+    .highlight {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .highlight pre,
+    pre {
+      background: #f4f3fb;
+      padding: 1rem;
+    }
+
+    pre.plain {
+      background: white;
+      padding: 0;
+    }
+
+    table {
+      border: 2rem solid #f4f3fb;
+      border-radius: 5px;
+
+      th, td {
+        border: 1px solid #f4f3fb;
+      }
+    }
+
+    table tr:nth-child(2n) {
+      background: white;
+    }
+  }
+
+  .docs__content__main__doc__cta {
+    background: #f9f9ff;
+    border-left: 1px solid #F3F3FB;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.5);
+
+    > div {
+      border-top: 1px solid #F3F3FB;
+      border-right: 1px solid #F3F3FB;
+      border-bottom: 1px solid #F3F3FB;
+      padding: 2rem;
+      width: 50%;
+
+      > h4 {
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      > a {
+        border-radius: 3px;
         background: #5E58AE;
+        color: #FFF;
+        transition: all .2s ease-in-out;
         text-decoration: none;
+
+        &:hover {
+          background: #5E58AE;
+          text-decoration: none;
+        }
       }
     }
   }
-}
 
-.docs__content__main__table-of-contents {
-  display: fixed;
-  top: 0;
-  right: 0;
-  margin-right: -2rem;
-  // background: #f9f9ff;
-  border-left: 1px solid #F3F3FB;
+  .docs__content__main__table-of-contents {
+    display: fixed;
+    top: 0;
+    right: 0;
+    margin-right: -2rem;
+    // background: #f9f9ff;
+    border-left: 1px solid #F3F3FB;
 
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    font-family: "Europa", "Helvetica Neue";
-    font-size: 14px;
-    color: #A6ACB7;
-    letter-spacing: 0.1px;
-    line-height: 16px;
-    text-decoration: none;
-    padding: 10px 0;
-    display: inline-block;
-    text-transform: capitalize;
-
-    &:hover {
-      color: #3D4A67;
+    ul {
+      padding: 0;
+      margin: 0;
     }
-  }
 
-  h4 {
-    font-family: "Europa", "Helvetica Neue";
-    font-weight: bold;
-    font-size: 15px;
-    color: #3D4A67;
-    letter-spacing: 0.11px;
-    margin: 0 0 10px 0;
+    a {
+      font-family: "Europa", "Helvetica Neue";
+      font-size: 14px;
+      color: #A6ACB7;
+      letter-spacing: 0.1px;
+      line-height: 16px;
+      text-decoration: none;
+      padding: 10px 0;
+      display: inline-block;
+      text-transform: capitalize;
+
+      &:hover {
+        color: #3D4A67;
+      }
+    }
+
+    h4 {
+      font-family: "Europa", "Helvetica Neue";
+      font-weight: bold;
+      font-size: 15px;
+      color: #3D4A67;
+      letter-spacing: 0.11px;
+      margin: 0 0 10px 0;
+    }
   }
 }
