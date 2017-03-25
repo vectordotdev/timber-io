@@ -6,14 +6,14 @@ title: Overview
 [Timber for Elixir](https://github.com/timberio/timber-elixir) is an optional upgrade you can
 install for your Elixir apps. It turns your once raw text logs into
 [rich JSON events]({% link _docs/elixir/events-and-context.md %}) that contain critical
-context and event data. It significantly improves the quality of your logs, allowing you to filter
-out the noise and solve problems faster.
+context and event data. It significantly improves the quality of your logs, allowing you to
+[filter out the noise]({% link _docs/app/basics/events-and-context.md %}) and solve problems faster.
 
 
 ## How it works
 
-This is accomplished by installing our [Timber Hex package](https://hex.pm/packages/timber) into
-your application.
+This is accomplished by [installing]({% link _docs/elixir/installation.md %}) our
+[Timber Hex package](https://hex.pm/packages/timber) into your application.
 
 For example, it turns this familiar raw text log line:
 
