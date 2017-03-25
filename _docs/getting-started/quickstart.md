@@ -1,5 +1,7 @@
 ---
+breadcrumbs: Getting Started
 title: Quickstart
+toc: true
 ---
 
 This guide will walk you through getting started on Timber. Each step includes screen-shots, and

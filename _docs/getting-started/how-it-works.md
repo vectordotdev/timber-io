@@ -1,13 +1,36 @@
 ---
-category: Getting Started
-category_order: 1
+breadcrumbs: Getting Started
 title: How It Works
-page_order: 2
+toc: true
 ---
 
-Timber is a cloud-based logging platform allowing you to centralize logs across multipe servers.
+<section>
 
-Timber is unique in that it focuses on log data quality, marying application libraries that
+Timber is a cloud-based logging platform allowing you to centralize logs across multipe servers.
+Send your logs to Timber, query and access them from one place.
+
+Timber is unique in that it provides an optional structured logging strategy that you can
+adopt.
+
+</section>
+
+
+## 1. Setup your account and applications
+
+
+
+## 2. Send your logs to Timber
+
+The first step is to simply send your logs to Timber. To your left you'll see a variety of
+ways to
+
+
+## 3. Access your logs through the Timber app
+
+
+## 4. Optionally upgrade your logs with our libraries
+
+focuses on log data quality, marying application libraries that
 enhancement your logs with a console designed specifically for this data.
 
 The process looks like:

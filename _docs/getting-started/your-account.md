@@ -1,8 +1,6 @@
 ---
-category: Getting Started
-category_order: 1
+breadcrumbs: Getting Started
 title: Your account
-page_order: 3
 toc: true
 ---
 

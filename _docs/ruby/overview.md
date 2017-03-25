@@ -4,10 +4,11 @@ title: Overview
 ---
 
 [Timber for Ruby](https://github.com/timberio/timber-ruby) is an optional upgrade you can
-install for your Ruby apps. It turns your once raw text logs into
-[rich JSON events]({% link _docs/ruby/events-and-context.md %}) that contain critical
-context and event data. It significantly improves the quality of your logs, allowing you to
-[filter out the noise]({% link _docs/app/basics/events-and-context.md %}) and solve problems faster.
+install for your Ruby apps. Instead of completely replacing your log messages, this library
+automatically augments your logs with JSON metadata. Essentially turning them into
+[rich JSON events with context]({% link _docs/ruby/events-and-context.md %}). This preserves the
+readability of your logs while still dramatically improving the quality of your data.
+The end result: better logging and faster problem solving.
 
 
 ## How it works

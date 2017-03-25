@@ -41,7 +41,7 @@ And _all_ of them share this context (for example):
 }
 ```
 
-To provide definits:
+To provide definitions:
 
 1. `event` - each log line represents an individual event, event data directly describes the line.
 2. `context` - is shared data representing state when the log line was written. Think of it like
@@ -50,19 +50,19 @@ To provide definits:
 
 ## How It Works
 
-It's pretty simple actually. Let's this log line from above:
+It's pretty simple actually. Let's take this log line from above:
 
 ```
 Sent 200 in 45.ms
 ```
 
-When you install any of the Timber libraries, it will augment the log line with metadata:
+When you install any of the Timber libraries, it will automatically augment the log line with metadata:
 
 ```
 Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
 ```
 
-Notice it context `context` _and_ `event` data. Once received by the Timber API, we go to
+Notice it the `context` _and_ `event` data. Once received by the Timber API, we go to
 work on parsing it.
 [Accessing this metadata is as simple as clicking the line]({% link _docs/app/tutorials/view-metadata.md %}.
 
@@ -92,7 +92,7 @@ of this schema very serious due to implications changes can have to downstream c
 We've formally defined this schema in our
 [JSON schema definition](https://github.com/timberio/log-event-json-schema). This
 sets a firm foundation for a data structure you can rely on. It ensures consistentcy and
-normalization across all of your applications. This makes downstream consumption reliable.
+normalization across all of your applications. This makes downstream consumption reliable
 
 Here's an example payload:
 
