@@ -4,43 +4,67 @@ title: Events & Context
 toc: true
 ---
 
-As you may have noticed, Timber fully embraces structured data in your logs. So much so
-that we designed Timber with that as it's core premise. You'll notice every integration, and
-library we offer, enhances your logs with context and metadata. With Timber, this is not
-left as an open-ended exercise. We've [defined](https://github.com/timberio/log-event-json-schema)
-and provided an entire structured logging strategy that you can start using in minutes.
+Timber fully embraces structured data in your logs. So much so that we designed an entire
+structured logging strategy that you can adopt. To make it simple, our libraries adopt this
+strategy automatically for you.
 
 
 ## What does "event" and "context" mean?
 
-Every log line can optionally contain `event` and `context` data. We define each as:
+Take these familiar log lines:
 
-1. `event` - This is data directly related to the line. In Timber each log log represents an
-   individual event. The `event` data represents this event in a structured format and can
-   contain additional data not already in the log line itself.
-2. `context` - Context represents the state of the environment when the log line was written.
-   It is shared across your log lines. Think of it like join data for your logs.
-   For example, by installing any of our libraries, you can capture `user` context. This context
-   represents the currently logged in user and adds fields like `context.user.id`,
-   `context.user.email`, and `context.user.name` to your log's metadata.
+```
+Started Get "/"
+Processing by WelcomeController#index as html
+Rendered welcome/index.html.erb (0.2ms)
+Completed 200 OK in 2.46ms
+```
+
+In Timber, each of these are individual events:
+
+```
+Started Get "/" <-------------------------------- http_server_request event
+Processing by WelcomeController#index as html <-- controller_call event
+Rendered welcome/index.html.erb (0.2ms) <-------- template_render event
+Completed 200 OK in 2.46ms <--------------------- http_server_response event
+```
+
+And _all_ of them share this context (for example):
+
+```json
+{
+  "context": {
+    "http": {"method": "GET", "path": "/", "remote_addr": "123.23.21.213", "request_id": "abcd1234"},
+    "user": {"id": "1", "name": "Ben Johnson", "email": "hi@timber.io"},
+    "server": {"hostname": "server.hostname.com", "pid": "1234322"}
+  }
+}
+```
+
+To provide definits:
+
+1. `event` - each log line represents an individual event, event data directly describes the line.
+2. `context` - is shared data representing state when the log line was written. Think of it like
+   join data for your logs.
 
 
 ## How It Works
 
-It's pretty simple actually. Take this familiar log line:
+It's pretty simple actually. Let's this log line from above:
 
 ```
 Sent 200 in 45.ms
 ```
 
-Timber augments this log with metadata:
+When you install any of the Timber libraries, it will augment the log line with metadata:
 
 ```
 Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
 ```
 
-Once received by the Timber API, we go to work on parsing it. And
-[accessing this metadata is as simple as clicking the line]({% link _docs/app/tutorials/view-metadata.md %}.
+Notice it context `context` _and_ `event` data. Once received by the Timber API, we go to
+work on parsing it.
+[Accessing this metadata is as simple as clicking the line]({% link _docs/app/tutorials/view-metadata.md %}.
 
 
 ## What can I do with this data?
@@ -65,10 +89,10 @@ of this schema very serious due to implications changes can have to downstream c
 
 ## JSON Structure
 
-Instead of allowing arbitrary JSON structures for this metadata, we've formally defined the schema
-with our [JSON schema definition](https://github.com/timberio/log-event-json-schema). This
-ensures data is consistent and normalized across all of your applications; dramatically
-improving the reliability of downstream consumption (our interface, graphs, alerts, etc).
+We've formally defined this schema in our
+[JSON schema definition](https://github.com/timberio/log-event-json-schema). This
+sets a firm foundation for a data structure you can rely on. It ensures consistentcy and
+normalization across all of your applications. This makes downstream consumption reliable.
 
 Here's an example payload:
 
