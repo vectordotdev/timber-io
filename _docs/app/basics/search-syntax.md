@@ -55,7 +55,7 @@ To support other familiar syntaxes, Timber implements various aliases for the ab
 | Condition         | Alias for
 |---------------------------------
 | `_exists_`        | `has`
-| `_missing_        | `missing`
+| `_missing_`        | `missing`
 
 
 ## Real-world examples
