@@ -1,6 +1,6 @@
 ---
 title: Inspect HTTP Requests! View the params, body, headers, and more.
-date: 2017-03-24 00:00:00
+date: 2017-03-20 00:00:00
 image: '/assets/img/docs/http-inspect.gif'
 author: ben_johnson
 tags: [app, console, data]

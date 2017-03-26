@@ -183,7 +183,7 @@
           path: /docs/app/tutorials/sql-query/
         - title: Tail a user
           path: /docs/app/tutorials/tail-a-user/
-        - title: Trace a request
+        - title: View in request context
           path: /docs/app/tutorials/trace-request/
         - title: View metadata & context
           path: /docs/app/tutorials/view-metadata/

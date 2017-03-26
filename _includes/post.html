@@ -6,19 +6,8 @@
       </div>
       <div class="w-100 w-60-ns pl3-ns">
         <h1 class="f3 fw6 tk-futura-pt mt0 lh-title pr5">{{post.title}}</h1>
-        <time class="post-date" datetime="{{ post.date }}">
-        {% assign d = post.date | date: "%-d" %}
-        {% assign m = post.date | date: "%B" %}
-        {% case m %}
-          {% when 'April' or 'May' or 'June' or 'July' %}{{ m }}
-          {% when 'September' %}Sept.
-          {% else %}{{ post.date | date: "%b" }}.
-          {% endcase %}
-        {% case d %}
-          {% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
-        {{ post.date | date: "%Y" }}
-        </time>
-        <p class="post-desc tk-source-sans-pro f6 f5-l lh-copy mt3">{% if post.desc %}{{ post.desc }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
+        <time class="post-date" datetime="{{ post.date }}">{{ post.date | date_to_long_string }} - {{ post.date | timeago }}</time>
+        <p class="post-desc tk-source-sans-pro f6 f5-l lh-copy mt3">{% if post.desc %}{{ post.desc }}{% else %}{{ post.content | strip_html | truncatewords: 40 }}{% endif %}</p>
         <p class="post-desc tk-source-sans-pro f6 f5-l v-mid">
           <img src="{{ author.gravatar }}?s=30" class="br-100 mr2" /> {{ author.name }}
         </p>

@@ -4,6 +4,7 @@ ruby RUBY_VERSION
 gem "jekyll", "~> 3.2"
 gem "jekyll-paginate"
 gem 'jekyll-seo-tag'
+gem 'jekyll-timeago'
 gem 'jekyll-toc'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and

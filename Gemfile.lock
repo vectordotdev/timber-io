@@ -22,6 +22,7 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.1.0)
       jekyll (~> 3.3)
+    jekyll-timeago (0.9.2)
     jekyll-toc (0.2.0)
       nokogiri (~> 1.6)
     jekyll-watch (1.5.0)
@@ -52,6 +53,7 @@ DEPENDENCIES
   jekyll (~> 3.2)
   jekyll-paginate
   jekyll-seo-tag
+  jekyll-timeago
   jekyll-toc
 
 RUBY VERSION

@@ -30,5 +30,5 @@ Timber offers a variety of powerful and unique features that'll help you be more
 Here are a few:
 
 1. [Tail a specific user]({% link _docs/app/tutorials/tail-a-user.md %})
-2. [Trace a request]({% link _docs/app/tutorials/trace-a-request.md %})
+2. [View a log in it's HTTP request context]({% link _docs/app/tutorials/view-in-request-context.md %})
 3. [Inspect an HTTP request]({% link _docs/app/tutorials/inspect-http-requests.md %})

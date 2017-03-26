@@ -21,7 +21,8 @@ desc: Timber Product Updates
 
 <section class="mw8 center avenir">
   <ul class="post-list ph3-ns pa0 mt4-ns mt2">
-    {% for post in site.changelog %}
+    {% assign sorted_posts = (site.changelog | sort: 'date' | reverse) %}
+    {% for post in sorted_posts %}
     {% assign author = site.data.authors[post.author] %}
     {% include post.html post=post %}
     {% endfor %}
