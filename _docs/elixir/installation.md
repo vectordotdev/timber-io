@@ -27,7 +27,7 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
 
 ### Preview
 
-![Timber elixir install](/assets/img/docs/timber-elixir-install.gif)
+![Timber elixir install]({% link assets/img/docs/timber-elixir-install.gif %})
 
 
 

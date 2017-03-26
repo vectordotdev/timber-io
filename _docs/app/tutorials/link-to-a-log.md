@@ -15,7 +15,7 @@ opening the context panel when accessed.
 
 ## Interface Example
 
-![Linking to a log](/assets/img/docs/link-to-a-log.gif)
+![Linking to a log]({% link assets/img/docs/link-to-a-log.gif %})
 
 
 <div class="next">

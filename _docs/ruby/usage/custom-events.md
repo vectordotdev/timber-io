@@ -26,11 +26,11 @@ Logger.warn "Payment rejected", payment_rejected: {customer_id: "abcd1234", amou
 1. Use this data for [querying your logs]({% link _docs/app/basics/search-syntax.md %}). Ex: `type:payment_rejected` or `payment_rejected.amount:>100`.
 2. View this custom event when inspecting log lines:
 
-   ![Event panels](/assets/img/docs/event-panel.png)
+   ![Event panels]({% link assets/img/docs/event-panel.png %})
 
    Or view it in the raw JSON payload:
 
-   ![Event raw](/assets/img/docs/event-raw.png)
+   ![Event raw]({% link assets/img/docs/event-raw.png %})
 
 
 ## Limits

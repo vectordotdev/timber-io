@@ -5,7 +5,7 @@ title: Right Click
 
 When you right click in the console, it will bring up a context menu:
 
-![Right-click / Context-menu](/assets/img/docs/right-click.gif)
+![Right-click / Context-menu]({% link assets/img/docs/right-click.gif %})
 
 The options explained:
 

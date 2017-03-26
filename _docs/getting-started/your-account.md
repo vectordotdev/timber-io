@@ -22,4 +22,4 @@ registering.
 You can access your account settings in the bottom left of the software:
 
 
-![Sign-up](/assets/img/docs/account-settings.png)
+![Sign-up]({% link assets/img/docs/account-settings.png %})

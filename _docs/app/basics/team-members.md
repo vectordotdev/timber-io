@@ -34,12 +34,12 @@ Delete members | X | ✓
 
 1. Start by going to the "Members" section under your app:
 
-    ![Members](/assets/img/docs/setting-up-team/members-list.png)
+    ![Members]({% link assets/img/docs/setting-up-team/members-list.png %})
 
 2. Click "Invite Member" in the top right:
 
-    ![New member](/assets/img/docs/setting-up-team/new-member.png)
+    ![New member]({% link assets/img/docs/setting-up-team/new-member.png %})
 
 3. They'll receive an email that looks like:
 
-    ![Invitation email](/assets/img/docs/setting-up-team/email.png)
+    ![Invitation email]({% link assets/img/docs/setting-up-team/email.png %})

@@ -17,7 +17,7 @@ There are 2 ways to accomplish this:
 
 ## Interface Example
 
-![Tail a user](/assets/img/docs/tail-a-user.gif)
+![Tail a user]({% link assets/img/docs/tail-a-user.gif %})
 
 
 <div class="next">

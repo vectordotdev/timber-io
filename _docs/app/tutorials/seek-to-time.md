@@ -18,7 +18,7 @@ Timber allows you to quick seek to any specific time:
 Within the Timber app you can seek to a specific time. You'll noticed this component
 in the top right of the interface:
 
-![Seek to time](/assets/img/docs/seek-to-time.gif)
+![Seek to time]({% link assets/img/docs/seek-to-time.gif %})
 
 
 ## Natural Language Dates / Times

@@ -1,19 +1,24 @@
 ---
 title: Timber - Log Better. Solve Problems Faster.
 timezone: UTC
+
 collections:
   blog_tags:
-    title: Tags
+    title: Blog Tags
     output: true
     permalink: /blog/tag/:name/
+  changelog_tags:
+    title: Changelog Tags
+    output: true
+    permalink: /changelog/tag/:name/
   changelog:
     title: Changelog
-    permalink: /changelog/:path/
     output: true
+    permalink: /changelog/
   docs:
     title: Docs
-    permalink: /docs/:path/
     output: true
+    permalink: /docs/:path/
   plans:
     title: Plans
     output: true
@@ -23,34 +28,38 @@ collections:
   uploads:
     title: Uploads
     output: true
+
 defaults:
-- scope:
-    path: ''
-    type: changelog
-  values:
-    layout: post
-    permalink: "/changelog/:year/:month/:day/:slug/"
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    permalink: "/blog/:slug/"
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
-- scope:
-    path: ''
-    type: blog_tags
-  values:
-    layout: posts_by_tag
-- scope:
-    path: ''
-    type: docs
-  values:
-    layout: docs
+  - scope:
+      type: blog_tags
+    values:
+      layout: posts_by_tag
+  - scope:
+      type: changelog
+    values:
+      layout: post
+      permalink: "/changelog/:year/:month/:day/:slug/"
+  - scope:
+      type: changelog_tags
+    values:
+      layout: posts_by_tag
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      permalink: "/blog/:slug/"
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: ''
+      type: docs
+    values:
+      layout: docs
+
 permalink: pretty
 desc: Timber.io – Log Better. Solve Problems Faster.
 url: https://timber.io
@@ -73,132 +82,146 @@ github_source: timberio/timber-io
 segment_key: ocCzUkf4zAaUOzyCbWelskTptGgenOAU
 paginate: 5
 paginate_path: "/blog/page:num"
+
 navigation:
-- title: Features
-  url: "/features/"
-  desc: Logging made better
-- title: Pricing
-  url: "/pricing/"
-  desc: Different package deals
-- title: About
-  url: "/about/"
-  desc: What Timber is about
-- title: Docs
-  url: "/docs/"
-- title: Blog
-  url: "/blog/"
-  desc: Timber community posts
-- title: Sign-up
-  url: "https://app.timber.io"
-  desc: Sign-up for Timber
+  - title: Features
+    url: "/features/"
+    desc: Logging made better
+  - title: Pricing
+    url: "/pricing/"
+    desc: Different package deals
+  - title: About
+    url: "/about/"
+    desc: What Timber is about
+  - title: Docs
+    url: "/docs/"
+  - title: Changelog
+    url: "/changelog/"
+    desc: Timber product updates
+  - title: Blog
+    url: "/blog/"
+    desc: Timber community posts
+  - title: Sign-up
+    url: "https://app.timber.io"
+    desc: Sign-up for Timber
+
 features:
-- title: Modern Dashboard
-  image: dashboard
-  desc: Our lightning fast and flexible dashboard allows you to solve problems faster.
-- title: Real-Time Tailing
-  image: realtime
-  desc: Real-time tailing, let's you know the current state of your app without the delay.
-- title: <em>Fast</em> Searching & Filtering
-  image: search
-  desc: Search and filter logs by user, request ID, or any other context. Filtering out the noise
-    quickly = higher productivity.
-- title: Clickable Logs
-  image: logs
-  desc: Clicking logs in Timber reveals valuable metadata and context. Never get caught lacking
-    the data you need.
-- title: 6 Month Retention
-  image: retention
-  desc: Most services keep your logs for 2-4 weeks, we offer 6 month retention
-    by default at no extra charge.
-- title: Log-based Graphing
-  image: trending
-  desc: Easily identify outliers and trending events based on <em>your</em> log data.
-    Close the loop from graphs, to data, to problem solved.
-- title: 1 Line Installers
-  image: install
-  desc: Install timber in less than a minute with our single command installers. No agents or
-    special APIs; just simple logging.
+  - title: Modern Dashboard
+    image: dashboard
+    desc: Our lightning fast and flexible dashboard allows you to solve problems faster.
+  - title: Real-Time Tailing
+    image: realtime
+    desc: Real-time tailing, let's you know the current state of your app without the delay.
+  - title: <em>Fast</em> Searching & Filtering
+    image: search
+    desc: Search and filter logs by user, request ID, or any other context. Filtering out the noise
+      quickly = higher productivity.
+  - title: Clickable Logs
+    image: logs
+    desc: Clicking logs in Timber reveals valuable metadata and context. Never get caught lacking
+      the data you need.
+  - title: 6 Month Retention
+    image: retention
+    desc: Most services keep your logs for 2-4 weeks, we offer 6 month retention
+      by default at no extra charge.
+  - title: Log-based Graphing
+    image: trending
+    desc: Easily identify outliers and trending events based on <em>your</em> log data.
+      Close the loop from graphs, to data, to problem solved.
+  - title: 1 Line Installers
+    image: install
+    desc: Install timber in less than a minute with our single command installers. No agents or
+      special APIs; just simple logging.
+
 billing_plans:
-- name: Free
-  image: free-plan
-  price: 0
-  data: 100MB
-- name: Personal
-  image: personal-plan
-  price: 10
-  data: 1GB
-- name: Team
-  image: team-plan
-  price: 68
-  data: 8GB
-- name: Enterprise
-  image: enterprise-plan
-  price: 350+
-  data: 50GB+
+  - name: Free
+    image: free-plan
+    price: 0
+    data: 100MB
+  - name: Personal
+    image: personal-plan
+    price: 10
+    data: 1GB
+  - name: Team
+    image: team-plan
+    price: 68
+    data: 8GB
+  - name: Enterprise
+    image: enterprise-plan
+    price: 350+
+    data: 50GB+
+
 faqs:
-- title: How does it work?
-  desc: Once the Timber package or gem is installed, it will automatically decorate your logs with useful context and events (user info, requests, queries, etc).
-- title: How do I install Timber?
-  desc: Simply sign up and choose your language and platform, from there you will be guided through a very brief installation process that will give you everything you need.
-- title: How much does it cost?
-  desc: Timber offers a variety of plans (including a generous free tier) to suit any company size. Paid plans start at $8 per GB of data sent.
-- title: Which apps do you support?
-  desc: Currently we have packages for ruby, elixir and node, but can also accept logs from any app that runs on Heroku.
-- title: What data can I collect?
-  desc: You can see all of the possible fields at https://github.com/timberio/log-event-json-schema, but you can also add your own custom context and events.
-- title: How is this different?
-  desc: Most logging platforms accept only raw text or json payloads. Timber automatically structures your logs so they're consistent, and augments them with custom context and events.
+  - title: How does it work?
+    desc: Once the Timber package or gem is installed, it will automatically decorate your logs with useful context and events (user info, requests, queries, etc).
+  - title: How do I install Timber?
+    desc: Simply sign up and choose your language and platform, from there you will be guided through a very brief installation process that will give you everything you need.
+  - title: How much does it cost?
+    desc: Timber offers a variety of plans (including a generous free tier) to suit any company size. Paid plans start at $8 per GB of data sent.
+  - title: Which apps do you support?
+    desc: Currently we have packages for ruby, elixir and node, but can also accept logs from any app that runs on Heroku.
+  - title: What data can I collect?
+    desc: You can see all of the possible fields at https://github.com/timberio/log-event-json-schema, but you can also add your own custom context and events.
+  - title: How is this different?
+    desc: Most logging platforms accept only raw text or json payloads. Timber automatically structures your logs so they're consistent, and augments them with custom context and events.
+
 team:
-- name: Zach Sherman
-  image: zach
-  role: Founder & CEO
-  desc: Founder @timberdotio, previously @seatgeek. @VanderbiltU grad. I like programming, design & sushi.
-- name: Ben Johnson
-  image: ben
-  role: Founder & CTO
-  desc: Founder / CTO @timberdotio, previously @seatgeek. How many logs could a logger log if a logger could log logs?
-- name: David Antaramian
-  image: david
-  role: Senior Backend Engineer
-  desc: A curmudgeon that codes in @elixirlang and sometimes Ruby. Senior Backend Engineer at @timberdotio. Organizing @ElixirNYC. Treasuring @empexco.
-- name: Garet McKinley
-  image: garet
-  role: Frontend Engineer
-  desc: Writer of software. Designer of Vectors. Open source lover.
-- name: You?
-  image: bronson
-  role: Lumberjack
-  desc: Interested in working at Timber? Send us an email at <a href="mailto:hi@timber.io">hi@timber.io</a>.
+  - name: Zach Sherman
+    image: zach
+    role: Founder & CEO
+    desc: Founder @timberdotio, previously @seatgeek. @VanderbiltU grad. I like programming, design & sushi.
+  - name: Ben Johnson
+    image: ben
+    role: Founder & CTO
+    desc: Founder / CTO @timberdotio, previously @seatgeek. How many logs could a logger log if a logger could log logs?
+  - name: David Antaramian
+    image: david
+    role: Senior Backend Engineer
+    desc: A curmudgeon that codes in @elixirlang and sometimes Ruby. Senior Backend Engineer at @timberdotio. Organizing @ElixirNYC. Treasuring @empexco.
+  - name: Garet McKinley
+    image: garet
+    role: Frontend Engineer
+    desc: Writer of software. Designer of Vectors. Open source lover.
+  - name: You?
+    image: bronson
+    role: Lumberjack
+    desc: Interested in working at Timber? Send us an email at <a href="mailto:hi@timber.io">hi@timber.io</a>.
+
 footer:
-- title: Features
-  url: "/features/"
-  desc: Logging made better
-- title: Pricing
-  url: "/pricing/"
-  desc: Different package deals
-- title: About
-  url: "/about/"
-  desc: What Timber is about
-- title: Contact
-  url: mailto://hi@timber.io
-  desc: How to reach us
-- title: Blog
-  url: "/blog/"
-  desc: Timber community posts
-- title: Sign-up
-  url: "https://app.timber.io"
-  desc: Sign-up for Timber
+  - title: Features
+    url: "/features/"
+    desc: Logging made better
+  - title: Pricing
+    url: "/pricing/"
+    desc: Different package deals
+  - title: About
+    url: "/about/"
+    desc: What Timber is about
+  - title: Contact
+    url: mailto://hi@timber.io
+    desc: How to reach us
+  - title: Blog
+    url: "/blog/"
+    desc: Timber community posts
+  - title: Sign-up
+    url: "https://app.timber.io"
+    desc: Sign-up for Timber
+
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
   parse_block_html: true
+
 include:
-- _pages
+  - _pages
+
 exclude:
-- README.md
-- vendor
+  - README.md
+  - vendor
+
 gems:
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-toc
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-timeago
+  - jekyll-toc

@@ -47,11 +47,11 @@ end
 1. Use this data for [querying your logs]({% link _docs/app/basics/search-syntax.md %}). Ex: `build.version:1.0.0`.
 2. View this custom context when inspecting log lines:
 
-   ![Context panels](/assets/img/docs/context-panel.png)
+   ![Context panels]({% link assets/img/docs/context-panel.png %})
 
    Or view it in the raw JSON payload:
 
-   ![Context raw](/assets/img/docs/context-raw.png)
+   ![Context raw]({% link assets/img/docs/context-raw.png %})
 
 
 

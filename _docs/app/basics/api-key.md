@@ -27,7 +27,7 @@ If you've already created an app:
 
 Here's an example:
 
-![Obtaining API key](/assets/img/docs/obtaining-api-key.gif)
+![Obtaining API key]({% link assets/img/docs/obtaining-api-key.gif %})
 
 
 <div class="next">

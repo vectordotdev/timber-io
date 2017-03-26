@@ -1,20 +1,28 @@
 zach_sherman:
     name: Zach Sherman
+    title: CEO / Co-founder
+    gravatar: //gravatar.com/avatar/7a1788b30f455f8a4475706c38d0cefe
     email: zach@timber.io
     link: http://twitter.com/zshrm
     twitter: zshrm
 ben_johnson:
     name: Ben Johnson
+    title: CTO / Co-founder
+    gravatar: //gravatar.com/avatar/cfe4e54a5bc02fb41bd0961fe05d1fdb
     email: ben@timber.io
     link: http://twitter.com/binarylogic
     twitter: binarylogic
 david_antaramian:
   name: David Antaramian
+  title: Senior Engineer
+  gravatar: //gravatar.com/avatar/03fc3a34e82d045168483380047981f4
   email: david@timber.io
   link: twitter.com/davidantaramian
   twitter: davidantaramian
 garet_mckinley:
   name: Garet McKinley
+  title: Engineer
+  gravatar: //gravatar.com/avatar/bf666b957b34d03317a30c68cdd02ec6
   email: garet@timber.io
   link: twitter.com/garetmckinley
   twitter: garetmckinley

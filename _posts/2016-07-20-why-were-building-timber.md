@@ -3,7 +3,7 @@ title: "Why We're Building Timber"
 date: 2016-07-20 00:00:00
 image: 'https://res.cloudinary.com/timber/image/upload/v1485983608/pricing/why-we-are-building-timber.png'
 author: zach_sherman
-tags: [timber]
+tags: [company]
 ---
 
 In the last decade, the way that we've built applications and services has changed dramatically. Unfortunately, the way that we debug and monitor them hasn't changed nearly as much. Applications that were once structured as monolithic architectures have been splintered into lean microservices, each with their own responsibility. Each microservice may be written in a different language with a different framework that is carefully chosen for the service's responsibility.

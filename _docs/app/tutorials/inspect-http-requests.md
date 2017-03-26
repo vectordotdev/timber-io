@@ -17,7 +17,7 @@ an error or performance issue and need to understand the HTTP parameters to repr
 
 ## Interface Example
 
-![HTTP inspection](/assets/img/docs/http-inspect.gif)
+![HTTP inspection]({% link assets/img/docs/http-inspect.gif %})
 
 
 <div class="next">

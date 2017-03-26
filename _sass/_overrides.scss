@@ -40,58 +40,6 @@
   outline: none !important;
 }
 
-blockquote {
-  border-left: 10px solid #357edd;
-  font-family: Georgia, serif;
-  font-style: italic;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, .9);
-  padding: 1rem;
-  margin: 20px 0;
-  font-size: 1.25rem;
-  background: #f9f9f9;
-  margin: 1.5em 0;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
-
-// @media screen and (min-width: 30em) and (max-width: 60em) {
-//   blockquote {
-//     font-size: 1.25rem;
-//   }
-// }
-
-// @media screen and (min-width: 60em) {
-//   blockquote {
-//     font-size: 1.5rem;
-//   }
-// }
-
-code {
-  background: #F4F3FB;
-  font-size: .75em;
-}
-
-.post a:link, .post a:visited {
-  // color: #000;
-  text-decoration: none;
-  background-image: linear-gradient(to bottom,rgba(0,0,0,.6) 50%,rgba(0,0,0,0) 50%);
-  background-repeat: repeat-x;
-  background-size: 2px .1em;
-  background-position: 0 1.07em;
-}
-
 #post-meta a:link {
   color: #FFF;
 }
@@ -106,7 +54,7 @@ progress {
   width: 100%;
   height: .25em;
 
-  /* Reset the apperance */  
+  /* Reset the apperance */
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;

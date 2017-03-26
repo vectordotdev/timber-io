@@ -15,7 +15,7 @@ using their request ID.
 
 ## Interface example
 
-![Trace a request](/assets/img/docs/trace-a-request.gif)
+![Trace a request]({% link assets/img/docs/trace-a-request.gif %})
 
 
 <div class="next">

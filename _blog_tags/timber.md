@@ -1,4 +1,0 @@
----
-slug: timber
-name: timber
----

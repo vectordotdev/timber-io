@@ -20,7 +20,7 @@ Installation of Timber for Ruby is accomplished with the [timber Ruby gem](https
 
 ### Preview
 
-![Timber ruby install](/assets/img/docs/timber-ruby-install.gif)
+![Timber ruby install]({% link assets/img/docs/timber-ruby-install.gif %})
 
 
 <div class="next">

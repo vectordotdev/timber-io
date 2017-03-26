@@ -11,7 +11,7 @@ The purpose is to ensure you utilize the full power of the Timber search feature
 
 ## Interface example
 
-![Search / Query example](/assets/img/docs/app/query-example.gif)
+![Search / Query example]({% link assets/img/docs/app/query-example.gif %})
 
 
 ## Text search

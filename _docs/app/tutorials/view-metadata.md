@@ -8,4 +8,4 @@ the log line itself and is not limited to the information in the actual line.
 
 Accessing metadata is as simple as clicking the line:
 
-![Viewing context](/assets/img/docs/viewing-context.gif)
+![Viewing context]({% link assets/img/docs/viewing-context.gif %})
