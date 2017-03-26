@@ -223,5 +223,4 @@ exclude:
 gems:
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-timeago
   - jekyll-toc

@@ -32,7 +32,7 @@ layout: default
       <div class="post-author">{{ author.name }}</div>
       <div class="post-auth-bio">{{ author.title }}</div>
       <div class="post-date">
-        {{ post.date | date_to_long_string }} - {{ post.date | timeago }} -
+        {{ post.date | date_to_long_string }} -
 
         {% assign words = content | number_of_words %}
         {% if words < 360 %}
