@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: Platform Error Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Platform Error Event
+title: platform_error event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>platform_error</code> event
 toc: true
 ---
 

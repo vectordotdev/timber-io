@@ -17,13 +17,13 @@
     - title: Events & context
       path: /docs/heroku/events-and-context/
       sections:
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Platform error event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>platform_error</code> event
           path: /docs/heroku/events-and-context/platform-error-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Relase context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>relase</code> context
           path: /docs/heroku/events-and-context/release-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Server CPU sample event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>server_cpu_sample</code> event
           path: /docs/heroku/events-and-context/server-cpu-sample-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Server Memory sample event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>server_memory_sample</code> event
           path: /docs/heroku/events-and-context/server-memory-sample-event/
 - title: Timber for Ruby
   path: /docs/ruby/overview

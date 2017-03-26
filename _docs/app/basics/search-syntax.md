@@ -60,21 +60,11 @@ To support other familiar syntaxes, Timber implements various aliases for the ab
 
 ## Real-world examples
 
-1. Find all exceptions: `has:exception`
+1. Find all exceptions: `is:exception`
 2. Find all error level logs: `level:error`
 3. Find all errors for a user: `user.id:1234 level:error`
 4. Find all 500 responses: `http_server_response.status:500`
-6. Find all 500 responses or exceptions: `http_server_response.status:500 OR has:exception`
-
----
-
-**Related documents**
-
-* [Schema & Fields]({% link _docs/app/tutorials/tail-a-user.md %}) - Tailing a user using attribute search.
-* [Tail a user]({% link _docs/app/tutorials/tail-a-user.md %}) - Tailing a user using attribute search.
-* [Trace a request]({% link _docs/app/tutorials/trace-a-request.md %}) - Trace a request via the request_id.
-* [Timber for Ruby installation]({% link _docs/app/basics/search-syntax.md %}) - Capture this data in your ruby app.
-* [Timber for Elixir installation]({% link _docs/app/basics/search-syntax.md %}) - Capture this data in your Elixir app.
+6. Find all 500 responses or exceptions: `http_server_response.status:500 OR is:exception`
 
 
 <div class="next">

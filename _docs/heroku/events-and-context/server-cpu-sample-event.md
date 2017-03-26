@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: Server CPU Sample Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Server CPU Sample Event
+title: server_cpu_sample_event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>server_cpu_sample</code> event
 toc: true
 ---
 

@@ -56,9 +56,3 @@ curl -X POST -H "Authorization: Bearer {base64(api_token)}" \
 1. `application/json` - used in the examples above.
 2. `application/msgpack` - the same as json, just [msgpack encoded](http://msgpack.org).
 3. `text/plain` - lines are separated by new line (`\n`) characters.
-
----
-
-**Related documents**
-
-* [Schema & Fields]({% link _docs/app/tutorials/tail-a-user.md %}) - Tailing a user using attribute search.
