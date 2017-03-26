@@ -3,10 +3,17 @@ breadcrumbs: Timber App / Tutorials
 title: Trace a Request
 ---
 
-Because Timber add's _normalized_ context with our libraries, you can quickly trace requests using their
-request ID.
+Because Timber add's _normalized_ context with our libraries, you can quickly trace requests
+using their request ID.
 
-Example query: `http.request_id:abcd1234`
+
+## Steps
+
+1. Execute the query: `http.request_id:my-request-id`
+2. Or, click the request ID tag on the log line itself.
+
+
+## Interface example
 
 ![Trace a request](/assets/img/docs/trace-a-request.gif)
 

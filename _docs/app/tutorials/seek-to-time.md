@@ -7,7 +7,13 @@ toc: true
 Timber allows you to quick seek to any specific time:
 
 
-## Interface Component
+## Steps
+
+1. Click the time in the top right
+2. Type the date in natural language or any date format (see below).
+
+
+## Interface Example
 
 Within the Timber app you can seek to a specific time. You'll noticed this component
 in the top right of the interface:
@@ -24,7 +30,6 @@ You can supply dates / times in natural language:
 3. `wednesday at 4:01pm` (the most recent wednesday, past or future)
 4. `1997-07-16T19:20:30+01:00`
 5. [Complete reference →](https://sugarjs.com/docs/#/DateParsing)
-
 
 
 ## Linking

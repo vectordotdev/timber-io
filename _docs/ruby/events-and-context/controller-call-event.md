@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Ruby / Events & Context
-title: Controller Call Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Controller Call Event
+title: controller_call event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>controller_call</code> event
 toc: true
 ---
 

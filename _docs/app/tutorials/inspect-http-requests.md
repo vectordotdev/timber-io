@@ -4,8 +4,20 @@ title: Inspect HTTP Requests
 toc: true
 ---
 
-The tutorials sections aims to show you how to use the various features of Timber, ensuring
-you get the most out of the application.
+With Timber you can inspect incoming and outgoing HTTP requests. This is helpful when you identify
+an error or performance issue and need to understand the HTTP parameters to reproduce it.
+
+
+## Steps
+
+1. In the [Timber console](https://app.timber.io) execute the `is:http_server_request` query.
+2. Click on any of the lines.
+3. The metadata / context panel will appear with detailed request information.
+
+
+## Interface Example
+
+![HTTP inspection](/assets/img/docs/http-inspect.gif)
 
 
 <div class="next">
