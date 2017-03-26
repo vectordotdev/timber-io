@@ -24,13 +24,12 @@ layout: default
 {% endif %}
 
 <header class="post__hero header relative" role="banner">
-  <div class="mw8 center ph3 ph5-ns tc br2 pv6 white mw8-l tk-source-sans-pro">
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro">
     <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">{{ post.title }}</h1>
 
     <div class="post-deets cf">
-      <img src="{{ author.gravatar }}?s=60" class="gravatar" />
-      <div class="post-author">{{ author.name }}</div>
-      <div class="post-auth-bio">{{ author.title }}</div>
+      <div class="post-auth-gravatar pb2"><img src="{{ author.gravatar }}?s=60" class="br-100" /></div>
+      <div class="post-author pb1">{{ author.name }} - {{ author.title }}</div>
       <div class="post-date">
         {{ post.date | date_to_long_string }} -
 
