@@ -16,7 +16,7 @@ The purpose is to ensure you utilize the full power of the Timber search feature
 
 ## Text search
 
-| Action                 | Example                      | Description
+| Condition              | Example                      | Description
 |------------------------|------------------------------|-------------------------------------------------------------------
 | Contains               | `paul`                       | Any line that contains `paul`. Case insensitive.
 | Intersection           | `paul bunyan`                | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
@@ -32,9 +32,10 @@ The purpose is to ensure you utilize the full power of the Timber search feature
 
 A full list of the available fields can be found in our log event JSON schema.
 
-| Action                   | Example                             | Description
+| Condition                | Example                             | Description
 |--------------------------|-------------------------------------|-------------------------------------------------------------------
 | Has (exists)             | `has:context.user.id`               | Any line that _has_ a value for `context.user.id` field.
+| Is                       | `is:sql_query`                      | Any line that is the specified event type. In this example, any line that has `event.sql_query`.
 | Missing (does not exist) | `missing:context.user.id`           | Any line _missing_ a value for `context.user.id` field.
 | Equals                   | `context.user.name:Paul`            | Any line where the `context.user.name` field _equals_ `Paul`. Case insensitive.
 | Contains                 | `context.user.name:*Paul*`          | Any line where the `context.user.name` field _contains_ `Paul`. Case insensitive.
@@ -46,6 +47,15 @@ A full list of the available fields can be found in our log event JSON schema.
 | Greater than or equal to | `http_server_response.time_ms:>=50` | Any line where the `http_server_response.time_ms` field is _greater than or equal to_ `50`.
 | Less than                | `http_server_response.time_ms:<50`  | Any line where the `http_server_response.time_ms` field is _less than_ `50`.
 | Less than or equal to    | `http_server_response.time_ms:<=50` | Any line where the`http_server_response.time_ms` field is _less than or equal to_ `50`.
+
+### Aliases
+
+To support other familiar syntaxes, Timber implements various aliases for the above conditions:
+
+| Condition         | Alias for
+|---------------------------------
+| `_exists_`        | `has`
+| `_missing_        | `missing`
 
 
 ## Real-world examples
