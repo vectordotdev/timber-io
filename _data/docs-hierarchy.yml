@@ -184,7 +184,7 @@
         - title: Tail a user
           path: /docs/app/tutorials/tail-a-user/
         - title: View in request context
-          path: /docs/app/tutorials/trace-request/
+          path: /docs/app/tutorials/view-in-request-context/
         - title: View metadata & context
           path: /docs/app/tutorials/view-metadata/
     - title: Integrations
