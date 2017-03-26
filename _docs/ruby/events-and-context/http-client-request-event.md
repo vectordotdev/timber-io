@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Ruby / Events & Context
-title: HTTP Client Request Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP Client Request Event
+title: http_client_request event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_client_request</code> event
 toc: true
 ---
 

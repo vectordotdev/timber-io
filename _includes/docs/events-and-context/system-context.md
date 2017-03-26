@@ -1,4 +1,4 @@
-The system context adds operating system context, such as the hostname and current process ID.
+The `system` context adds operating system context, such as the hostname and current process ID.
 
 
 ### Example JSON Structure

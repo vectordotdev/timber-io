@@ -1,4 +1,4 @@
-The HTTP context adds critical HTTP data within the context of a HTTP request. Any log line
+The `http` context adds critical HTTP data within the context of a HTTP request. Any log line
 written within a single HTTP request will share this context data.
 
 

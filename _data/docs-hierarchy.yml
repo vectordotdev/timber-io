@@ -35,29 +35,29 @@
     - title: Events & context
       path: /docs/ruby/events-and-context/
       sections:
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Controller call event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>controller_call</code> event
           path: /docs/ruby/events-and-context/controller-call-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Exception event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>exception</code> event
           path: /docs/ruby/events-and-context/exception-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP client request event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_client_request</code> event
           path: /docs/ruby/events-and-context/http-client-request-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP client response event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_client_response</code> event
           path: /docs/ruby/events-and-context/http-client-response-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http</code> context
           path: /docs/ruby/events-and-context/http-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP server request event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_server_request</code> event
           path: /docs/ruby/events-and-context/http-server-request-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP server response event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_server_response</code> event
           path: /docs/ruby/events-and-context/http-server-response-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Session context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>session</code> context
           path: /docs/ruby/events-and-context/session-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> SQL query event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>sql_query</code> event
           path: /docs/ruby/events-and-context/sql-query-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> System context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>system</code> context
           path: /docs/ruby/events-and-context/system-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Template render event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>template_render</code> event
           path: /docs/ruby/events-and-context/template-render-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> User context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>user</code> context
           path: /docs/ruby/events-and-context/user-context/
     - title: Usage
       path: /docs/ruby/usage/
@@ -85,29 +85,29 @@
     - title: Events & context
       path: /docs/elixir/events-and-context/
       sections:
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Controller call event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>controller_call</code> event
           path: /docs/elixir/events-and-context/controller-call-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Exception event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>exception</code> event
           path: /docs/elixir/events-and-context/exception-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP client request event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_client_request</code> event
           path: /docs/elixir/events-and-context/http-client-request-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP client response event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_client_response</code> event
           path: /docs/elixir/events-and-context/http-client-response-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http</code> context
           path: /docs/elixir/events-and-context/http-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP server request event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_server_request</code> event
           path: /docs/elixir/events-and-context/http-server-request-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP server response event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_server_response</code> event
           path: /docs/elixir/events-and-context/http-server-response-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Session context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>session</code> context
           path: /docs/elixir/events-and-context/session-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> SQL query event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>sql_query</code> event
           path: /docs/elixir/events-and-context/sql-query-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> System context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>system</code> context
           path: /docs/elixir/events-and-context/system-context/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> Template render event
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>template_render</code> event
           path: /docs/elixir/events-and-context/template-render-event/
-        - title: <i class="fa fa-cube" aria-hidden="true"></i> User context
+        - title: <i class="fa fa-cube" aria-hidden="true"></i> <code>user</code> context
           path: /docs/elixir/events-and-context/user-context/
     - title: Usage
       path: /docs/elixir/usage/

@@ -1,4 +1,4 @@
-The controller call event represents an invocation of your controller within the HTTP
+The `controller_call` event represents an invocation of your controller within the HTTP
 request cycle. The order of events generally looks like:
 
 ```

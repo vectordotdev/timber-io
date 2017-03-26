@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Ruby / Events & Context
-title: SQL Query Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> SQL Query Event
+title: sql_query event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>sql_query</code> event
 toc: true
 ---
 

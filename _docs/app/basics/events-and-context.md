@@ -20,16 +20,16 @@ Rendered welcome/index.html.erb (0.2ms)
 Completed 200 OK in 2.46ms
 ```
 
-In Timber, each of these are individual events:
+With the Timber libraries, these become
 
 ```
-Started Get "/" <-------------------------------- http_server_request event
-Processing by WelcomeController#index as html <-- controller_call event
-Rendered welcome/index.html.erb (0.2ms) <-------- template_render event
-Completed 200 OK in 2.46ms <--------------------- http_server_response event
+Started Get "/" @metadata { "event": { "http_server_request": {...}, "context": {...} } }
+Processing by WelcomeController#index as html @metadata { "event": { "controller_call": {...}, "context": {...} } }
+Rendered welcome/index.html.erb (0.2ms) @metadata { "event": { "template_render": {...}, "context": {...} } }
+Completed 200 OK in 2.46ms  @metadata { "event": { "http_server_response": {...}, "context": {...} } }
 ```
 
-And _all_ of them share this context (for example):
+Notice the `context` key. Here's an example of what that might look like:
 
 ```json
 {

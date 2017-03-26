@@ -1,4 +1,4 @@
-The HTTP server response event represnts the response of an _incoming_ HTTP request to your
+The `http_server_response` event represnts the response of an _incoming_ HTTP request to your
 application. This is different from the `HTTP Client Response Event` in that it is a
 response to an _incoming_ request.
 

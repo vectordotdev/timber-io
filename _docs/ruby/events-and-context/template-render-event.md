@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Ruby / Events & Context
-title: Template Render Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Template Render Event
+title: template_render event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>template_render</code> event
 toc: true
 ---
 

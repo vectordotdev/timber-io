@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: User Context
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> User Context
+title: user context
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>user</code> context
 toc: true
 ---
 

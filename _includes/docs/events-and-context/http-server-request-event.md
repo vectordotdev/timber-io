@@ -1,4 +1,4 @@
-The HTTP server request event reprsents an _incoming_ HTTP request _to_ your application.
+The `http_server_request` event reprsents an _incoming_ HTTP request _to_ your application.
 This is different from the `HTTP Client Request Event` in that it is an _incoming_ request
 that your appication serves.
 

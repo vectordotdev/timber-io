@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Ruby / Events & Context
-title: Exception Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Exception Event
+title: exception event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>exception</code> event
 toc: true
 ---
 

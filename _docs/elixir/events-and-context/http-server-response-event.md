@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Elixir / Events & Context
-title: HTTP Server Response Event
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP Server Response Event
+title: http_server_response event
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http_server_response</code> event
 toc: true
 ---
 

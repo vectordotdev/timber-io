@@ -1,4 +1,4 @@
-The HTTP client request event reprsents an _outgoing_ HTTP request from within your application.
+The `http_client_request` event reprsents an _outgoing_ HTTP request from within your application.
 This is different from the `HTTP Server Request Event` in that it it is an _outgoing_ request.
 
 ```

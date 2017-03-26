@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: HTTP Context
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> HTTP Context
+title: http context
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>http</code> context
 toc: true
 ---
 

@@ -1,4 +1,4 @@
-The template render event represents the rendering of a template within your application.
+The `template_render` event represents the rendering of a template within your application.
 
 ```
 Rendered welcome/index.html.erb within layouts/application (0.2ms)

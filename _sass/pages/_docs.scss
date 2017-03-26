@@ -55,6 +55,10 @@
             display: block;
             transition: all .2s ease-in-out;
 
+            code {
+              background: transparent;
+            }
+
             &:hover {
               background: #f5f7fb;
               color: #595b61;
@@ -140,6 +144,10 @@
       &:hover {
         color: #2F2A57;
       }
+    }
+
+    code {
+      background: transparent;
     }
   }
 

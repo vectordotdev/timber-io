@@ -1,4 +1,4 @@
-The exception event formally tracks exceptions in your application. Instead of exceptions
+The `exception` event formally tracks exceptions in your application. Instead of exceptions
 being a blob of text in your logs, Timber parses them and classifies it as a single event
 proper event.
 

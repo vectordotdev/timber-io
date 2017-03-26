@@ -1,4 +1,4 @@
-The SQL query event resresents a SQL query being issued from within your application.
+The `sql_query` event resresents a SQL query being issued from within your application.
 
 ```
 SELECT * FROM users (0.5ms)

@@ -1,7 +1,7 @@
 ---
 breadcrumbs: Timber for Heroku / Events & Context
-title: Session Context
-formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> Session Context
+title: session context
+formatted_title: <i class="fa fa-cube" aria-hidden="true"></i> <code>session</code> context
 toc: true
 ---
 

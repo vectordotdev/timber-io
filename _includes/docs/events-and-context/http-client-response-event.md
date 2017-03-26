@@ -1,5 +1,4 @@
-
-The HTTP client response event represnts the response of an _outgoing_ HTTP request from within
+The `http_client_response` event represnts the response of an _outgoing_ HTTP request from within
 your application. This is different from the `HTTP Server Response Event` in that it is a
 response to an _outgoing_ request.
 

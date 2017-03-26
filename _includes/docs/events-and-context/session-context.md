@@ -1,4 +1,4 @@
-The session context adds critical session data to your logs. A session if defined by your
+The `session` context adds critical session data to your logs. A session if defined by your
 application. In most applications this is stored in a cookies and expires after a given
 amount of time. It allows you to identify users regardless if they explicitly authenticate
 or not.

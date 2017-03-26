@@ -1,4 +1,4 @@
-The user context adds critical user data to your logs. It allows you to tail a user and
+The `user` context adds critical user data to your logs. It allows you to tail a user and
 relate log lines to users within your application.
 
 
