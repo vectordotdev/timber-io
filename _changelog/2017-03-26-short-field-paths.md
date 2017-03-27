@@ -1,5 +1,5 @@
 ---
-title: Shorter easier field paths
+title: Shorter, easier field paths
 date: 2017-03-26 00:00:00
 image: '/assets/img/changelog/short-paths.gif'
 author: ben_johnson
