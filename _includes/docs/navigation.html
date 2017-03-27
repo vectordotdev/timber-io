@@ -55,7 +55,7 @@
       {% assign selected = false %}
     {% endif %}
     <li{% if sub_sub_section_selected == true or sub_section_selected == true or selected == true %} class="current"{% endif %}>
-      <a href="{{ section.path }}" class="pv3"><span class="fr closed-arrow">►</span><span class="fr open-arrow">▼</span>{{ section.title }}</a>
+      <a href="{{ section.path }}" class="pv3"><span class="fr closed-arrow fa fa-chevron-right"></span><span class="fr open-arrow fa fa-chevron-down"></span>{{ section.title }}</a>
 
       {{ sub_section }}
     </li>

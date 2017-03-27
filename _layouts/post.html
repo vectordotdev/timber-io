@@ -28,9 +28,9 @@ layout: default
     <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">{{ post.title }}</h1>
 
     <div class="post-deets cf">
-      <div class="post-auth-gravatar pb2"><img src="{{ author.gravatar }}?s=60" class="br-100" /></div>
-      <div class="post-author pb1">{{ author.name }} - {{ author.title }}</div>
-      <div class="post-date">
+      <div class="post-auth-gravatar pb2"><img src="{{ author.gravatar }}?s=60" class="br-100" style="height: 3rem;"/></div>
+      <div class="post-author pb2 f6 mt2">{{ author.name }} - {{ author.title }}</div>
+      <div class="post-date pb2 f6">
         {{ post.date | date_to_long_string }} -
 
         {% assign words = content | number_of_words %}
