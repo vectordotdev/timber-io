@@ -165,6 +165,20 @@ faqs:
   - title: How is this different?
     desc: Most logging platforms accept only raw text or json payloads. Timber automatically structures your logs so they're consistent, and augments them with custom context and events.
 
+pricing_faqs:
+  - title: Can I cancel at any time?
+    desc: Absolutely, simply log into your account, navigate to billing, and click "cancel".
+  - title: How do you calculate usage?
+    desc: Anytime you send data to the Timber service we record it in bytes. 1GB = 1,000,000 bytes.
+  - title: What happens if I go over my limit?
+    desc: We'll politely ask you upgrade. We will <em>never</em> drop your data.
+  - title: What about rate limiting or spikes in usage?
+    desc: No problem! We don't rate limit. Send data as fast as you'd like.
+  - title: What happens if change plans?
+    desc: We'll pro-rate the new plan at the remaining time for the period.
+  - title: Can I extend my rention period?
+    desc: Yep, just chat with us in the bottom and we'll create a custom plan for your needs.
+
 team:
   - name: Zach Sherman
     image: zach
@@ -193,13 +207,16 @@ footer:
     desc: Logging made better
   - title: Pricing
     url: "/pricing/"
-    desc: Different package deals
+    desc: Simple, straight-foward pricing
   - title: About
     url: "/about/"
     desc: What Timber is about
   - title: Contact
     url: mailto://hi@timber.io
     desc: How to reach us
+  - title: Changelog
+    url: "/changelog/"
+    desc: Timber product updates
   - title: Blog
     url: "/blog/"
     desc: Timber community posts

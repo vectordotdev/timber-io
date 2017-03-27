@@ -4,7 +4,7 @@ layout: page
 desc: Timber Product Updates
 ---
 
-<header class="blog__hero header relative" role="banner">
+<header class="changelog__hero header relative" role="banner">
   <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro">
     <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked tl-ns tc">Changelog</h1>
     <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tl-ns tc mw6">
@@ -15,12 +15,14 @@ desc: Timber Product Updates
 
 {% if paginator.page == 1 %}
   {% for post in site.changelog limit: 2 %}
-<link rel="prerender" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="prerender" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
   {% endfor %}
 {% endif %}
 
-<section class="mw8 center avenir">
-  <ul class="post-list ph3-ns pa0 mt4-ns mt2">
+<section class="changelog__content mw8 center avenir">
+  <div class="mh3 mt4">{% include changelog/get_updates.html %}</div>
+
+  <ul class="post-list ph3-ns pa0">
     {% assign sorted_posts = (site.changelog | sort: 'date' | reverse) %}
     {% for post in sorted_posts %}
     {% assign author = site.data.authors[post.author] %}

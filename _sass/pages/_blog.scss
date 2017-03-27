@@ -16,3 +16,33 @@
 .blog__hero--tag {
   background: linear-gradient(#130F21, #22213F);
 }
+
+
+.blog__subscribe {
+  background: #f9f9ff;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.5);
+  color: #5e58b2;
+
+  h3 {
+    color: #5e58b2;
+  }
+
+  input.email-field {
+    border: 1px solid #e0deef;
+    color: #5e58b2;
+  }
+
+  input.email-field[placeholder],
+  input.email-field::-webkit-input-placeholder {
+    color: #5e58b2 !important;
+  }
+
+  input.submit {
+    border: 1px solid #5E58AE;
+    background: #5E58AE;
+    color: #FFF;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+  }
+}

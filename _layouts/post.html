@@ -6,11 +6,12 @@ layout: default
 
 {% assign post = page %}
 {% assign author = site.data.authors[post.author] %}
+{% assign is_blog = post.url contains "blog" %}
 
 {% if post.tags.size > 0 %}
-  {% capture tags_content %} <span class="f6 bg-light-gray pa1 mr2 icon-price-tag{% if post.tags.size > 1 %}s{% endif %}">Tagged with: </span> {% endcapture %}
+  {% capture tags_content %} <span class="f6 bg-light-gray pa1 mr2 br2 icon-price-tag{% if post.tags.size > 1 %}s{% endif %}">Tagged with: </span> {% endcapture %}
   {% for post_tag in post.tags %}
-    {% if post.url contains "blog" %}
+    {% if is_blog %}
       {% assign tag = site.blog_tags | where: "slug", post_tag %}
     {% else %}
       {% assign tag = site.changelog_tags | where: "slug", post_tag %}
@@ -49,19 +50,14 @@ layout: default
     <div class="post-content pretty-links">
       {{ content }}
     </div>
-    <p id="post-meta mt3">{{ tags_content }}</p>
+    <p id="post-meta mt4">{{ tags_content }}</p>
 
-   <div class="email-collector mt5 pa4">
-      <h3 class="ma0">P.S. Can we send you an email?</h3>
-
-      <p>About once a week we'll send an email with our latest and greatest posts.</p>
-
-      <form action="//timber.us13.list-manage.com/subscribe/post?u=d940416df2301557f8f160288&amp;id=49cdac46ba" method="post" target="_blank" novalidate>
-        <div><input type="email" value="" name="EMAIL" placeholder="email address" class="db email-field" required></div>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d940416df2301557f8f160288_49cdac46ba" tabindex="-1" value=""></div>
-        <div><input type="submit" value="Subscribe" name="subscribe" class="submit"></div>
-      </form>
+    <div class="mt4">
+      {% if post.url contains "blog" %}
+        {% include blog/subscribe.html %}
+      {% else %}
+        {% include changelog/get_updates.html %}
+      {% endif %}
     </div>
   </article>
 </div>

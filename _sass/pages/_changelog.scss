@@ -16,3 +16,16 @@
 .changelog__hero--tag {
   background: linear-gradient(#130F21, #22213F);
 }
+
+.changelog__content__get_updates {
+  background: #f4f3fb;
+  color: #5e58b2;
+
+  a {
+    color: #5e58b2;
+  }
+
+  a:hover {
+    color: #201e3b;
+  }
+}
