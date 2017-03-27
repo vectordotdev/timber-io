@@ -6,12 +6,11 @@ layout: default
 
 {% assign post = page %}
 {% assign author = site.data.authors[post.author] %}
-{% assign is_blog = post.url contains "blog" %}
 
 {% if post.tags.size > 0 %}
   {% capture tags_content %} <span class="f6 bg-light-gray pa1 mr2 br2 icon-price-tag{% if post.tags.size > 1 %}s{% endif %}">Tagged with: </span> {% endcapture %}
   {% for post_tag in post.tags %}
-    {% if is_blog %}
+    {% if post.url contains "blog" %}
       {% assign tag = site.blog_tags | where: "slug", post_tag %}
     {% else %}
       {% assign tag = site.changelog_tags | where: "slug", post_tag %}
