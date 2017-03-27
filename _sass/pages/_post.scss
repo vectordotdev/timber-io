@@ -19,6 +19,11 @@
   .post-content a {
     color: #5E58AE;
     text-decoration: none;
+
+    i {
+      position: relative;
+      bottom: 4px;
+    }
   }
 
   a.heading-anchor {
