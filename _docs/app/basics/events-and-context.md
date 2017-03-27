@@ -29,7 +29,9 @@ Rendered welcome/index.html.erb (0.2ms) @metadata { "event": { "template_render"
 Completed 200 OK in 2.46ms  @metadata { "event": { "http_server_response": {...}, "context": {...} } }
 ```
 
-Notice the `context` key. Here's an example of what that might look like:
+Notice each line is assigned an event type. `http_server_request`, `controller_call`,
+`template_render`, and `http_server_response`, respectively. And all of the lines share
+`context`. An example of what `context` might look like:
 
 ```json
 {
@@ -41,11 +43,11 @@ Notice the `context` key. Here's an example of what that might look like:
 }
 ```
 
-To provide definitions:
+Finally, to define each of these:
 
-1. `event` - each log line represents an individual event, event data directly describes the line.
-2. `context` - is shared data representing state when the log line was written. Think of it like
-   join data for your logs.
+1. `event` - Is data directly related to the respective event.
+2. `context` - Represents the current state of the environment when the log line was written.
+   Think of it like join data for your logs.
 
 
 ## How It Works
