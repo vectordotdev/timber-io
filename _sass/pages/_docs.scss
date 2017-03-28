@@ -114,6 +114,12 @@
       }
     }
   }
+
+  > ul:last-child {
+    > li {
+      border-bottom: 0px none;
+    }
+  }
 }
 
 .docs__content {
