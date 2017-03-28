@@ -10,7 +10,7 @@ use your log data.
 
 You can access the app at [https://app.timber.io](https://app.timber.io).
 
-The purpose of this seciton is to get your familiar with the app and ensure make the most
+The purpose of this section is to get your familiar with the app and ensure make the most
 of using it.
 
 
