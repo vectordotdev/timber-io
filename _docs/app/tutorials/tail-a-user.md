@@ -17,7 +17,7 @@ Tailing a user allows you to filter the logs to a specific user. It has multiple
 Tip: you can also click the user tag directly on the line (see example below).
 
 
-## Interface Example
+## Demo
 
 ![Tail a user]({% link assets/img/docs/tail-a-user.gif %})
 

@@ -3,8 +3,8 @@
   sections:
     - title: Quick start
       path: /docs/getting-started/quickstart/
-    - title: How it works
-      path: /docs/getting-started/how-it-works/
+    - title: The Timber libraries
+      path: /docs/getting-started/the-timber-libraries/
     - title: Your account
       path: /docs/getting-started/your-account/
 - title: Timber for Heroku
@@ -154,6 +154,8 @@
       sections:
         - title: API keys
           path: /docs/app/basics/api-key/
+        - title: The Log line JSON schema
+          path: /docs/app/basics/the-log-line-json-schema/
         - title: Events & context
           path: /docs/app/basics/events-and-context/
         - title: Keyboard shortcuts

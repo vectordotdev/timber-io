@@ -15,7 +15,7 @@ an error or performance issue and need to understand the HTTP parameters to repr
 3. The metadata / context panel will appear with detailed request information.
 
 
-## Interface Example
+## Demo
 
 ![HTTP inspection]({% link assets/img/docs/http-inspect.gif %})
 

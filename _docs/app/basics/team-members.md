@@ -43,3 +43,8 @@ Delete members | X | ✓
 3. They'll receive an email that looks like:
 
     ![Invitation email]({% link assets/img/docs/setting-up-team/email.png %})
+
+
+<div class="next">
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
+</div>

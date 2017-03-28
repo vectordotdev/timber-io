@@ -4,12 +4,15 @@ title: Events & Context
 toc: true
 ---
 
-Timber fully embraces structured data in your logs. So much so that we designed an entire
-structured logging strategy that you can adopt. To make it simple, our libraries adopt this
-strategy automatically for you.
+Timber fully embraces, and encourages, structured data in your logs. So much so that we designed
+a system to transparently attach metadata without changing the original log line. This allows
+you to attach rich data to your logs without sacrificing readability. To make this easy and
+automatic, we've designed
+[libraries]({% link _docs/getting-started/the-timber-libraries.md %}) that handle this for you.
+The end result is higher quality logs and faster problem solving.
 
 
-## What does "event" and "context" mean?
+## How it works
 
 Take these familiar log lines:
 
@@ -20,7 +23,7 @@ Rendered welcome/index.html.erb (0.2ms)
 Completed 200 OK in 2.46ms
 ```
 
-With the Timber libraries, these become
+With [the Timber libraries]({% link _docs/getting-started/the-timber-libraries.md %}), these become:
 
 ```
 Started Get "/" @metadata { "event": { "http_server_request": {...}, "context": {...} } }
@@ -29,8 +32,12 @@ Rendered welcome/index.html.erb (0.2ms) @metadata { "event": { "template_render"
 Completed 200 OK in 2.46ms  @metadata { "event": { "http_server_response": {...}, "context": {...} } }
 ```
 
-Notice each line is assigned an event type. `http_server_request`, `controller_call`,
-`template_render`, and `http_server_response`, respectively. And all of the lines share
+Notice each line is delimited by a `@metadata` callout. This separates the original log message
+from the metadata. The metadata is simply a JSON document. If you haven't, check out our
+[log line JSON schema doc]({% link _docs/app/basics/the-log-line-json-schema.md %}).
+
+Also, notice each line is assigned an event type: `http_server_request`, `controller_call`,
+`template_render`, and `http_server_response` (respectively). And, all of the lines share
 `context`. An example of what `context` might look like:
 
 ```json
@@ -50,25 +57,6 @@ Finally, to define each of these:
    Think of it like join data for your logs.
 
 
-## How It Works
-
-It's pretty simple actually. Let's take this log line from above:
-
-```
-Sent 200 in 45.ms
-```
-
-When you install any of the Timber libraries, it will automatically augment the log line with metadata:
-
-```
-Sent 200 in 45.2ms @metadata {"dt": "2017-02-02T01:33:21.154345Z", "level": "info", "context": {"user": {"id": 1, "name": "Ben Johnson"}, "http": {"method": "GET", "host": "timber.io", "path": "/path", "request_id": "abcd1234"}}, "event": {"http_server_response": {"status": 200, "time_ms": 45.2}}}
-```
-
-Notice it the `context` _and_ `event` data. Once received by the Timber API, we go to
-work on parsing it.
-[Accessing this metadata is as simple as clicking the line]({% link _docs/app/tutorials/view-metadata.md %}.
-
-
 ## What can I do with this data?
 
 So many great things! Checkout these articles:
@@ -79,96 +67,15 @@ So many great things! Checkout these articles:
 4. [Integrations]({% link _docs/app/integrations.md %})
 
 
-## Versioning and Releases
+## How do I get this data?
 
-Our schema is formally defined by our
-[log event JSON schema](https://github.com/timberio/log-event-json-schema).
-Schema versions are
-[released within Github](https://github.com/timberio/log-event-json-schema/releases)
-and follow the [semver specification](http://semver.org/). We take versioning and maintenance
-of this schema very serious due to implications changes can have to downstream consumers.
+Simply pick your language and follow the installation instructions:
+
+* [Timber for Ruby]({% link _docs/ruby/overview.md %})
+* [Timber for Elixir]({% link _docs/elixir/overview.md %})
 
 
-## JSON Structure
-
-We've formally defined this schema in our
-[JSON schema definition](https://github.com/timberio/log-event-json-schema). This
-sets a firm foundation for a data structure you can rely on. It ensures consistentcy and
-normalization across all of your applications. This makes downstream consumption reliable
-
-Here's an example payload:
-
-```json
-{
-  "message": "Sent 200 in 115.67ms",
-  "dt": "2017-03-19T13:58:44.706231Z",
-  "level": "info",
-  "id": "2ca8161e-0cac-11e7-b762-12626c3a2376",
-  "application_id": 1,
-  "event": {
-    "server_side_app": {
-      "http_server_response": {
-        "time_ms": 115.673509,
-        "status": 200,
-        "request_id": "6446bd7c-65ce-47f3-99a7-9b69d4c7a15f",
-        "headers": {
-          "x-request-id": "6446bd7c-65ce-47f3-99a7-9b69d4c7a15f",
-          "content-type": "application/json; charset=utf-8",
-          "content-length": "21852",
-          "cache-control": "max-age=0, private, must-revalidate"
-        },
-        "body": "{\"key\":\"value\"}"
-      }
-    }
-  },
-  "context": {
-    "user": {
-      "name": "Ben Johnson",
-      "id": "abcd1234",
-      "email": "ben@timber.io"
-    },
-    "system": {
-      "hostname": "my.hostname.com",
-      "pid": "4"
-    },
-    "runtime": {
-      "module_name": "MyApp.MyModule",
-      "line": 160,
-      "function": "my_function/1",
-      "file": "/path/to/event_plug.ex",
-      "application": "my_app"
-    },
-    "platform": {
-      "heroku": {
-        "source": "app",
-        "dyno_type": "web",
-        "dyno_id": 1
-      }
-    },
-    "http": {
-      "request_id": "6446bd7c-65ce-47f3-99a7-9b69d4c7a15f",
-      "remote_addr": "10.93.232.18",
-      "path": "/path",
-      "method": "GET"
-    }
-  }
-}
-```
-
-### Top-level Field Descriptions
-
-Name | Type | Description
------|------|------------
-`message` | `string` | The raw message for the log line. We keep this to preserve the essence of logging and not sacrifice human readability. `optional` `max-length: 50,000`
-`dt` | `string` | The date / time the log line was written in ISO8601 format.
-`level` | `string` |  The level the log line was written: `debug`, `info`, `warn`, `error`, `fatal`
-`id` | `string` | A unique ID assigned by Timber during ingestion. `required`
-`application_id` | `number` | The ID of the association application in Timber. `required`
-`event` | `object` | Each log line represents an individual event. This key contains this data. Event data is directly related to the log line itself. See below for field descriptions. `optional`
-`context` | `object` | Contextual data when the log line was written. It's not directly related to the line but serves to relate log lines. Think of it almost like log line join data. See below for field descriptions. `optional`
-
-
-### Event & Context Field Descriptions
+## Full list of events and contexts
 
 These are described within the section that provides the context or event. See:
 

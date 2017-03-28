@@ -3,8 +3,10 @@ breadcrumbs: Timber App / Tutorials
 title: View in Request Context
 ---
 
-Have you ever searched for a line and wanted to see it in the context of the HTTP request?
-Timber makes this easy with the `http` context:
+All to common developers will find a log line but need to view it in context to solve the
+issue at hand. Timber's `http` context allows you to do exactly that. Instead of backing out
+to the raw unfiltered timeline, Timber allows you to see the line in the context of it's
+specific HTTP request. Here's how it works:
 
 
 ## Steps
@@ -13,7 +15,7 @@ Timber makes this easy with the `http` context:
 2. Or, click the `req: #abcd1234` tag on the log line itself.
 
 
-## Interface example
+## Demo
 
 ![View in request context]({% link assets/img/docs/view-in-request-context.gif %})
 

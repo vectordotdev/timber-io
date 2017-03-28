@@ -13,7 +13,7 @@ Timber allows you to quick seek to any specific time:
 2. Type the date in natural language or any date format (see below).
 
 
-## Interface Example
+## Demo
 
 Within the Timber app you can seek to a specific time. You'll noticed this component
 in the top right of the interface:

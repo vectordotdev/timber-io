@@ -9,31 +9,23 @@ This documentation outlines the various syntax options when executing a search.
 The purpose is to ensure you utilize the full power of the Timber search feature.
 
 
-## Interface example
+## Demo
 
 ![Search / Query example]({% link assets/img/docs/app/query-example.gif %})
 
 
-## Text search
+## Syntax Rules
 
-| Condition              | Example                      | Description
-|------------------------|------------------------------|-------------------------------------------------------------------
-| Contains               | `paul`                       | Any line that contains `paul`. Case insensitive.
-| Intersection           | `paul bunyan`                | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
-| Literal phrases `"`    | `"paul bunyan"`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
-| Literal phrases `'`    | `'paul bunyan'`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
-| Negation (exclusion)   | `-paul`                      | Any line that does _not_ contain `paul`. Case insensitive.
-| Wildcards `*`          | `pau*unyan`                  | Regex equivalent: `/paul.*unyan/`. Case insensitive.
-| Grouping               | `(paul OR bunyan) AND ox`    | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
-| Grouping w/ negation   | `-(paul bunyan)`             | Any line that does _not_ contain `paul` _and_ does not contain `bunyan`.
-
-
-## Attribute search
-
-A full list of the available fields can be found in our log event JSON schema.
-
-| Condition                | Example                             | Description
-|--------------------------|-------------------------------------|-------------------------------------------------------------------
+| Condition                | Example                      | Description
+|--------------------------|------------------------------|-------------------------------------------------------------------
+| Contains                 | `paul`                       | Any line that contains `paul`. Case insensitive.
+| Intersection             | `paul bunyan`                | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
+| Literal phrases `"`      | `"paul bunyan"`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
+| Literal phrases `'`      | `'paul bunyan'`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
+| Negation (exclusion)     | `-paul`                      | Any line that does _not_ contain `paul`. Case insensitive.
+| Wildcards `*`            | `pau*unyan`                  | Regex equivalent: `/paul.*unyan/`. Case insensitive.
+| Grouping                 | `(paul OR bunyan) AND ox`    | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
+| Grouping w/ negation     | `-(paul bunyan)`             | Any line that does _not_ contain `paul` _and_ does not contain `bunyan`.
 | Has (exists)             | `has:context.user.id`               | Any line that _has_ a value for `context.user.id` field.
 | Is                       | `is:sql_query`                      | Any line that is the specified event type. In this example, any line that has `event.sql_query`.
 | Missing (does not exist) | `missing:context.user.id`           | Any line _missing_ a value for `context.user.id` field.
@@ -55,16 +47,22 @@ To support other familiar syntaxes, Timber implements various aliases for the ab
 | Condition         | Alias for
 |---------------------------------
 | `_exists_`        | `has`
-| `_missing_`        | `missing`
+| `_missing_`       | `missing`
+
+### Schema & Fields
+
+See [the log line JSON schema]({% link _docs/app/basics/the-log-line-json-schema.md %}) for a
+comprehensive list of fields.
 
 
 ## Real-world examples
 
-1. Find all exceptions: `is:exception`
-2. Find all error level logs: `level:error`
-3. Find all errors for a user: `user.id:1234 level:error`
-4. Find all 500 responses: `http_server_response.status:500`
-6. Find all 500 responses or exceptions: `http_server_response.status:500 OR is:exception`
+1. `is:exception` - Find all exceptions
+2. `level:error` - View all logs on the `error` level.
+3. `user.id:1234 level:error` - View logs for a specific user
+4. `Controller -(Products Login)` - View all lines that contain `Controller` and do _not_ contain `Products` or `Login`.
+5. `(myhost posfix) OR 192.138*` - View all lines that contain `myhost` _and_ `posfix` or just simply contain a word that begins with `192.138`.
+6. `"Started GET" OR "/path" - View all lines that have the exact phrase `Started GET` _or_ contain `/path`.
 
 
 <div class="next">

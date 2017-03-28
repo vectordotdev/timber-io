@@ -19,9 +19,9 @@ We recommend the following articles for new users, as it lays the foundation for
 Timber:
 
 1. [Quickstart]({% link _docs/getting-started/quickstart.md %})
-2. [Events & context]({% link _docs/app/basics/events-and-context.md %})
-3. [Search syntax]({% link _docs/app/basics/search-syntax.md %})
-4. [View metadata & context]({% link _docs/app/tutorials/tail-a-user.md %})
+1. [The Timber libraries]({% link _docs/getting-started/the-timber-libraries.md %})
+3. [Events & context]({% link _docs/app/basics/events-and-context.md %})
+4. [Search syntax]({% link _docs/app/basics/search-syntax.md %})
 
 
 ## Feature highlights

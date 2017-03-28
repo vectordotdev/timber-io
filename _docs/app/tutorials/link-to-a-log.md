@@ -13,7 +13,7 @@ opening the context panel when accessed.
 2. Notice the URL in the browser changes. Either copy this URL or click the `Copy Link` button.
 
 
-## Interface Example
+## Demo
 
 ![Linking to a log]({% link assets/img/docs/link-to-a-log.gif %})
 
