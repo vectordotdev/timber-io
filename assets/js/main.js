@@ -68,7 +68,7 @@ $(function () {
   // Switch sign-up to dashboard if logged in
   if (Cookies.get('timber_logged_in') === "true") {
     $('.site-wrapper nav > .w-75-l > a:last-of-type')
-      .text('Dashboard');
+      .text('Dashboard →');
   }
 
   // Make post headers linkable
