@@ -3,7 +3,7 @@ breadcrumbs: Timber App / Tutorials
 title: View in Request Context
 ---
 
-Have you ever searched for a line and wanted to see it in the context of the HTTP request.
+Have you ever searched for a line and wanted to see it in the context of the HTTP request?
 Timber makes this easy with the `http` context:
 
 
