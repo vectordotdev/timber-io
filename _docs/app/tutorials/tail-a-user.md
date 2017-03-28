@@ -3,16 +3,18 @@ breadcrumbs: Timber App / Tutorials
 title: Tail a User
 ---
 
-Because Timber add's context with our libraries, you can quickly filter your logs by user.
-There are 2 ways to accomplish this:
+Tailing a user allows you to filter the logs to a specific user. It has multiple applications:
 
+1. Find user reported issues easily and quickly.
+2. Verify user reported performance issues. Finally answer "why is the site slow?".
+3. Tail yourself while you run integration tests.
 
 ## Steps
 
-1. Click the user tag on the log line itself (see below).
-
-2. Query directly for the user via `context.user.id:1234`, `context.user.name:"Ben Johnson"`,
+1. Issue any of the following queries `context.user.id:1234`, `context.user.name:"Ben Johnson"`,
    or `context.user.email:hi@timber.io`.
+
+Tip: you can also click the user tag directly on the line (see example below).
 
 
 ## Interface Example
