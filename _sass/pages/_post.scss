@@ -193,41 +193,6 @@
   pre code::after {
     content: normal;
   }
-
-  //
-  // Components
-  //
-
-  div.email-collector {
-    background: #f9f9ff;
-    border-left: 1px solid #F3F3FB;
-    border-radius: 5px;
-    color: rgba(0, 0, 0, 0.5);
-
-    h3 {
-      color: rgba(0, 0, 0, 0.7);
-    }
-
-    input.email-field {
-      display: block;
-      width: 100%;
-      padding: 0.5em 0.75em;
-      margin-bottom: 0.5em;
-      border-radius: 5px;
-      border: 1px solid #F3F3FB;
-    }
-
-    input.submit {
-      border: 1px solid #5E58AE;
-      border-radius: 3px;
-      background: #5E58AE;
-      color: #FFF;
-      transition: all .2s ease-in-out;
-      text-decoration: none;
-      padding: 0.25em 0.5em;
-    }
-  }
-
 }
 
 .post-article::first-letter {

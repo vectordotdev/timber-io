@@ -1,0 +1,109 @@
+---
+title: Pricing
+permalink: "/pricing_new/"
+desc: Simple pricing
+---
+
+<header class="pricing__hero header relative" role="banner">
+  <div class="mw9 center ph3 ph5-ns tc br2 pv5 white mw9-l tk-source-sans-pro">
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">Simple, predictable pricing</h1>
+    <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
+      No complicated feature matrices or tricks. Just simple straight-forward pricing.
+    </p>
+  </div>
+</header>
+
+<section class="pricing__plans bg-snuff">
+  <div class="mw9-l center pa4">
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Retention</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+
+      <tr>
+        <td>2GB / month</td>
+        <td>3 days</td>
+        <td>Free</td>
+      </tr>
+
+      <tr>
+        <td>2GB / month</td>
+        <td>6 months</td>
+        <td>
+          $10 / month<br />
+          $5 per GB
+        </td>
+        <td>
+          <a href="{{ site.app_url }}" class="f6 br-pill fw6 light-purple b--light-purple ba ttu tk-source-sans-pro no-underline grow pv2 ph4 dib">
+            Sign Up
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td>4GB / month</td>
+        <td>6 months</td>
+        <td>$20 / month</td>
+      </tr>
+
+      <tr>
+        <td>8GB / month</td>
+        <td>6 months</td>
+        <td>$35 / month</td>
+      </tr>
+
+      <tr>
+        <td>16GB / month</td>
+        <td>6 months</td>
+        <td>$68 / month</td>
+      </tr>
+
+      <tr>
+        <td>25GB / month</td>
+        <td>6 months</td>
+        <td>$132 / month</td>
+      </tr>
+
+      <tr>
+        <td>50GB / month</td>
+        <td>6 months</td>
+        <td>$200 / month</td>
+      </tr>
+
+      <tr>
+        <td>100GB / month</td>
+        <td>6 months</td>
+        <td>$250 / month</td>
+      </tr>
+
+      <tr>
+        <td>100GB+ / month</td>
+        <td>6 months</td>
+        <td>$2/GB</td>
+      </tr>
+    </table>
+  </div>
+  <div id="pricing-bottom"></div>
+</section>
+
+<section class="pa4 pb0">
+  <div class="mw9-l center">
+    <h1 class="tc p2 ttu black o-80 fw6 f2 m4 tracked tk-futura-pt">Questions? We've got answers.</h1>
+    <div class="flex flex-wrap pa6-l pa3-m pa2 pt4-l pb3-l">
+      {% for faq in site.pricing_faqs %}
+        <div class="w-100 w-50-ns pa5-l pa3-m pa2 pt3-l pb3-l flex">
+          <div>
+            <span class="bg-light-purple white tk-futura-pt br-100 pa2 w2 h2 dib tc fw6">{{ forloop.index + 1}}</span>
+          </div>
+          <div class="pl3">
+            <h3 class="black tk-futura-pt pt0 mt2">{{faq.title}}</h3>
+            <p class="tk-source-sans-pro f5 fw4 black-50 lh-copy">{{faq.desc}}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
