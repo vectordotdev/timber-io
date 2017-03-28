@@ -24,7 +24,7 @@ We've also created a [docs page]({% link _docs/app/tutorials/inspect-http-reques
    data properly.
 
     * Ruby: `bundle update timber`
-    * Elixir: `mix dep.update timber`
+    * Elixir: `mix deps.update timber`
 
 2. Commit and deploy.
 3. Execute any of these queries: `is:http_server_request` or `is:controller_call`
