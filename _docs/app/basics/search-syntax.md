@@ -51,7 +51,7 @@ To support other familiar syntaxes, Timber implements various aliases for the ab
 
 ### Schema & Fields
 
-See [the log line JSON schema]({% link _docs/app/basics/the-log-line-json-schema.md %}) for a
+See [the log line JSON schema]({% link _docs/app/advanced/the-log-line-json-schema.md %}) for a
 comprehensive list of fields.
 
 

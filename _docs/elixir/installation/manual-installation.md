@@ -39,7 +39,7 @@ These demonstrate the changes below in a git-pull style format.
     Replace `[timber-api-key]` with your actual Timber API key. Notice you can also
     pass the `{:system, "TIMBER_LOGS_KEY"}` notation for using an environment variable.
     You can [obtain a Timber API key by creating an app or clicking 'settings' on an
-    existing app]({% link _docs/app/basics/api-key.md %}).
+    existing app]({% link _docs/app/advanced/api-keys.md %}).
 
     ```elixir
     # config/timber.exs

@@ -1,5 +1,5 @@
 ---
-breadcrumbs: Timber App / The Basics
+breadcrumbs: Timber App / Advanced
 title: The Log Line JSON Schema
 toc: true
 ---

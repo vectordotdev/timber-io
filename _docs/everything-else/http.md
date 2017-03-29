@@ -12,7 +12,7 @@ A few examples:
 
 ## Authentication
 
-Once you've [obtained your API key]({% link _docs/app/basics/api-key.md %}), you'll need to
+Once you've [obtained your API key]({% link _docs/app/advanced/api-keys.md %}), you'll need to
 add it add in the `Authorization` header like so:
 
 ```

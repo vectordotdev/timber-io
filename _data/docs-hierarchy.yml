@@ -152,10 +152,6 @@
     - title: The Basics
       path: /docs/app/basics/
       sections:
-        - title: API keys
-          path: /docs/app/basics/api-key/
-        - title: The Log line JSON schema
-          path: /docs/app/basics/the-log-line-json-schema/
         - title: Events & context
           path: /docs/app/basics/events-and-context/
         - title: Keyboard shortcuts
@@ -164,8 +160,6 @@
           path: /docs/app/basics/right-click/
         - title: Search syntax
           path: /docs/app/basics/search-syntax/
-        - title: Service limits
-          path: /docs/app/basics/service-limits/
         - title: Team members & access
           path: /docs/app/basics/team-members/
     - title: Tutorials
@@ -200,3 +194,14 @@
           path: /docs/app/integrations/sentry/
         - title: Not here? Make a request
           path: /docs/app/integrations/request/
+    - title: Advanced
+      path: /docs/app/advanced/
+      sections:
+        - title: API keys
+          path: /docs/app/advanced/api-keys/
+        - title: Installation instructions
+          path: /docs/app/advanced/installation-instructions/
+        - title: Service limits
+          path: /docs/app/advanced/service-limits/
+        - title: The Log line JSON schema
+          path: /docs/app/advanced/the-log-line-json-schema/

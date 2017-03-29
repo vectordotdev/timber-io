@@ -5,7 +5,7 @@ toc: true
 ---
 
 In your `shell` run the following command, subbing `{timber_api_key}` with
-[your API key]({% link _docs/app/basics/api-key.md %})
+[your API key]({% link _docs/app/advanced/api-keys.md %})
 
 ```shell
 heroku drains:add https://{timber_api_key}@logs.timber.io/frames

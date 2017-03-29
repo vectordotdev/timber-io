@@ -56,7 +56,7 @@ bug fixes, and performance improvements.
 
 3. In your `shell`, run `bundle exec timber install your-api-key`.
 
-    * [Here's a guide on locating your API key]({% link _docs/app/basics/api-key.md %})
+    * [Here's a guide on locating your API key]({% link _docs/app/advanced/api-keys.md %})
 
 4. Remove any code you had in place to capture user contexts. As noted above, this issue has
    been fixed.

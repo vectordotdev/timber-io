@@ -34,7 +34,7 @@ Completed 200 OK in 2.46ms  @metadata { "event": { "http_server_response": {...}
 
 Notice each line is delimited by a `@metadata` callout. This separates the original log message
 from the metadata. The metadata is simply a JSON document. If you haven't, check out our
-[log line JSON schema doc]({% link _docs/app/basics/the-log-line-json-schema.md %}).
+[log line JSON schema doc]({% link _docs/app/advanced/the-log-line-json-schema.md %}).
 
 Also, notice each line is assigned an event type: `http_server_request`, `controller_call`,
 `template_render`, and `http_server_response` (respectively). And, all of the lines share

@@ -1,5 +1,5 @@
 ---
-breadcrumbs: Timber App / The Basics
+breadcrumbs: Timber App / Advanced
 title: Service Limits
 ---
 
