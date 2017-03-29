@@ -6,20 +6,50 @@
 }
 
 .pricing__plans {
-  table {
-    font-size: 1.2em;
+  blockquote {
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.75;
+    color: rgba(0, 0, 0, .9);
+    font-size: 1.25rem;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  .wrapper {
     border: 2rem solid #f4f3fb;
     box-sizing: border-box;
 
-    tr {
-      > td,
-      > th {
-        padding: 1em 2em;
-        border-bottom: 1px solid #f4f3fb;
-      }
+    table {
+      font-size: 1.1em;
 
-      > td:first-child {
-        background-color: white;
+      tr {
+        > td,
+        > th {
+          padding: 1em 2em;
+          border-bottom: 1px solid #f4f3fb;
+        }
+
+        > td:first-child {
+          background-color: white;
+        }
       }
     }
   }

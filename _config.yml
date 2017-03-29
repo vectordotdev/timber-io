@@ -171,12 +171,12 @@ pricing_faqs:
   - title: How do you calculate usage?
     desc: Anytime you send data to the Timber service we record it in bytes. 1GB = 1,000,000 bytes.
   - title: What happens if I go over my limit?
-    desc: We'll politely ask you upgrade. We will <em>never</em> drop your data.
+    desc: We'll politely ask you upgrade. We will <em>never</em> drop your data unless your account is severly delinquent.
   - title: What about rate limiting or spikes in usage?
     desc: No problem! We don't rate limit. Send data as fast as you'd like.
   - title: What happens if change plans?
     desc: We'll pro-rate the new plan at the remaining time for the period.
-  - title: Can I extend my rention period?
+  - title: Can I customize my plan?
     desc: Yep, just chat with us in the bottom and we'll create a custom plan for your needs.
 
 team:
