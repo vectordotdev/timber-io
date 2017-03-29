@@ -153,17 +153,17 @@ billing_plans:
 
 faqs:
   - title: How does it work?
-    desc: Once the Timber package or gem is installed, it will automatically decorate your logs with useful context and events (user info, requests, queries, etc).
+    desc: Once the Timber library is installed, it will automatically <a href="/docs/app/basics/events-and-context/">decorate your logs with useful context and events</a> (user info, requests, queries, etc).
   - title: How do I install Timber?
-    desc: Simply sign up and choose your language and platform, from there you will be guided through a very brief installation process that will give you everything you need.
+    desc: Simply <a href="https://app.timber.io">sign up</a> and choose your language and platform, from there you will be guided through a very brief installation process that will give you everything you need.
   - title: How much does it cost?
-    desc: Timber offers a variety of plans (including a generous free tier) to suit any company size. Paid plans start at $8 per GB of data sent.
+    desc: Timber offers a <a href="/pricing">variety of plans</a> (including a generous free tier) to suit any company size. Paid plans start at $8 per GB of data sent.
   - title: Which apps do you support?
-    desc: Currently we have packages for ruby, elixir and node, but can also accept logs from any app that runs on Heroku.
+    desc: Currently we have libraries for <a href="https://github.com/timberio/timber-ruby">ruby</a>, <a href="https://github.com/timberio/timber-elixir">elixir</a> and <a href="https://github.com/timberio/timber-node">node</a>, but can also accept logs from any app that runs on Heroku.
   - title: What data can I collect?
-    desc: You can see all of the possible fields at https://github.com/timberio/log-event-json-schema, but you can also add your own custom context and events.
+    desc: You can see all of the possible fields in our <a href="https://github.com/timberio/log-event-json-schema">JSON schema</a>, but you can also add your own custom context and events.
   - title: How is this different?
-    desc: Most logging platforms accept only raw text or json payloads. Timber automatically structures your logs so they're consistent, and augments them with custom context and events.
+    desc: Most logging platforms accept only raw text or JSON payloads. Timber <a href="/docs/app/basics/events-and-context/">allows you to attach metadata (events & context)</a> to your logs and provides <a href="/docs/getting-started/the-timber-libraries/">libraries</a> that handle this automatically for you.
 
 pricing_faqs:
   - title: Can I cancel at any time?
