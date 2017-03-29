@@ -38,17 +38,20 @@
     box-sizing: border-box;
 
     table {
-      font-size: 1.1em;
-
       tr {
         > td,
         > th {
+          background: white;
+          color: rgba(95,87,173, 0.7);
           padding: 1em 2em;
           border-bottom: 1px solid #f4f3fb;
         }
 
+        > th,
         > td:first-child {
-          background-color: white;
+          color: rgba(95,87,173, 1);
+          font-size: 1.2em;
+          font-weight: bold;
         }
       }
     }
