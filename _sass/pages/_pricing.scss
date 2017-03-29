@@ -43,6 +43,7 @@
         > th {
           background: white;
           color: rgba(95,87,173, 0.7);
+          font-size: 1.2em;
           padding: 1em 2em;
           border-bottom: 1px solid #f4f3fb;
         }
@@ -50,7 +51,6 @@
         > th,
         > td:first-child {
           color: rgba(95,87,173, 1);
-          font-size: 1.2em;
           font-weight: bold;
         }
       }
