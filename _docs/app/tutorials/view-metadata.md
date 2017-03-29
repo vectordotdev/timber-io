@@ -24,4 +24,4 @@ That's it! :)
 
 When you click the log line the URL in your browser changes. If you send that URL to someone
 they'll see exactly what you see. Read our
-[link to a log doc]{% link _docs/app/tutorials/link-to-a-log.md %} for more details.
+[link to a log doc]({% link _docs/app/tutorials/link-to-a-log.md %}) for more details.
