@@ -106,5 +106,5 @@ These are described within the section that provides the context or event. See:
 
 
 <div class="next">
-  Next: [Events & context <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({% link _docs/app/basics/events-and-context.md %})
+  Next: [{{ page.next.title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>]({{ page.next.url }})
 </div>
