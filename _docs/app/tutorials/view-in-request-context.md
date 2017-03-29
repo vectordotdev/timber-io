@@ -1,6 +1,6 @@
 ---
 breadcrumbs: Timber App / Tutorials
-title: View in Request Context
+title: View a Line in it's Request Context
 ---
 
 All too common developers will find a log line but need to view it in context to solve the
