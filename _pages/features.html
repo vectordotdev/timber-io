@@ -5,7 +5,7 @@ desc: Features.
 ---
 
 <header class="features__hero header relative" role="banner">
-  <div class="mw8 center ph3 ph5-ns tc br2 pv5 mb5 white mw8-l tk-source-sans-pro">
+  <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro">
     <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">Features</h1>
     <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
       Features that you'll never see with any other logging platform.
@@ -14,14 +14,17 @@ desc: Features.
 </header>
 
 <!-- This should be dryed up -->
-<section class="home__features mt5 mw9-l center" id="features">
-  <div class="flex flex-wrap justify-center">
-    {% for feature in site.features %}
-      <div class="fl w-50 w-33-m pa4-m w-25-l pa3 pb3-l pt3-l pa4-l tc mb3">
-        <img src="/assets/img/{{feature.image}}.png" alt="{{feature.title}}" class="w-75 black-10"/>
-        <h4 class="f4 black tk-futura-pt mt4 mb3 ttu">{{feature.title}}</h4>
+<section class="home__features mw8-l center" id="features">
+  <div class="flex flex-wrap justify-center pt3">
+    {% for feature in site.data.features %}
+      <div class="fl tl w-100 w-50-m w-50-l pa4-m pa4-l mt3">
+        <script src="https://fast.wistia.com/embed/medias/pqbkz5awoe.jsonp" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_pqbkz5awoe popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;width:100%">&nbsp;</span></div></div>
+        <h4 class="f4 black tk-futura-pt mt4 mb3 ttu">{{feature.name}}</h4>
         <p class="tk-source-sans-pro f5 black-50 ma0 lh-copy">{{feature.desc}}</p>
       </div>
     {% endfor %}
   </div>
 </section>
+
+<!-- Wistia JS -->
+</script><script src="https://fast.wistia.com/assets/external/E-v1.js" async>
