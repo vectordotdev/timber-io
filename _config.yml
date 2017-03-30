@@ -108,22 +108,21 @@ navigation:
 features:
   - title: Modern Dashboard
     image: dashboard
-    desc: Our lightning fast and flexible dashboard allows you to solve problems faster.
+    desc: Our lightning fast and flexible log dashboard allows you to solve problems faster.
   - title: Real-Time Tailing
     image: realtime
-    desc: Real-time tailing, let's you know the current state of your app without the delay.
+    desc: Real-time log tailing let's you know the current state of your app without the delay.
   - title: <em>Fast</em> Searching & Filtering
     image: search
     desc: Search and filter logs by user, request ID, or any other context. Filtering out the noise
-      quickly = higher productivity.
+      quickly -- higher productivity.
   - title: Clickable Logs
     image: logs
     desc: Clicking logs in Timber reveals valuable metadata and context. Never get caught lacking
       the data you need.
   - title: 6 Month Retention
     image: retention
-    desc: Most services keep your logs for 2-4 weeks, we offer 6 month retention
-      by default at no extra charge.
+    desc: Most services keep your logs for 2-4 weeks, we offer up to 6 months of retention at cheaper prices.
   - title: Log-based Graphing
     image: trending
     desc: Easily identify outliers and trending events based on <em>your</em> log data.
