@@ -151,6 +151,16 @@ billing_plans:
     price: 350+
     data: 50GB+
 
+pricing_features:
+  - Real-time tailing
+  - 11-9s of durability
+  - Email &amp; chat support
+  - The Timber REST API
+  - Unlimited real-time alerts
+  - Unlimited real-time graphs
+  - Encryption in-transit and at-rest
+  - Unlimited hosts/systems/servers
+
 faqs:
   - title: How does it work?
     desc: Once the Timber library is installed, it will automatically <a href="/docs/app/basics/events-and-context/">decorate your logs with useful context and events</a> (user info, requests, queries, etc).

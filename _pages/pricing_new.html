@@ -8,7 +8,7 @@ desc: Simple pricing
   <div class="mw9 center ph3 ph5-ns tc br2 pv5 white mw9-l tk-source-sans-pro">
     <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked">Simple Pricing. Long Retention.</h1>
     <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
-      Pricing as low as $0.75 / GB
+      Simple plans, unllimited users, and pricing as low as $0.75 per GB.
     </p>
   </div>
 </header>
@@ -33,11 +33,11 @@ desc: Simple pricing
               <h6 class="tk-futura-pro ttu fw6 f6 ma3 tracked">Features</h6>
               <div class="b--light-purple bb center mw3 mb3"></div>
               <p class="tk-source-sans-pro fw4 f6">
-                <p class="mb2">7 day retention</p>
-                <p class="mb2">1 User</p>
-                <p class="mb2">5 real-time alerts</p>
-                <p class="mb2">5 real-time graphs</p>
-                <p class="mb2">Email &amp; chat support</p>
+                <li>7 day retention</p>
+                <li>1 User</p>
+                <li>5 real-time alerts</p>
+                <li>5 real-time graphs</p>
+                <li>Email &amp; chat support</p>
               </p>
             </div>
           </div>
@@ -66,14 +66,14 @@ desc: Simple pricing
               <h6 class="tk-futura-pro ttu fw6 f6 ma3 tracked">Features</h6>
               <div class="b--light-purple bb center mw3 mb3"></div>
               <p class="features tk-source-sans-pro fw4 f6">
-                <p class="mb2">6 month retention</p>
-                <p class="mb2">Unlimited users</p>
-                <p class="mb2">Unlimited real-time alerts</p>
-                <p class="mb2">Unlimited real-time graphs</p>
-                <p class="mb2">11-9s of durability</p>
-                <p class="mb2">Encryption at rest</p>
-                <p class="mb2">Installation assistance</p>
-                <p class="mb2">Email &amp; chat support</p>
+                <li>6 month retention</p>
+                <li>Unlimited users</p>
+                <li>Unlimited real-time alerts</p>
+                <li>Unlimited real-time graphs</p>
+                <li>11-9s of durability</p>
+                <li>Encryption at rest</p>
+                <li>Installation assistance</p>
+                <li>Email &amp; chat support</p>
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ desc: Simple pricing
           <th>Data</th>
           <th>Users</th>
           <th>Retention</th>
-          <th><span class="pl3">Choose</span></th>
+          <th class="tc" style="width: 1%">Choose</th>
         </tr>
 
         <tr>
@@ -196,15 +196,11 @@ desc: Simple pricing
 
     <div class="tc">
       <h3>All plans include</h3>
-      <p class="mb2">Real-time tailing</p>
-      <p class="mb2">11-9s of durability</p>
-      <p class="mb2">Email &amp; chat support</p>
-      <p class="mb2">The Timber REST API</p>
-      <p class="mb2">Unlimited real-time alerts</p>
-      <p class="mb2">Unlimited real-time graphs</p>
-      <p class="mb2">Encryption in-transit and at-rest</p>
-      <p class="mb2">Unlimited hosts/systems/servers</p>
-    </div>
+      <ul class="flex">
+        {% for feature in site.pricing_features %}
+          <li class="flex w-100 w-50-ns">{{ feature }}</li>
+        {% endfor %}
+      </ul>
   </div>
 </section>
 
