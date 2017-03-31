@@ -15,43 +15,48 @@ $(function () {
   }
 
   // Initialize the carousel
-  var $demoCarousel = $(".home__demo__carousel__content").slick({
-    infinite: true,
-    slidesToShow: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    nextArrow: "",
-    prevArrow: ""
-  });
+  if (window.location.pathname === "/") {
+    var $demoCarousel = $(".home__demo__carousel__content").slick({
+      infinite: true,
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      nextArrow: "",
+      prevArrow: ""
+    });
 
-  // Highlight selected carousel button when it changes
-  $demoCarousel.on('afterChange', function(event, slick, currentSlide) {
-    var buttonToHighlight = $('.home__demo__carousel__nav button').eq(currentSlide)[0];
-    highlightActiveButton(buttonToHighlight);
-  })
+    // Highlight selected carousel button when it changes
+    $demoCarousel.on('afterChange', function(event, slick, currentSlide) {
+      var buttonToHighlight = $('.home__demo__carousel__nav button').eq(currentSlide)[0];
+      highlightActiveButton(buttonToHighlight);
+    })
 
-  // Handle explicit carousel selection
-  $('.home__demo__carousel__nav button').on('click', function() {
-    $demoCarousel.slick('slickGoTo', $(this).index());
-    highlightActiveButton(this);
-  });
+    // Handle explicit carousel selection
+    $('.home__demo__carousel__nav button').on('click', function() {
+      $demoCarousel.slick('slickGoTo', $(this).index());
+      highlightActiveButton(this);
+    });
 
-  // Make the first button active
-  $('.home__demo__carousel__nav button').first().click();
+    // Make the first button active
+    $('.home__demo__carousel__nav button').first().click();
 
-  // // Homepage video button
-  // $('.popup-youtube').magnificPopup({
-	// 	disableOn: 700,
-	// 	type: 'iframe',
-	// 	mainClass: 'mfp-fade',
-	// 	removalDelay: 160,
-	// 	preloader: false,
-	// 	fixedContentPos: false
-	// });
+    $('#video-link').on('click', function() {
+      $('.wistia_embed a')[0].click();
+    });
+  }
 
-  $('#video-link').on('click', function() {
-    $('.wistia_embed a')[0].click();
-  });
+  if (window.location.pathname !== "/") {
+    // Vimeo Popup
+    $('.popup-vimeo').magnificPopup({
+     disableOn: 700,
+     type: 'iframe',
+     mainClass: 'mfp-fade',
+     removalDelay: 160,
+     preloader: false,
+     fixedContentPos: false
+    });
+  }
+
 
   /* Mobile menu */
   $('.nav-toggle').on('click', function() {
