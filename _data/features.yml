@@ -17,3 +17,7 @@
 - name: Metadata & Context
   video_id: 211012431
   desc: Timber has full support for additional log line data without having to dump it all in the message. Context is baked in to every log line and you can also send custom data to search and filter on.
+
+- name: Link to a Log
+  video_id: 211011947
+  desc: Linking to a log is easy and extremely useful. Simply click to get a shareable url that you can send to your team so they can see that exact log in context.
