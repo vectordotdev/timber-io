@@ -1,11 +1,19 @@
-- name: Inspect HTTP Requests
-  desc: Nothing is more frustrating than identifying an issue only to lack the data you need to properly solve it. Now you can insepct HTTP request data right in the context panel.
+- name: Powerful search and filtering
+  video_id: 211007843
+  desc: Timber features blazing fast searching and querying that lets you search not only by strings, but by any attribute associated with your logs.
 
-- name: Inspect HTTP Requests
-  desc: Nothing is more frustrating than identifying an issue only to lack the data you need to properly solve it. Now you can insepct HTTP request data right in the context panel.
+- name: Live Tailing
+  video_id: 211009297
+  desc: Logs are the lifeblood of your app. In the heat of the moment, nothing is more important that seeing real time data. With timber you can live tail your logs, they show up in seconds.
 
-- name: Inspect HTTP Requests
-  desc: Nothing is more frustrating than identifying an issue only to lack the data you need to properly solve it. Now you can insepct HTTP request data right in the context panel.
+- name: View in Context
+  video_id: 211011512
+  desc: I'm sure you know the feeling, finding an exception just to cringe knowing you have to back out and scan the unfiltered timeline to get context. With Timber, viewing this exception in context is just a click.
 
-- name: Inspect HTTP Requests
-  desc: Nothing is more frustrating than identifying an issue only to lack the data you need to properly solve it. Now you can insepct HTTP request data right in the context panel.
+- name: Tail a User
+  video_id: 211013543
+  desc: User context is at the core of the Timber platform. This data is automatically added to any log line so it's easy to tail a users session, debug issues and find what you need when you need in the heat of the moment.
+
+- name: Metadata & Context
+  video_id: 211012431
+  desc: Timber has full support for additional log line data without having to dump it all in the message. Context is baked in to every log line and you can also send custom data to search and filter on.

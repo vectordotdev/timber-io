@@ -45,6 +45,19 @@ $(function () {
     });
   }
 
+  if (window.location.pathname !== "/") {
+    // Vimeo Popup
+    $('.popup-vimeo').magnificPopup({
+     disableOn: 700,
+     type: 'iframe',
+     mainClass: 'mfp-fade',
+     removalDelay: 160,
+     preloader: false,
+     fixedContentPos: false
+    });
+  }
+
+
   /* Mobile menu */
   $('.nav-toggle').on('click', function() {
     // this === nav-toggle

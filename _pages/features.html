@@ -18,13 +18,14 @@ desc: Features.
   <div class="flex flex-wrap justify-center pt3">
     {% for feature in site.data.features %}
       <div class="fl tl w-100 w-50-m w-50-l pa4-m pa4-l mt3">
-        <script src="https://fast.wistia.com/embed/medias/pqbkz5awoe.jsonp" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_pqbkz5awoe popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;width:100%">&nbsp;</span></div></div>
-        <h4 class="f4 black tk-futura-pt mt4 mb3 ttu">{{feature.name}}</h4>
-        <p class="tk-source-sans-pro f5 black-50 ma0 lh-copy">{{feature.desc}}</p>
+        <div class="popup-vimeo" href="https://vimeo.com/{{ feature.video_id }}">
+          <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; cursor: pointer;} .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+          </style>
+          <div class='embed-container'><iframe style="pointer-events: none" src='http://player.vimeo.com/video/{{ feature.video_id }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+          <h4 class="f4 black tk-futura-pt mt4 mb3 ttu">{{feature.name}}</h4>
+          <p class="tk-source-sans-pro f5 black-50 ma0 lh-copy">{{feature.desc}}</p>
+        </div>
       </div>
     {% endfor %}
   </div>
 </section>
-
-<!-- Wistia JS -->
-</script><script src="https://fast.wistia.com/assets/external/E-v1.js" async>
