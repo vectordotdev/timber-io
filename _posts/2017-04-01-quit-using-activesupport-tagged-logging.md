@@ -49,12 +49,10 @@ useful, critical, data that you need to analyze your logs. Why is this bad? So m
 2. **Your tag data is ambiguous.** It requires preconceived knowledge of how your tags are ordered.
    Anyone not in-the-know has no idea which one is the `request_id` or the `session_id`.
 3. **It's brittle, inconsistent, there's no contract.** It is highly likely these tags will change,
-   as well as the order. Anyone relying on this data for alerts, graphs, etc, will constantly be
-   reacting to any change you make.
-4. **It's still a pain in the ass to search.**
+   as well as the order. Anyone relying on this data for alerts, graphs, etc, will be
+   reacting changes _after_ things break.
+4. **It's still a pain to search.**
 5. **Parsing this line is exceptionally difficult.**
-6. I could keep going.
-
 
 ## A better way
 
