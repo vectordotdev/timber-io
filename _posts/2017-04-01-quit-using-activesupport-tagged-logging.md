@@ -24,15 +24,14 @@ Your log messages will look like this:
 ```
 
 For anyone that's managed Rails logs in a production environment, this was a _very_ welcome change.
-It basically allowed you to add context to your logs. Such as the `request_id`, `user_id`,
-`request_path`, and anything else you wanted. When it came time to search your logs, you thanked
-all things good that these tags were in your logs.
+It basically allowed you to add context to your logs. When it came time to resolve an issue and
+search your logs, you thanked all things good that these tags were in your logs.
 
 
 ## The problem
 
-While `ActiveSupport::TaggedLogging` is great on the surface, in practice your logs start to
-look like this:
+While `ActiveSupport::TaggedLogging` is great on the surface, in practice it has flaws. To start,
+your logs start to look like this:
 
 ```
 [c6034478-4026-4ded-9e3c-088c76d056f1] [72.48.77.213] [f75f36519c5c55021708b88ad6dad68fedf5d] [2322] Started GET "/" for 72.48.77.213 at 2016-01-06 20:30:21 +0000
@@ -41,20 +40,20 @@ look like this:
 [acfab2a7-f1b7-4e15-8bf6-cdaa008d102c] [235.235.12.57] [0beec7b5ea3f0fdbc95d0dd47f3c5bc2] [432] Started GET "/" for 235.235.12.57 at 2016-01-06 20:30:23 +0000
 ```
 
-Almost every production system I've seen dipped their toes in with the `request_id` tag,
-realizing how helpful this was, and added the `session_id`, `remote_addr`, and `user_id` tags.
-I've seend some applications add as many as 15 tags! Why is this bad? So many reasons!
+Almost every production system I've seen expanded beyond just the `request_id` tag, and added
+the `session_id`, `remote_addr`, and `user_id` tags. Some as many as 15 tags! And, why not? It's
+useful, critical, data that you need to analyze your logs. Why is this bad? So many reasons!
 
-1. **Your logs are no longer human readable.**
-2. **Your logs are exceptionally noisy.**
-3. **Your tag data is ambiguous.** It requires preconceived knowledge of how your tags are ordered.
+1. **Your logs are no longer human readable.** They are noisy and full of long hashes, and the
+   start of the log message is no longer aligned.
+2. **Your tag data is ambiguous.** It requires preconceived knowledge of how your tags are ordered.
    Anyone not in-the-know has no idea which one is the `request_id` or the `session_id`.
-4. **It's brittle, inconsistent, there's no contract.** It is highly likely these tags will change,
+3. **It's brittle, inconsistent, there's no contract.** It is highly likely these tags will change,
    as well as the order. Anyone relying on this data for alerts, graphs, etc, will constantly be
    reacting to any change you make.
-5. **It's still a pain in the ass to search.**
-6. **Parsing this line is exceptionally difficult.**
-7. I could keep going.
+4. **It's still a pain in the ass to search.**
+5. **Parsing this line is exceptionally difficult.**
+6. I could keep going.
 
 
 ## A better way
@@ -81,34 +80,34 @@ Log message @metadata context.http.request_id=c6034478-4026-4ded-9e3c-088c76d056
 Notice how this is oh-so-much-better. Let's address the same issues above:
 
 1. **It's human readable**. The log message is at the front, like you'd expect, and the structured
-   data is delimited by a very clear delimiter. Lastlty, the metadata is human readable in logfmt.
-2. **Your logs are no longer noisy.**
-3. **Your data is no longer ambiguous.** The `request_id` and `session_id` are keyed and clearly
+   data is clearly delimited. Plus, the metadata is in a human readable format ([logfmt](https://brandur.org/logfmt)).
+2. **Your data is no longer ambiguous.** The `request_id` and `session_id` are keyed and clearly
    identified.
-4. **Your logs are consistent and reliable.** The data is structured, easy to parse, and the order
+3. **Your logs are consistent and reliable.** The data is structured, easy to parse, and the order
    does not matter. Adding more data will not affect downstream consumers (alerts, graphs, etc).
-5. **This is much easier to search.** You have real structured data to search on.
-6. **Parsing ia dead simple.** Logfmt is an open standard, there are parsers for virtually every
+4. **This is much easier to search.** You have real structured data to search on.
+5. **Parsing ia dead simple.** Logfmt is an open standard, there are parsers for virtually every
    language.
 
 
 ## Taking this further.
 
 The strategy above is certainly a step up, but there are still some issues: What if
-the structured data changes? None of the logging platforms will recognize this format and
+the structured data changes? And, none of the logging platforms will recognize this format and
 parse it.
 
-Welcome to Timber :). Timber formalizes this strategy and provides the best logging console
-(I'm biased of course) to search and use this data. How so?
+Welcome to Timber :). Timber formalizes this strategy, parses this data, and provides the best
+(I'm biased of course) console for accessing this data. How does it work?
 
-1. Timber parses this format, [showing you only the log message in our console]({% link _docs/app/tutorials/view-metadata.md %}).
-   Accessing this metadata is as simple as clicking the line.
+1. Timber parses the attached metadata, [showing you only the log message in our console]({% link _docs/app/tutorials/view-metadata.md %}).
+   Accessing the metadata is as simple as [clicking the line]({% link _docs/app/tutorials/view-metadata.md %}).
 2. All of this data is accessible as
    [real fields you can search on]({% link _docs/app/basics/search-syntax.md %}).
    Ex: `http.request_id:abcd1234`.
 3. We've defined a [versioned JSON schema]({% link _docs/app/advanced/the-log-line-json-schema.md %})
-   for this metadata. This creates a contract with downstream consumers. It also means you don't
-   have to spend hours (or days) deciding on a flexible structure for this data.
+   that creates a strict contract with downstream consumers (alerts, graphs, etc). It also means
+   you don't have to spend days deciding on a flexible structure for this data. It took us many
+   weeks.
 
 
 ## Get this in under 5 minutes
