@@ -54,7 +54,7 @@ useful, critical, data that you need to analyze your logs. Why is this bad? So m
 4. **It's still a pain to search.**
 5. **Parsing this line is exceptionally difficult.**
 
-## A better way
+## The solution
 
 So how do you resolve every issue above? By adding proper _structured_ context:
 
@@ -88,7 +88,7 @@ Notice how this is oh-so-much-better. Let's address the same issues above:
    language.
 
 
-## Taking this further.
+## Taking it further
 
 The strategy above is certainly a step up, but there are still some issues: What if
 the structured data changes? And, none of the logging platforms will recognize this format and
@@ -108,7 +108,7 @@ Welcome to Timber :). Timber formalizes this strategy, parses this data, and pro
    weeks.
 
 
-## Get this in under 5 minutes
+## Try it out today
 
 You can follow our [installation guide]({% link _docs/ruby/installation.md %}), but it's very simple:
 
