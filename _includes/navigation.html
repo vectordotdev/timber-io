@@ -1,5 +1,5 @@
 <nav class="db dt-l w-100 border-box pa4 bg-dark-purple tk-futura-pt tracked">
-  <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l outline-0" href="/" title="Home">
+  <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb3 mb0-l outline-0" href="/" title="Home">
     <div class="dib w6">
       {% include logo.html color="#FFF" %}
     </div>
@@ -7,7 +7,7 @@
   <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
     {% for link in site.navigation %}
       {% assign active = nil %}
-      {% assign base_class = "link dim white f6 dib mr3 mr4-l ttu tracked fw5 tk-futura-pt" %}
+      {% assign base_class = "link dim white f6 dib mr3 mb2 mr4-l ttu tracked fw5 tk-futura-pt" %}
 
       {% if page.url contains link.url %}
         {% assign active = "nav__links__link--active" %}
