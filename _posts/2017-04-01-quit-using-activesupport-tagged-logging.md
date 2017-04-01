@@ -1,7 +1,7 @@
 ---
 title: Quit using ActiveSupport::TaggedLogging!
 date: 2017-03-22 00:00:00
-image: '/assets/img/blog/ruby.png'
+image: '/assets/img/blog/rails-log-tags.png'
 author: ben_johnson
 tags: [ruby, rails]
 ---
@@ -43,7 +43,7 @@ look like this:
 
 Almost every production system I've seen dipped their toes in with the `request_id` tag,
 realizing how helpful this was, and added the `session_id`, `remote_addr`, and `user_id` tags.
-I've some applications add as many as 15 tags! Why is this bad? So many reasons!
+I've seend some applications add as many as 15 tags! Why is this bad? So many reasons!
 
 1. **Your logs are no longer human readable.**
 2. **Your logs are exceptionally noisy.**
@@ -92,9 +92,21 @@ Notice how this is oh-so-much-better. Let's address the same issues above:
    language.
 
 
-## Taking this further. A console designed specifically for this data.
+## Taking this further.
 
-That's exactly what Timber is.
+The strategy above is certainly a step up, but there are still some issues: What if
+the structured data changes? None of the logging platforms will recognize this format and
+parse it.
+
+Welcome to Timber :). Timber formalizes this strategy and provides the best logging console
+(I'm biased of course) to search and use this data. How so?
+
+1. Timber parses this format, showing you only the log message in our console. Accessing this
+   metadata is as simple as clicking the line.
+2. All of this data is accessible as real fields you can search on. Ex: `http.request_id:abcd1234`.
+3. We've defined a versioned JSON schema for this metadata. This creates a contract with downstream
+   consumers. It also means you don't have to spend hours (or days) coming up with a flexible
+   structure for this data.
 
 
 ## Get this in under 5 minutes
