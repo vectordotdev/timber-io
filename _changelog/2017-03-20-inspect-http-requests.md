@@ -1,5 +1,5 @@
 ---
-title: Inspect HTTP Requests
+title: Inspect HTTP requests
 date: 2017-03-20 00:00:00
 image: '/assets/img/docs/http-inspect.gif'
 author: ben_johnson
