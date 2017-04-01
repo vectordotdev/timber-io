@@ -4,16 +4,16 @@ layout: default
 
 <header class="blog__hero--tag header relative" role="banner">
   <div class="mw8 center ph3 ph5-ns tc br2 pv5 white mw8-l tk-source-sans-pro">
-    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked tc">{{ page.slug }} posts</h1>
+    <h1 class="fw6 f3 f2-ns lh-title mt0 mb3 tk-futura-pt ttu tracked tc">{{ page.slug }} Changelog Updates</h1>
     <p class="fw4 f5 lh-copy mt0 mb3 o-50 tk-source-sans-pro tracked tc mw6 center">
-      A collection of thoughtfully crafted blog posts about {{ page.slug }}.
+      Changelog updates relating to {{ page.slug }}.
     </p>
   </div>
 </header>
 
 <section class="mw8 center avenir">
   <ul class="post-list ph3-ns pa0 mt4-ns mt2">
-    {% for post in site.posts %}
+    {% for post in site.changelog %}
       {% if post.tags contains page.slug %}
         {% include post.html post=post %}
       {% endif %}

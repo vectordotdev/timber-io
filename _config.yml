@@ -42,7 +42,7 @@ defaults:
   - scope:
       type: changelog_tags
     values:
-      layout: posts_by_tag
+      layout: changelog_by_tag
   - scope:
       path: ''
       type: posts

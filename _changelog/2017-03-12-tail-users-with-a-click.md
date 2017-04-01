@@ -3,7 +3,7 @@ title: Tail users with a click
 date: 2017-03-12 00:00:00
 image: '/assets/img/changelog/user-tag.png'
 author: zach_sherman
-tags: [app, console]
+changelog_tags: [app, console]
 ---
 
 Today we added a subtle tag to your logs:
