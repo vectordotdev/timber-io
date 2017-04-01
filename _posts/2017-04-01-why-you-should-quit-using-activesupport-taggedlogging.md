@@ -42,9 +42,9 @@ your logs start to look like this:
 
 Almost every production system I've seen expanded beyond just the `request_id` tag, and added
 the `session_id`, `remote_addr`, and `user_id` tags. Some as many as 15 tags! And, why not? It's
-useful, critical, data that you need to analyze your logs. Why is this bad? So many reasons!
+useful, critical, data that you need to analyze your logs. Why is this bad?
 
-1. **Your logs are no longer human readable.** They are noisy and full of long hashes, and the
+1. **Your logs are no longer human readable.** They are noisy, full of long hashes, and the
    start of the log message is no longer aligned.
 2. **Your tag data is ambiguous.** It requires preconceived knowledge of how your tags are ordered.
    Anyone not in-the-know has no idea which one is the `request_id` or the `session_id`.
@@ -77,21 +77,21 @@ Log message @metadata context.http.request_id=c6034478-4026-4ded-9e3c-088c76d056
 
 Notice how this is oh-so-much-better. This isn't a new concept either:
 
-* [Go has built-in context support]()
-* [Elixir has built-in content support]()
-* [Winston, node's most popular logging library supports context]()
-* [Log4j, java's most popular loggling library supports context]()
+* [Go has built-in support for logging context](https://godoc.org/github.com/go-kit/kit/log#hdr-Contextual_Loggers)
+* [Elixir has built-in support for logging context](https://hexdocs.pm/logger/Logger.html#metadata/1)
+* [Winston, node's most popular logging library, supports context](https://github.com/winstonjs/winston#logging-with-metadata)
+* [Log4j, java's most popular loggling library, supports context](https://logging.apache.org/log4j/2.x/manual/thread-context.html)
 * And many more
 
-Let's address the same issues above:
+Given this new approach, let's address the same issues above:
 
-1. **It's human readable**. The log message is at the front, like you'd expect, and the structured
+1. **Your logs are human readable**. The log message is at the front, like you'd expect, and the structured
    data is clearly delimited. Plus, the metadata is in a human readable format ([logfmt](https://brandur.org/logfmt)).
 2. **Your data is no longer ambiguous.** The `request_id` and `session_id` are keyed and clearly
    identified.
 3. **Your logs are consistent and reliable.** The data is structured, easy to parse, and the order
    does not matter. Adding more data will not affect downstream consumers (alerts, graphs, etc).
-4. **This is much easier to search.** You have real structured data to search on.
+4. **your logs are much easier to search.** You have real structured data to search on.
 5. **Parsing ia dead simple.** Logfmt is an open standard, there are parsers for virtually every
    language.
 
