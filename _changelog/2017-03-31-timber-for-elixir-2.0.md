@@ -1,7 +1,7 @@
 ---
 title: Timber for Elixir v2 Released
 date: 2017-03-31 00:00:00
-image: '/assets/img/changelog/elixir.gif'
+image: '/assets/img/changelog/elixir.png'
 author: david_antaramian
 tags: [app, console, searching]
 ---
