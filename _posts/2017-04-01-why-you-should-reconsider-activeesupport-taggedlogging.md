@@ -1,5 +1,5 @@
 ---
-title: Quit using ActiveSupport::TaggedLogging!
+title: Why You Should Reconsider ActiveSupport::TaggedLogging
 date: 2017-03-22 00:00:00
 image: '/assets/img/blog/rails-log-tags.png'
 author: ben_johnson
@@ -52,7 +52,7 @@ useful, critical, data that you need to analyze your logs. Why is this bad? So m
    as well as the order. Anyone relying on this data for alerts, graphs, etc, will be
    reacting changes _after_ things break.
 4. **It's still a pain to search.**
-5. **Parsing this line is exceptionally difficult.**
+5. **Parsing this line is difficult and requires regex.**
 
 ## The solution
 

@@ -1,5 +1,5 @@
 ---
-title: Timber for Ruby v2 released
+title: Timber for Ruby v2 Released
 date: 2017-03-22 00:00:00
 image: '/assets/img/blog/ruby.png'
 author: ben_johnson
