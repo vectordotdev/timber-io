@@ -1,5 +1,5 @@
 ---
-title: Why You Should Reconsider ActiveSupport::TaggedLogging
+title: Why You Should Quit Using ActiveSupport::TaggedLogging
 date: 2017-03-22 00:00:00
 image: '/assets/img/blog/rails-log-tags.png'
 author: ben_johnson
@@ -75,7 +75,15 @@ This produces a log line like:
 Log message @metadata context.http.request_id=c6034478-4026-4ded-9e3c-088c76d056f1 context.http.remote_add="72.48.77.213" session.id=f75f36519c5c55021708b88ad6dad68fedf5d user.id=1
 ```
 
-Notice how this is oh-so-much-better. Let's address the same issues above:
+Notice how this is oh-so-much-better. This isn't a new concept either:
+
+* [Go has built-in context support]()
+* [Elixir has built-in content support]()
+* [Winston, node's most popular logging library supports context]()
+* [Log4j, java's most popular loggling library supports context]()
+* And many more
+
+Let's address the same issues above:
 
 1. **It's human readable**. The log message is at the front, like you'd expect, and the structured
    data is clearly delimited. Plus, the metadata is in a human readable format ([logfmt](https://brandur.org/logfmt)).
