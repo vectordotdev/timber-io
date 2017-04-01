@@ -101,15 +101,19 @@ parse it.
 Welcome to Timber :). Timber formalizes this strategy and provides the best logging console
 (I'm biased of course) to search and use this data. How so?
 
-1. Timber parses this format, showing you only the log message in our console. Accessing this
-   metadata is as simple as clicking the line.
-2. All of this data is accessible as real fields you can search on. Ex: `http.request_id:abcd1234`.
-3. We've defined a versioned JSON schema for this metadata. This creates a contract with downstream
-   consumers. It also means you don't have to spend hours (or days) coming up with a flexible
-   structure for this data.
+1. Timber parses this format, [showing you only the log message in our console]({% link _docs/app/tutorials/view-metadata.md %}).
+   Accessing this metadata is as simple as clicking the line.
+2. All of this data is accessible as
+   [real fields you can search on]({% link _docs/app/basics/search-syntax.md %}).
+   Ex: `http.request_id:abcd1234`.
+3. We've defined a [versioned JSON schema]({% link _docs/app/advanced/the-log-line-json-schema.md %})
+   for this metadata. This creates a contract with downstream consumers. It also means you don't
+   have to spend hours (or days) deciding on a flexible structure for this data.
 
 
 ## Get this in under 5 minutes
+
+You can follow our [installation guide]({% link _docs/ruby/installation.md %}), but it's very simple:
 
 Add our gem to your `Gemfile`:
 
