@@ -7,7 +7,7 @@ tags: [app, console, searching]
 ---
 
 Hot and fresh! V2 of [our Elixir library](https://github.com/timberio/timber-elixir) is
-now available.
+now available. V2 includes a variety of improvements, notable changes are listed below.
 
 ## Notable changes
 
