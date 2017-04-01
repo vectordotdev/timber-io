@@ -1,6 +1,6 @@
 ---
 title: Why You Should Quit Using ActiveSupport::TaggedLogging
-date: 2017-03-22 00:00:00
+date: 2017-04-01 00:00:00
 image: '/assets/img/blog/rails-log-tags.png'
 author: ben_johnson
 tags: [ruby, rails]
