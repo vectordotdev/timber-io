@@ -1,5 +1,5 @@
 ---
-title: Why You Should Quit Using ActiveSupport::TaggedLogging
+title: You're Better Than ActiveSupport::TaggedLogging
 date: 2017-04-01 00:00:00
 image: '/assets/img/blog/rails-log-tags.png'
 author: ben_johnson
