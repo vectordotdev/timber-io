@@ -29,13 +29,13 @@ layout: default
 </header>
 
 <div class="post tk-source-sans-pro lh-copy">
+  <div id="post-meta" class="pa3 pa4-ns ph6-l mw8 center" style="padding-bottom: 0">{% include post_tags.html post=post %}</div>
   <article class="post-article pa3 pa4-ns ph6-l mw8 center f4">
     <div class="post-content pretty-links">
       {{ content }}
     </div>
-    <p id="post-meta mt4">{% include post_tags.html post=post %}</p>
 
-    <div class="mt4">
+    <div class="mt5">
       {% if post.url contains "blog" %}
         {% include blog/subscribe.html %}
       {% else %}

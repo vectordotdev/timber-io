@@ -54,6 +54,7 @@ useful, critical, data that you need to analyze your logs. Why is this bad?
 4. **It's still a pain to search.**
 5. **Parsing this line is difficult and requires regex.**
 
+
 ## The solution
 
 So how do you resolve every issue above? By adding proper _structured_ context:
@@ -96,48 +97,15 @@ Given this new approach, let's address the same issues above:
    language.
 
 
-## Taking it further
+## Putting it into action
 
-The strategy above is certainly a step up, but there are still some issues: What if
-the structured data changes? And, none of the logging platforms will recognize this format and
-parse it.
+The strategy above is certainly a step up, but there are still some issues: What is the best way
+to structure this data? How do you handle changes to this structure? What about getting logging
+systems to parse this format? And won't the metadata still make my logs noisy?
 
-Welcome to Timber :). Timber formalizes this strategy, parses this data, and provides the best
-(I'm biased of course) console for accessing this data. How does it work?
+Solving the above issues could take many hours, or days, and is most likely well outside the
+scope of your core-competencies. This is exactly why we created Timber. Timber is this strategy,
+formalized, maintained, and used by hundreds of other companies. And it takes less than a minute
+to setup.
 
-1. Timber parses the attached metadata, [showing you only the log message in our console]({% link _docs/app/tutorials/view-metadata.md %}).
-   Accessing the metadata is as simple as [clicking the line]({% link _docs/app/tutorials/view-metadata.md %}).
-2. All of this data is accessible as
-   [real fields you can search on]({% link _docs/app/basics/search-syntax.md %}).
-   Ex: `http.request_id:abcd1234`.
-3. We've defined a [versioned JSON schema]({% link _docs/app/advanced/the-log-line-json-schema.md %})
-   that creates a strict contract with downstream consumers (alerts, graphs, etc). It also means
-   you don't have to spend days deciding on a flexible structure for this data. It took us many
-   weeks.
-
-
-## Try it out today
-
-You can follow our [installation guide]({% link _docs/ruby/installation.md %}), but it's very simple:
-
-Add our gem to your `Gemfile`:
-
-```ruby
-# Gemfile
-gem 'timber'
-```
-
-Run these commands in your `console`:
-
-```console
-bundle install timber
-bundle exec timber install
-```
-
-And get this:
-
-![Viewing context]({% link assets/img/docs/viewing-context.gif %})
-
-Notice the metadata is hidden and available by clicking the line. Moreover, this data is
-still available for searching, graphing, and alerting.
-
+**[Try it out and get setup in minutes →](https://app.timber.io)**
