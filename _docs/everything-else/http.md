@@ -49,8 +49,10 @@ Host: logs.timber.io
 Authorization: Bearer {base64(api_key)} (see above)
 Content-Type: application/json
 
-{"dt": "2017-03-01T00:00:00.000000Z", "message": "log line 1"}
-{"dt": "2017-03-01T00:00:00.000000Z", "message": "log line 2"}
+[
+  {"dt": "2017-03-01T00:00:00.000000Z", "message": "log line 1"},
+  {"dt": "2017-03-01T00:00:00.000000Z", "message": "log line 2"}
+]
 ```
 
 Please see the [log line JSON schema doc]({% link _docs/app/advanced/the-log-line-json-schema.md %})
