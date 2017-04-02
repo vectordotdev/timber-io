@@ -1,0 +1,14 @@
+{% if post.tags.size > 0 %}
+  <span class="f6 bg-light-gray pa1 mr2 br2 icon-price-tag{% if post.tags.size > 1 %}s{% endif %}">Tagged with: </span>
+  {% for post_tag in post.tags %}
+    {% if post.url contains "blog" %}
+      {% assign tag = site.blog_tags | where: "slug", post_tag %}
+    {% else %}
+      {% assign tag = site.changelog_tags | where: "slug", post_tag %}
+    {% endif %}
+    {% if tag %}
+      {% assign tag = tag[0] %}
+      <a class="f6 link dim br-pill ph3 pv1 mr2 dib white bg-purple fw6" href="{{ tag.url }}">{{ tag.name }}</a>
+    {% endif %}
+  {% endfor %}
+{% endif %}

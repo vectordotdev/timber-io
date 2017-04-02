@@ -60,7 +60,7 @@ So how do you resolve every issue above? By adding proper _structured_ context:
 
 ```ruby
 context = {
-  http: {request_id: requst_id, remote_addr},
+  http: {request_id: requst_id, remote_addr: remote_addr},
   session: {id: session_id},
   user: {id: user_id}
 }

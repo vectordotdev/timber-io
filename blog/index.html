@@ -23,7 +23,6 @@ desc: Timber Community Blog Posts
 <section class="mw8 center avenir">
   <ul class="post-list ph3-ns pa0 mt4-ns mt2">
     {% for post in paginator.posts %}
-    {% assign author = site.data.authors[post.author] %}
     {% include post.html post=post %}
     {% endfor %}
   </ul>
