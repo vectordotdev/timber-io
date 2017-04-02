@@ -92,7 +92,7 @@ Given this new approach, let's address the same issues above:
 3. **Your logs are consistent and reliable.** The data is structured, easy to parse, and the order
    does not matter. Adding more data will not affect downstream consumers (alerts, graphs, etc).
 4. **your logs are much easier to search.** You have real structured data to search on.
-5. **Parsing ia dead simple.** Logfmt is an open standard, there are parsers for virtually every
+5. **Parsing is dead simple.** Logfmt is an open standard, there are parsers for virtually every
    language.
 
 
