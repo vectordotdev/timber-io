@@ -136,7 +136,7 @@
       path: /docs/everything-else/elastic-beanstalk/
     - title: File Tailing Agent (coming soon)
       path: /docs/everything-else/file-tailing/
-    - title: HTTP (coming soon)
+    - title: HTTP
       path: /docs/everything-else/http/
     - title: Kubernetes (coming soon)
       path: /docs/everything-else/kubernetes/

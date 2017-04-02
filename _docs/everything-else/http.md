@@ -26,33 +26,37 @@ if your key is `abcd1234` then the header value should be:
 Authorization: Basic YWJjZDEyMzQ=
 ```
 
+
 ## Examples
 
-### Plain HTTP
+### text/plain
 
 ```
 POST /frames HTTP/1.1
 Host: logs.timber.io
-Authorization: Bearer {base64(api_key)}
+Authorization: Bearer {base64(api_key)} (see above)
 Content-Type: text/plain
 
 [2016-03-02T00:01:02.112234Z] log line 1
 [2016-03-02T00:01:02.112234Z] log line 2
 ```
 
-### Curl
+### application/json
 
-```shell
-curl -X POST -H "Authorization: Bearer {base64(api_token)}" \
-  -H "Content-Type: text/plain" \
-  -H "Cache-Control: no-cache" \
-  -H "Postman-Token: 0fe1a806-97e6-213b-0b1f-acb9c697d26b" \
-  -d '[2016-03-02T00:01:02.112234Z] log line 1\n[2016-03-02T00:01:02.112234Z] log line 2' \
-  "https://logs.timber.io/frames"
+```
+POST /frames HTTP/1.1
+Host: logs.timber.io
+Authorization: Bearer {base64(api_key)} (see above)
+Content-Type: application/json
+
+{"dt": "2017-03-01T00:00:00.000000Z", "message": "log line 1"}
+{"dt": "2017-03-01T00:00:00.000000Z", "message": "log line 2"}
 ```
 
-## Supported Media Types
+Please see the [log line JSON schema doc]({% link _docs/app/advanced/the-log-line-json-schema.md %})
+for more info on our JSON schema, as well as the fields and requirements.
 
-1. `application/json` - used in the examples above.
-2. `application/msgpack` - the same as json, just [msgpack encoded](http://msgpack.org).
-3. `text/plain` - lines are separated by new line (`\n`) characters.
+
+## Other Supported Media Types
+
+1. `application/msgpack` - the same as json, just [msgpack encoded / compressed](http://msgpack.org).
