@@ -57,6 +57,6 @@ Please see the [log line JSON schema doc]({% link _docs/app/advanced/the-log-lin
 for more info on our JSON schema, as well as the fields and requirements.
 
 
-## Other Supported Media Types
+### Other Supported Media Types
 
 1. `application/msgpack` - the same as json, just [msgpack encoded / compressed](http://msgpack.org).
