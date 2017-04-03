@@ -10,7 +10,9 @@
 }
 
 .post-article {
-  color: rgba(0,0,0,0.8);
+  color: rgba(0,0,0,0.7);
+  line-height: 1.5;
+  font-size: 0.9em;
 
   //
   // Generic
@@ -68,6 +70,11 @@
     display: inline;
   }
 
+  h2 {
+    margin-top: 1.5em;
+    line-height: 1;
+  }
+
   hr {
     height: 0;
     margin: 15px 0;
@@ -103,7 +110,11 @@
 
   ol,
   ul {
+    margin-top: 1.5em;
 
+    li {
+      margin-bottom: 0.5em;
+    }
   }
 
   table {
@@ -159,7 +170,8 @@
   }
 
   .highlight {
-    margin-bottom: 16px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
 
   .highlight pre {
@@ -169,7 +181,7 @@
 
   .highlight pre,
   pre {
-    padding: 16px;
+    padding: 1em 1.5em;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;

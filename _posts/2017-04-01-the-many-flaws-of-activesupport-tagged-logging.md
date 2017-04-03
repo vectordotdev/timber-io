@@ -44,11 +44,11 @@ Almost every production system I've seen expanded beyond just the `request_id` t
 the `session_id`, `remote_addr`, and `user_id` tags. Some as many as 15 tags! And, why not? It's
 useful, critical, data that you need to analyze your logs. Why is this bad?
 
-1. **Your logs are no longer human readable.** They are noisy, full of long hashes, and the
+1. **Your logs are no longer human readable.**<br />They are noisy, full of long hashes, and the
    start of the log message is no longer aligned.
-2. **Your tag data is ambiguous.** It requires preconceived knowledge of how your tags are ordered.
+2. **Your tag data is ambiguous.**<br />It requires preconceived knowledge of how your tags are ordered.
    Anyone not in-the-know has no idea which one is the `request_id` or the `session_id`.
-3. **It's brittle, inconsistent, there's no contract.** It is highly likely these tags will change,
+3. **It's brittle, inconsistent, there's no contract.**<br />It is highly likely these tags will change,
    as well as the order. Anyone relying on this data for alerts, graphs, etc, will be
    reacting changes _after_ things break.
 4. **It's still a pain to search.**
@@ -65,6 +65,7 @@ context = {
   session: {id: session_id},
   user: {id: user_id}
 }
+# The timber gem adds the with_context method
 Rails.logger.with_context(context) do
   Rails.logger.info('Log message')
 end
@@ -86,14 +87,14 @@ Notice how this is oh-so-much-better. This isn't a new concept either:
 
 Given this new approach, let's address the same issues above:
 
-1. **Your logs are human readable**. The log message is at the front, like you'd expect, and the structured
+1. **Your logs are human readable**.<br />The log message is at the front, like you'd expect, and the structured
    data is clearly delimited. Plus, the metadata is in a human readable format ([logfmt](https://brandur.org/logfmt)).
-2. **Your data is no longer ambiguous.** The `request_id` and `session_id` are keyed and clearly
+2. **Your data is no longer ambiguous.**<br />The `request_id` and `session_id` are keyed and clearly
    identified.
-3. **Your logs are consistent and reliable.** The data is structured, easy to parse, and the order
+3. **Your logs are consistent and reliable.**<br />The data is structured, easy to parse, and the order
    does not matter. Adding more data will not affect downstream consumers (alerts, graphs, etc).
-4. **your logs are much easier to search.** You have real structured data to search on.
-5. **Parsing is dead simple.** Logfmt is an open standard, there are parsers for virtually every
+4. **your logs are much easier to search.**<br />You have real structured data to search on.
+5. **Parsing is dead simple.**<br />Logfmt is an open standard, there are parsers for virtually every
    language.
 
 
