@@ -16,7 +16,7 @@ changes to our search syntax:
 2. `MyModule::MySubModule` - Is now treated as a literal text search. Searching for ruby module
    names is a very common task. Previously, because `:` is a special character for attribute search,
    this would throw an error saying the `MyModule:` attribute does not exist.
-3. `debug`, `info`, `warn`, `error, and `fatal` - Now search the repsecitve log level as well as
+3. `debug`, `info`, `warn`, `error`, and `fatal` - Now search the repsecitve log level as well as
    the log line message. Previously, this required an attribute search like `level:warn`. Because
    level is displayed on the screen, we've seen a lot of users type levels expecting it to work.
    Now it does!
