@@ -6,7 +6,7 @@ toc: true
 
 The Timber search syntax follows familiar standards set by other popular services and websites.
 This documentation outlines the various syntax options when executing a search.
-The purpose is to ensure you utilize the full power of the Timber search feature.
+The purpose is to enable you to utilize the full power of the Timber search feature.
 
 
 ## Demo
@@ -16,16 +16,17 @@ The purpose is to ensure you utilize the full power of the Timber search feature
 
 ## Syntax Rules
 
-| Condition                | Example                      | Description
-|--------------------------|------------------------------|-------------------------------------------------------------------
-| Contains                 | `paul`                       | Any line that contains `paul`. Case insensitive.
-| Intersection             | `paul bunyan`                | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
-| Literal phrases `"`      | `"paul bunyan"`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
-| Literal phrases `'`      | `'paul bunyan'`              | Any line that contains `paul bunyan`, (space included). Case insensitive.
-| Negation (exclusion)     | `-paul`                      | Any line that does _not_ contain `paul`. Case insensitive.
-| Wildcards `*`            | `pau*unyan`                  | Regex equivalent: `/paul.*unyan/`. Case insensitive.
-| Grouping                 | `(paul OR bunyan) AND ox`    | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
-| Grouping w/ negation     | `-(paul bunyan)`             | Any line that does _not_ contain `paul` _and_ does not contain `bunyan`.
+| Condition                | Example                             | Description
+|--------------------------|-------------------------------------|-------------------------------------------------------------------
+| Contains                 | `paul bunyan`                       | Any line that contains the phrase `paul bunyan`. Case insensitive.
+| Intersection             | `paul AND bunyan`                   | Any line that contains `paul` _and_ `bunyan`, _separately_. Case insensitive.
+| Either / Or              | `paul OR bunyan`                    | Any line that contains `paul` _or_ `bunyan`. Case insensitive.
+| Literal phrases `"`      | `"paul:bunyan"`                     | Allows you to treat special characters literally. Any line that contains `paul:bunyan`, (: included). Case insensitive.
+| Literal phrases `'`      | `'paul bunyan'`                     | Allows you to treat special characters literally. Any line that contains `paul bunyan`, (space included). Case insensitive.
+| Negation (exclusion)     | `-(paul bunyan)`                    | Any line that does _not_ contain `paul bunyan`. Case insensitive.
+| Wildcards `*`            | `pau*unyan`                         | Regex equivalent: `/paul.*unyan/`. Case insensitive.
+| Grouping                 | `(paul OR bunyan) AND ox`           | Any line that contains (`paul` _or_ `bunyan`) _and_ `ox`.
+| Grouping w/ negation     | `-(paul bunyan)`                    | Any line that does _not_ contain `paul` _and_ does not contain `bunyan`.
 | Has (exists)             | `has:context.user.id`               | Any line that _has_ a value for `context.user.id` field.
 | Is                       | `is:sql_query`                      | Any line that is the specified event type. In this example, any line that has `event.sql_query`.
 | Missing (does not exist) | `missing:context.user.id`           | Any line _missing_ a value for `context.user.id` field.
@@ -60,9 +61,9 @@ comprehensive list of fields.
 1. `is:exception` - Find all exceptions
 2. `level:error` - View all logs on the `error` level.
 3. `user.id:1234 level:error` - View logs for a specific user
-4. `Controller -(Products Login)` - View all lines that contain `Controller` and do _not_ contain `Products` or `Login`.
-5. `(myhost posfix) OR 192.138*` - View all lines that contain `myhost` _and_ `posfix` or just simply contain a word that begins with `192.138`.
-6. `"Started GET" OR "/path" - View all lines that have the exact phrase `Started GET` _or_ contain `/path`.
+4. `Controller -(Sent 200)` - View all lines that contain `Controller` and do _not_ contain `Sent 200`.
+5. `sent 200 OR 192.138*` - View all lines that contain `sent 200` or just simply contain a word that begins with `192.138`.
+6. `Started OR GET OR "/path" - View all lines that contain `Started` _or_ GET` _or_ `/path`.
 
 
 <div class="next">
