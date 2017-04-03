@@ -1,5 +1,5 @@
 ---
-title: You're Better Than ActiveSupport::TaggedLogging
+title: The Many Flaws Of ActiveSupport::TaggedLogging, And What You Can Do
 date: 2017-04-01 00:00:00
 image: '/assets/img/blog/rails-log-tags.png'
 author: ben_johnson
