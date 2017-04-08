@@ -29,7 +29,7 @@ These demonstrate the changes below in a git-pull style format.
     def deps do
       [
         {:hackney, "~> 1.6"},
-        {:timber, "~> 1.0"}
+        {:timber, "~> 2.0"}
       ]
     end
     ```

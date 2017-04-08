@@ -15,7 +15,7 @@ Installation of Timber for Elixir is accomplished with the [timber hex package](
     end
 
     def deps do
-      [{:timber, "~> 1.0"}]
+      [{:timber, "~> 2.0"}]
     end
     ```
 
