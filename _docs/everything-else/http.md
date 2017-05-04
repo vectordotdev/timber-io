@@ -34,11 +34,17 @@ Authorization: Basic YWJjZDEyMzQ=
 ```
 POST /frames HTTP/1.1
 Host: logs.timber.io
-Authorization: Bearer {base64(api_key)} (see above)
+Authorization: Basic {base64(api_key)} (see above)
 Content-Type: text/plain
 
-[2016-03-02T00:01:02.112234Z] log line 1
-[2016-03-02T00:01:02.112234Z] log line 2
+log line 1
+log line 2
+```
+
+Optionally, you can prefix the line with an ISO8601 date and the Timber API will parse it. For example:
+
+```
+2016-03-02T00:01:02.112234Z - log line 1
 ```
 
 ### application/json
@@ -46,7 +52,7 @@ Content-Type: text/plain
 ```
 POST /frames HTTP/1.1
 Host: logs.timber.io
-Authorization: Bearer {base64(api_key)} (see above)
+Authorization: Basic {base64(api_key)} (see above)
 Content-Type: application/json
 
 [
