@@ -62,10 +62,10 @@ Negation will give you the opposite if whatever succeeds it, even attribute cond
 1. `-term` - Any line that does _not_ contain `term`.
 2. `-(my search phrase)` - Any line that does not contain the phrase `my search phrase`, as a whole.
    (case insensitive).
-3. `-http_server_response.time_ms:>50` - Is equivalent to: `-http_server_response.time_ms:<=50`
+3. `-http_server_response.time_ms:>50` - Is equivalent to: `http_server_response.time_ms:<=50`
 4. `-(-http_server_response.time_ms:>50 my search phrase)` - Allows you negate groups of conditions.
-   This will match any line where `http_server_response.time_ms` is _less than or equal to_ 50 and
-   does _not_ contain `my search phrase`. (case insensitive).
+   This will match any line where `http_server_response.time_ms:<=50` and does _not_ contain
+   `my search phrase`. (case insensitive).
 
 
 ### Aliases
