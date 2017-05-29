@@ -31,6 +31,7 @@ The purpose is to enable you to utilize the full power of the Timber search feat
 | Is                       | `is:sql_query`                      | Any line that is the specified event type. In this example, any line that has `event.sql_query`.
 | Missing (does not exist) | `missing:context.user.id`           | Any line _missing_ a value for `context.user.id` field.
 | Equals                   | `context.user.name:Paul`            | Any line where the `context.user.name` field _equals_ `Paul`. Case insensitive.
+| Does not equal           | `context.user.name:-Paul`           | Any line where the `context.user.name` field does _not_ equal `Paul`. Case insensitive.
 | Contains                 | `context.user.name:*Paul*`          | Any line where the `context.user.name` field _contains_ `Paul`. Case insensitive.
 | Begins with              | `context.user.name:Paul*`           | Any line where the `context.user.name` field _begins with_ `Paul`. Case insensitive.
 | Ends with                | `context.user.name:*Bunyan`         | Any line where the `context.user.name` field _ends with_ `Bunyan`. Case insensitive.
@@ -40,6 +41,32 @@ The purpose is to enable you to utilize the full power of the Timber search feat
 | Greater than or equal to | `http_server_response.time_ms:>=50` | Any line where the `http_server_response.time_ms` field is _greater than or equal to_ `50`.
 | Less than                | `http_server_response.time_ms:<50`  | Any line where the `http_server_response.time_ms` field is _less than_ `50`.
 | Less than or equal to    | `http_server_response.time_ms:<=50` | Any line where the`http_server_response.time_ms` field is _less than or equal to_ `50`.
+
+
+### Phrases and keywords
+
+Timber defaults to phrases instead of keywords when terms are separate by a space. This is ideal
+for log searching because most of the time you're searching for phrases. More terms equals greater
+specificity. To give you examples:
+
+1. `my search phrase` - Will find all logs where `my search phrase`, as a whole, is present.
+   (case insensitive).
+2. `my OR search OR phrase` - This functions more like a keyword search. It will find all logs
+   where `my`, `search`, or `phrase` are present. (case insensitive).
+
+
+### Negation
+
+Negation will give you the opposite if whatever succeeds it, even attribute conditions. For example:
+
+1. `-term` - Any line that does _not_ contain `term`.
+2. `-(my search phrase)` - Any line that does not contain the phrase `my search phrase`, as a whole.
+   (case insensitive).
+3. `-http_server_response.time_ms:>50` - Is equivalent to: `-http_server_response.time_ms:<=50`
+4. `-(-http_server_response.time_ms:>50 my search phrase)` - Allows you negate groups of conditions.
+   This will match any line where `http_server_response.time_ms` is _less than or equal to_ 50 and
+   does _not_ contain `my search phrase`. (case insensitive).
+
 
 ### Aliases
 
@@ -52,7 +79,7 @@ To support other familiar syntaxes, Timber implements various aliases for the ab
 
 ### Schema & Fields
 
-See [the log line JSON schema]({% link _docs/app/advanced/the-log-line-json-schema.md %}) for a
+See [the log line JSON schema]({% link _docs/upgrade-your-logs/how-it-works/json-schema.md %}) for a
 comprehensive list of fields.
 
 
