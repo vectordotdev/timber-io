@@ -1,4 +1,11 @@
-View at https://timber.io
+:warning: No longer maintained :warning:
+
+This code repository previously powered the [Timber.io](https://timber.io/)
+website. The site has since moved on to a newer codebase that is not public.
+This repository is being maintained in an archive state for posterity but may be
+deleted without warning in the future.
+
+If you still wish to run this, please use the following instructions:
 
 1. Ensure you have ruby installed if not check out rvm.io
 2. Make sure you have bundler: `gem install bundler`
